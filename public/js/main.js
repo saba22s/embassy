@@ -13,7 +13,8 @@ class PalestineEmbassy {
             isMobileMenuOpen: false,
             currentLanguage: this.getCurrentLanguage(),
             isLoading: false,
-            observers: new Map()
+            observers: new Map(),
+            activeDropdowns: new Set()
         };
         
         this.elements = {};
@@ -176,6 +177,8 @@ class PalestineEmbassy {
                 navLinks.classList.remove('active', 'opening');
                 this.releaseFocus();
                 document.body.style.overflow = '';
+                // Close all dropdowns when mobile menu closes
+                this.closeAllDropdowns();
             }
             
             this.utils.dispatchEvent('mobileMenuToggle', { isOpen: this.state.isMobileMenuOpen });
@@ -201,106 +204,191 @@ class PalestineEmbassy {
     }
 
     /**
-     * Initialize dropdown menus
+     * FIXED: Initialize dropdown menus with proper event handling
      */
     initializeDropdowns() {
-        const dropdowns = document.querySelectorAll('.nav-item');
-        
-        dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('a[aria-haspopup="true"]');
-            const submenu = dropdown.querySelector('.submenu');
+        // Wait for DOM to be ready and re-query dropdowns
+        setTimeout(() => {
+            const dropdowns = document.querySelectorAll('.nav-item');
             
-            if (!link || !submenu) return;
-
-            let hoverTimeout;
-
-            const showSubmenu = () => {
-                clearTimeout(hoverTimeout);
-                dropdown.classList.add('submenu-visible');
-                link.setAttribute('aria-expanded', 'true');
-                this.utils.dispatchEvent('submenuOpen', { dropdown });
-            };
-
-            const hideSubmenu = () => {
-                hoverTimeout = setTimeout(() => {
-                    dropdown.classList.remove('submenu-visible');
-                    link.setAttribute('aria-expanded', 'false');
-                    this.utils.dispatchEvent('submenuClose', { dropdown });
-                }, 150);
-            };
-
-            // Mouse events
-            dropdown.addEventListener('mouseenter', showSubmenu);
-            dropdown.addEventListener('mouseleave', hideSubmenu);
-
-            // Keyboard events
-            link.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    dropdown.classList.contains('submenu-visible') ? hideSubmenu() : showSubmenu();
-                }
-            });
-
-            // Touch support for mobile
-            link.addEventListener('touchstart', (e) => {
-                // Only toggle on touch for mobile viewports
-                if (window.innerWidth <= 768) {
-                    e.preventDefault(); // Prevent default link behavior
-                    const isVisible = dropdown.classList.toggle('submenu-visible');
-                    link.setAttribute('aria-expanded', isVisible.toString());
-                }
-            }, { passive: false }); // passive: false for preventDefault
-        });
-
-        // Close dropdowns when clicking outside, but not when clicking the toggle itself
-        document.addEventListener('click', (e) => {
-            dropdowns.forEach(dropdown => {
+            console.log(`Found ${dropdowns.length} dropdown items`); // Debug log
+            
+            dropdowns.forEach((dropdown, index) => {
                 const link = dropdown.querySelector('a[aria-haspopup="true"]');
-                // Check if the click target is not the dropdown itself, and not the link that controls it
-                if (!dropdown.contains(e.target) && (!link || !link.contains(e.target))) {
-                    dropdown.classList.remove('submenu-visible');
-                    if (link) link.setAttribute('aria-expanded', 'false');
+                const submenu = dropdown.querySelector('.submenu');
+                
+                if (!link || !submenu) {
+                    console.log(`Dropdown ${index} missing link or submenu`); // Debug log
+                    return;
+                }
+
+                console.log(`Initializing dropdown ${index}:`, link.textContent); // Debug log
+
+                let hoverTimeout;
+                let isDropdownOpen = false;
+
+                const showSubmenu = () => {
+                    clearTimeout(hoverTimeout);
+                    if (!isDropdownOpen) {
+                        // Close other dropdowns first
+                        this.closeAllDropdowns();
+                        
+                        isDropdownOpen = true;
+                        dropdown.classList.add('dropdown-open');
+                        link.setAttribute('aria-expanded', 'true');
+                        this.state.activeDropdowns.add(dropdown);
+                        
+                        console.log('Showing submenu for:', link.textContent); // Debug log
+                        this.utils.dispatchEvent('submenuOpen', { dropdown });
+                    }
+                };
+
+                const hideSubmenu = () => {
+                    hoverTimeout = setTimeout(() => {
+                        if (isDropdownOpen) {
+                            isDropdownOpen = false;
+                            dropdown.classList.remove('dropdown-open');
+                            link.setAttribute('aria-expanded', 'false');
+                            this.state.activeDropdowns.delete(dropdown);
+                            
+                            console.log('Hiding submenu for:', link.textContent); // Debug log
+                            this.utils.dispatchEvent('submenuClose', { dropdown });
+                        }
+                    }, 150);
+                };
+
+                const cancelHide = () => {
+                    clearTimeout(hoverTimeout);
+                };
+
+                // Desktop: Mouse events
+                dropdown.addEventListener('mouseenter', showSubmenu);
+                dropdown.addEventListener('mouseleave', hideSubmenu);
+                
+                // Keep submenu open when hovering over it
+                submenu.addEventListener('mouseenter', cancelHide);
+                submenu.addEventListener('mouseleave', hideSubmenu);
+
+                // Mobile and keyboard: Click/touch events
+                link.addEventListener('click', (e) => {
+                    // For mobile or when using keyboard
+                    if (window.innerWidth <= 768 || e.detail === 0) {
+                        e.preventDefault();
+                        
+                        if (isDropdownOpen) {
+                            hideSubmenu();
+                            clearTimeout(hoverTimeout); // Immediate close on mobile
+                        } else {
+                            showSubmenu();
+                        }
+                    }
+                });
+
+                // Keyboard events
+                link.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (isDropdownOpen) {
+                            hideSubmenu();
+                            clearTimeout(hoverTimeout); // Immediate close
+                        } else {
+                            showSubmenu();
+                        }
+                    } else if (e.key === 'Escape') {
+                        if (isDropdownOpen) {
+                            hideSubmenu();
+                            clearTimeout(hoverTimeout); // Immediate close
+                            link.focus(); // Return focus to trigger
+                        }
+                    }
+                });
+
+                // Touch events for better mobile support
+                link.addEventListener('touchstart', (e) => {
+                    if (window.innerWidth <= 768) {
+                        // Prevent default only for dropdown triggers on mobile
+                        if (!isDropdownOpen) {
+                            e.preventDefault();
+                            showSubmenu();
+                        }
+                    }
+                }, { passive: false });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                const clickedDropdown = e.target.closest('.nav-item');
+                const clickedLink = e.target.closest('a[aria-haspopup="true"]');
+                
+                // If clicked outside all dropdowns, or on a different dropdown
+                if (!clickedDropdown || (clickedLink && !clickedDropdown.contains(clickedLink))) {
+                    this.closeAllDropdowns();
                 }
             });
+
+            // Close dropdowns on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    this.closeAllDropdowns();
+                }
+            });
+
+        }, 100); // Small delay to ensure DOM is ready
+    }
+
+    /**
+     * Close all open dropdowns
+     */
+    closeAllDropdowns() {
+        this.state.activeDropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a[aria-haspopup="true"]');
+            dropdown.classList.remove('dropdown-open');
+            if (link) {
+                link.setAttribute('aria-expanded', 'false');
+            }
         });
+        this.state.activeDropdowns.clear();
     }
 
     /**
      * Initialize keyboard navigation
      */
     initializeKeyboardNavigation() {
-        const navItems = document.querySelectorAll('.nav-links a, .submenu a');
-        
-        navItems.forEach((item, index) => {
-            item.addEventListener('keydown', (e) => {
-                let targetIndex;
-                
-                switch (e.key) {
-                    case 'ArrowDown':
-                        e.preventDefault();
-                        targetIndex = index + 1;
-                        break;
-                    case 'ArrowUp':
-                        e.preventDefault();
-                        targetIndex = index - 1;
-                        break;
-                    case 'Home':
-                        e.preventDefault();
-                        targetIndex = 0;
-                        break;
-                    case 'End':
-                        e.preventDefault();
-                        targetIndex = navItems.length - 1;
-                        break;
-                    default:
-                        return;
-                }
-                
-                if (targetIndex >= 0 && targetIndex < navItems.length) {
-                    navItems[targetIndex].focus();
-                }
+        // Wait for DOM elements to be available
+        setTimeout(() => {
+            const navItems = document.querySelectorAll('.nav-links a, .submenu a');
+            
+            navItems.forEach((item, index) => {
+                item.addEventListener('keydown', (e) => {
+                    let targetIndex;
+                    
+                    switch (e.key) {
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            targetIndex = index + 1;
+                            break;
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            targetIndex = index - 1;
+                            break;
+                        case 'Home':
+                            e.preventDefault();
+                            targetIndex = 0;
+                            break;
+                        case 'End':
+                            e.preventDefault();
+                            targetIndex = navItems.length - 1;
+                            break;
+                        default:
+                            return;
+                    }
+                    
+                    if (targetIndex >= 0 && targetIndex < navItems.length) {
+                        navItems[targetIndex].focus();
+                    }
+                });
             });
-        });
+        }, 100);
     }
 
     /**
@@ -328,7 +416,7 @@ class PalestineEmbassy {
                 if (target) {
                     target.focus();
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    this.announceToScreenReader(`Mapsd to ${target.textContent || targetId}`);
+                    this.announceToScreenReader(`Moved to ${target.textContent || targetId}`);
                 }
             });
         });
@@ -369,6 +457,7 @@ class PalestineEmbassy {
         this.liveRegion.setAttribute('aria-live', 'polite');
         this.liveRegion.setAttribute('aria-atomic', 'true');
         this.liveRegion.className = 'sr-only';
+        this.liveRegion.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
         document.body.appendChild(this.liveRegion);
     }
 
@@ -488,6 +577,11 @@ class PalestineEmbassy {
     setupEventListeners() {
         // Resize handler
         const handleResize = this.utils.debounce(() => {
+            // Close dropdowns on resize to mobile
+            if (window.innerWidth <= 768) {
+                this.closeAllDropdowns();
+            }
+            
             this.utils.dispatchEvent('windowResize', { 
                 width: window.innerWidth, 
                 height: window.innerHeight 
@@ -711,7 +805,6 @@ class Utils {
             rect.top >= 0 &&
             rect.left >= 0 &&
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
