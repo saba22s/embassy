@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="feedback-page-title">الاقتراحات والشكاوى - سفارة دولة فلسطين</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components/navigation.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/feedback.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body data-lang-direction="rtl">
+    <div id="header-container"></div>
+
+    <main class="feedback-page-wrapper">
+        <header class="feedback-header-main">
+            <h1 id="feedback-hero-title" class="page-main-title-feedback">نستمع إليك</h1>
+            <p id="feedback-hero-subtitle" class="page-subtitle-feedback">يرجى ملء النموذج أدناه لإرسال اقتراحاتكم أو شكاويكم.</p>
+        </header>
+
+        <div class="feedback-content-container">
+            <section class="feedback-form-card">
+                <form id="contactForm" action="../../server/process_feedback.php" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="fullName" id="feedback-name-label">الاسم الكامل:</label>
+                        <input type="text" id="fullName" name="fullName" required aria-required="true" aria-describedby="fullName-error">
+                        <div class="error-message" id="fullName-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" id="feedback-email-label">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                        <div class="error-message" id="email-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" id="feedback-phone-label">رقم الهاتف (اختياري):</label>
+                        <input type="tel" id="phone" name="phone" aria-describedby="phone-info">
+                        <small id="phone-info" class="sr-only">يرجى إدخال رقم هاتف صالح.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" id="feedback-subject-label">الموضوع:</label>
+                        <input type="text" id="subject" name="subject" required aria-required="true" aria-describedby="subject-error">
+                        <div class="error-message" id="subject-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" id="feedback-message-label">رسالتك:</label>
+                        <textarea id="message" name="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
+                        <div class="error-message" id="message-error" aria-live="polite"></div>
+                    </div>
+
+                    <button type="submit" id="feedback-submit-button" class="feedback-submit-button">إرسال الرسالة</button>
+                    <div id="formStatusMessage" class="feedback-message-status" role="status" aria-live="polite"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+   <script defer src="../js/language-switcher.js"></script>
+<script defer src="../js/carousel.js"></script>
+<script defer src="../js/main.js"></script>
+    <script defer src="../js/page-specific/feedback-form.js"></script>
+</body>
+
+</html>
