@@ -130,6 +130,55 @@
   font-style: italic;
 }
 
+/* Photo Gallery Section - Enhanced */
+.photo-gallery-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-gallery-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 123, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(108, 117, 125, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+.gallery-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-title p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Info Grid Section */
 .info-grid-section {
   padding: 80px 20px;
   background: linear-gradient(135deg, #121212 0%, #383838 50%, #1a1a1a 100%);
@@ -244,6 +293,7 @@
   color: #2b2b2b;
 }
 
+/* Official Section */
 .official-section {
   padding: 40px 0;
   background: linear-gradient(145deg, #151515 0%, #0b0b0b 40%, #141414 100%);
@@ -263,6 +313,16 @@
   background: linear-gradient(90deg, transparent 0%, #c4ac6e 20%, #d4bc7e 50%, #c4ac6e 80%, transparent 100%);
   animation: luxOfficialShimmer 3s ease-in-out infinite;
   pointer-events: none;
+}
+
+@keyframes luxOfficialShimmer {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .official-container {
@@ -357,6 +417,7 @@
   color: #a0a0a0d2;
 }
 
+/* Latest News Section */
 .latest-news-section {
   padding: 100px 0;
   background: linear-gradient(135deg,
@@ -376,16 +437,6 @@
   background: linear-gradient(90deg, transparent 0%, #c4ac6e 20%, #d4bc7e 50%, #c4ac6e 80%, transparent 100%);
   animation: luxOfficialShimmer 3s ease-in-out infinite;
   pointer-events: none;
-}
-
-@keyframes luxOfficialShimmer {
-  0%,
-  100% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
 }
 
 .section-title {
@@ -514,7 +565,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .ambassador-message {
     max-width: 95%;
@@ -592,13 +643,12 @@
   }
 
   .official-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
     padding: 0 20px;
   }
 
   .official-card {
     padding: 24px 16px;
+    min-width: 180px;
   }
 
   .official-card img {
@@ -666,6 +716,14 @@
   .info-box-image {
     height: 160px;
   }
+
+  .official-container {
+    padding: 0 15px;
+  }
+
+  .official-card {
+    min-width: 160px;
+  }
 }
 
 /* RTL support */
@@ -678,6 +736,17 @@ body.rtl .ambassador-message {
 }
 
 /* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .info-box:nth-child(odd),
 .official-card,
 .news-card {
@@ -720,7 +789,7 @@ body.rtl .ambassador-message {
   animation-delay: 0.6s;
 }
 
-/* التأثيرات الإضافية للتحسين البصري للinfo-grid */
+/* Additional visual enhancements for info-grid */
 .info-box:hover {
   animation: pulse 1.5s infinite;
 }

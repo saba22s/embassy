@@ -1,79 +1,93 @@
-<header class="header">
-    <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="شعار السفارة" width="60" />
-    </a>
+<header class="modern-header" id="modernHeader">
+    <div class="header-container">
+        <a href="index.html" class="logo-section">
+            <img src="images/logo.png" alt="شعار السفارة" class="logo-image">
+            </a>
 
-    <button class="mobile-menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <nav class="main-navigation">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">الأخبار</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">السفارة</a>
+                    <div class="dropdown-menu">
+                        <a href="embassy.html" class="dropdown-link">السفارة في السطور</a>
+                        <a href="ambassador.html" class="dropdown-link">السفير</a>
+                        <a href="former_ambassadors.html" class="dropdown-link">السفراء السابقون</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">الشؤون التعليمية</a>
+                    <div class="dropdown-menu">
+                        <a href="turkish_universities.html" class="dropdown-link">الجامعات في تركيا</a>
+                        <a href="study_in_turkey.html" class="dropdown-link">الدراسة في تركيا</a>
+                        <a href="student_guide.html" class="dropdown-link">دليل الطلاب الجديد</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">الشؤون القنصلية</a>
+                    <div class="dropdown-menu">
+                        <a href="passports.html" class="dropdown-link">الجوازات</a>
+                        <a href="forms.html" class="dropdown-link">النماذج</a>
+                        <a href="services.html" class="dropdown-link">خدمات السفارة</a>
+                        <a href="pdf/conslate.pdf" class="dropdown-link" target="_blank" rel="noopener noreferrer">دليل المواطن للخدمات القنصلية</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">العلاقات الفلسطينية التركية</a>
+                    <div class="dropdown-menu">
+                        <a href="palestine.html" class="dropdown-link">فلسطين</a>
+                        <a href="turkey.html" class="dropdown-link">تركيا</a>
+                        <a href="religious_relations.html" class="dropdown-link">العلاقات الدينية</a>
+                        <a href="historical_relations.html" class="dropdown-link">العلاقات التاريخية</a>
+                        <a href="cultural_relations.html" class="dropdown-link">العلاقات الثقافية</a>
+                        <a href="political_relations.html" class="dropdown-link">العلاقات السياسية</a>
+                        <a href="economic_relations.html" class="dropdown-link">العلاقات الاقتصادية</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">متفرقات</a>
+                    <div class="dropdown-menu">
+                        <a href="events.html" class="dropdown-link">الأحداث والأنشطة</a>
+                        <a href="feedback.html" class="dropdown-link">الاقتراحات والشكاوي</a>
+                        <a href="misc.html#links" class="dropdown-link">مواقع هامة</a>
+                        <a href="misc.html#media" class="dropdown-link">الوسائط</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="passport-inquiry.html" class="nav-link">الاستعلام عن جواز السفر</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">التواصل</a>
+                </li>
+            </ul>
+        </nav>
 
-    <nav class="nav-links">
-        <a href="index.html" id="home">الرئيسية</a>
-        <a href="news.html" id="news">الأخبار</a>
-
-        <div class="nav-item">
-            <a href="#" id="embassy" role="button" aria-haspopup="true" aria-expanded="false">السفارة</a>
-            <div class="submenu" role="menu">
-                <a href="embassy.html" id="embassy-about" role="menuitem">السفارة في السطور</a>
-                <a href="ambassador.html" id="embassy-ambassador" role="menuitem">السفير</a>
-                <a href="former_ambassadors.html" id="embassy-former" role="menuitem">السفراء السابقون</a>
+        <div class="header-actions">
+            <div class="language-switcher" id="languageSwitcher">
+                <button class="language-button" id="languageButton">
+                    <i class="fas fa-globe"></i>
+                    <span>العربية</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <div class="language-option active" data-lang="ar">العربية</div>
+                    <div class="language-option" data-lang="en">English</div>
+                    <div class="language-option" data-lang="tr">Türkçe</div>
+                </div>
             </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
-
-        <div class="nav-item">
-            <a href="#" id="education" role="button" aria-haspopup="true" aria-expanded="false">الشؤون التعليمية</a>
-            <div class="submenu" role="menu">
-                <a href="turkish_universities.html" id="edu-universities" role="menuitem">الجامعات في تركيا</a>
-                <a href="study_in_turkey.html" id="edu-study" role="menuitem">الدراسة في تركيا</a>
-                <a href="student_guide.html" id="edu-guide" role="menuitem">دليل الطلاب الجديد</a>
-            </div>
-        </div>
-
-        <div class="nav-item">
-            <a href="#" id="consular" role="button" aria-haspopup="true" aria-expanded="false">الشؤون القنصلية</a>
-            <div class="submenu" role="menu">
-                <a href="passports.html" id="cons-passports" role="menuitem">الجوازات</a>
-                <a href="forms.html" id="cons-forms" role="menuitem">النماذج</a>
-                <a href="services.html" id="cons-services" role="menuitem">خدمات السفارة</a>
-                <a href="pdf/conslate.pdf" id="cons-guide" target="_blank" rel="noopener noreferrer" role="menuitem">دليل المواطن للخدمات القنصلية</a>
-            </div>
-        </div>
-
-        <div class="nav-item">
-            <a href="#" id="relations" role="button" aria-haspopup="true" aria-expanded="false">العلاقات الفلسطينية التركية</a>
-            <div class="submenu" role="menu">
-                <a href="palestine.html" id="rel-pal" role="menuitem">فلسطين</a>
-                <a href="turkey.html" id="rel-tur" role="menuitem">تركيا</a>
-                <a href="religious_relations.html" id="rel-rel" role="menuitem">العلاقات الدينية</a>
-                <a href="historical_relations.html" id="rel-his" role="menuitem">العلاقات التاريخية</a>
-                <a href="cultural_relations.html" id="rel-cul" role="menuitem">العلاقات الثقافية</a>
-                <a href="political_relations.html" id="rel-pol" role="menuitem">العلاقات السياسية</a>
-                <a href="economic_relations.html" id="rel-eco" role="menuitem">العلاقات الاقتصادية</a>
-            </div>
-        </div>
-
-        <div class="nav-item">
-            <a href="#" id="misc" role="button" aria-haspopup="true" aria-expanded="false">متفرقات</a>
-            <div class="submenu" role="menu">
-                <a href="events.html" id="misc-events" role="menuitem">الأحداث والأنشطة</a>
-                <a href="feedback.html" id="misc-feedback" role="menuitem">الاقتراحات والشكاوي</a>
-                <a href="misc.html#links" id="misc-links" role="menuitem">مواقع هامة</a>
-                <a href="misc.html#media" id="misc-media" role="menuitem">الوسائط</a>
-            </div>
-        </div>
-
-        <a href="passport-inquiry.html" id="passport">الاستعلام عن جواز السفر</a>
-        <a href="contact.html" id="contact">التواصل</a>
-    </nav>
-
-    <div class="language-switcher">
-        <button id="langButton" aria-haspopup="true" aria-expanded="false">🌐 العربية</button>
-        <ul id="langMenu" class="hidden" role="menu">
-            <li data-lang="ar" role="menuitem" tabindex="0">العربية</li>
-            <li data-lang="en" role="menuitem" tabindex="0">English</li>
-            <li data-lang="tr" role="menuitem" tabindex="0">Türkçe</li>
-        </ul>
     </div>
+
+
 </header>
