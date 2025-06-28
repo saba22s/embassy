@@ -363,3 +363,5 @@ window.waitForElement = waitForElement;
 
 // Export component loader instance for other scripts
 window.getComponentLoader = () => componentLoader;
+
+

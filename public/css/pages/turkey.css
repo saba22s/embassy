@@ -1,0 +1,255 @@
+  :root {
+      --turkey-bg: #0c0c0f;
+      --turkey-text-primary: #e8eaed;
+      --turkey-text-secondary: #b0b8c4;
+      --turkey-accent-gold: #c4ac6e;
+      --turkey-card-bg: #121418;
+      --turkey-border-color: rgba(196, 172, 110, 0.2);
+      --turkey-hover-accent: #dcb87e;
+      --font-primary-turkey: 'Segoe UI', Tahoma, sans-serif;
+      --font-secondary-turkey: 'Amiri', serif;
+      --turkey-accent-gold-rgb: 196, 172, 110;
+  }
+
+  .turkey-page-wrapper {
+      background-color: var(--turkey-bg);
+      color: var(--turkey-text-primary);
+      font-family: var(--font-primary-turkey);
+      padding: 0 0 60px 0;
+      overflow-x: hidden;
+  }
+
+  .turkey-header-main {
+      padding: 70px 20px 50px;
+      background: linear-gradient(155deg, rgba(22, 22, 25, 0.95) 0%, rgba(12, 12, 15, 0.98) 100%), url('images/embassy-bg-pattern.png') center center/cover no-repeat;
+      text-align: center;
+      border-bottom: 1px solid var(--turkey-border-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 40px;
+  }
+
+  .turkey-header-main .page-main-title-turkey {
+      font-family: var(--font-secondary-turkey);
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      color: var(--turkey-accent-gold);
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .turkey-content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  .turkey-section {
+      background-color: var(--turkey-card-bg);
+      border: 1px solid var(--turkey-border-color);
+      border-radius: 18px;
+      padding: 35px 40px;
+      margin-bottom: 35px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .turkey-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(var(--turkey-accent-gold-rgb), 0.1);
+  }
+
+  .turkey-section .section-title-turkey {
+      font-family: var(--font-secondary-turkey);
+      font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+      color: var(--turkey-accent-gold);
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1.5px solid var(--turkey-border-color);
+      font-weight: 700;
+  }
+
+  .turkey-section p,
+  .turkey-section li {
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      line-height: 1.9;
+      color: var(--turkey-text-primary);
+      margin-bottom: 1.5em;
+  }
+
+  body.rtl .turkey-section p,
+  body.rtl .turkey-section li {
+      text-align: right;
+  }
+
+  body.ltr .turkey-section p,
+  body.ltr .turkey-section li {
+      text-align: left;
+  }
+
+  .turkey-section strong {
+      /* For labels like "العاصمة:" */
+      font-weight: 600;
+      color: var(--turkey-hover-accent);
+      margin-inline-end: 0.5em;
+  }
+
+  .turkey-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1em;
+  }
+
+  .turkey-section ul li {
+      padding-inline-start: 25px;
+      /* For bullet point */
+      position: relative;
+      margin-bottom: 0.8em;
+  }
+
+  .turkey-section ul li::before {
+      content: "•";
+      color: var(--turkey-accent-gold);
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0px;
+  }
+
+  .turkey-map-container {
+      width: 100%;
+      max-width: 700px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--turkey-border-color);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .turkey-map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+  }
+
+  .official-links-list a {
+      color: var(--turkey-accent-gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .official-links-list a:hover {
+      color: var(--turkey-hover-accent);
+      text-decoration: underline;
+  }
+
+  /* Navigation Boxes to Relations Sections */
+  .relations-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 20px 0;
+      margin-top: 40px;
+  }
+
+  .relation-nav-card {
+      background-color: var(--turkey-card-bg);
+      border: 1px solid var(--turkey-border-color);
+      border-radius: 15px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--turkey-text-primary);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .relation-nav-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(var(--turkey-accent-gold-rgb), 0.12);
+  }
+
+  .relation-nav-card-image-container {
+      width: 100%;
+      height: 200px;
+      /* Fixed height for images */
+      overflow: hidden;
+  }
+
+  .relation-nav-card-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+  }
+
+  .relation-nav-card:hover .relation-nav-card-image-container img {
+      transform: scale(1.1);
+  }
+
+  .relation-nav-card-content {
+      padding: 20px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .relation-nav-card-content h3 {
+      font-family: var(--font-secondary-turkey);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      color: var(--turkey-accent-gold);
+      margin: 0;
+      font-weight: 600;
+  }
+
+  /* RTL Adjustments */
+  body.rtl .turkey-section .section-title-turkey {
+      text-align: right;
+  }
+
+  @media (max-width: 768px) {
+      .turkey-header-main {
+          padding: 50px 15px 30px;
+      }
+
+      .turkey-header-main .page-main-title-turkey {
+          font-size: clamp(2rem, 7vw, 2.8rem);
+      }
+
+      .turkey-content-container {
+          padding: 0 15px;
+      }
+
+      .turkey-section {
+          padding: 25px 20px;
+      }
+
+      .turkey-section .section-title-turkey {
+          font-size: clamp(1.6rem, 5vw, 2.1rem);
+      }
+
+      .turkey-section p,
+      .turkey-section li {
+          font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+      }
+
+      .relations-nav-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .turkey-header-main .page-main-title-turkey {
+          font-size: clamp(1.8rem, 8vw, 2.4rem);
+      }
+
+      .relations-nav-grid {
+          grid-template-columns: 1fr;
+          /* Stack cards on very small screens */
+      }
+  }

@@ -1,0 +1,158 @@
+ :root {
+     --former-amb-bg: #0a0b0d;
+     /* Consistent with ambassador page */
+     --former-amb-text: #e8eaed;
+     --former-amb-text-subtle: #a2a8b1;
+     --former-amb-accent-gold: #c8b08a;
+     --former-amb-accent-gold-rgb: 200, 176, 138;
+     --former-amb-card-bg: #121418;
+     --former-amb-card-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+     --former-amb-border: rgba(var(--former-amb-accent-gold-rgb), 0.25);
+     --former-amb-border-radius: 12px;
+     --font-primary-former: 'Segoe UI', Tahoma, sans-serif;
+     --font-secondary-former: 'Amiri', serif;
+ }
+
+ .former-ambassadors-page-wrapper {
+     background-color: var(--former-amb-bg);
+     color: var(--former-amb-text);
+     font-family: var(--font-primary-former);
+     padding: 0;
+     overflow-x: hidden;
+ }
+
+ .former-ambassadors-header-section {
+     background: linear-gradient(160deg, rgba(20, 22, 26, 0.92) 0%, rgba(8, 9, 11, 0.98) 100%),
+         url('images/embassy-bg-pattern.png') center center / cover no-repeat;
+     padding: 60px 20px 40px;
+     text-align: center;
+     border-bottom: 1px solid var(--former-amb-border);
+ }
+
+ .former-ambassadors-header-section .main-title {
+     font-family: var(--font-secondary-former);
+     font-size: clamp(2.2rem, 5vw, 3rem);
+     color: var(--former-amb-text);
+     font-weight: 700;
+     margin-bottom: 10px;
+     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .former-ambassadors-list-container {
+     max-width: 1200px;
+     margin: 40px auto;
+     padding: 0 20px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 35px;
+     /* Increased gap */
+ }
+
+ .former-ambassador-card {
+     background-color: var(--former-amb-card-bg);
+     border: 1px solid var(--former-amb-border);
+     border-radius: var(--former-amb-border-radius);
+     padding: 30px;
+     /* Increased padding */
+     box-shadow: var(--former-amb-card-shadow);
+     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .former-ambassador-card:hover {
+     transform: translateY(-5px) scale(1.02);
+     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+ }
+
+ .former-ambassador-image-wrapper {
+     width: 280px;
+     /* Large square image */
+     height: 280px;
+     border-radius: var(--former-amb-border-radius);
+     /* Can be 50% for circle or keep square */
+     overflow: hidden;
+     margin-bottom: 25px;
+     /* Increased margin */
+     border: 4px solid var(--former-amb-accent-gold);
+     box-shadow: 0 0 15px rgba(var(--former-amb-accent-gold-rgb), 0.2);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .former-ambassador-image-wrapper:hover {
+     transform: scale(1.05);
+     box-shadow: 0 0 25px rgba(var(--former-amb-accent-gold-rgb), 0.35);
+ }
+
+ .former-ambassador-image-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .former-ambassador-card .ambassador-name {
+     font-family: var(--font-secondary-former);
+     font-size: clamp(1.5rem, 3vw, 1.8rem);
+     color: var(--former-amb-accent-gold);
+     font-weight: 700;
+     margin-bottom: 8px;
+     line-height: 1.3;
+ }
+
+ .former-ambassador-card .ambassador-tenure {
+     font-family: var(--font-primary-former);
+     font-size: clamp(0.95rem, 2vw, 1.1rem);
+     color: var(--former-amb-text-subtle);
+     font-weight: 500;
+ }
+
+ /* RTL Adjustments */
+ .former-ambassadors-page-wrapper[dir="rtl"] .former-ambassadors-header-section .main-title,
+ .former-ambassadors-page-wrapper[dir="rtl"] .former-ambassador-card {
+     text-align: center;
+     /* Center alignment works well for cards regardless of direction */
+ }
+
+
+ @media (max-width: 768px) {
+     .former-ambassadors-header-section .main-title {
+         font-size: clamp(1.8rem, 6vw, 2.4rem);
+     }
+
+     .former-ambassadors-list-container {
+         grid-template-columns: 1fr;
+         /* Stack cards on smaller screens */
+         gap: 30px;
+     }
+
+     .former-ambassador-card {
+         padding: 25px;
+     }
+
+     .former-ambassador-image-wrapper {
+         width: 220px;
+         height: 220px;
+     }
+
+     .former-ambassador-card .ambassador-name {
+         font-size: clamp(1.3rem, 4vw, 1.6rem);
+     }
+
+     .former-ambassador-card .ambassador-tenure {
+         font-size: clamp(0.9rem, 2.5vw, 1rem);
+     }
+ }
+
+ @media (max-width: 480px) {
+     .former-ambassadors-header-section {
+         padding: 50px 15px 30px;
+     }
+
+     .former-ambassador-image-wrapper {
+         width: 180px;
+         /* Smaller for very small screens */
+         height: 180px;
+     }
+ }

@@ -1,0 +1,164 @@
+        :root {
+            --embassy-bg-dark: #0c0c0f; /* أغمق قليلاً من خلفية الجسم الرئيسية للمزيد من التباين */
+            --embassy-card-bg: rgba(28, 28, 32, 0.75); /* خلفية البطاقة، متناسقة مع الأجواء الداكنة */
+            --embassy-card-border: rgba(196, 172, 110, 0.2); /* لون ذهبي خافت للحدود */
+            --embassy-text-primary: #e8eaed; /* لون نص أساسي أفتح قليلاً */
+            --embassy-text-secondary: #b0b8c4; /* لون نص ثانوي */
+            --embassy-gold-accent: #c4ac6e; /* لون ذهبي بارز من style.css */
+            --embassy-gold-accent-subtle: rgba(196, 172, 110, 0.7); /* ذهبي خافت للعناوين الفرعية أو الخطوط */
+
+            --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* */
+            --font-secondary: 'Amiri', serif; /* */
+        }
+
+        .embassy-page-wrapper {
+            background-color: var(--embassy-bg-dark);
+            padding: 60px 20px; /* زيادة الحشو العلوي والسفلي */
+            color: var(--embassy-text-primary);
+        }
+
+        .embassy-container { /* استبدال embassy-container-grid */
+            max-width: 1000px; /* عرض أقصى للمحتوى */
+            margin: 0 auto;
+        }
+
+        .embassy-header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .embassy-header-section .main-title {
+            font-family: var(--font-secondary);
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            color: var(--embassy-text-primary);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+        }
+
+        .embassy-header-section .subtitle {
+            font-family: var(--font-primary);
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: var(--embassy-text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .embassy-info-card {
+            background: var(--embassy-card-bg);
+            backdrop-filter: blur(16px); /* زيادة طفيفة في التعتيم */
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--embassy-card-border);
+            border-radius: 22px; /* زيادة طفيفة في دائرية الزوايا */
+            padding: 40px; /* حشو داخلي موحد */
+            box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5); /* ظل أكثر عمقًا */
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            margin-bottom: 40px; /* مسافة بين البطاقات إذا كان هناك أكثر من واحدة */
+        }
+
+        .embassy-info-card:hover {
+            transform: translateY(-6px) scale(1.01); /* تأثير رفع بسيط عند التمرير */
+            box-shadow: 0 18px 55px rgba(var(--embassy-gold-accent-rgb, 196, 172, 110), 0.1), 0 10px 30px rgba(0,0,0,0.6);
+        }
+         /* لتعريف متغيرات الألوان RGB للحدود الشفافة وظلال Hover */
+        :root { --embassy-gold-accent-rgb: 196, 172, 110; }
+
+        .embassy-info-card .card-title {
+            font-family: var(--font-secondary);
+            font-size: clamp(1.8rem, 5vw, 2.4rem);
+            color: var(--embassy-gold-accent);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1.5px solid var(--embassy-card-border);
+            font-weight: 700;
+        }
+
+        .embassy-info-card p {
+            font-family: var(--font-primary);
+            font-size: clamp(1rem, 2.5vw, 1.15rem); /* حجم خط مناسب للقراءة */
+            line-height: 2; /* زيادة تباعد الأسطر */
+            color: var(--embassy-text-primary);
+            margin-bottom: 1.7em; /* تعديل المسافة بين الفقرات */
+            text-align: justify;
+        }
+        .embassy-info-card p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* معرض صور أنيق ومدمج */
+        .embassy-elegant-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px; /* مسافة بين الصور */
+            margin-top: 35px; /* مسافة من النص أعلاه */
+        }
+
+        .embassy-elegant-gallery .gallery-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px; /* دائرية أكثر للصور */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+            aspect-ratio: 5 / 4; /* نسبة عرض إلى ارتفاع جديدة */
+            border: 1px solid transparent; /* حد شفاف مبدئي */
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .embassy-elegant-gallery .gallery-image-wrapper:hover {
+            border-color: var(--embassy-gold-accent-subtle);
+            transform: scale(1.03);
+        }
+
+        .embassy-elegant-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.3s ease;
+        }
+
+        .embassy-elegant-gallery .gallery-image-wrapper:hover img {
+            transform: scale(1.15);
+            filter: brightness(0.9); /* تأثير تعتيم خفيف عند التمرير */
+        }
+
+        /* دعم اتجاه النص RTL */
+        .embassy-page-wrapper[dir="rtl"] .embassy-info-card .card-title {
+            text-align: right;
+        }
+        .embassy-page-wrapper[dir="rtl"] .embassy-info-card p {
+            text-align: justify; /* أو right إذا كان ذلك أفضل للقراءة */
+        }
+        /* (لا تحتاج إلى تغييرات كبيرة إذا كنت تستخدم flex أو grid بشكل جيد مع الاتجاه) */
+
+
+        /* تجاوبية */
+        @media (max-width: 992px) { /* نقطة توقف للأجهزة اللوحية */
+            .embassy-elegant-gallery {
+                grid-template-columns: repeat(2, 1fr); /* عمودان في الأجهزة اللوحية */
+            }
+        }
+        @media (max-width: 768px) {
+            .embassy-page-wrapper {
+                padding: 40px 15px;
+            }
+            .embassy-info-card {
+                padding: 30px 25px;
+            }
+            .embassy-elegant-gallery {
+                grid-template-columns: 1fr; /* عمود واحد في الهواتف */
+                gap: 20px;
+            }
+            .embassy-header-section .main-title {
+                font-size: clamp(2rem, 7vw, 2.8rem);
+            }
+            .embassy-header-section .subtitle {
+                font-size: clamp(1rem, 3.5vw, 1.2rem);
+            }
+            .embassy-info-card .card-title {
+                 font-size: clamp(1.6rem, 6vw, 2rem);
+            }
+             .embassy-info-card p {
+                font-size: clamp(0.9rem, 2.8vw, 1.05rem);
+            }
+        }

@@ -1,0 +1,299 @@
+  :root {
+            --econ-bg: #0A0B0D;
+            --econ-card-bg: rgba(22, 27, 34, 0.65);
+            --econ-border: rgba(88, 166, 255, 0.2);
+            --econ-text-primary: #E6EDF3;
+            --econ-text-secondary: #A2A8B1;
+            --econ-accent-blue: #58A6FF;
+            --econ-accent-blue-rgb: 88, 166, 255;
+            --font-display: 'Cairo', sans-serif;
+            --font-body: 'Readex Pro', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--econ-bg);
+            color: var(--econ-text-primary);
+            line-height: 1.6;
+        }
+
+        .econ-v3-wrapper {
+            background-color: var(--econ-bg);
+            color: var(--econ-text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        /* --- Hero Section --- */
+        .econ-v3-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0A0B0D 0%, #1a1d23 100%);
+        }
+
+        .econ-v3-hero-bg-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .econ-v3-hero-bg-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+            animation: heroZoom 25s infinite alternate ease-in-out;
+            will-change: transform;
+        }
+
+        .econ-v3-hero-bg-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 40%, rgba(10, 11, 13, 0.2), var(--econ-bg) 85%);
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .econ-v3-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: contentFadeUp 1.2s 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        @keyframes contentFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .econ-v3-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+            line-height: 1.15;
+            letter-spacing: -2px;
+        }
+
+        .econ-v3-hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--econ-text-secondary);
+            line-height: 1.7;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        /* --- Main Content Area --- */
+        .econ-v3-main-content {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .econ-v3-section {
+            margin-bottom: 70px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .econ-v3-section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .econ-v3-section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--econ-text-primary);
+        }
+
+        .econ-v3-section-title span {
+            color: var(--econ-accent-blue);
+        }
+
+        .econ-v3-card {
+            background: var(--econ-card-bg);
+            border: 1px solid var(--econ-border);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .econ-v3-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .econ-v3-card p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--econ-text-secondary);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .econ-v3-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .econ-v3-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .econ-v3-card .card-header i {
+            font-size: 1.6rem;
+            color: var(--econ-accent-blue);
+        }
+
+        .econ-v3-card .card-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--econ-text-primary);
+        }
+
+        .econ-v3-card .card-content-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--econ-text-secondary);
+            text-align: right;
+        }
+
+        /* --- Visualizations --- */
+        .data-viz-container {
+            margin-top: 30px;
+        }
+
+        .data-viz-item {
+            margin-bottom: 20px;
+        }
+
+        .data-viz-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--econ-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .data-viz-bar-bg {
+            background-color: rgba(var(--econ-accent-blue-rgb), 0.1);
+            border-radius: 4px;
+            height: 12px;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(var(--econ-accent-blue-rgb), 0.2);
+        }
+
+        .data-viz-bar-fill {
+            background: linear-gradient(90deg, var(--econ-accent-blue) 0%, #8AC7FF 100%);
+            height: 100%;
+            width: 0;
+            border-radius: 4px;
+            transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding-top: 25px;
+            margin-top: 25px;
+            border-top: 1px solid var(--econ-border);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--econ-text-secondary);
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Debug styles */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 9999;
+            max-width: 300px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .econ-v3-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .econ-v3-hero {
+                height: 90vh;
+            }
+
+            .econ-v3-main-content {
+                padding: 60px 15px;
+            }
+
+            .econ-v3-card {
+                padding: 30px;
+            }
+
+            .debug-info {
+                position: relative;
+                margin: 10px;
+            }
+        }

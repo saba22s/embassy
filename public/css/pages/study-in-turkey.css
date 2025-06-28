@@ -1,0 +1,170 @@
+  :root {
+      --study-bg: #0c0c0f;
+      /* Dark background consistent with other pages */
+      --study-text-primary: #e8eaed;
+      /* Primary text color */
+      --study-text-secondary: #b0b8c4;
+      /* Secondary text color */
+      --study-accent-gold: #c4ac6e;
+      /* Gold accent for titles and links */
+      --study-card-bg: #121418;
+      /* Background for content blocks/cards */
+      --study-border-color: rgba(196, 172, 110, 0.2);
+      /* Border color for cards */
+      --study-hover-border-color: rgba(196, 172, 110, 0.5);
+      /* Hover border color */
+      --font-primary-study: 'Segoe UI', Tahoma, sans-serif;
+      --font-secondary-study: 'Amiri', serif;
+  }
+
+  .study-in-turkey-page-wrapper {
+      background-color: var(--study-bg);
+      color: var(--study-text-primary);
+      font-family: var(--font-primary-study);
+      padding: 0;
+      overflow-x: hidden;
+  }
+
+  .study-header-main {
+      padding: 70px 20px 50px;
+      background: linear-gradient(155deg, rgba(22, 22, 25, 0.95) 0%, rgba(12, 12, 15, 0.98) 100%), url('images/embassy-bg-pattern.png') center center/cover no-repeat;
+      text-align: center;
+      border-bottom: 1px solid var(--study-border-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .study-header-main .page-main-title {
+      font-family: var(--font-secondary-study);
+      font-size: clamp(2.4rem, 6vw, 3.2rem);
+      color: var(--study-accent-gold);
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  .study-header-main .page-subtitle {
+      font-family: var(--font-primary-study);
+      font-size: clamp(1.1rem, 3vw, 1.3rem);
+      color: var(--study-text-secondary);
+      margin-bottom: 8px;
+      font-weight: 400;
+  }
+
+  .study-header-main .update-date {
+      font-family: var(--font-primary-study);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      color: var(--study-text-secondary);
+      font-style: italic;
+  }
+
+  .study-content-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+  }
+
+  .study-info-block {
+      background-color: var(--study-card-bg);
+      border: 1px solid var(--study-border-color);
+      border-radius: 15px;
+      padding: 30px 35px;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .study-info-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .study-info-block .section-title-study {
+      font-family: var(--font-secondary-study);
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      color: var(--study-accent-gold);
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--study-accent-gold);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+  }
+
+  .study-info-block p,
+  .study-info-block li {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--study-text-primary);
+      margin-bottom: 18px;
+  }
+
+  .study-info-block strong {
+      /* For labels like "اللغة الرسمية:" */
+      color: var(--study-accent-gold);
+      font-weight: 600;
+      margin-inline-end: 0.5em;
+  }
+
+  .study-info-block ul {
+      list-style: disc;
+      padding-inline-start: 25px;
+      /* Standard padding for lists */
+      margin-top: 15px;
+  }
+
+  .study-info-block ul li {
+      margin-bottom: 12px;
+  }
+
+  .study-info-block a {
+      color: var(--study-accent-gold);
+      text-decoration: none;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  .study-info-block a:hover {
+      color: var(--study-hover-border-color);
+      text-decoration: underline;
+  }
+
+ 
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .study-header-main {
+          padding: 50px 15px 30px;
+      }
+
+      .study-header-main .page-main-title {
+          font-size: clamp(2rem, 7vw, 2.8rem);
+      }
+
+      .study-content-container {
+          margin: 30px auto;
+          padding: 0 15px;
+      }
+
+      .study-info-block {
+          padding: 25px 20px;
+      }
+
+      .study-info-block .section-title-study {
+          font-size: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      .study-info-block p,
+      .study-info-block li {
+          font-size: 1rem;
+          line-height: 1.8;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .study-header-main .page-main-title {
+          font-size: clamp(1.8rem, 8vw, 2.4rem);
+      }
+
+      .study-info-block p,
+      .study-info-block li {
+          font-size: 0.95rem;
+      }
+  }

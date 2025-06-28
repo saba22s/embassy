@@ -1,0 +1,151 @@
+  :root {
+      --services-bg: #0e0e0e;
+      /* نفس خلفية الموقع الرئيسية */
+      --services-card-bg: rgba(30, 30, 30, 0.8);
+      /* خلفية البطاقات مع شفافية طفيفة */
+      --services-border: rgba(255, 255, 255, 0.15);
+      --services-accent-gold: #c4ac6e;
+      /* لون ذهبي من style.css */
+      --services-text-primary: #dddcdc;
+      --services-text-secondary: #b0b8c4;
+      --font-primary-services: 'Segoe UI', Tahoma, sans-serif;
+      --font-secondary-services: 'Amiri', serif;
+  }
+
+  .services-page-wrapper {
+      background-color: var(--services-bg);
+      color: var(--services-text-primary);
+      font-family: var(--font-primary-services);
+      padding-bottom: 60px;
+      /* لإعطاء مساحة للفوتر */
+  }
+
+  .services-header-hero {
+      background: linear-gradient(rgba(14, 14, 14, 0.85), rgba(14, 14, 14, 0.95)), url('images/embassy-bg-pattern.png');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--services-border);
+      margin-bottom: 40px;
+  }
+
+  .services-header-hero .main-title-services {
+      font-family: var(--font-secondary-services);
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      color: var(--services-accent-gold);
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .services-header-hero .intro-text-services {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--services-text-primary);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      opacity: 0.9;
+      /* text-align is center by default from .services-header-hero */
+  }
+
+  .services-content-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  .service-category-card {
+      background: var(--services-card-bg);
+      border: 1px solid var(--services-border);
+      border-radius: 16px;
+      margin-bottom: 30px;
+      padding: 30px 35px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .service-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .service-category-card .category-title-main {
+      font-family: var(--font-secondary-services);
+      font-size: clamp(1.8rem, 4vw, 2.3rem);
+      color: var(--services-accent-gold);
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--services-accent-gold);
+      font-weight: 600;
+  }
+
+  /* محاذاة عنوان فئة الخدمة بناءً على فئة body */
+  body.rtl .service-category-card .category-title-main {
+      text-align: right;
+  }
+
+  body.ltr .service-category-card .category-title-main {
+      text-align: left;
+  }
+
+  .services-list {
+      list-style: none;
+      padding: 0;
+  }
+
+  .services-list li {
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      color: var(--services-text-primary);
+      line-height: 1.8;
+      margin-bottom: 15px;
+      padding-inline-start: 25px;
+      position: relative;
+  }
+
+  /* محاذاة عناصر قائمة الخدمات بناءً على فئة body */
+  body.rtl .services-list li {
+      text-align: right;
+  }
+
+  body.ltr .services-list li {
+      text-align: left;
+  }
+
+  .services-list li::before {
+      content: "◆";
+      color: var(--services-accent-gold);
+      position: absolute;
+      inset-inline-start: 0;
+      top: 2px;
+      /* Adjust for vertical alignment if needed */
+      font-size: 0.9em;
+  }
+
+  @media (max-width: 768px) {
+      .services-header-hero {
+          padding: 60px 15px;
+      }
+
+      .services-header-hero .main-title-services {
+          font-size: clamp(2rem, 7vw, 2.8rem);
+      }
+
+      .services-header-hero .intro-text-services {
+          font-size: clamp(0.9rem, 3vw, 1.1rem);
+      }
+
+      .service-category-card {
+          padding: 25px 20px;
+      }
+
+      .service-category-card .category-title-main {
+          font-size: clamp(1.6rem, 5vw, 2rem);
+      }
+
+      .services-list li {
+          font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+      }
+  }

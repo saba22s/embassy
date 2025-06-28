@@ -1,0 +1,337 @@
+ :root {
+     --political-bg: #0A0B0D;
+     --political-card-bg: #121418;
+     --political-border: rgba(200, 176, 138, 0.2);
+     --political-text-primary: #E8EAED;
+     --political-text-secondary: #A2A8B1;
+     --political-accent-gold: #c8b08a;
+     --political-accent-gold-rgb: 200, 176, 138;
+     --font-heading-political: 'Cairo', sans-serif;
+     --font-subheading-political: 'Amiri', serif;
+     --font-body-political: 'Readex Pro', sans-serif;
+ }
+
+ .political-relations-page-wrapper {
+     background-color: var(--political-bg);
+     color: var(--political-text-primary);
+     font-family: var(--font-body-political);
+     overflow-x: hidden;
+     padding-bottom: 60px;
+ }
+
+ /* --- Hero Section --- */
+ .political-hero-section {
+     min-height: 65vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 80px 20px;
+     background:
+         linear-gradient(rgba(10, 11, 13, 0.8), rgba(10, 11, 13, 1)),
+         url('images/pal-turkey-flags.jpg') no-repeat center center/cover;
+     border-bottom: 1px solid var(--political-border);
+ }
+
+ .political-hero-content {
+     max-width: 950px;
+     animation: fadeInFromBottom 1.2s ease-out forwards;
+ }
+
+ .political-hero-title {
+     font-family: var(--font-heading-political);
+     font-size: clamp(2.5rem, 6vw, 4.2rem);
+     font-weight: 700;
+     color: #fff;
+     margin-bottom: 20px;
+     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+     line-height: 1.3;
+ }
+
+ .political-hero-subtitle {
+     font-family: var(--font-subheading-political);
+     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+     color: var(--political-text-secondary);
+     line-height: 1.8;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ /* --- Foundations Section --- */
+ .foundations-section {
+     padding: 70px 20px;
+     background-color: var(--political-card-bg);
+ }
+
+ .section-title-center {
+     text-align: center;
+     font-family: var(--font-heading-political);
+     font-size: clamp(2rem, 5vw, 2.8rem);
+     color: var(--political-accent-gold);
+     margin-bottom: 50px;
+     font-weight: 600;
+     position: relative;
+ }
+
+ .section-title-center::after {
+     content: '';
+     display: block;
+     width: 70px;
+     height: 3px;
+     background: var(--political-accent-gold);
+     margin: 15px auto 0;
+     border-radius: 2px;
+     opacity: 0.5;
+ }
+
+ .foundations-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 30px;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .foundation-card {
+     background-color: var(--political-bg);
+     padding: 35px;
+     border: 1px solid var(--political-border);
+     border-radius: 12px;
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .foundation-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+ }
+
+ .foundation-card .icon {
+     font-size: 2.8rem;
+     color: var(--political-accent-gold);
+     margin-bottom: 20px;
+ }
+
+ .foundation-card .title {
+     font-family: var(--font-heading-political);
+     font-size: 1.5rem;
+     color: var(--political-text-primary);
+     margin-bottom: 15px;
+ }
+
+ .foundation-card .description {
+     font-size: 1rem;
+     line-height: 1.8;
+     color: var(--political-text-secondary);
+ }
+
+ /* --- Key Moments Section --- */
+ .key-moments-section {
+     padding: 70px 20px;
+ }
+
+ .moment-card {
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     max-width: 1000px;
+     margin: 0 auto 50px auto;
+     background-color: var(--political-card-bg);
+     border-radius: 12px;
+     overflow: hidden;
+     border: 1px solid var(--political-border);
+     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+ }
+
+ .moment-card.rtl {
+     flex-direction: column;
+ }
+
+ .moment-card.ltr {
+     flex-direction: column;
+ }
+
+ /* For potential LTR support */
+
+ .moment-content {
+     padding: 40px;
+ }
+
+ .moment-year {
+     font-family: var(--font-heading-political);
+     font-size: 2rem;
+     color: var(--political-accent-gold);
+     margin-bottom: 10px;
+ }
+
+ .moment-title {
+     font-family: var(--font-subheading-political);
+     font-size: 1.6rem;
+     color: var(--political-text-primary);
+     margin-bottom: 15px;
+ }
+
+ .moment-description {
+     font-size: 1.05rem;
+     line-height: 1.9;
+     color: var(--political-text-secondary);
+     text-align: justify;
+ }
+
+ body.rtl .moment-description {
+     text-align: right;
+ }
+
+ body.ltr .moment-description {
+     text-align: left;
+ }
+
+ /* --- Agreements Section --- */
+ .agreements-section {
+     padding: 70px 20px;
+     background-color: var(--political-card-bg);
+ }
+
+ .agreements-container {
+     max-width: 900px;
+     margin: 0 auto;
+ }
+
+ .accordion-item {
+     border-bottom: 1px solid var(--political-border);
+ }
+
+ .accordion-button {
+     background: none;
+     border: none;
+     width: 100%;
+     text-align: right;
+     padding: 20px 0;
+     font-family: var(--font-subheading-political);
+     font-size: 1.3rem;
+     color: var(--political-text-primary);
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: color 0.3s ease;
+ }
+
+ body.ltr .accordion-button {
+     text-align: left;
+ }
+
+ .accordion-button:hover,
+ .accordion-button.active {
+     color: var(--political-accent-gold);
+ }
+
+ .accordion-icon {
+     font-family: monospace;
+     font-size: 1.5rem;
+     transition: transform 0.3s ease;
+ }
+
+ .accordion-button.active .accordion-icon {
+     transform: rotate(45deg);
+ }
+
+ .accordion-content {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.5s ease-out;
+ }
+
+ .accordion-content-inner {
+     padding: 0px 10px 25px 10px;
+ }
+
+ .accordion-content-inner ul {
+     list-style-type: none;
+     padding: 0;
+ }
+
+ .accordion-content-inner li {
+     padding: 10px;
+     color: var(--political-text-secondary);
+     font-size: 1rem;
+     line-height: 1.8;
+     border-bottom: 1px dashed rgba(var(--political-accent-gold-rgb), 0.1);
+ }
+
+ .accordion-content-inner li:last-child {
+     border-bottom: none;
+ }
+
+ /* --- Final Section --- */
+ .final-section {
+     padding: 70px 20px;
+ }
+
+ .final-section-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 40px;
+     max-width: 1200px;
+     margin: 0 auto;
+     align-items: start;
+ }
+
+ .final-card h3 {
+     font-family: var(--font-heading-political);
+     font-size: 1.8rem;
+     color: var(--political-accent-gold);
+     margin-bottom: 20px;
+     border-bottom: 2px solid var(--political-border);
+     padding-bottom: 10px;
+ }
+
+ .final-card p {
+     color: var(--political-text-secondary);
+     line-height: 1.9;
+ }
+
+ /* General Animation */
+ @keyframes fadeInFromBottom {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .animate-on-scroll {
+     opacity: 0;
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+     transform: translateY(40px);
+ }
+
+ .animate-on-scroll.is-visible {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ /* Responsive */
+ @media (max-width: 900px) {
+     .final-section-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .moment-card {
+         flex-direction: column;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .foundations-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .moment-content {
+         padding: 30px;
+     }
+ }

@@ -1,0 +1,235 @@
+  :root {
+      --uni-bg: #0c0c0f;
+      --uni-text-primary: #e8eaed;
+      --uni-text-secondary: #b0b8c4;
+      --uni-accent-gold: #c4ac6e;
+      --uni-card-bg: #121418;
+      --uni-border-color: rgba(196, 172, 110, 0.2);
+      --uni-hover-border-color: rgba(196, 172, 110, 0.5);
+      --font-primary-uni: 'Segoe UI', Tahoma, sans-serif;
+      --font-secondary-uni: 'Amiri', serif;
+  }
+
+  .universities-page-wrapper {
+      background-color: var(--uni-bg);
+      color: var(--uni-text-primary);
+      font-family: var(--font-primary-uni);
+      padding: 0;
+      text-align: center;
+      /* Global text centering */
+      padding-bottom: 60px;
+      /* Added padding to create space for the footer */
+  }
+
+  .universities-header-main {
+      padding: 60px 20px 40px;
+      /* Increased top/bottom padding */
+      background: linear-gradient(145deg, #151515 0%, #0b0b0b 40%, #141414 100%);
+      text-align: center;
+      border-bottom: 1px solid var(--uni-border-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+  }
+
+  .universities-header-main .page-main-title {
+      font-family: var(--font-secondary-uni);
+      font-size: clamp(2.2rem, 5.5vw, 3rem);
+      /* Slightly larger and more responsive */
+      color: var(--uni-accent-gold);
+      margin-bottom: 12px;
+      /* Adjusted margin */
+      font-weight: 700;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      /* Refined shadow */
+  }
+
+  .universities-header-main .page-subtitle {
+      font-family: var(--font-primary-uni);
+      font-size: clamp(1rem, 2.8vw, 1.2rem);
+      /* Slightly larger */
+      color: var(--uni-text-secondary);
+      margin-bottom: 0;
+      font-weight: 400;
+      /* Explicit weight */
+  }
+
+  .universities-content-container {
+      max-width: 900px;
+      /* Narrower for better readability of centered lists */
+      margin: 40px auto;
+      /* Increased top/bottom margin */
+      padding: 0 20px;
+      /* Horizontal padding */
+  }
+
+  .university-section {
+      background-color: var(--uni-card-bg);
+      border: 1px solid var(--uni-border-color);
+      border-radius: 18px;
+      /* Slightly more rounded */
+      padding: 35px 25px;
+      /* Adjusted padding */
+      margin-bottom: 40px;
+      /* Increased margin */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      /* Softer shadow */
+      text-align: center;
+      /* Ensure section content aims for center */
+  }
+
+  .university-section .section-title-uni {
+      font-family: var(--font-secondary-uni);
+      font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+      /* Adjusted size */
+      color: var(--uni-accent-gold);
+      margin: 0 auto 30px auto;
+      /* Center the title block and provide margin */
+      padding-bottom: 15px;
+      /* Increased padding */
+      border-bottom: 1.5px solid var(--uni-border-color);
+      /* Slightly thicker border */
+      text-align: center;
+      display: inline-block;
+      /* To make margin auto work for centering */
+  }
+
+  .university-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      /* Center the list itself */
+      max-width: 700px;
+      /* Constrain width for centered text readability */
+      text-align: center;
+      /* Center the text within list items */
+      /* Removed column-count */
+  }
+
+  .university-list li {
+      padding: 12px 5px;
+      /* Increased padding */
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      /* Slightly larger base font */
+      color: var(--uni-text-primary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      /* Subtler border */
+      line-height: 1.7;
+      /* Improved line height */
+      text-align: center;
+      /* Ensure text inside li is centered */
+  }
+
+  .university-list li:last-child {
+      border-bottom: none;
+  }
+
+  .university-list li .uni-name-main {
+      display: block;
+      /* Ensure it takes full width for centering */
+      font-weight: 600;
+      /* Bolder main name */
+      color: var(--uni-text-primary);
+  }
+
+  .university-list li .uni-name-alt {
+      display: block;
+      /* Ensure it takes full width for centering */
+      font-size: 0.9em;
+      /* Slightly smaller */
+      color: var(--uni-text-secondary);
+      margin-top: 4px;
+      /* Space between main and alt name */
+      /* Removed padding-inline-start for centered text */
+  }
+
+
+  .universities-notes-section {
+      margin-top: 30px;
+      /* Increased margin */
+      padding: 30px 25px;
+      /* Adjusted padding */
+      background-color: var(--uni-card-bg);
+      border: 1px solid var(--uni-border-color);
+      border-radius: 18px;
+      text-align: center;
+      /* Center the content of notes */
+  }
+
+  .universities-notes-section p {
+      font-size: clamp(0.9rem, 2.2vw, 1rem);
+      /* Adjusted size */
+      color: var(--uni-text-secondary);
+      line-height: 1.8;
+      /* Improved line height */
+      margin-bottom: 18px;
+      /* Increased margin */
+      text-align: center;
+  }
+
+  .universities-notes-section p:last-child {
+      margin-bottom: 0;
+  }
+
+  .universities-notes-section strong {
+      color: var(--uni-accent-gold);
+      font-weight: 600;
+      /* Bolder */
+      /* display: block; -- REMOVED -- */
+      /* margin-bottom: 5px; -- REMOVED -- */
+      margin-inline-end: 0.5em;
+      /* لإضافة مسافة طفيفة بعد العنوان/التسمية */
+  }
+
+  .universities-notes-section a {
+      color: var(--uni-accent-gold);
+      text-decoration: none;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+      word-break: break-all;
+      /* Break long links */
+  }
+
+  .universities-notes-section a:hover {
+      color: var(--uni-hover-border-color);
+      text-decoration: underline;
+  }
+
+  /* RTL adjustments - mostly handled by text-align: center now */
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .universities-header-main .page-main-title {
+          font-size: clamp(2rem, 6.5vw, 2.5rem);
+      }
+
+      .university-section .section-title-uni {
+          font-size: clamp(1.6rem, 5.5vw, 2rem);
+      }
+
+      .universities-content-container {
+          max-width: 95%;
+          /* Allow more width on smaller screens */
+      }
+
+      .university-list {
+          max-width: 100%;
+          /* List can take more space */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .universities-content-container {
+          padding: 0 10px;
+      }
+
+      .university-section {
+          padding: 25px 15px;
+      }
+
+      .universities-header-main {
+          padding: 50px 15px 30px;
+      }
+
+      .universities-notes-section {
+          padding: 25px 15px;
+      }
+  }

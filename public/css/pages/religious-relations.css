@@ -1,0 +1,462 @@
+ :root {
+     --rr-bg: #0A0B0D;
+     /* خلفية داكنة جداً وأنيقة */
+     --rr-text-primary: #E8EAED;
+     /* لون نص أساسي ناصع */
+     --rr-text-secondary: #A2A8B1;
+     /* لون نص ثانوي/للتسميات */
+     --rr-accent-gold: #c8b08a;
+     /* لون ذهبي معتق للتمييز */
+     --rr-accent-gold-rgb: 200, 176, 138;
+     --rr-card-bg: #121418;
+     /* خلفية البطاقات أغمق قليلاً */
+     --rr-border-color: rgba(var(--rr-accent-gold-rgb), 0.2);
+     --rr-font-primary: 'Segoe UI', Tahoma, sans-serif;
+     --rr-font-secondary: 'Amiri', serif;
+ }
+
+ .rr-page-wrapper {
+     background-color: var(--rr-bg);
+     color: var(--rr-text-primary);
+     font-family: var(--rr-font-primary);
+     overflow-x: hidden;
+ }
+
+ /* Hero Section Styling */
+ .rr-hero-section {
+     height: 70vh;
+     min-height: 400px;
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/placeholder_religious_hero.jpg') center center/cover no-repeat;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 20px;
+     color: #fff;
+     position: relative;
+ }
+
+ .rr-hero-section::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     background: linear-gradient(to top, var(--rr-bg), transparent);
+ }
+
+ .rr-hero-title {
+     font-family: var(--rr-font-secondary);
+     font-size: clamp(2.5rem, 6vw, 4.5rem);
+     font-weight: 700;
+     color: #fff;
+     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+     margin-bottom: 15px;
+     animation: fadeInDown 1s ease-out;
+ }
+
+ .rr-hero-subtitle {
+     font-size: clamp(1rem, 2.5vw, 1.5rem);
+     color: var(--rr-text-primary);
+     max-width: 700px;
+     line-height: 1.7;
+     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+     animation: fadeInUp 1s ease-out 0.5s;
+     animation-fill-mode: backwards;
+     /* Keeps element hidden until animation starts */
+ }
+
+ /* Content Sections General Styling */
+ .rr-content-section {
+     padding: 60px 20px;
+     max-width: 950px;
+     margin: 0 auto;
+ }
+
+ .rr-section-title {
+     font-family: var(--rr-font-secondary);
+     font-size: clamp(2rem, 5vw, 2.8rem);
+     color: var(--rr-accent-gold);
+     text-align: center;
+     margin-bottom: 40px;
+     position: relative;
+     padding-bottom: 15px;
+ }
+
+ .rr-section-title::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 70px;
+     height: 3px;
+     background-color: var(--rr-accent-gold);
+     border-radius: 2px;
+ }
+
+ /* Text Content Styling */
+ .rr-text-content {
+     background-color: var(--rr-card-bg);
+     padding: 30px 35px;
+     border-radius: 12px;
+     border: 1px solid var(--rr-border-color);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+     margin-bottom: 40px;
+ }
+
+ .rr-text-content p {
+     font-size: clamp(1rem, 2.5vw, 1.1rem);
+     line-height: 1.9;
+     color: var(--rr-text-primary);
+     margin-bottom: 1.5em;
+     text-align: justify;
+ }
+
+ .rr-text-content p:last-child {
+     margin-bottom: 0;
+ }
+
+ /* Timeline Section */
+ .rr-timeline-section {
+     position: relative;
+     padding: 40px 0;
+ }
+
+ .rr-timeline {
+     position: relative;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ .rr-timeline::after {
+     /* The central line */
+     content: '';
+     position: absolute;
+     width: 4px;
+     background-color: var(--rr-border-color);
+     top: 0;
+     bottom: 0;
+     left: 50%;
+     margin-left: -2px;
+ }
+
+ body.rtl .rr-timeline::after {
+     left: auto;
+     right: 50%;
+     margin-left: 0;
+     margin-right: -2px;
+ }
+
+ .rr-timeline-item {
+     padding: 10px 40px;
+     position: relative;
+     background-color: inherit;
+     width: 50%;
+     margin-bottom: 30px;
+ }
+
+ /* The circles on the timeline */
+ .rr-timeline-item::after {
+     content: '';
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     right: -10px;
+     background-color: var(--rr-accent-gold);
+     border: 3px solid var(--rr-card-bg);
+     top: 15px;
+     border-radius: 50%;
+     z-index: 1;
+     box-shadow: 0 0 10px rgba(var(--rr-accent-gold-rgb), 0.5);
+ }
+
+ body.rtl .rr-timeline-item::after {
+     right: auto;
+     left: -10px;
+ }
+
+
+ /* Place the container to the left */
+ .rr-timeline-item.left {
+     left: 0;
+ }
+
+ body.rtl .rr-timeline-item.left {
+     left: auto;
+     right: 0;
+ }
+
+
+ /* Place the container to the right */
+ .rr-timeline-item.right {
+     left: 50%;
+ }
+
+ body.rtl .rr-timeline-item.right {
+     left: auto;
+     right: 50%;
+ }
+
+
+ /* Fix the circle for containers on the right side */
+ .rr-timeline-item.right::after {
+     left: -10px;
+ }
+
+ body.rtl .rr-timeline-item.right::after {
+     left: auto;
+     right: -10px;
+ }
+
+ .rr-timeline-content {
+     padding: 20px;
+     background-color: var(--rr-card-bg);
+     position: relative;
+     border-radius: 8px;
+     border: 1px solid var(--rr-border-color);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+ }
+
+ .rr-timeline-content h3 {
+     font-family: var(--rr-font-secondary);
+     color: var(--rr-accent-gold);
+     margin-top: 0;
+     margin-bottom: 10px;
+     font-size: 1.4rem;
+ }
+
+ .rr-timeline-content p {
+     font-size: 0.95rem;
+     line-height: 1.7;
+     color: var(--rr-text-secondary);
+     margin-bottom: 0;
+ }
+
+ .rr-timeline-year {
+     font-size: 1rem;
+     font-weight: bold;
+     color: var(--rr-accent-gold);
+     display: block;
+     margin-bottom: 8px;
+ }
+
+ /* Gallery Section: Using a simple grid for now, can be enhanced with JS later */
+ .rr-gallery-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 20px;
+ }
+
+ .rr-gallery-item {
+     overflow: hidden;
+     border-radius: 8px;
+     border: 1px solid var(--rr-border-color);
+     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+     aspect-ratio: 4 / 3;
+ }
+
+ .rr-gallery-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.4s ease, filter 0.3s ease;
+ }
+
+ .rr-gallery-item:hover img {
+     transform: scale(1.1);
+     filter: brightness(0.8);
+ }
+
+
+ /* Jerusalem Focus Section */
+ .rr-jerusalem-focus-section {
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/placeholder_jerusalem_bg.jpg') center center/cover fixed;
+     padding: 80px 20px;
+     color: #fff;
+     text-align: center;
+ }
+
+ .rr-jerusalem-focus-section .rr-section-title {
+     color: #fff;
+     /* Override gold for better contrast on image */
+     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+ }
+
+ .rr-jerusalem-focus-section .rr-section-title::after {
+     background-color: #fff;
+ }
+
+ .rr-jerusalem-focus-quote {
+     font-family: var(--rr-font-secondary);
+     font-size: clamp(1.2rem, 3vw, 1.8rem);
+     font-style: italic;
+     margin: 30px auto;
+     max-width: 700px;
+     line-height: 1.8;
+     position: relative;
+     padding: 0 20px;
+ }
+
+ .rr-jerusalem-focus-quote::before,
+ .rr-jerusalem-focus-quote::after {
+     content: '"';
+     font-size: 3rem;
+     color: var(--rr-accent-gold);
+     opacity: 0.6;
+     position: absolute;
+ }
+
+ .rr-jerusalem-focus-quote::before {
+     top: -10px;
+     left: -5px;
+ }
+
+ .rr-jerusalem-focus-quote::after {
+     bottom: -25px;
+     right: -5px;
+ }
+
+ body.rtl .rr-jerusalem-focus-quote::before {
+     left: auto;
+     right: -5px;
+ }
+
+ body.rtl .rr-jerusalem-focus-quote::after {
+     right: auto;
+     left: -5px;
+ }
+
+
+ .rr-jerusalem-focus-text {
+     font-size: clamp(1rem, 2.5vw, 1.15rem);
+     max-width: 800px;
+     margin: 20px auto 0;
+     line-height: 1.9;
+     color: var(--rr-text-primary);
+ }
+
+
+ /* Animations */
+ @keyframes fadeInDown {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .rr-animate-on-scroll {
+     opacity: 0;
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+
+ .rr-animate-on-scroll.is-visible {
+     opacity: 1;
+     transform: translateY(0) !important;
+ }
+
+ .rr-animate-on-scroll.fade-in-up {
+     transform: translateY(30px);
+ }
+
+ .rr-animate-on-scroll.fade-in-left {
+     transform: translateX(-30px);
+ }
+
+ body.rtl .rr-animate-on-scroll.fade-in-left {
+     transform: translateX(30px);
+ }
+
+ .rr-animate-on-scroll.fade-in-right {
+     transform: translateX(30px);
+ }
+
+ body.rtl .rr-animate-on-scroll.fade-in-right {
+     transform: translateX(-30px);
+ }
+
+
+ /* Responsive adjustments for timeline */
+ @media screen and (max-width: 768px) {
+     .rr-hero-section {
+         height: 60vh;
+     }
+
+     .rr-timeline::after {
+         left: 10px;
+     }
+
+     /* Central line to the far left */
+     body.rtl .rr-timeline::after {
+         left: auto;
+         right: 10px;
+     }
+
+     .rr-timeline-item {
+         width: 100%;
+         padding-left: 50px;
+         /* Space for icon and line */
+         padding-right: 15px;
+         margin-bottom: 40px;
+     }
+
+     body.rtl .rr-timeline-item {
+         padding-left: 15px;
+         padding-right: 50px;
+     }
+
+     .rr-timeline-item.left,
+     .rr-timeline-item.right {
+         left: 0%;
+     }
+
+     body.rtl .rr-timeline-item.left,
+     body.rtl .rr-timeline-item.right {
+         left: auto;
+         right: 0%;
+     }
+
+     .rr-timeline-item::after {
+         /* Adjust icon position */
+         left: 0px;
+     }
+
+     body.rtl .rr-timeline-item::after {
+         left: auto;
+         right: 0px;
+     }
+
+     .rr-timeline-item.right::after {
+         left: 0px;
+     }
+
+     /* Same for right on mobile */
+     body.rtl .rr-timeline-item.right::after {
+         left: auto;
+         right: 0px;
+     }
+
+     .rr-jerusalem-focus-quote::before,
+     .rr-jerusalem-focus-quote::after {
+         font-size: 2.5rem;
+     }
+ }

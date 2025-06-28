@@ -1,0 +1,148 @@
+  :root {
+      --guide-bg: #0c0c0f;
+      --guide-text-primary: #e8eaed;
+      --guide-text-secondary: #b0b8c4;
+      --guide-accent-gold: #c4ac6e;
+      --guide-card-bg: #121418;
+      --guide-border-color: rgba(196, 172, 110, 0.2);
+      --guide-hover-border-color: rgba(196, 172, 110, 0.5);
+      --font-primary-guide: 'Segoe UI', Tahoma, sans-serif;
+      --font-secondary-guide: 'Amiri', serif;
+  }
+
+  .student-guide-page-wrapper {
+      background-color: var(--guide-bg);
+      color: var(--guide-text-primary);
+      font-family: var(--font-primary-guide);
+      padding-bottom: 60px;
+      /* Space for footer */
+      overflow-x: hidden;
+  }
+
+  .student-guide-header-main {
+      padding: 70px 20px 50px;
+      background: linear-gradient(155deg, rgba(22, 22, 25, 0.95) 0%, rgba(12, 12, 15, 0.98) 100%), url('images/embassy-bg-pattern.png') center center/cover no-repeat;
+      text-align: center;
+      border-bottom: 1px solid var(--guide-border-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .student-guide-header-main .page-main-title {
+      font-family: var(--font-secondary-guide);
+      font-size: clamp(2.2rem, 5.5vw, 3rem);
+      color: var(--guide-accent-gold);
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  .student-guide-content-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+  }
+
+  .sg-section {
+      background-color: var(--guide-card-bg);
+      border: 1px solid var(--guide-border-color);
+      border-radius: 15px;
+      padding: 30px 35px;
+      margin-bottom: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .sg-section .sg-section-title {
+      font-family: var(--font-secondary-guide);
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      color: var(--guide-accent-gold);
+      margin-bottom: 25px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--guide-accent-gold);
+      font-weight: 700;
+  }
+
+  .qa-block {
+      margin-bottom: 25px;
+  }
+
+  .qa-block .sg-question {
+      font-family: var(--font-secondary-guide);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      color: var(--guide-accent-gold);
+      margin-bottom: 10px;
+      font-weight: 600;
+      line-height: 1.6;
+  }
+
+  .qa-block .sg-answer,
+  .qa-block .sg-answer-intro {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--guide-text-primary);
+      margin-bottom: 10px;
+      text-align: justify;
+  }
+
+  .qa-block .sg-answer-list {
+      list-style: disc;
+      padding-inline-start: 25px;
+      margin-top: 10px;
+      color: var(--guide-text-primary);
+  }
+
+  .qa-block .sg-answer-list li {
+      margin-bottom: 10px;
+      line-height: 1.8;
+      text-align: justify;
+  }
+
+  .qa-block .sg-answer a,
+  .qa-block .sg-answer-list li a {
+      color: var(--guide-accent-gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .qa-block .sg-answer a:hover,
+  .qa-block .sg-answer-list li a:hover {
+      color: var(--guide-hover-border-color);
+      text-decoration: underline;
+  }
+
+  /* RTL adjustments */
+  body.rtl .student-guide-page-wrapper .sg-section .sg-section-title,
+  body.rtl .student-guide-page-wrapper .qa-block .sg-question {
+      text-align: right;
+  }
+
+  @media (max-width: 768px) {
+      .student-guide-header-main {
+          padding: 50px 15px 30px;
+      }
+
+      .student-guide-header-main .page-main-title {
+          font-size: clamp(2rem, 6.5vw, 2.6rem);
+      }
+
+      .student-guide-content-container {
+          margin: 30px auto;
+          padding: 0 15px;
+      }
+
+      .sg-section {
+          padding: 25px 20px;
+      }
+
+      .sg-section .sg-section-title {
+          font-size: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      .qa-block .sg-question {
+          font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+      }
+
+      .qa-block .sg-answer,
+      .qa-block .sg-answer-list li {
+          font-size: 1rem;
+      }
+  }
