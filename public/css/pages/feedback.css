@@ -1,0 +1,198 @@
+    :root {
+            --feedback-bg: #0c0c0f;
+            --feedback-text-primary: #e8eaed;
+            --feedback-text-secondary: #b0b8c4;
+            --feedback-accent-gold: #c4ac6e;
+            --feedback-card-bg: #121418;
+            --feedback-border-color: rgba(196, 172, 110, 0.2);
+            --feedback-hover-accent: #dcb87e;
+            --font-primary-feedback: 'Segoe UI', Tahoma, sans-serif;
+            --font-secondary-feedback: 'Amiri', serif;
+            --feedback-accent-gold-rgb: 196, 172, 110;
+        }
+
+        .feedback-page-wrapper {
+            background-color: var(--feedback-bg);
+            color: var(--feedback-text-primary);
+            font-family: var(--font-primary-feedback);
+            padding-bottom: 60px; /* Space for footer */
+            overflow-x: hidden;
+        }
+
+        .feedback-header-main {
+            padding: 70px 20px 50px;
+            background: linear-gradient(155deg, rgba(22, 22, 25, 0.95) 0%, rgba(12, 12, 15, 0.98) 100%), url('../images/embassy-bg-pattern.png') center center/cover no-repeat; /* هذا المسار صحيح */
+            text-align: center;
+            border-bottom: 1px solid var(--feedback-border-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-header-main .page-main-title-feedback {
+            font-family: var(--font-secondary-feedback);
+            font-size: clamp(2.4rem, 6vw, 3.2rem);
+            color: var(--feedback-accent-gold);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+        }
+
+        .feedback-header-main .page-subtitle-feedback {
+            font-family: var(--font-primary-feedback);
+            font-size: clamp(1rem, 2.8vw, 1.2rem);
+            color: var(--feedback-text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .feedback-content-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .feedback-form-card {
+            background-color: var(--feedback-card-bg);
+            border: 1px solid var(--feedback-border-color);
+            border-radius: 15px;
+            padding: 30px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+
+        .feedback-form-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(var(--feedback-accent-gold-rgb), 0.15);
+        }
+
+        .feedback-form-card .form-group {
+            margin-bottom: 20px;
+            text-align: right; /* Default for RTL */
+        }
+
+        .feedback-form-card .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: var(--feedback-text-primary);
+            font-weight: 600;
+        }
+
+        .feedback-form-card .form-group input[type="text"],
+        .feedback-form-card .form-group input[type="email"],
+        .feedback-form-card .form-group input[type="tel"],
+        .feedback-form-card .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--feedback-border-color);
+            border-radius: 8px;
+            color: var(--feedback-text-primary);
+            font-family: var(--font-primary-feedback);
+            font-size: 1rem;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .feedback-form-card .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .feedback-form-card .form-group input::placeholder,
+        .feedback-form-card .form-group textarea::placeholder {
+            color: var(--feedback-text-secondary);
+            opacity: 0.7;
+        }
+
+        .feedback-form-card .form-group input:focus,
+        .feedback-form-card .form-group textarea:focus {
+            outline: none;
+            border-color: var(--feedback-accent-gold);
+            box-shadow: 0 0 0 3px rgba(var(--feedback-accent-gold-rgb), 0.2);
+        }
+
+        .feedback-form-card .error-message {
+            color: #ff6b6b; /* Red color for errors */
+            font-size: 0.85rem;
+            margin-top: 5px;
+            text-align: right; /* Default for RTL */
+        }
+
+        .feedback-submit-button {
+            display: block;
+            width: 100%;
+            padding: 15px 25px;
+            background-color: var(--feedback-accent-gold);
+            color: var(--feedback-bg);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .feedback-submit-button:hover {
+            background-color: var(--feedback-hover-accent);
+            transform: translateY(-2px);
+        }
+
+        .feedback-message-status {
+            text-align: center;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none; /* Hidden by default */
+        }
+
+        .feedback-message-status.success {
+            background-color: rgba(144, 238, 144, 0.2); /* Light green with transparency */
+            color: #90ee90;
+        }
+
+        .feedback-message-status.error {
+            background-color: rgba(255, 99, 71, 0.2); /* Tomato red with transparency */
+            color: #ff6347;
+        }
+
+        /* RTL adjustments */
+        body.ltr .feedback-form-card .form-group,
+        body.ltr .feedback-form-card .error-message {
+            text-align: left;
+        }
+
+
+        @media (max-width: 768px) {
+            .feedback-header-main {
+                padding: 50px 15px 30px;
+            }
+            .feedback-header-main .page-main-title-feedback {
+                font-size: clamp(2rem, 7vw, 2.8rem);
+            }
+            .feedback-content-container {
+                margin: 30px auto;
+                padding: 0 15px;
+            }
+            .feedback-form-card {
+                padding: 25px 20px;
+            }
+            .feedback-form-card .form-group label,
+            .feedback-form-card .form-group input,
+            .feedback-form-card .form-group textarea {
+                font-size: 0.95rem;
+            }
+            .feedback-submit-button {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feedback-header-main .page-main-title-feedback {
+                font-size: clamp(1.8rem, 8vw, 2.4rem);
+            }
+            .feedback-form-card .form-group textarea {
+                min-height: 100px;
+            }
+        }
