@@ -1,0 +1,103 @@
+{
+  "header": {
+    "logo_alt": "Embassy Logo",
+    "navigation": {
+      "home": "Home",
+      "news": "News",
+      "embassy": "Embassy",
+      "embassy_about": "About the Embassy",
+      "embassy_ambassador": "Ambassador",
+      "embassy_former": "Former Ambassadors",
+      "education": "Educational Affairs",
+      "edu_universities": "Universities in Turkey",
+      "edu_study": "Study in Turkey",
+      "edu_guide": "New Student Guide",
+      "consular": "Consular Affairs",
+      "cons_passports": "Passports",
+      "cons_forms": "Forms",
+      "cons_services": "Embassy Services",
+      "cons_guide": "Citizen's Consular Services Guide",
+      "relations": "Palestinian-Turkish Relations",
+      "rel_pal": "Palestine",
+      "rel_tur": "Turkey",
+      "rel_rel": "Religious Relations",
+      "rel_his": "Historical Relations",
+      "rel_cul": "Cultural Relations",
+      "rel_pol": "Political Relations",
+      "rel_eco": "Economic Relations",
+      "misc": "Miscellaneous",
+      "misc_events": "Events & Activities",
+      "misc_feedback": "Suggestions & Complaints",
+      "misc_links": "Important Links",
+      "misc_media": "Media",
+      "passport": "Passport Inquiry",
+      "contact": "Contact"
+    },
+    "language_switcher": {
+      "button_text": "🌐 English",
+      "arabic": "العربية",
+      "english": "English",
+      "turkish": "Türkçe"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "About the Embassy",
+      "text": "The Embassy of the State of Palestine in Turkey was established to serve the Palestinian people currently residing in Turkey, as well as to promote Palestinian culture and heritage across Turkish cities and to present an image of Palestinian society and its traditions."
+    },
+    "important_links": {
+      "title": "Important Links",
+      "foreign_ministry": "Ministry of Foreign Affairs",
+      "interior_ministry": "Ministry of Interior",
+      "consulate_istanbul": "Consulate General in Istanbul"
+    },
+    "contact": {
+      "title": "Contact",
+      "location": "Kılıç Ali Caddesi No:5, Diplomatik Site, 06450 Or-an Ankara",
+      "phone": "Phone: +90 312 490 35 46",
+      "fax": "Fax: +90 312 490 40 77",
+      "email": "Email: tremb@mfae.gov.ps"
+    },
+    "social_media": {
+      "facebook_aria": "Facebook",
+      "twitter_aria": "Twitter",
+      "instagram_aria": "Instagram",
+      "linkedin_aria": "LinkedIn",
+      "youtube_aria": "YouTube"
+    },
+    "copyright": "2025 © Embassy of the State of Palestine"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "close": "Close",
+    "open": "Open",
+    "read_more": "Read more",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "download": "Download",
+    "view": "View",
+    "share": "Share",
+    "print": "Print",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "date": "Date",
+    "time": "Time",
+    "name": "Name",
+    "title": "Title",
+    "description": "Description",
+    "required": "Required",
+    "optional": "Optional"
+  }
+}
