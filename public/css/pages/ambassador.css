@@ -1,0 +1,248 @@
+ :root {
+            --ambassador-v3-bg: #0a0b0d; /* خلفية داكنة جداً وأنيقة */
+            --ambassador-v3-text: #e8eaed; /* لون نص أساسي ناصع */
+            --ambassador-v3-text-subtle: #a2a8b1; /* لون نص ثانوي/للتسميات */
+            --ambassador-v3-accent-gold: #c8b08a; /* لون ذهبي معتق للتمييز */
+            --ambassador-v3-accent-gold-rgb: 200, 176, 138; /* RGB للذهبي لاستخدامه في الشفافية */
+            --ambassador-v3-accent-gold-light: #e0c8a0; /* درجة أفتح من الذهبي للتحويم */
+            --ambassador-v3-border: rgba(var(--ambassador-v3-accent-gold-rgb), 0.25); /* لون حدود خافت */
+            --ambassador-v3-card-bg: #121418; /* خلفية البطاقات أغمق قليلاً من الخلفية الرئيسية */
+            --ambassador-v3-card-shadow: 0 12px 35px rgba(0, 0, 0, 0.35); /* ظل واضح للبطاقات */
+            --ambassador-v3-border-radius: 12px; /* دائرية زوايا معتدلة */
+            --font-primary-v3: 'Segoe UI', Tahoma, sans-serif; /* الخط الأساسي للمحتوى */
+            --font-secondary-v3: 'Amiri', serif; /* الخط الثانوي للعناوين الرئيسية والأسماء */
+        }
+
+        .ambassador-page-new-wrapper {
+            background-color: var(--ambassador-v3-bg);
+            color: var(--ambassador-v3-text);
+            font-family: var(--font-primary-v3);
+            padding: 0;
+            overflow-x: hidden; /* منع التمرير الأفقي غير المرغوب فيه */
+        }
+
+        /* --- قسم الهيرو --- */
+        .ambassador-hero-section {
+            background: linear-gradient(160deg, rgba(20, 22, 26, 0.92) 0%, rgba(8, 9, 11, 0.98) 100%), 
+                        url('images/embassy-bg-pattern.png') center center / cover no-repeat; /* يمكنك إضافة نقش خلفية خفي إذا أردت */
+            padding: 70px 20px 50px; /* تعديل الحشو */
+            text-align: center;
+            border-bottom: 1px solid var(--ambassador-v3-border);
+            position: relative;
+            box-shadow: inset 0 4px 12px rgba(0,0,0,0.15); /* ظل داخلي ناعم */
+        }
+
+        .ambassador-hero-image-wrapper {
+            width: 260px; /* تعديل حجم الصورة */
+            height: 260px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 25px; /* تعديل الهامش السفلي */
+            border: 5px solid var(--ambassador-v3-accent-gold); /* إطار ذهبي بارز */
+            box-shadow: 0 0 20px rgba(var(--ambassador-v3-accent-gold-rgb), 0.25),
+                        0 0 40px rgba(var(--ambassador-v3-accent-gold-rgb), 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .ambassador-hero-image-wrapper:hover {
+            transform: scale(1.03); /* تأثير تحويم طفيف */
+            box-shadow: 0 0 25px rgba(var(--ambassador-v3-accent-gold-rgb), 0.35),
+                        0 0 50px rgba(var(--ambassador-v3-accent-gold-rgb), 0.2);
+        }
+
+        .ambassador-hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ضمان ملاءمة الصورة بشكل جيد */
+        }
+
+        .ambassador-hero-section .hero-name {
+            font-family: var(--font-secondary-v3);
+            font-size: clamp(2.4rem, 5vw, 3.2rem); /* حجم خط متجاوب للاسم */
+            color: var(--ambassador-v3-text);
+            font-weight: 700;
+            margin-bottom: 10px; /* تقليل الهامش السفلي */
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .ambassador-hero-section .hero-title {
+            font-family: var(--font-primary-v3);
+            font-size: clamp(1.2rem, 2.8vw, 1.4rem); /* حجم خط متجاوب للمنصب */
+            color: var(--ambassador-v3-accent-gold-light);
+            font-weight: 600; /* أقل سمكاً من الاسم */
+            letter-spacing: 0.5px; /* تباعد أحرف طفيف */
+        }
+
+        /* --- حاوية السيرة الذاتية --- */
+        .ambassador-cv-container {
+            max-width: 900px; /* عرض أقصى معتدل */
+            margin: 50px auto; /* تعديل الهوامش */
+            padding: 0 20px;
+        }
+
+        .cv-category-block {
+            background-color: var(--ambassador-v3-card-bg);
+            border: 1px solid var(--ambassador-v3-border);
+            border-radius: var(--ambassador-v3-border-radius);
+            padding: 30px 35px; /* تعديل الحشو الداخلي */
+            margin-bottom: 35px; /* تعديل المسافة بين البطاقات */
+            box-shadow: var(--ambassador-v3-card-shadow);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        
+        .cv-category-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 38px rgba(0,0,0,0.45); /* ظل أعمق عند التحويم */
+        }
+
+        .cv-category-block .category-title {
+            font-family: var(--font-secondary-v3);
+            font-size: clamp(1.5rem, 3.5vw, 1.9rem); /* حجم عنوان القسم */
+            color: var(--ambassador-v3-accent-gold-light);
+            margin-bottom: 25px; /* مسافة أسفل العنوان */
+            padding-bottom: 12px; /* مسافة للخط السفلي */
+            border-bottom: 1.5px solid var(--ambassador-v3-accent-gold); /* خط سفلي أرق */
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            transition: border-color 0.3s ease-out;
+        }
+        .cv-category-block:hover .category-title {
+             border-bottom-color: var(--ambassador-v3-accent-gold-light);
+        }
+
+
+        .cv-category-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cv-category-block li,
+        .cv-category-block .cv-item-paragraph {
+            font-size: 1rem; /* حجم خط المحتوى */
+            line-height: 1.8; /* تباعد أسطر مريح */
+            color: var(--ambassador-v3-text);
+            margin-bottom: 12px; /* مسافة بين العناصر */
+            display: flex;
+            align-items: flex-start;
+            padding: 4px 0; /* حشو رأسي طفيف */
+        }
+        
+        .cv-category-block li:last-child,
+        .cv-category-block .cv-item-paragraph:last-child {
+            margin-bottom: 0;
+        }
+
+        /* علامة النقطة أو الشرطة */
+        .cv-category-block li .item-marker,
+        .cv-category-block .cv-item-paragraph .item-marker {
+            color: var(--ambassador-v3-accent-gold);
+            margin-inline-end: 12px; /* مسافة بعد العلامة */
+            line-height: inherit;
+            flex-shrink: 0; /* منع التقلص */
+            font-weight: bold;
+            padding-top: 1px; /* محاذاة أفضل */
+        }
+        
+        /* نمط للتسميات مثل "تاريخ الميلاد:" */
+        .cv-category-block .item-label {
+            font-weight: 600; /* تسمية أثقل قليلاً */
+            color: var(--ambassador-v3-text-subtle);
+            margin-inline-end: 6px;
+        }
+
+        .cv-category-block .item-value { /* للنص الفعلي للمعلومة */
+            color: var(--ambassador-v3-text);
+        }
+        
+        /* نمط للسنوات إذا كانت منفصلة */
+        .cv-category-block .item-year {
+            color: var(--ambassador-v3-accent-gold-light);
+            font-weight: 600;
+            margin-inline-start: 8px; /* مسافة قبل السنة */
+            font-size: 0.9em; /* أصغر قليلاً */
+        }
+
+
+        /* --- قسم معرض الصور النهائي --- */
+        .ambassador-final-gallery {
+            padding-top: 40px; /* مسافة قبل المعرض */
+            padding-bottom: 20px; /* مسافة بعد المعرض */
+        }
+
+        .ambassador-final-gallery .gallery-header {
+            font-family: var(--font-secondary-v3);
+            font-size: clamp(1.7rem, 3.8vw, 2rem); /* حجم عنوان المعرض */
+            color: var(--ambassador-v3-accent-gold-light);
+            text-align: center;
+            margin-bottom: 30px; /* مسافة أسفل العنوان */
+            font-weight: 700;
+        }
+
+        .ambassador-final-photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* صور أصغر قليلاً وأكثر مرونة */
+            gap: 18px; /* مسافة بين الصور */
+        }
+
+        .ambassador-final-photos-grid .photo-container {
+            aspect-ratio: 16 / 10; /* نسبة عرض إلى ارتفاع للصور */
+            overflow: hidden;
+            border-radius: var(--ambassador-v3-border-radius);
+            border: 1.5px solid transparent; /* حد شفاف مبدئي */
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .ambassador-final-photos-grid .photo-container:hover {
+            transform: translateY(-4px) scale(1.02); /* تأثير رفع طفيف جداً */
+            box-shadow: 0 10px 22px rgba(var(--ambassador-v3-accent-gold-rgb), 0.2); 
+            border-color: var(--ambassador-v3-accent-gold); /* إطار ذهبي عند التحويم */
+        }
+
+        .ambassador-final-photos-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .ambassador-final-photos-grid .photo-container:hover img {
+            transform: scale(1.08); /* تكبير طفيف للصورة داخل الإطار */
+        }
+        
+        /* --- تجاوبية --- */
+        @media (max-width: 992px) {
+            .ambassador-final-photos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ambassador-hero-image-wrapper { width: 200px; height: 200px; border-width: 4px; }
+            .ambassador-hero-section .hero-name { font-size: clamp(2rem, 6vw, 2.6rem); }
+            .ambassador-hero-section .hero-title { font-size: clamp(1.1rem, 3vw, 1.3rem); }
+            .cv-category-block { padding: 25px 20px; }
+            .cv-category-block .category-title { font-size: clamp(1.4rem, 4vw, 1.7rem); }
+            .ambassador-final-photos-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .ambassador-hero-section { padding: 50px 15px 30px; }
+            .ambassador-hero-image-wrapper { width: 160px; height: 160px; border-width: 3px; }
+            .ambassador-hero-section .hero-name { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+            .ambassador-hero-section .hero-title { font-size: clamp(1rem, 3.5vw, 1.15rem); }
+            .ambassador-cv-container { margin: 30px auto; padding: 0 15px; }
+            .cv-category-block { padding: 20px 15px; margin-bottom: 25px; }
+            .cv-category-block .category-title { font-size: clamp(1.3rem, 5vw, 1.5rem); margin-bottom: 20px; padding-bottom: 10px; }
+            .cv-category-block li, .cv-category-block .cv-item-paragraph { font-size: 0.95rem; line-height: 1.7; margin-bottom: 10px; }
+            .ambassador-final-gallery .gallery-header { font-size: clamp(1.5rem, 4.5vw, 1.8rem); margin-bottom: 25px; }
+            .ambassador-final-photos-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+
+        /* RTL specific adjustments if needed, though logical properties help */
+        .ambassador-page-new-wrapper[dir="rtl"] .cv-category-block .item-label {
+            text-align: right; 
+        }

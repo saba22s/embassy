@@ -1,221 +1,487 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سفارة دولة فلسطين</title>
-    <link rel="stylesheet" href="/public/css/global.css" />
-    <link rel="stylesheet" href="/public/css/components/navigation.css" />
-    <link rel="stylesheet" href="/public/css/components/footer.css" />
-    <link rel="stylesheet" href="/public/css/components/carousel.css" />
-    <link rel="stylesheet" href="/public/css/pages/home.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارة دولة فلسطين في تركيا</title>
+    
+    <!-- CSS Files - Clean separation -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/home.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="سفارة دولة فلسطين في تركيا - خدمات قنصلية، شؤون تعليمية، وعلاقات ثقافية">
+    <meta name="keywords" content="فلسطين، تركيا، سفارة، قنصلية، تعليم، ثقافة">
+    <meta name="author" content="سفارة دولة فلسطين في تركيا">
+    
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="سفارة دولة فلسطين في تركيا">
+    <meta property="og:description" content="الموقع الرسمي لسفارة دولة فلسطين في الجمهورية التركية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://embassy-palestine-turkey.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/images/favicon.png">
 </head>
 
 <body>
-    <div id="header-container">
+    <!-- Header Container - Managed by main.css -->
+    <div id="header-container"></div>
+
+    <!-- Homepage Wrapper - Design isolation -->
+    <div class="homepage-wrapper">
+        <div class="homepage-content-container">
+            
+            <!-- Hero Banner Section -->
+            <section class="hero-banner-section" role="banner" aria-label="القسم التعريفي للسفارة">
+                <img class="hero-flag-display" 
+                     src="/public/images/ps.flag(12).jpg" 
+                     alt="علم فلسطين" 
+                     loading="lazy">
+                <div class="hero-title-container">
+                    <h1 class="hero-main-title" id="siteTitle">سفارة دولة فلسطين في تركيا</h1>
+                </div>
+                <img class="hero-flag-display" 
+                     src="/public/images/tr.flag(12).jpg" 
+                     alt="علم تركيا" 
+                     loading="lazy">
+            </section>
+
+            <!-- Ambassador Spotlight Section -->
+            <section class="ambassador-spotlight-section">
+                <div class="ambassador-portrait-container">
+                    <a href="https://ar.wikipedia.org/wiki/%D9%81%D8%A7%D8%A6%D8%AF_%D9%85%D8%B5%D8%B7%D9%81%D9%89" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="معلومات عن السفير فائد مصطفى">
+                        <img class="ambassador-portrait-image" 
+                             src="/public/images/faed.jpg" 
+                             alt="سفير دولة فلسطين الدكتور فائد مصطفى" 
+                             loading="lazy">
+                    </a>
+                </div>
+                <div class="ambassador-message-content">
+                    <h2 class="ambassador-section-title" id="ambassadorTitle">كلمة السفير</h2>
+                    <p class="ambassador-message-text" id="ambassadorMessage">
+                        بإسم سفارة دولة فلسطين لدى الجمهورية التركية وكافة العاملين فيها، يسعدني أن أتوجه إليكم بالتحيه
+                        والتقدير، وأرحب بكافة زائري موقعنا هذا بحلته الجديدة، أملاً أن يشكل هذا الموقع نافذة للجمهور
+                        الفلسطيني لكي يتعرف من خلاله على كافة المعلومات المطلوبة حول السفارة، ودورها، ونشاطاتها في كافة
+                        المجالات، بالإضافة إلى الخدمات القنصلية التي تقدمها للطلبة والجالية الفلسطينية في الجمهورية
+                        التركية.
+                    </p>
+                    <div class="ambassador-signature-block">
+                        <span class="ambassador-full-name" id="ambassadorName">الدكتور فائد مصطفى</span>
+                        <span class="ambassador-position-title" id="ambassadorTitleOnly">السفير</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visual Showcase Carousel Section -->
+            <section class="visual-showcase-section">
+                <div class="showcase-header">
+                    <h2 class="showcase-main-title" id="galleryTitle">معرض الصور</h2>
+                    <p class="showcase-subtitle" id="galleryDescription">استعرض جمال وتاريخ مدن فلسطين</p>
+                </div>
+                
+                <div class="visual-carousel-container">
+                    <div class="visual-carousel-wrapper">
+                        <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%82%D8%AF%D8%B3" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="معلومات عن مدينة القدس">
+                            <div class="visual-carousel-slide active" 
+                                 style="background-image: url('/public/images/Jerusalem.jpg')"
+                                 role="img"
+                                 aria-label="صورة مدينة القدس">
+                                <div class="slide-content-overlay">
+                                    <h3 class="slide-location-title" id="jerusalemTitle">القدس</h3>
+                                    <p class="slide-location-description" id="jerusalemDescription">عاصمة فلسطين</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ar.wikipedia.org/wiki/%D8%AD%D9%8A%D9%81%D8%A7" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="معلومات عن مدينة حيفا">
+                            <div class="visual-carousel-slide" 
+                                 style="background-image: url('/public/images/Haifa.jpg')"
+                                 role="img"
+                                 aria-label="صورة مدينة حيفا">
+                                <div class="slide-content-overlay">
+                                    <h3 class="slide-location-title" id="haifaTitle">حيفا</h3>
+                                    <p class="slide-location-description" id="haifaDescription">مدينة من أكبر وأهم مدن فِلسطِين التَاريخِية</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ar.wikipedia.org/wiki/%D8%BA%D8%B2%D8%A9" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="معلومات عن مدينة غزة">
+                            <div class="visual-carousel-slide" 
+                                 style="background-image: url('/public/images/Gaza.jpg')"
+                                 role="img"
+                                 aria-label="صورة مدينة غزة">
+                                <div class="slide-content-overlay">
+                                    <h3 class="slide-location-title" id="gazaTitle">غزة</h3>
+                                    <p class="slide-location-description" id="gazaDescription">غَزَّة مدينة ساحلية فلسطينية</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%86%D8%A7%D8%B5%D8%B1%D8%A9" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="معلومات عن مدينة الناصرة">
+                            <div class="visual-carousel-slide" 
+                                 style="background-image: url('/public/images/Nazareth.jpg')"
+                                 role="img"
+                                 aria-label="صورة مدينة الناصرة">
+                                <div class="slide-content-overlay">
+                                    <h3 class="slide-location-title" id="nazarethTitle">الناصرة</h3>
+                                    <p class="slide-location-description" id="nazarethDescription">من أهم مدن فلسطين التاريخية</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="معلومات عن مدينة الخليل">
+                            <div class="visual-carousel-slide" 
+                                 style="background-image: url('/public/images/Hebron.jpg')"
+                                 role="img"
+                                 aria-label="صورة مدينة الخليل">
+                                <div class="slide-content-overlay">
+                                    <h3 class="slide-location-title" id="hebronTitle">الخليل</h3>
+                                    <p class="slide-location-description" id="hebronDescription">تُعد الخليل من أقدم مدن العالم، وتاريخها يعود إلى 5500 عام.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <button class="carousel-navigation-button carousel-prev-button" 
+                            aria-label="الشريحة السابقة"
+                            type="button">
+                        <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </button>
+                    
+                    <button class="carousel-navigation-button carousel-next-button" 
+                            aria-label="الشريحة التالية"
+                            type="button">
+                        <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-indicators">
+                        <span class="carousel-dot-indicator active" 
+                              data-index="0" 
+                              tabindex="0" 
+                              role="button" 
+                              aria-label="انتقل إلى الشريحة 1"></span>
+                        <span class="carousel-dot-indicator" 
+                              data-index="1" 
+                              tabindex="0" 
+                              role="button" 
+                              aria-label="انتقل إلى الشريحة 2"></span>
+                        <span class="carousel-dot-indicator" 
+                              data-index="2" 
+                              tabindex="0" 
+                              role="button" 
+                              aria-label="انتقل إلى الشريحة 3"></span>
+                        <span class="carousel-dot-indicator" 
+                              data-index="3" 
+                              tabindex="0" 
+                              role="button" 
+                              aria-label="انتقل إلى الشريحة 4"></span>
+                        <span class="carousel-dot-indicator" 
+                              data-index="4" 
+                              tabindex="0" 
+                              role="button" 
+                              aria-label="انتقل إلى الشريحة 5"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Tiles Grid Section -->
+            <section class="navigation-tiles-section">
+                <div class="navigation-tiles-grid">
+                    <a href="/public/html/palestine.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة معلومات عن فلسطين">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/palestine.9.jpg" 
+                                 alt="صورة تمثل فلسطين" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-palestine">فلسطين</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/embassy.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة معلومات عن السفارة">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/embassy.9.jpg" 
+                                 alt="صورة مبنى السفارة" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-embassy">السفارة</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/consular.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة الشؤون القنصلية">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/passport.9.jpg" 
+                                 alt="صورة تمثل الخدمات القنصلية" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-consular">الشؤون القنصلية</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/turkey.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة معلومات عن تركيا">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/turkey.9.jpg" 
+                                 alt="صورة تمثل تركيا" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-turkey">تركيا</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/education.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة الشؤون التعليمية">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/education.9.jpg" 
+                                 alt="صورة تمثل التعليم" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-education">الشؤون التعليمية</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/circulars.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة التعاميم والإعلانات">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/circulars.9.jpg" 
+                                 alt="صورة تمثل التعاميم والإعلانات" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-circulars">التعاميم والإعلانات</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/news.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة الأخبار">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/news,9.jpg" 
+                                 alt="صورة تمثل الأخبار" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-news">الأخبار</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/activities.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة الأنشطة والفعاليات">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/Activities .9.jpg" 
+                                 alt="صورة تمثل الأنشطة والفعاليات" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-activities">الأنشطة والفعاليات</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="/public/html/holidays.html" 
+                       class="navigation-tile-card"
+                       aria-label="صفحة الأعياد الوطنية">
+                        <div class="tile-image-container">
+                            <img class="tile-background-image" 
+                                 src="/public/images/ps.flag.9.jpg" 
+                                 alt="صورة تمثل الأعياد الوطنية" 
+                                 loading="lazy">
+                        </div>
+                        <div class="tile-content-area">
+                            <h3 class="tile-title-text" id="info-holidays">الأعياد الوطنية</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Institutional Links Section -->
+            <section class="institutional-links-section" aria-label="الروابط الرسمية">
+                <div class="institutional-links-grid">
+                    <a href="https://www.palpresidency.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع الرئاسة الفلسطينية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/logo.png" 
+                             alt="شعار الرئاسة الفلسطينية" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="presidency_card">الرئاسة الفلسطينية</span>
+                    </a>
+                    
+                    <a href="https://www.palestinecabinet.gov.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع رئاسة الوزراء الفلسطينية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/logo.png" 
+                             alt="شعار رئاسة الوزراء" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="pm_card">رئاسة الوزراء</span>
+                    </a>
+                    
+                    <a href="https://www.mofa.pna.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع وزارة الخارجية الفلسطينية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/logo.png" 
+                             alt="شعار وزارة الخارجية" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="mofa_card">وزارة الخارجية</span>
+                    </a>
+                    
+                    <a href="https://www.moi.pna.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع وزارة الداخلية الفلسطينية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/logo.png" 
+                             alt="شعار وزارة الداخلية" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="moi_card">وزارة الداخلية</span>
+                    </a>
+                    
+                    <a href="https://www.moc.pna.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع وزارة الثقافة الفلسطينية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/logo.png" 
+                             alt="شعار وزارة الثقافة" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="culture_card">وزارة الثقافة</span>
+                    </a>
+                    
+                    <a href="https://wafa.ps/" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="institutional-link-card"
+                       aria-label="موقع وكالة وفا الرسمية">
+                        <img class="institutional-logo-image" 
+                             src="/public/images/wafa.png" 
+                             alt="شعار وكالة وفا" 
+                             loading="lazy">
+                        <span class="institutional-link-text" id="wafa_card">وكالة وفا الرسمية</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- News Highlights Section -->
+            <section class="news-highlights-section">
+                <div class="news-section-header">
+                    <h2 class="news-main-title" id="newsTitle1">أحدث الأخبار</h2>
+                </div>
+                
+                <div class="news-articles-grid">
+                    <a href="#" 
+                       class="news-article-card"
+                       aria-label="اقرأ الخبر: عنوان الخبر الرئيسي هنا">
+                        <img class="news-featured-image" 
+                             src="/public/images/news,9.jpg" 
+                             alt="صورة الخبر الرئيسي" 
+                             loading="lazy">
+                        <div class="news-article-content">
+                            <h3 class="news-article-headline" id="news-headline-1">عنوان الخبر الرئيسي هنا</h3>
+                            <p class="news-article-summary" id="news-desc-1">وصف مختصر للخبر يتضمن أهم المعلومات والتفاصيل المتعلقة بالموضوع المطروح.</p>
+                            <span class="news-publication-date" id="news-date-1">25 مايو 2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" 
+                       class="news-article-card"
+                       aria-label="اقرأ الخبر: أخبار محلية مهمة">
+                        <img class="news-featured-image" 
+                             src="/public/images/news,9.jpg" 
+                             alt="صورة الأخبار المحلية" 
+                             loading="lazy">
+                        <div class="news-article-content">
+                            <h3 class="news-article-headline" id="news-headline-2">أخبار محلية مهمة</h3>
+                            <p class="news-article-summary" id="news-desc-2">تفاصيل الأحداث المحلية والتطورات الجديدة في المنطقة مع التركيز على الجوانب المهمة.</p>
+                            <span class="news-publication-date" id="news-date-2">24 مايو 2025</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" 
+                       class="news-article-card"
+                       aria-label="اقرأ الخبر: تطورات جديدة في السياسة">
+                        <img class="news-featured-image" 
+                             src="/public/images/news,9.jpg" 
+                             alt="صورة التطورات السياسية" 
+                             loading="lazy">
+                        <div class="news-article-content">
+                            <h3 class="news-article-headline" id="news-headline-3">تطورات جديدة في السياسة</h3>
+                            <p class="news-article-summary" id="news-desc-3">آخر المستجدات السياسية والقرارات الحكومية الجديدة التي تؤثر على المواطنين.</p>
+                            <span class="news-publication-date" id="news-date-3">23 مايو 2025</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+        </div>
     </div>
 
-    <div class="main-content">
-        <section class="header-glass" role="banner" aria-label="القسم التعريفي للسفارة">
-            <img class="flag" src="images/ps.flag(12).jpg" alt="علم فلسطين" loading="lazy" />
-            <div class="title-box">
-                <h1 id="siteTitle" data-i18n="siteTitle">سفارة دولة فلسطين في تركيا</h1>
-            </div>
-            <img class="flag" src="images/tr.flag(12).jpg" alt="علم تركيا" loading="lazy" />
-        </section>
-    </div>
+    <!-- Footer Container - Managed by main.css -->
+    <div id="footer-container"></div>
 
-    <section class="ambassador-message">
-        <a href="https://ar.wikipedia.org/wiki/%D9%81%D8%A7%D8%A6%D8%AF_%D9%85%D8%B5%D8%B7%D9%81%D9%89" target="_blank">
-            <img src="images/faed.jpg" alt="سفير دولة فلسطين" class="ambassador-img" />
-        </a>
-        <div class="message-text">
-            <h2 id="ambassadorTitle">كلمة السفير</h2>
-            <p id="ambassadorMessage">
-                بإسم سفارة دولة فلسطين لدى الجمهورية التركية وكافة العاملين فيها، يسعدني أن أتوجه إليكم بالتحيه
-                والتقدير، وأرحب بكافة زائري موقعنا هذا بحلته الجديدة، أملاً أن يشكل هذا الموقع نافذة للجمهور
-                الفلسطيني لكي يتعرف من خلاله على كافة المعلومات المطلوبة حول السفارة، ودورها، ونشاطاتها في كافة
-                المجالات، بالإضافة إلى الخدمات القنصلية التي تقدمها للطلبة والجالية الفلسطينية في الجمهورية
-                التركية.
-            </p>
-            <div>
-                <span id="ambassadorName" class="ambassador-name">الدكتور فائد مصطفى</span>
-                <span id="ambassadorTitleOnly" class="ambassador-title">السفير</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="photo-gallery-section">
-        <div class="gallery-title">
-            <h2 id="galleryTitle">معرض الصور</h2>
-            <p id="galleryDescription">استعرض جمال وتاريخ مدن فلسطين</p>
-        </div>
-        <div class="carousel-container">
-            <div class="carousel-wrapper">
-                <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%AF%D8%B3" target="_blank">
-                    <div class="carousel-slide active" style="background-image: url('images/Jerusalem.jpg')">
-                        <div class="slide-info">
-                            <h3 id="jerusalemTitle">القدس</h3>
-                            <p id="jerusalemDescription">عاصمة فلسطين</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://ar.wikipedia.org/wiki/%D8%AD%D9%8A%D9%81%D8%A7" target="_blank">
-                    <div class="carousel-slide" style="background-image: url('images/Haifa.jpg')">
-                        <div class="slide-info">
-                            <h3 id="haifaTitle">حيفا</h3>
-                            <p id="haifaDescription">مدينة من أكبر وأهم مدن فِلسطِين التَاريخِية</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://ar.wikipedia.org/wiki/%D8%BA%D8%B2%D8%A9" target="_blank">
-                    <div class="carousel-slide" style="background-image: url('images/Gaza.jpg')">
-                        <div class="slide-info">
-                            <h3 id="gazaTitle">غزة</h3>
-                            <p id="gazaDescription">غَZَّة مدينة ساحلية فلسطينية</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%86%D8%A7%D8%B5%D8%B1%D8%A9" target="_blank">
-                    <div class="carousel-slide" style="background-image: url('images/Nazareth.jpg')">
-                        <div class="slide-info">
-                            <h3 id="nazarethTitle">الناصرة</h3>
-                            <p id="nazarethDescription">من أهم مدن فلسطين التاريخية</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84" target="_blank">
-                    <div class="carousel-slide" style="background-image: url('images/Hebron.jpg')">
-                        <div class="slide-info">
-                            <h3 id="hebronTitle">الخليل</h3>
-                            <p id="hebronDescription">تُعد الخليل من أقدم مدن العالم، وتاريخها يعود إلى 5500 عام.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <button class="carousel-btn prev-btn" aria-label="Previous slide">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg>
-            </button>
-            <button class="carousel-btn next-btn" aria-label="Next slide">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" /></svg>
-            </button>
-            <div class="carousel-dots">
-                <span class="dot active" data-index="0" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-                <span class="dot" data-index="1" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-                <span class="dot" data-index="2" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-                <span class="dot" data-index="3" tabindex="0" role="button" aria-label="Go to slide 4"></span>
-                <span class="dot" data-index="4" tabindex="0" role="button" aria-label="Go to slide 5"></span>
-            </div>
-        </div>
-    </section>
-
-    <section id="infoGridSection" class="info-grid-section">
-        <div class="info-grid">
-            <a href="html/palestine.html" class="info-box" id="link-palestine">
-                <div class="info-box-image"><img src="images/palestine.9.jpg" alt="فلسطين"></div>
-                <div class="info-box-content"><h3 id="info-palestine">فلسطين</h3></div>
-            </a>
-            <a href="html/embassy.html" class="info-box" id="link-embassy">
-                <div class="info-box-image"><img src="images/embassy.9.jpg" alt="السفارة"></div>
-                <div class="info-box-content"><h3 id="info-embassy">السفارة</h3></div>
-            </a>
-            <a href="html/consular.html" class="info-box" id="link-consular">
-                <div class="info-box-image"><img src="images/passport.9.jpg" alt="الشؤون القنصلية"></div>
-                <div class="info-box-content"><h3 id="info-consular">الشؤون القنصلية</h3></div>
-            </a>
-            <a href="html/turkey.html" class="info-box" id="link-turkey">
-                <div class="info-box-image"><img src="images/turkey.9.jpg" alt="تركيا"></div>
-                <div class="info-box-content"><h3 id="info-turkey">تركيا</h3></div>
-            </a>
-            <a href="html/education.html" class="info-box" id="link-education">
-                <div class="info-box-image"><img src="images/education.9.jpg" alt="الشؤون التعليمية"></div>
-                <div class="info-box-content"><h3 id="info-education">الشؤون التعليمية</h3></div>
-            </a>
-            <a href="html/circulars.html" class="info-box" id="link-circulars">
-                <div class="info-box-image"><img src="images/circulars.9.jpg" alt="التعاميم والإعلانات"></div>
-                <div class="info-box-content"><h3 id="info-circulars">التعاميم والإعلانات</h3></div>
-            </a>
-            <a href="html/news.html" class="info-box" id="link-news">
-                <div class="info-box-image"><img src="images/news,9.jpg" alt="الأخبار"></div>
-                <div class="info-box-content"><h3 id="info-news">الأخبار</h3></div>
-            </a>
-            <a href="html/events.html" class="info-box" id="link-activities">
-                <div class="info-box-image"><img src="images/Activities .9.jpg" alt="الأنشطة والفعاليات"></div>
-                <div class="info-box-content"><h3 id="info-activities">الأنشطة والفعاليات</h3></div>
-            </a>
-            <a href="html/holidays.html" class="info-box" id="link-holidays">
-                <div class="info-box-image"><img src="images/ps.flag.9.jpg" alt="الأعياد الوطنية"></div>
-                <div class="info-box-content"><h3 id="info-holidays">الأعياد الوطنية</h3></div>
-            </a>
-        </div>
-    </section>
-
-    <section class="official-section" aria-label="روابط رسمية">
-        <div class="official-container">
-            <a href="https://www.palpresidency.ps/" target="_blank" class="official-card">
-                <img src="images/logo.png" alt="شعار الرئاسة"><span id="presidency_card">الرئاسة الفلسطينية</span>
-            </a>
-            <a href="https://www.palestinecabinet.gov.ps/" target="_blank" class="official-card">
-                <img src="images/logo.png" alt="شعار رئاسة الوزراء"><span id="pm_card">رئاسة الوزراء</span>
-            </a>
-            <a href="https://www.mofa.pna.ps/" target="_blank" class="official-card">
-                <img src="images/logo.png" alt="شعار وزارة الخارجية"><span id="mofa_card">وزارة الخارجية</span>
-            </a>
-            <a href="https://www.moi.pna.ps/" target="_blank" class="official-card">
-                <img src="images/logo.png" alt="شعار وزارة الداخلية"><span id="moi_card">وزارة الداخلية</span>
-            </a>
-            <a href="https://www.moc.pna.ps/" target="_blank" class="official-card">
-                <img src="images/logo.png" alt="شعار وزارة الثقافة"><span id="culture_card">وزارة الثقافة</span>
-            </a>
-            <a href="https://wafa.ps/" target="_blank" class="official-card">
-                <img src="images/wafa.png" alt="شعار وكالة وفا"><span id="wafa_card">وكالة وفا الرسمية</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="latest-news-section" id="latestNewsSection">
-        <h2 id="newsTitle1" class="section-title">أحدث الأخبار</h2>
-        <div class="news-grid" id="newsGrid">
-            <a href="#" class="news-card">
-                <img src="https://picsum.photos/seed/news1/400/250" alt="صورة الخبر الأول">
-                <div class="news-content">
-                    <h3 id="news-headline-1" class="news-title">عنوان الخبر الرئيسي هنا</h3>
-                    <p id="news-desc-1" class="news-desc">وصف مختصر للخبر يتضمن أهم المعلومات والتفاصيل المتعلقة بالموضوع المطروح.</p>
-                    <span id="news-date-1" class="news-date">25 مايو 2025</span>
-                </div>
-            </a>
-            <a href="#" class="news-card">
-                <img src="https://picsum.photos/seed/news2/400/250" alt="صورة الخبر الثاني">
-                <div class="news-content">
-                    <h3 id="news-headline-2" class="news-title">أخبار محلية مهمة</h3>
-                    <p id="news-desc-2" class="news-desc">تفاصيل الأحداث المحلية والتطورات الجديدة في المنطقة مع التركيز على الجوانب المهمة.</p>
-                    <span id="news-date-2" class="news-date">24 مايو 2025</span>
-                </div>
-            </a>
-            <a href="#" class="news-card">
-                <img src="https://picsum.photos/seed/news3/400/250" alt="صورة الخبر الثالث">
-                <div class="news-content">
-                    <h3 id="news-headline-3" class="news-title">تطورات جديدة في السياسة</h3>
-                    <p id="news-desc-3" class="news-desc">آخر المستجدات السياسية والقرارات الحكومية الجديدة التي تؤثر على المواطنين.</p>
-                    <span id="news-date-3" class="news-date">23 مايو 2025</span>
-                </div>
-            </a>
-        </div>
-    </section>
-    <div id="footer-container">
-    </div>
-
+    <!-- JavaScript Files - Load in correct order -->
     <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/carousel.js"></script>
     <script defer src="/public/js/main.js"></script>
-    
 </body>
-
 </html>

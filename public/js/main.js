@@ -1,855 +1,365 @@
-class PalestineEmbassy {
-    constructor() {
-        this.config = {
-            scrollThreshold: 100,
-            animationDuration: 300,
-            debounceDelay: 100,
-            intersectionThreshold: 0.1,
-            prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        };
-        
-        this.state = {
-            isScrolled: false,
-            isMobileMenuOpen: false,
-            currentLanguage: this.getCurrentLanguage(),
-            isLoading: false,
-            observers: new Map(),
-            activeDropdowns: new Set()
-        };
-        
-        this.elements = {};
-        this.utils = new Utils();
-        
-        this.init();
+/*====================================================
+  MAIN.JS - Clean Module Loader
+  Handles loading header/footer and initializing components
+====================================================*/
+
+class ComponentLoader {
+  constructor() {
+    this.loadedComponents = new Set();
+    this.retryAttempts = 3;
+    this.retryDelay = 1000;
+  }
+
+  async init() {
+    try {
+      // Load header and footer in parallel
+      await Promise.all([
+        this.loadComponent('/partials/_header.html', 'header-container'),
+        this.loadComponent('/partials/_footer.html', 'footer-container')
+      ]);
+
+      // Initialize all page features after components are loaded
+      await this.initializeFeatures();
+
+    } catch (error) {
+      console.error('Failed to initialize components:', error);
+      this.handleFallback();
+    }
+  }
+
+  async loadComponent(url, containerId, attempt = 1) {
+    const container = document.getElementById(containerId);
+    if (!container) {
+      console.warn(`Container with ID '${containerId}' not found`);
+      return;
     }
 
-    /**
-     * Initialize the application
-     */
-    async init() {
-        try {
-            this.showLoadingState();
-            await this.loadDOMElements();
-            await this.loadPartials();
-            this.initializeFeatures();
-            this.setupEventListeners();
-            this.initializeAnimations();
-            this.hideLoadingState();
-            
-            console.log('🇵🇸 Palestine Embassy website initialized successfully');
-        } catch (error) {
-            console.error('Failed to initialize:', error);
-            this.handleError(error);
-        }
+    try {
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const htmlContent = await response.text();
+      container.innerHTML = htmlContent;
+      this.loadedComponents.add(containerId);
+      
+      console.log(`✅ Loaded ${url} into ${containerId}`);
+
+    } catch (error) {
+      console.error(`❌ Failed to load ${url} (attempt ${attempt}):`, error);
+      
+      if (attempt < this.retryAttempts) {
+        console.log(`🔄 Retrying in ${this.retryDelay}ms...`);
+        await this.delay(this.retryDelay);
+        return this.loadComponent(url, containerId, attempt + 1);
+      } else {
+        this.renderFallback(container, url);
+      }
+    }
+  }
+
+  async initializeFeatures() {
+    // Check if global initializer is available
+    if (typeof globalPageInitializer === 'function') {
+      try {
+        globalPageInitializer();
+        console.log('✅ Page features initialized successfully');
+      } catch (error) {
+        console.error('❌ Error initializing page features:', error);
+      }
+    } else {
+      console.error('❌ globalPageInitializer function not found. Ensure language-switcher.js is loaded.');
     }
 
-    /**
-     * Load and cache DOM elements
-     */
-    async loadDOMElements() {
-        const selectors = {
-            header: '.header',
-            headerContainer: '#header-container',
-            footerContainer: '#footer-container',
-            mobileMenuToggle: '.mobile-menu-toggle',
-            navLinks: '.nav-links',
-            skipLink: '.skip-link',
-            loadingIndicator: '.loading-indicator'
-        };
+    // Initialize additional features specific to the current page
+    this.initializePageSpecificFeatures();
+  }
 
-        for (const [key, selector] of Object.entries(selectors)) {
-            this.elements[key] = document.querySelector(selector);
-        }
-    }
-
-    /**
-     * Load header and footer partials
-     */
-    async loadPartials() {
-        const partials = [
-            { container: this.elements.headerContainer, url: '/partials/_header.html' },
-            { container: this.elements.footerContainer, url: '/partials/_footer.html' }
-        ];
-
-        const loadPromises = partials.map(({ container, url }) => 
-            this.loadPartial(container, url)
-        );
-
-        await Promise.all(loadPromises);
-        
-        // Re-cache elements after partials load
-        await this.loadDOMElements();
-    }
-
-    /**
-     * Load individual partial
-     */
-    async loadPartial(container, url) {
-        if (!container) return;
-
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`Failed to load ${url}`);
-            
-            const html = await response.text();
-            container.innerHTML = html;
-            
-            // Dispatch custom event for partial loaded
-            this.utils.dispatchEvent('partialLoaded', { url, container });
-        } catch (error) {
-            console.error(`Error loading partial ${url}:`, error);
-            container.innerHTML = `<div class="error-message">Error loading content</div>`;
-        }
-    }
-
-    /**
-     * Initialize core features
-     */
-    initializeFeatures() {
-        this.initializeHeader();
-        this.initializeNavigation();
-        this.initializeAccessibility();
-        this.initializeServiceWorker();
-        this.initializeLazyLoading();
-        this.initializeErrorHandling();
-    }
-
-    /**
-     * Initialize header functionality
-     */
-    initializeHeader() {
-        if (!this.elements.header) return;
-
-        // Header scroll behavior
-        const handleScroll = this.utils.throttle(() => {
-            const scrollTop = window.pageYOffset;
-            const isScrolled = scrollTop > this.config.scrollThreshold;
-            
-            if (isScrolled !== this.state.isScrolled) {
-                this.state.isScrolled = isScrolled;
-                this.elements.header.classList.toggle('scrolled', isScrolled);
-                
-                // Hide header on scroll down, show on scroll up
-                if (scrollTop > this.lastScrollTop && scrollTop > 200) {
-                    this.elements.header.classList.add('hidden');
-                } else {
-                    this.elements.header.classList.remove('hidden');
-                }
-            }
-            
-            this.lastScrollTop = scrollTop;
-        }, this.config.debounceDelay);
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        this.lastScrollTop = 0;
-    }
-
-    /**
-     * Initialize navigation functionality
-     */
-    initializeNavigation() {
-        this.initializeMobileMenu();
-        this.initializeDropdowns();
-        this.initializeKeyboardNavigation();
-    }
-
-    /**
-     * Initialize mobile menu
-     */
-    initializeMobileMenu() {
-        const toggle = this.elements.mobileMenuToggle;
-        const navLinks = this.elements.navLinks;
-        
-        if (!toggle || !navLinks) return;
-
-        const toggleMenu = () => {
-            this.state.isMobileMenuOpen = !this.state.isMobileMenuOpen;
-            
-            toggle.classList.toggle('active', this.state.isMobileMenuOpen);
-            toggle.setAttribute('aria-expanded', this.state.isMobileMenuOpen);
-            
-            if (this.state.isMobileMenuOpen) {
-                navLinks.classList.add('opening');
-                setTimeout(() => navLinks.classList.add('active'), 10);
-                this.trapFocus(navLinks);
-                document.body.style.overflow = 'hidden';
-            } else {
-                navLinks.classList.remove('active', 'opening');
-                this.releaseFocus();
-                document.body.style.overflow = '';
-                // Close all dropdowns when mobile menu closes
-                this.closeAllDropdowns();
-            }
-            
-            this.utils.dispatchEvent('mobileMenuToggle', { isOpen: this.state.isMobileMenuOpen });
-        };
-
-        toggle.addEventListener('click', toggleMenu);
-        
-        // Close menu on escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.state.isMobileMenuOpen) {
-                toggleMenu();
-            }
-        });
-
-        // Close menu on outside click
-        document.addEventListener('click', (e) => {
-            if (this.state.isMobileMenuOpen && 
-                !navLinks.contains(e.target) && 
-                !toggle.contains(e.target)) {
-                toggleMenu();
-            }
-        });
-    }
-
-    /**
-     * FIXED: Initialize dropdown menus with proper event handling
-     */
-    initializeDropdowns() {
-        // Wait for DOM to be ready and re-query dropdowns
-        setTimeout(() => {
-            const dropdowns = document.querySelectorAll('.nav-item');
-            
-            console.log(`Found ${dropdowns.length} dropdown items`); // Debug log
-            
-            dropdowns.forEach((dropdown, index) => {
-                const link = dropdown.querySelector('a[aria-haspopup="true"]');
-                const submenu = dropdown.querySelector('.submenu');
-                
-                if (!link || !submenu) {
-                    console.log(`Dropdown ${index} missing link or submenu`); // Debug log
-                    return;
-                }
-
-                console.log(`Initializing dropdown ${index}:`, link.textContent); // Debug log
-
-                let hoverTimeout;
-                let isDropdownOpen = false;
-
-                const showSubmenu = () => {
-                    clearTimeout(hoverTimeout);
-                    if (!isDropdownOpen) {
-                        // Close other dropdowns first
-                        this.closeAllDropdowns();
-                        
-                        isDropdownOpen = true;
-                        dropdown.classList.add('dropdown-open');
-                        link.setAttribute('aria-expanded', 'true');
-                        this.state.activeDropdowns.add(dropdown);
-                        
-                        console.log('Showing submenu for:', link.textContent); // Debug log
-                        this.utils.dispatchEvent('submenuOpen', { dropdown });
-                    }
-                };
-
-                const hideSubmenu = () => {
-                    hoverTimeout = setTimeout(() => {
-                        if (isDropdownOpen) {
-                            isDropdownOpen = false;
-                            dropdown.classList.remove('dropdown-open');
-                            link.setAttribute('aria-expanded', 'false');
-                            this.state.activeDropdowns.delete(dropdown);
-                            
-                            console.log('Hiding submenu for:', link.textContent); // Debug log
-                            this.utils.dispatchEvent('submenuClose', { dropdown });
-                        }
-                    }, 150);
-                };
-
-                const cancelHide = () => {
-                    clearTimeout(hoverTimeout);
-                };
-
-                // Desktop: Mouse events
-                dropdown.addEventListener('mouseenter', showSubmenu);
-                dropdown.addEventListener('mouseleave', hideSubmenu);
-                
-                // Keep submenu open when hovering over it
-                submenu.addEventListener('mouseenter', cancelHide);
-                submenu.addEventListener('mouseleave', hideSubmenu);
-
-                // Mobile and keyboard: Click/touch events
-                link.addEventListener('click', (e) => {
-                    // For mobile or when using keyboard
-                    if (window.innerWidth <= 768 || e.detail === 0) {
-                        e.preventDefault();
-                        
-                        if (isDropdownOpen) {
-                            hideSubmenu();
-                            clearTimeout(hoverTimeout); // Immediate close on mobile
-                        } else {
-                            showSubmenu();
-                        }
-                    }
-                });
-
-                // Keyboard events
-                link.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        if (isDropdownOpen) {
-                            hideSubmenu();
-                            clearTimeout(hoverTimeout); // Immediate close
-                        } else {
-                            showSubmenu();
-                        }
-                    } else if (e.key === 'Escape') {
-                        if (isDropdownOpen) {
-                            hideSubmenu();
-                            clearTimeout(hoverTimeout); // Immediate close
-                            link.focus(); // Return focus to trigger
-                        }
-                    }
-                });
-
-                // Touch events for better mobile support
-                link.addEventListener('touchstart', (e) => {
-                    if (window.innerWidth <= 768) {
-                        // Prevent default only for dropdown triggers on mobile
-                        if (!isDropdownOpen) {
-                            e.preventDefault();
-                            showSubmenu();
-                        }
-                    }
-                }, { passive: false });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', (e) => {
-                const clickedDropdown = e.target.closest('.nav-item');
-                const clickedLink = e.target.closest('a[aria-haspopup="true"]');
-                
-                // If clicked outside all dropdowns, or on a different dropdown
-                if (!clickedDropdown || (clickedLink && !clickedDropdown.contains(clickedLink))) {
-                    this.closeAllDropdowns();
-                }
-            });
-
-            // Close dropdowns on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    this.closeAllDropdowns();
-                }
-            });
-
-        }, 100); // Small delay to ensure DOM is ready
-    }
-
-    /**
-     * Close all open dropdowns
-     */
-    closeAllDropdowns() {
-        this.state.activeDropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('a[aria-haspopup="true"]');
-            dropdown.classList.remove('dropdown-open');
-            if (link) {
-                link.setAttribute('aria-expanded', 'false');
-            }
-        });
-        this.state.activeDropdowns.clear();
-    }
-
-    /**
-     * Initialize keyboard navigation
-     */
-    initializeKeyboardNavigation() {
-        // Wait for DOM elements to be available
-        setTimeout(() => {
-            const navItems = document.querySelectorAll('.nav-links a, .submenu a');
-            
-            navItems.forEach((item, index) => {
-                item.addEventListener('keydown', (e) => {
-                    let targetIndex;
-                    
-                    switch (e.key) {
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            targetIndex = index + 1;
-                            break;
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            targetIndex = index - 1;
-                            break;
-                        case 'Home':
-                            e.preventDefault();
-                            targetIndex = 0;
-                            break;
-                        case 'End':
-                            e.preventDefault();
-                            targetIndex = navItems.length - 1;
-                            break;
-                        default:
-                            return;
-                    }
-                    
-                    if (targetIndex >= 0 && targetIndex < navItems.length) {
-                        navItems[targetIndex].focus();
-                    }
-                });
-            });
-        }, 100);
-    }
-
-    /**
-     * Initialize accessibility features
-     */
-    initializeAccessibility() {
-        this.initializeSkipLinks();
-        this.initializeFocusManagement();
-        this.initializeAnnouncements();
-        this.setupReducedMotion();
-    }
-
-    /**
-     * Initialize skip links
-     */
-    initializeSkipLinks() {
-        const skipLinks = document.querySelectorAll('.skip-link');
-        
-        skipLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const target = document.getElementById(targetId);
-                
-                if (target) {
-                    target.focus();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    this.announceToScreenReader(`Moved to ${target.textContent || targetId}`);
-                }
-            });
-        });
-    }
-
-    /**
-     * Initialize focus management
-     */
-    initializeFocusManagement() {
-        // Focus indicators
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                document.body.classList.add('keyboard-navigation');
-            }
-        });
-
-        document.addEventListener('mousedown', () => {
-            document.body.classList.remove('keyboard-navigation');
-        });
-
-        // Focus trap for modals
-        this.focusableSelectors = [
-            'a[href]',
-            'button:not([disabled])',
-            'textarea:not([disabled])',
-            'input:not([disabled])',
-            'select:not([disabled])',
-            '[tabindex]:not([tabindex="-1"])'
-        ].join(',');
-    }
-
-    /**
-     * Initialize screen reader announcements
-     */
-    initializeAnnouncements() {
-        // Create live region for announcements
-        this.liveRegion = document.createElement('div');
-        this.liveRegion.setAttribute('aria-live', 'polite');
-        this.liveRegion.setAttribute('aria-atomic', 'true');
-        this.liveRegion.className = 'sr-only';
-        this.liveRegion.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
-        document.body.appendChild(this.liveRegion);
-    }
-
-    /**
-     * Setup reduced motion preferences
-     */
-    setupReducedMotion() {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        
-        const handleReducedMotion = (e) => {
-            this.config.prefersReducedMotion = e.matches;
-            document.body.classList.toggle('reduced-motion', e.matches);
-        };
-
-        mediaQuery.addListener(handleReducedMotion);
-        handleReducedMotion(mediaQuery);
-    }
-
-    /**
-     * Initialize Service Worker
-     */
-    async initializeServiceWorker() {
-        if ('serviceWorker' in navigator) {
-            try {
-                const registration = await navigator.serviceWorker.register('/sw.js');
-                console.log('Service Worker registered:', registration);
-                
-                // Update notification
-                registration.addEventListener('updatefound', () => {
-                    this.notifyUpdate();
-                });
-            } catch (error) {
-                console.warn('Service Worker registration failed:', error);
-            }
-        }
-    }
-
-    /**
-     * Initialize lazy loading
-     */
-    initializeLazyLoading() {
-        // Intersection Observer for images
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        // Observe lazy images
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-
-        this.state.observers.set('images', imageObserver);
-    }
-
-    /**
-     * Initialize animations
-     */
-    initializeAnimations() {
-        if (this.config.prefersReducedMotion) return;
-
-        // Intersection Observer for animations
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    animationObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: this.config.intersectionThreshold });
-
-        // Observe elements with animation classes
-        document.querySelectorAll('[data-animate]').forEach(element => {
-            animationObserver.observe(element);
-        });
-
-        this.state.observers.set('animations', animationObserver);
-    }
-
-    /**
-     * Initialize error handling
-     */
-    initializeErrorHandling() {
-        // Global error handler
-        window.addEventListener('error', (e) => {
-            console.error('Global error:', e.error);
-            this.handleError(e.error);
-        });
-
-        // Promise rejection handler
-        window.addEventListener('unhandledrejection', (e) => {
-            console.error('Unhandled promise rejection:', e.reason);
-            this.handleError(e.reason);
-        });
-
-        // Network status
-        window.addEventListener('online', () => {
-            this.announceToScreenReader('Connection restored');
-            this.hideErrorMessage();
-        });
-
-        window.addEventListener('offline', () => {
-            this.announceToScreenReader('Connection lost');
-            this.showErrorMessage('No internet connection. Some features may be limited.');
-        });
-    }
-
-    /**
-     * Setup event listeners
-     */
-    setupEventListeners() {
-        // Resize handler
-        const handleResize = this.utils.debounce(() => {
-            // Close dropdowns on resize to mobile
-            if (window.innerWidth <= 768) {
-                this.closeAllDropdowns();
-            }
-            
-            this.utils.dispatchEvent('windowResize', { 
-                width: window.innerWidth, 
-                height: window.innerHeight 
-            });
-        }, this.config.debounceDelay);
-
-        window.addEventListener('resize', handleResize, { passive: true });
-
-        // Print handler
-        window.addEventListener('beforeprint', () => {
-            document.body.classList.add('print-mode');
-        });
-
-        window.addEventListener('afterprint', () => {
-            document.body.classList.remove('print-mode');
-        });
-
-        // Page visibility
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                this.pauseAnimations();
-            } else {
-                this.resumeAnimations();
-            }
-        });
-    }
-
-    /**
-     * Utility methods
-     */
+  initializePageSpecificFeatures() {
+    // Setup external links to open in new tab
+    this.setupExternalLinks();
     
-    getCurrentLanguage() {
-        return document.documentElement.lang || 'ar';
-    }
-
-    showLoadingState() {
-        this.state.isLoading = true;
-        document.body.classList.add('loading');
-        
-        if (this.elements.loadingIndicator) {
-            this.elements.loadingIndicator.style.display = 'block';
-        }
-    }
-
-    hideLoadingState() {
-        this.state.isLoading = false;
-        document.body.classList.remove('loading');
-        
-        if (this.elements.loadingIndicator) {
-            this.elements.loadingIndicator.style.display = 'none';
-        }
-    }
-
-    trapFocus(container) {
-        const focusableElements = container.querySelectorAll(this.focusableSelectors);
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-
-        const trapTabKey = (e) => {
-            if (e.key === 'Tab') {
-                if (e.shiftKey) {
-                    if (document.activeElement === firstElement) {
-                        e.preventDefault();
-                        lastElement.focus();
-                    }
-                } else {
-                    if (document.activeElement === lastElement) {
-                        e.preventDefault();
-                        firstElement.focus();
-                    }
-                }
-            }
-        };
-
-        container.addEventListener('keydown', trapTabKey);
-        this.focusTrap = { container, handler: trapTabKey };
-        
-        if (firstElement) firstElement.focus();
-    }
-
-    releaseFocus() {
-        if (this.focusTrap) {
-            this.focusTrap.container.removeEventListener('keydown', this.focusTrap.handler);
-            this.focusTrap = null;
-        }
-    }
-
-    announceToScreenReader(message) {
-        if (this.liveRegion) {
-            this.liveRegion.textContent = message;
-            setTimeout(() => {
-                this.liveRegion.textContent = '';
-            }, 1000);
-        }
-    }
-
-    pauseAnimations() {
-        document.querySelectorAll('.animate-in').forEach(el => {
-            el.style.animationPlayState = 'paused';
-        });
-    }
-
-    resumeAnimations() {
-        document.querySelectorAll('.animate-in').forEach(el => {
-            el.style.animationPlayState = 'running';
-        });
-    }
-
-    handleError(error) {
-        const errorMessage = error.message || 'An unexpected error occurred';
-        this.showErrorMessage(errorMessage);
-        
-        // Send error to logging service (if implemented)
-        if (typeof this.logError === 'function') {
-            this.logError(error);
-        }
-    }
-
-    showErrorMessage(message) {
-        // Implementation depends on your error UI design
-        console.error('Error:', message);
-        this.announceToScreenReader(`Error: ${message}`);
-    }
-
-    hideErrorMessage() {
-        // Implementation depends on your error UI design
-        this.announceToScreenReader('Error resolved');
-    }
-
-    notifyUpdate() {
-        // Notify user of available update
-        if ('Notification' in window && Notification.permission === 'granted') {
-            new Notification('Update available', {
-                body: 'A new version of the site is available. Refresh to update.',
-                icon: '/images/logo.png'
-            });
-        }
-    }
-
-    /**
-     * Public API methods
-     */
+    // Setup form validation if forms exist
+    this.setupFormValidation();
     
-    updateLanguage(language) {
-        this.state.currentLanguage = language;
-        document.documentElement.lang = language;
-        document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-        
-        this.utils.dispatchEvent('languageChange', { language });
-    }
+    // Setup smooth scrolling for anchor links
+    this.setupSmoothScrolling();
+  }
 
-    // Cleanup method
-    destroy() {
-        // Remove event listeners
-        this.state.observers.forEach(observer => observer.disconnect());
-        
-        // Clear timeouts/intervals
-        if (this.focusTrap) {
-            this.releaseFocus();
-        }
-        
-        // Remove live region
-        if (this.liveRegion) {
-            this.liveRegion.remove();
-        }
-    }
-}
-
-/**
- * Utility class for common functions
- */
-class Utils {
-    // Debounce function
-    debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // Throttle function
-    throttle(func, limit) {
-        let inThrottle;
-        return function executedFunction(...args) {
-            if (!inThrottle) {
-                func.apply(this, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    }
-
-    // Custom event dispatcher
-    dispatchEvent(eventName, detail = {}) {
-        const event = new CustomEvent(eventName, {
-            detail,
-            bubbles: true,
-            cancelable: true
-        });
-        document.dispatchEvent(event);
-    }
-
-    // Format date for Arabic locale
-    formatDate(date, locale = 'ar-SA') {
-        return new Intl.DateTimeFormat(locale, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        }).format(date);
-    }
-
-    // Check if element is in viewport
-    isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Smooth scroll to element
-    scrollToElement(element, offset = 0) {
-        const elementTop = element.offsetTop - offset;
-        window.scrollTo({
-            top: elementTop,
-            behavior: 'smooth'
-        });
-    }
-
-    // Local storage with error handling
-    setStorage(key, value) {
-        try {
-            localStorage.setItem(key, JSON.stringify(value));
-            return true;
-        } catch (error) {
-            console.warn('Failed to save to localStorage:', error);
-            return false;
-        }
-    }
-
-    getStorage(key, defaultValue = null) {
-        try {
-            const item = localStorage.getItem(key);
-            return item ? JSON.parse(item) : defaultValue;
-        } catch (error) {
-            console.warn('Failed to read from localStorage:', error);
-            return defaultValue;
-        }
-    }
-}
-
-// Initialize application when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.PalestineEmbassy = new PalestineEmbassy();
+  setupExternalLinks() {
+    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
+    externalLinks.forEach(link => {
+      if (!link.hasAttribute('target')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
     });
-} else {
-    window.PalestineEmbassy = new PalestineEmbassy();
+  }
+
+  setupFormValidation() {
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      if (!form.dataset.validationInitialized) {
+        form.addEventListener('submit', this.validateForm);
+        form.dataset.validationInitialized = 'true';
+      }
+    });
+  }
+
+  validateForm(event) {
+    const form = event.target;
+    const requiredFields = form.querySelectorAll('[required]');
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+      if (!field.value.trim()) {
+        isValid = false;
+        field.classList.add('error');
+      } else {
+        field.classList.remove('error');
+      }
+    });
+
+    if (!isValid) {
+      event.preventDefault();
+      console.warn('Form validation failed');
+    }
+  }
+
+  setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (!anchor.dataset.smoothScrollInitialized) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          
+          try {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          } catch (error) {
+            console.warn('Invalid selector for smooth scroll:', targetId);
+          }
+        });
+        anchor.dataset.smoothScrollInitialized = 'true';
+      }
+    });
+  }
+
+  renderFallback(container, url) {
+    const fallbackHTML = `
+      <div style="
+        background: #f8f9fa; 
+        border: 1px solid #dee2e6; 
+        border-radius: 4px; 
+        padding: 20px; 
+        text-align: center; 
+        color: #6c757d;
+        margin: 10px 0;
+      ">
+        <p style="margin: 0; font-size: 14px;">
+          ⚠️ Unable to load content from <code>${url}</code>
+        </p>
+        <p style="margin: 5px 0 0 0; font-size: 12px;">
+          Please check your connection and refresh the page.
+        </p>
+      </div>
+    `;
+    container.innerHTML = fallbackHTML;
+  }
+
+  handleFallback() {
+    // Show a global error message if critical components fail to load
+    const fallbackBanner = document.createElement('div');
+    fallbackBanner.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #dc3545;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      z-index: 9999;
+      font-size: 14px;
+    `;
+    fallbackBanner.innerHTML = `
+      ⚠️ Some components failed to load. Please refresh the page.
+      <button onclick="location.reload()" style="
+        background: white;
+        color: #dc3545;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+      ">Refresh</button>
+    `;
+    document.body.prepend(fallbackBanner);
+  }
+
+  delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // Public API
+  isComponentLoaded(containerId) {
+    return this.loadedComponents.has(containerId);
+  }
+
+  getAllLoadedComponents() {
+    return Array.from(this.loadedComponents);
+  }
 }
 
-// Export for module systems
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { PalestineEmbassy, Utils };
+/*====================================================
+  ERROR HANDLING
+====================================================*/
+
+class ErrorHandler {
+  constructor() {
+    this.setupGlobalErrorHandling();
+  }
+
+  setupGlobalErrorHandling() {
+    // Handle JavaScript errors
+    window.addEventListener('error', (event) => {
+      console.error('🚨 JavaScript Error:', {
+        message: event.message,
+        filename: event.filename,
+        line: event.lineno,
+        column: event.colno
+      });
+    });
+
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('🚨 Unhandled Promise Rejection:', event.reason);
+    });
+
+    // Handle resource loading errors
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        console.error('🚨 Resource Loading Error:', {
+          element: event.target.tagName,
+          source: event.target.src || event.target.href,
+          message: 'Failed to load resource'
+        });
+      }
+    }, true);
+  }
 }
+
+/*====================================================
+  MAIN INITIALIZATION
+====================================================*/
+
+// Initialize error handling
+const errorHandler = new ErrorHandler();
+let componentLoader;
+
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', async () => {
+  console.log('🚀 DOM Content Loaded - Initializing...');
+  
+  try {
+    // Initialize component loader
+    componentLoader = new ComponentLoader();
+    
+    // Load all components
+    await componentLoader.init();
+    
+    console.log('✅ All components loaded and initialized');
+    
+  } catch (error) {
+    console.error('🚨 Critical error during page initialization:', error);
+  }
+});
+
+// Handle page visibility changes (pause operations when hidden)
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    console.log('📱 Page hidden - pausing operations');
+  } else {
+    console.log('📱 Page visible - resuming operations');
+  }
+});
+
+/*====================================================
+  UTILITY FUNCTIONS
+====================================================*/
+
+// Debounce function for performance
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      timeout = null;
+      if (!immediate) func(...args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func(...args);
+  };
+}
+
+// Check if element is in viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Wait for element to exist
+function waitForElement(selector, timeout = 5000) {
+  return new Promise((resolve, reject) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      resolve(element);
+      return;
+    }
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        obs.disconnect();
+        resolve(element);
+      }
+    });
+
+    observer.observe(document, {
+      childList: true,
+      subtree: true
+    });
+
+    setTimeout(() => {
+      observer.disconnect();
+      reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+    }, timeout);
+  });
+}
+
+/*====================================================
+  EXPORTS FOR GLOBAL USE
+====================================================*/
+
+// Make utilities available globally
+window.ComponentLoader = ComponentLoader;
+window.ErrorHandler = ErrorHandler;
+window.debounce = debounce;
+window.isInViewport = isInViewport;
+window.waitForElement = waitForElement;
+
+// Export component loader instance for other scripts
+window.getComponentLoader = () => componentLoader;

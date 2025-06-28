@@ -1,54 +1,63 @@
-<footer class="footer">
+<footer id="footer" class="footer-section">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
     <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-section footer-about">
-                <h3 id="about-embassy-title">حول السفارة</h3>
-                <p id="about-embassy-text">وجدت سفارة دولة فلسطين في تركيا من أجل خدمة أبناء الشعب الفلسطيني المتواجدين حالياً في تركيا، بالإضافة إلى نشر الثقافة والتراث الفلسطيني.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3 id="important-links-title">مواقع هامة</h3>
-                <ul class="footer-links">
-                    <li><a href="http://www.mofa.pna.ps" target="_blank" id="foreign-ministry-link">وزارة الخارجية</a></li>
-                    <li><a href="http://www.moi.gov.ps" target="_blank" id="interior-ministry-link">وزارة الداخلية</a></li>
-                    <li><a href="https://istanbul.palembassy.org" target="_blank" id="consulate-link">القنصلية العامة</a></li>
-                    <li><a href="#" id="passport-inquiry-link">الاستعلام عن جواز السفر</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3 id="contact-title">التواصل</h3>
-                <div class="contact-info">
-                    <p id="embassy-address">Kılıç Ali Caddesi No:5<br>Diplomatik Site, Ankara</p>
-                    <p><a href="tel:+903124903546" id="embassy-phone">+90 312 490 35 46</a></p>
-                    <p><a href="mailto:tremb@mfae.gov.ps" id="embassy-email">tremb@mfae.gov.ps</a></p>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3 id="follow-us-title">تابعونا</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/palembassytr" target="_blank" title="Facebook" id="facebook-link">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://twitter.com/PalEmbassyTR" target="_blank" title="Twitter" id="twitter-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/palembassytr/" target="_blank" title="Instagram" id="instagram-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/palestinian-embassy-turkey/" target="_blank" title="LinkedIn" id="linkedin-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@palembtr" target="_blank" title="YouTube" id="youtube-link">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+        <div id="about-section" class="footer-column">
+            <h3 id="about-title" class="section-title">حول السفارة</h3>
+            <p id="about-text">
+                وجدت سفارة دولة فلسطين في تركيا من أجل خدمة أبناء الشعب الفلسطيني المتواجدين حالياً في تركيا،
+                بالإضافة إلى نشر الثقافة والتراث الفلسطيني في جميع المدن التركية وتقديم صورة عن المجتمع
+                الفلسطيني وعاداته.
+            </p>
         </div>
 
-        <div class="footer-bottom">
-            <p id="footer-copyright">© 2025 سفارة دولة فلسطين • <span id="privacy-policy">سياسة الخصوصية</span> • <span id="terms-of-use">شروط الاستخدام</span></p>
+        <div id="important-links" class="footer-column">
+            <h3 id="links-title" class="section-title">مواقع هامة</h3>
+            <ul class="important-links-list">
+                <li><a href="http://www.mofa.pna.ps" target="_blank" rel="noopener" id="link-foreign-ministry">وزارة
+                        الخارجية</a></li>
+                <li><a href="http://www.moi.gov.ps" target="_blank" rel="noopener" id="link-interior-ministry">وزارة
+                        الداخلية</a></li>
+                <li><a href="https://istanbul.palembassy.org" target="_blank" rel="noopener"
+                        id="link-consulate-istanbul">القنصلية العامة في إسطنبول</a></li>
+            </ul>
+        </div>
+
+        <div id="contact-section" class="footer-column">
+            <h3 id="contact-title" class="section-title">التواصل</h3>
+            <address id="contact-address">
+                <span id="contact-location">Kılıç Ali Caddesi No:5, Diplomatik Site, 06450 Or-an Ankara</span><br>
+                <span id="contact-phone">الهاتف: <a href="tel:+903124903546">+90 312 490 35 46</a></span><br>
+                <span id="contact-fax">الفاكس: +90 312 490 40 77</span><br>
+                <span id="contact-email">البريد الإلكتروني: <a
+                        href="mailto:tremb@mfae.gov.ps">tremb@mfae.gov.ps</a></span>
+            </address>
+
+            <div id="social-media">
+                <a href="https://www.facebook.com/palembassytr" class="social-icon" target="_blank"
+                    aria-label="Facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/PalEmbassyTR" class="social-icon" target="_blank" aria-label="X"
+                    title="X">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/palembassytr/" class="social-icon" target="_blank"
+                    aria-label="Instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/palestinian-embassy-turkey/" class="social-icon"
+                    target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.youtube.com/@palembtr" class="social-icon" target="_blank" rel="noopener"
+                    aria-label="YouTube" title="YouTube"> <i class="fab fa-youtube"></i>
+                </a>
+            </div>
         </div>
     </div>
+
+    <div class="copyright-section" id="copyright">2025 © سفارة دولة فلسطين</div>
 </footer>
