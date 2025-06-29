@@ -1,0 +1,21 @@
+{
+    "pageTitle": "Former Ambassadors - Embassy of the State of Palestine",
+    "mainTitle": "Former Ambassadors",
+    "ambassadors": [
+        {
+            "name": "Ambassador Dr. Ribhi Halloum",
+            "tenure": "1979 - 1990",
+            "imageAlt": "Photo of Ambassador Dr. Ribhi Halloum"
+        },
+        {
+            "name": "Late Ambassador Fouad Yassin",
+            "tenure": "1990 - 2005",
+            "imageAlt": "Photo of late Ambassador Fouad Yassin"
+        },
+        {
+            "name": "Ambassador Nabil Maarouf",
+            "tenure": "2005 - 2014",
+            "imageAlt": "Photo of Ambassador Nabil Maarouf"
+        }
+    ]
+}

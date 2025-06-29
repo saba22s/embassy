@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-former-ambassadors-page">السفراء السابقون - سفارة دولة فلسطين</title>
+    <title id="title-former-ambassadors-page" data-i18n="former-ambassadors:pageTitle">السفراء السابقون - سفارة دولة
+        فلسطين</title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
+
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="stylesheet" href="/public/css/pages/former-ambassadors.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
@@ -20,43 +25,51 @@
 
     <div class="former-ambassadors-page-wrapper" dir="rtl">
         <section class="former-ambassadors-header-section">
-            <h1 class="main-title" id="former-ambassadors-main-title">السفراء السابقون</h1>
+            <h1 class="main-title" id="former-ambassadors-main-title" data-i18n="former-ambassadors:mainTitle">السفراء
+                السابقون</h1>
         </section>
 
         <div class="former-ambassadors-list-container">
             <div class="former-ambassador-card">
                 <div class="former-ambassador-image-wrapper">
-                    <img src="../images/Ribhi.jpg" alt="صورة السفير د. ربحي حلوم" id="former-ambassador-1-img-alt">
+                    <img src="../images/Ribhi.jpg" alt="صورة السفير د. ربحي حلوم" id="former-ambassador-1-img-alt"
+                        data-i18n="[alt]former-ambassadors:ambassadors.0.imageAlt">
                 </div>
-                <h2 class="ambassador-name" id="former-ambassador-1-name">السفير د. ربحي حلوم</h2>
-                <p class="ambassador-tenure" id="former-ambassador-1-tenure">1979 - 1990</p>
+                <h2 class="ambassador-name" id="former-ambassador-1-name"
+                    data-i18n="former-ambassadors:ambassadors.0.name">السفير د. ربحي حلوم</h2>
+                <p class="ambassador-tenure" id="former-ambassador-1-tenure"
+                    data-i18n="former-ambassadors:ambassadors.0.tenure">1979 - 1990</p>
             </div>
 
             <div class="former-ambassador-card">
                 <div class="former-ambassador-image-wrapper">
-                    <img src="../images/Fouad.jpg" alt="صورة السفير المرحوم فؤاد ياسين"
-                        id="former-ambassador-2-img-alt">
+                    <img src="../images/Fouad.jpg" alt="صورة السفير المرحوم فؤاد ياسين" id="former-ambassador-2-img-alt"
+                        data-i18n="[alt]former-ambassadors:ambassadors.1.imageAlt">
                 </div>
-                <h2 class="ambassador-name" id="former-ambassador-2-name">السفير المرحوم فؤاد ياسين</h2>
-                <p class="ambassador-tenure" id="former-ambassador-2-tenure">1990 - 2005</p>
+                <h2 class="ambassador-name" id="former-ambassador-2-name"
+                    data-i18n="former-ambassadors:ambassadors.1.name">السفير المرحوم فؤاد ياسين</h2>
+                <p class="ambassador-tenure" id="former-ambassador-2-tenure"
+                    data-i18n="former-ambassadors:ambassadors.1.tenure">1990 - 2005</p>
             </div>
 
             <div class="former-ambassador-card">
                 <div class="former-ambassador-image-wrapper">
-                    <img src="../images/Nabil.jpg" alt="صورة السفير نبيل معروف" id="former-ambassador-3-img-alt">
+                    <img src="../images/Nabil.jpg" alt="صورة السفير نبيل معروف" id="former-ambassador-3-img-alt"
+                        data-i18n="[alt]former-ambassadors:ambassadors.2.imageAlt">
                 </div>
-                <h2 class="ambassador-name" id="former-ambassador-3-name">السفير نبيل معروف</h2>
-                <p class="ambassador-tenure" id="former-ambassador-3-tenure">2005 - 2014</p>
+                <h2 class="ambassador-name" id="former-ambassador-3-name"
+                    data-i18n="former-ambassadors:ambassadors.2.name">السفير نبيل معروف</h2>
+                <p class="ambassador-tenure" id="former-ambassador-3-tenure"
+                    data-i18n="former-ambassadors:ambassadors.2.tenure">2005 - 2014</p>
             </div>
         </div>
     </div>
 
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
-
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 </body>
 
 </html>

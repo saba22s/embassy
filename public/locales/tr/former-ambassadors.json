@@ -1,0 +1,21 @@
+{
+    "pageTitle": "Eski Büyükelçiler - Filistin Devleti Büyükelçiliği",
+    "mainTitle": "Eski Büyükelçiler",
+    "ambassadors": [
+        {
+            "name": "Büyükelçi Dr. Ribhi Halloum",
+            "tenure": "1979 - 1990",
+            "imageAlt": "Büyükelçi Dr. Ribhi Halloum'un fotoğrafı"
+        },
+        {
+            "name": "Merhum Büyükelçi Fouad Yassin",
+            "tenure": "1990 - 2005",
+            "imageAlt": "Merhum Büyükelçi Fouad Yassin'in fotoğrafı"
+        },
+        {
+            "name": "Büyükelçi Nabil Maarouf",
+            "tenure": "2005 - 2014",
+            "imageAlt": "Büyükelçi Nabil Maarouf'un fotoğrafı"
+        }
+    ]
+}
