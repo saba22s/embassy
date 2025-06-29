@@ -1,0 +1,25 @@
+{
+    "pageTitle": "Cultural Relations - Embassy of the State of Palestine",
+    "hero": {
+        "mainTitle": "A Shared Tapestry of Art and Creativity",
+        "subtitle": "Palestinian-Turkish cultural relations are active and rich in events that reflect the rich cultural heritage of both peoples."
+    },
+    "palestinianEvents": {
+        "title": "Palestinian Events in Turkey",
+        "text": "Palestinian cultural weeks and days have been organized in Turkey six times, the latest being in 2017. These events included diverse activities in several Turkish cities aimed at introducing authentic Palestinian culture."
+    },
+    "turkishCenters": {
+        "title": "Turkish Cultural Centers in Palestine",
+        "text": "In Jerusalem, the Turkish Cultural Center was established years ago with the aim of introducing Turkish culture among the Palestinian people. Another branch of the center was also established in Ramallah to enhance this cultural exchange."
+    },
+    "educationalExchange": {
+        "title": "Educational and Academic Exchange",
+        "text": "Thousands of Palestinian students study in Turkey, many of them through Turkish government scholarships reaching about 150 scholarships annually. The Association of Turkish University Graduates in Palestine also contributes with its distinguished competencies to the development of our state and society."
+    },
+    "gallery": {
+        "alt1": "Image from Palestinian cultural events in Turkey",
+        "alt2": "Scene from the Turkish Cultural Center in Palestine",
+        "alt3": "Image from cultural exchange activities",
+        "alt4": "Scene from joint cultural events"
+    }
+}

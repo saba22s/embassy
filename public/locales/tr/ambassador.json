@@ -1,0 +1,57 @@
+{
+    "pageTitle": "Büyükelçi - Filistin Devleti Büyükelçiliği",
+    "ambassador": {
+        "profileImageAlt": "Büyükelçi Faed Mustafa'nın fotoğrafı",
+        "fullName": "Faed Khalid Abd Mustafa",
+        "officialTitle": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi"
+    },
+    "personalInfo": {
+        "heading": "Kişisel Bilgiler",
+        "dob": {
+            "label": "Doğum Tarihi:",
+            "value": "23 Temmuz 1965"
+        },
+        "pob": {
+            "label": "Doğum Yeri:",
+            "value": "Deir Ballut – Filistin"
+        },
+        "maritalStatus": {
+            "label": "Medeni Durum:",
+            "value": "Dul (merhume eşi Kafah Ghaleb Mustafa \"Umm Tariq\"), üç çocuğu vardır (bir oğul ve iki kız)"
+        }
+    },
+    "education": {
+        "heading": "Akademik Nitelikler",
+        "bachelor": "Ürdün'deki Yarmouk Üniversitesi'nden Ekonomi ve İdari Bilimler lisans derecesi (1987)",
+        "masters": "Moskova'daki Halklar Dostluğu Üniversitesi'nden Tarih yüksek lisans derecesi (2001)",
+        "phd": "Moskova'daki Halklar Dostluğu Üniversitesi'nden Uluslararası İlişkiler ve Dış Politika doktora derecesi (2005)"
+    },
+    "career": {
+        "heading": "Mesleki Kariyer",
+        "pna": "Filistin Ulusal Otoritesi'nin kurulmasından bu yana resmi çalışmaya başladı (1994)",
+        "russiaEmbassy": "Rusya Federasyonu'ndaki Filistin Devleti Büyükelçiliği'ne katıldı (1998)",
+        "consul": "Moskova'daki Filistin Devleti Büyükelçiliği'nde Konsolos (Mart 2003)",
+        "deputyAmbassador": "Moskova'daki Filistin Devleti Büyükelçiliği'nde Büyükelçi Yardımcısı (Ocak 2008)",
+        "assistantMinister": "Doğu Avrupa İşleri Dışişleri Bakan Yardımcısı, Büyükelçi rütbesiyle (28 Haziran 2009)",
+        "ambassadorRussia": "Filistin Devleti'nin Rusya Federasyonu Büyükelçisi (4 Eylül 2009)",
+        "ambassadorTurkey": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi (Mayıs 2015 - Halen)"
+    },
+    "nationalActivity": {
+        "heading": "Ulusal Biyografi",
+        "fatah": "Fetih Hareketi Devrim Konseyi üyesi (2016'dan beri)",
+        "pnc": "Filistin Ulusal Konseyi üyesi (2018'den beri)"
+    },
+    "languages": {
+        "heading": "Diller",
+        "list": "Ana dili Arapça olmak üzere İngilizce ve Rusça'yı akıcı konuşur, İbranice'yi iyi bilir."
+    },
+    "trainingCourses": {
+        "heading": "Eğitim Kursları",
+        "list": "Yurt içi ve yurt dışında çeşitli diplomatik ve stratejik alanlarda sayısız eğitim kursuna katıldı."
+    },
+    "gallery": {
+        "main1Alt": "Büyükelçi resmi bir törende",
+        "main2Alt": "Büyükelçi diplomatik şahsiyetlerle",
+        "main3Alt": "Büyükelçi bir konferansta konuşma yaparken"
+    }
+}

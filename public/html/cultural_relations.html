@@ -4,87 +4,163 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-cultural-relations-page">العلاقات الثقافية - سفارة دولة فلسطين</title>
+    <title id="title-cultural-relations-page" data-i18n="cultural-relations:pageTitle">العلاقات الثقافية - سفارة دولة فلسطين</title>
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="stylesheet" href="/public/css/pages/cultural-relations.css" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="العلاقات الثقافية بين فلسطين وتركيا - نسيج مشترك من الفن والإبداع">
+    <meta name="keywords" content="فلسطين، تركيا، علاقات ثقافية، تبادل ثقافي، فعاليات">
+    <meta name="author" content="سفارة دولة فلسطين في تركيا">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="العلاقات الثقافية - سفارة دولة فلسطين">
+    <meta property="og:description" content="العلاقات الثقافية الفلسطينية التركية - نسيج مشترك من الفن والإبداع">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/images/favicon.png">
+    
+    <!-- i18next Dependencies - MUST be loaded BEFORE other scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
+    <!-- Header Container -->
     <div id="header-container"></div>
 
+    <!-- Main Content -->
     <div class="cultural-relations-page-wrapper">
-        <section class="cultural-hero-section">
+        <!-- Hero Section -->
+        <section class="cultural-hero-section" role="banner" aria-label="قسم العنوان الرئيسي للعلاقات الثقافية">
             <div class="cultural-hero-content">
-                <h1 class="cultural-hero-title" id="cultural-hero-main-title">نسيج مشترك من الفن والإبداع</h1>
-                <p class="cultural-hero-subtitle" id="cultural-hero-sub-text">
-                    العلاقات الثقافية الفلسطينية التركية هي علاقات نشطة وغنية بالفعاليات التي تعكس الموروث الثقافي الغني
-                    لكلا الشعبين.
+                <h1 class="cultural-hero-title" 
+                    id="cultural-hero-main-title"
+                    data-i18n="cultural-relations:hero.mainTitle">
+                    نسيج مشترك من الفن والإبداع
+                </h1>
+                <p class="cultural-hero-subtitle" 
+                   id="cultural-hero-sub-text"
+                   data-i18n="cultural-relations:hero.subtitle">
+                    العلاقات الثقافية الفلسطينية التركية هي علاقات نشطة وغنية بالفعاليات التي تعكس الموروث الثقافي الغني لكلا الشعبين.
                 </p>
             </div>
         </section>
 
-        <main class="cultural-content-container">
+        <!-- Main Content Container -->
+        <main class="cultural-content-container" role="main">
             <div class="cultural-section-grid">
-                <div class="cultural-info-card" id="palestinian-events-card">
-                    <div class="card-icon"><i class="fas fa-palette"></i></div>
-                    <h2 class="card-title" id="palestinian-events-title">فعاليات فلسطينية في تركيا</h2>
-                    <p class="card-text" id="palestinian-events-text">
-                        تم تنظيم فعاليات الأسابيع والأيام الثقافية الفلسطينية في تركيا ست مرات، كان آخرها في عام 2017.
-                        شملت هذه الفعاليات أنشطة متنوعة في عدة مدن تركية بهدف التعريف بالثقافة الفلسطينية الأصيلة.
+                
+                <!-- Palestinian Events Card -->
+                <article class="cultural-info-card" id="palestinian-events-card">
+                    <div class="card-icon" aria-hidden="true">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h2 class="card-title" 
+                        id="palestinian-events-title"
+                        data-i18n="cultural-relations:palestinianEvents.title">
+                        فعاليات فلسطينية في تركيا
+                    </h2>
+                    <p class="card-text" 
+                       id="palestinian-events-text"
+                       data-i18n="cultural-relations:palestinianEvents.text">
+                        تم تنظيم فعاليات الأسابيع والأيام الثقافية الفلسطينية في تركيا ست مرات، كان آخرها في عام 2017. شملت هذه الفعاليات أنشطة متنوعة في عدة مدن تركية بهدف التعريف بالثقافة الفلسطينية الأصيلة.
                     </p>
-                </div>
+                </article>
 
-                <div class="cultural-info-card" id="turkish-centers-card">
-                    <div class="card-icon"><i class="fas fa-university"></i></div>
-                    <h2 class="card-title" id="turkish-centers-title">مراكز ثقافية تركية في فلسطين</h2>
-                    <p class="card-text" id="turkish-centers-text">
-                        في القدس، تم تأسيس المركز الثقافي التركي منذ سنوات بهدف التعريف بالثقافة التركية في أوساط الشعب
-                        الفلسطيني. كما تم إنشاء فرع آخر للمركز في مدينة رام الله لتعزيز هذا التبادل الثقافي.
+                <!-- Turkish Centers Card -->
+                <article class="cultural-info-card" id="turkish-centers-card">
+                    <div class="card-icon" aria-hidden="true">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h2 class="card-title" 
+                        id="turkish-centers-title"
+                        data-i18n="cultural-relations:turkishCenters.title">
+                        مراكز ثقافية تركية في فلسطين
+                    </h2>
+                    <p class="card-text" 
+                       id="turkish-centers-text" 
+                       data-i18n="cultural-relations:turkishCenters.text">
+                        في القدس، تم تأسيس المركز الثقافي التركي منذ سنوات بهدف التعريف بالثقافة التركية في أوساط الشعب الفلسطيني. كما تم إنشاء فرع آخر للمركز في مدينة رام الله لتعزيز هذا التبادل الثقافي.
                     </p>
-                </div>
+                </article>
 
-                <div class="cultural-info-card" id="educational-exchange-card">
-                    <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h2 class="card-title" id="educational-exchange-title">التبادل التعليمي والأكاديمي</h2>
-                    <p class="card-text" id="educational-exchange-text">
-                        يدرس آلاف الطلبة الفلسطينيين في تركيا، كثير منهم عبر منح دراسية حكومية تركية تصل إلى حوالي 150
-                        منحة سنوياً. كما تساهم جمعية خريجي الجامعات التركية في فلسطين بكفاءاتها المميزة في تطوير دولتنا
-                        ومجتمعنا.
+                <!-- Educational Exchange Card -->
+                <article class="cultural-info-card" id="educational-exchange-card">
+                    <div class="card-icon" aria-hidden="true">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2 class="card-title" 
+                        id="educational-exchange-title"
+                        data-i18n="cultural-relations:educationalExchange.title">
+                        التبادل التعليمي والأكاديمي
+                    </h2>
+                    <p class="card-text" 
+                       id="educational-exchange-text"
+                       data-i18n="cultural-relations:educationalExchange.text">
+                        يدرس آلاف الطلبة الفلسطينيين في تركيا، كثير منهم عبر منح دراسية حكومية تركية تصل إلى حوالي 150 منحة سنوياً. كما تساهم جمعية خريجي الجامعات التركية في فلسطين بكفاءاتها المميزة في تطوير دولتنا ومجتمعنا.
                     </p>
-                </div>
+                </article>
+
             </div>
         </main>
 
-        <section class="cultural-gallery-section">
+        <!-- Gallery Section -->
+        <section class="cultural-gallery-section" 
+                 role="region" 
+                 aria-label="معرض صور العلاقات الثقافية">
             <div class="cultural-gallery-grid">
                 <div class="gallery-item-wrapper">
-                    <img src="../images/cultural_relations/cultural_relations1.jpg" alt="1" id="gallery-img-alt-1">
+                    <img src="../images/cultural_relations/cultural_relations1.jpg"
+                         data-i18n="[alt]cultural-relations:gallery.alt1"
+                         alt="صورة من الفعاليات الثقافية الفلسطينية في تركيا" 
+                         id="gallery-img-alt-1"
+                         loading="lazy">
                 </div>
                 <div class="gallery-item-wrapper">
-                    <img src="../images/cultural_relations/cultural_relations2.jpg" alt="2" id="gallery-img-alt-2">
+                    <img src="../images/cultural_relations/cultural_relations2.jpg"
+                         data-i18n="[alt]cultural-relations:gallery.alt2" 
+                         alt="لقطة من المركز الثقافي التركي في فلسطين"
+                         id="gallery-img-alt-2"
+                         loading="lazy">
                 </div>
                 <div class="gallery-item-wrapper">
-                    <img src="../images/cultural_relations/cultural_relations3.jpg" alt="3" id="gallery-img-alt-3">
+                    <img src="../images/cultural_relations/cultural_relations3.jpg"
+                         data-i18n="[alt]cultural-relations:gallery.alt3" 
+                         alt="صورة من أنشطة التبادل الثقافي"
+                         id="gallery-img-alt-3"
+                         loading="lazy">
                 </div>
                 <div class="gallery-item-wrapper">
-                    <img src="../images/cultural_relations/cultural_relations4.jpg" alt="4" id="gallery-img-alt-4">
+                    <img src="../images/cultural_relations/cultural_relations4.jpg"
+                         data-i18n="[alt]cultural-relations:gallery.alt4" 
+                         alt="لقطة من الأحداث الثقافية المشتركة"
+                         id="gallery-img-alt-4"
+                         loading="lazy">
                 </div>
             </div>
         </section>
 
     </div>
 
+    <!-- Footer Container -->
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
+    <!-- JavaScript Files - في الترتيب الصحيح -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 
 </body>
 

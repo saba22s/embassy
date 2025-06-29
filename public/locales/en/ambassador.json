@@ -1,0 +1,57 @@
+{
+    "pageTitle": "Ambassador - Embassy of the State of Palestine",
+    "ambassador": {
+        "profileImageAlt": "Photo of Ambassador Faed Mustafa",
+        "fullName": "Faed Khalid Abd Mustafa",
+        "officialTitle": "Ambassador of the State of Palestine to the Republic of Turkey"
+    },
+    "personalInfo": {
+        "heading": "Personal Information",
+        "dob": {
+            "label": "Date of Birth:",
+            "value": "July 23, 1965"
+        },
+        "pob": {
+            "label": "Place of Birth:",
+            "value": "Deir Ballut – Palestine"
+        },
+        "maritalStatus": {
+            "label": "Marital Status:",
+            "value": "Widower (late wife Kafah Ghaleb Mustafa \"Umm Tariq\"), has three children (one son and two daughters)"
+        }
+    },
+    "education": {
+        "heading": "Academic Qualifications",
+        "bachelor": "Bachelor's degree in Economics and Administrative Sciences from Yarmouk University in Jordan (1987)",
+        "masters": "Master's degree in History from Peoples' Friendship University in Moscow (2001)",
+        "phd": "PhD in International Relations and Foreign Policy from Peoples' Friendship University in Moscow (2005)"
+    },
+    "career": {
+        "heading": "Professional Career",
+        "pna": "Started official work since the establishment of the Palestinian National Authority (1994)",
+        "russiaEmbassy": "Joined the Embassy of the State of Palestine in the Russian Federation (1998)",
+        "consul": "Consul at the Embassy of the State of Palestine in Moscow (March 2003)",
+        "deputyAmbassador": "Deputy Ambassador at the Embassy of the State of Palestine in Moscow (January 2008)",
+        "assistantMinister": "Assistant Minister of Foreign Affairs for Eastern European Affairs with the rank of Ambassador (June 28, 2009)",
+        "ambassadorRussia": "Ambassador of the State of Palestine to the Russian Federation (September 4, 2009)",
+        "ambassadorTurkey": "Ambassador of the State of Palestine to the Republic of Turkey (May 2015 - Present)"
+    },
+    "nationalActivity": {
+        "heading": "National Biography",
+        "fatah": "Member of the Revolutionary Council of Fatah Movement (since 2016)",
+        "pnc": "Member of the Palestinian National Council (since 2018)"
+    },
+    "languages": {
+        "heading": "Languages",
+        "list": "Proficient in English and Russian with good knowledge of Hebrew, in addition to Arabic as the native language."
+    },
+    "trainingCourses": {
+        "heading": "Training Courses",
+        "list": "Participated in numerous training courses in various diplomatic and strategic fields both domestically and internationally."
+    },
+    "gallery": {
+        "main1Alt": "Ambassador during an official occasion",
+        "main2Alt": "Ambassador with diplomatic figures",
+        "main3Alt": "Ambassador delivering a speech at a conference"
+    }
+}

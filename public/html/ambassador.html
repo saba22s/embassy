@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-ambassador-page">السفير - سفارة دولة فلسطين</title>
+    <title id="title-ambassador-page" data-i18n="ambassador:pageTitle">السفير - سفارة دولة فلسطين</title>
     <link rel="stylesheet" href="/public/css/pages/ambassador.css" />
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,10 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- i18next Dependencies - MUST be loaded BEFORE other scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body>
@@ -23,31 +27,46 @@
             <div class="ambassador-hero-image-wrapper">
                 <a href="https://ar.wikipedia.org/wiki/%D9%81%D8%A7%D8%A6%D8%AF_%D9%85%D8%B5%D8%B7%D9%81%D9%89"
                     target="_blank" rel="noopener">
-                    <img src="../images/faed.jpg" alt="صورة السفير فائد مصطفى" id="ambassador-profile-image-alt">
+                    <img src="../images/faed.jpg" data-i18n="[alt]ambassador:ambassador.profileImageAlt"
+                        alt="صورة السفير فائد مصطفى" id="ambassador-profile-image-alt">
                 </a>
             </div>
-            <h1 class="hero-name" id="ambassador-full-name-main">فائد خالد عبد مصطفى</h1>
-            <p class="hero-title" id="ambassador-official-title-main">سفير دولة فلسطين لدى الجمهورية التركية</p>
+            <h1 class="hero-name" id="ambassador-full-name-main" data-i18n="ambassador:ambassador.fullName">فائد خالد
+                عبد مصطفى</h1>
+            <p class="hero-title" id="ambassador-official-title-main" data-i18n="ambassador:ambassador.officialTitle">
+                سفير دولة فلسطين لدى الجمهورية التركية</p>
         </section>
 
         <div class="ambassador-cv-container">
             <section class="cv-category-block" id="personal-info-section">
-                <h2 class="category-title" id="personal-info-heading">المعلومات الشخصية</h2>
+                <h2 class="category-title" id="personal-info-heading" data-i18n="ambassador:personalInfo.heading">
+                    المعلومات الشخصية</h2>
                 <ul>
                     <li>
                         <span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-label" id="ambassador-dob-label">تاريخ الميلاد:</span> <span
-                                class="item-value" id="ambassador-dob-value">23 يوليو 1965</span></div>
+                        <div>
+                            <span class="item-label" id="ambassador-dob-label"
+                                data-i18n="ambassador:personalInfo.dob.label">تاريخ الميلاد:</span>
+                            <span class="item-value" id="ambassador-dob-value"
+                                data-i18n="ambassador:personalInfo.dob.value">23 يوليو 1965</span>
+                        </div>
                     </li>
                     <li>
                         <span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-label" id="ambassador-pob-label">مكان الميلاد:</span> <span
-                                class="item-value" id="ambassador-pob-value">دير بلوط – فلسطين</span></div>
+                        <div>
+                            <span class="item-label" id="ambassador-pob-label"
+                                data-i18n="ambassador:personalInfo.pob.label">مكان الميلاد:</span>
+                            <span class="item-value" id="ambassador-pob-value"
+                                data-i18n="ambassador:personalInfo.pob.value">دير بلوط – فلسطين</span>
+                        </div>
                     </li>
                     <li>
                         <span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-label" id="ambassador-marital-status-label">الحالة الاجتماعية:</span>
-                            <span class="item-value" id="ambassador-marital-status-value">أرمل (زوجته المرحومة كفاح غالب
+                        <div>
+                            <span class="item-label" id="ambassador-marital-status-label"
+                                data-i18n="ambassador:personalInfo.maritalStatus.label">الحالة الاجتماعية:</span>
+                            <span class="item-value" id="ambassador-marital-status-value"
+                                data-i18n="ambassador:personalInfo.maritalStatus.value">أرمل (زوجته المرحومة كفاح غالب
                                 مصطفى "أم طارق")، ولديه ثلاثة أبناء (ولد وابنتان)</span>
                         </div>
                     </li>
@@ -55,106 +74,152 @@
             </section>
 
             <section class="cv-category-block" id="education-section">
-                <h2 class="category-title" id="education-heading">التأهيل العلمي</h2>
+                <h2 class="category-title" id="education-heading" data-i18n="ambassador:education.heading">التأهيل
+                    العلمي</h2>
                 <ul>
-                    <li id="education-bachelor"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">بكالوريوس في الاقتصاد والعلوم الإدارية من جامعة اليرموك في
-                                الاردن</span><span class="item-year">(1987)</span></div>
+                    <li id="education-bachelor">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:education.bachelor">بكالوريوس في الاقتصاد
+                                والعلوم الإدارية من جامعة اليرموك في الاردن (1987)</span>
+                        </div>
                     </li>
-                    <li id="education-masters"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">ماجستير في التاريخ من جامعة الصداقة بين الشعوب في
-                                موسكو</span><span class="item-year">(2001)</span></div>
+                    <li id="education-masters">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:education.masters">ماجستير في التاريخ من
+                                جامعة الصداقة بين الشعوب في موسكو (2001)</span>
+                        </div>
                     </li>
-                    <li id="education-phd"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">دكتوراه في العلاقات الدولية والسياسات الخارجية من جامعة الصداقة
-                                بين الشعوب في موسكو</span><span class="item-year">(2005)</span></div>
+                    <li id="education-phd">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:education.phd">دكتوراه في العلاقات الدولية
+                                والسياسات الخارجية من جامعة الصداقة بين الشعوب في موسكو (2005)</span>
+                        </div>
                     </li>
                 </ul>
             </section>
 
             <section class="cv-category-block" id="career-section">
-                <h2 class="category-title" id="career-heading">السيرة المهنية</h2>
+                <h2 class="category-title" id="career-heading" data-i18n="ambassador:career.heading">السيرة المهنية</h2>
                 <ul>
-                    <li id="career-pna"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">بدء العمل الرسمي منذ تأسيس السلطة الوطنية الفلسطينية</span><span
-                                class="item-year">(1994)</span></div>
+                    <li id="career-pna">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.pna">بدء العمل الرسمي منذ تأسيس السلطة
+                                الوطنية الفلسطينية (1994)</span>
+                        </div>
                     </li>
-                    <li id="career-russia-embassy"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">الالتحاق بالعمل في سفارة دولة فلسطين في روسيا
-                                الاتحادية</span><span class="item-year">(1998)</span></div>
+                    <li id="career-russia-embassy">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.russiaEmbassy">الالتحاق بالعمل في
+                                سفارة دولة فلسطين في روسيا الاتحادية (1998)</span>
+                        </div>
                     </li>
-                    <li id="career-consul"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">القنصل في سفارة دولة فلسطين في موسكو</span><span
-                                class="item-year">(مارس 2003)</span></div>
+                    <li id="career-consul">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.consul">القنصل في سفارة دولة فلسطين في
+                                موسكو (مارس 2003)</span>
+                        </div>
                     </li>
-                    <li id="career-deputy-ambassador"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">نائب السفير في سفارة دولة فلسطين في موسكو</span><span
-                                class="item-year">(يناير 2008)</span></div>
+                    <li id="career-deputy-ambassador">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.deputyAmbassador">نائب السفير في سفارة
+                                دولة فلسطين في موسكو (يناير 2008)</span>
+                        </div>
                     </li>
-                    <li id="career-assistant-minister"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">مساعد وزير الخارجية لشؤون أوروبا الشرقية بدرجة سفير</span><span
-                                class="item-year">(28 يونيو 2009)</span></div>
+                    <li id="career-assistant-minister">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.assistantMinister">مساعد وزير الخارجية
+                                لشؤون أوروبا الشرقية بدرجة سفير (28 يونيو 2009)</span>
+                        </div>
                     </li>
-                    <li id="career-ambassador-russia"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">سفير دولة فلسطين لدى روسيا الاتحادية</span><span
-                                class="item-year">(4 سبتمبر 2009)</span></div>
+                    <li id="career-ambassador-russia">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.ambassadorRussia">سفير دولة فلسطين لدى
+                                روسيا الاتحادية (4 سبتمبر 2009)</span>
+                        </div>
                     </li>
-                    <li id="career-ambassador-turkey"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">سفير دولة فلسطين لدى الجمهورية التركية</span><span
-                                class="item-year">(مايو 2015 - حتى الآن)</span></div>
+                    <li id="career-ambassador-turkey">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:career.ambassadorTurkey">سفير دولة فلسطين لدى
+                                الجمهورية التركية (مايو 2015 - حتى الآن)</span>
+                        </div>
                     </li>
                 </ul>
             </section>
 
             <section class="cv-category-block" id="national-activity-section">
-                <h2 class="category-title" id="national-activity-heading">السيرة الوطنية</h2>
+                <h2 class="category-title" id="national-activity-heading"
+                    data-i18n="ambassador:nationalActivity.heading">السيرة الوطنية</h2>
                 <ul>
-                    <li id="national-activity-fatah"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">عضو المجلس الثوري لحركة فتح</span><span class="item-year">(منذ
-                                2016)</span></div>
+                    <li id="national-activity-fatah">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:nationalActivity.fatah">عضو المجلس الثوري
+                                لحركة فتح (منذ 2016)</span>
+                        </div>
                     </li>
-                    <li id="national-activity-pnc"><span class="item-marker" aria-hidden="true">&ndash;</span>
-                        <div><span class="item-value">عضو المجلس الوطني الفلسطيني</span><span class="item-year">(منذ
-                                2018)</span></div>
+                    <li id="national-activity-pnc">
+                        <span class="item-marker" aria-hidden="true">&ndash;</span>
+                        <div>
+                            <span class="item-value" data-i18n="ambassador:nationalActivity.pnc">عضو المجلس الوطني
+                                الفلسطيني (منذ 2018)</span>
+                        </div>
                     </li>
                 </ul>
             </section>
 
             <section class="cv-category-block" id="languages-section">
-                <h2 class="category-title" id="languages-heading">اللغات</h2>
+                <h2 class="category-title" id="languages-heading" data-i18n="ambassador:languages.heading">اللغات</h2>
                 <p class="cv-item-paragraph" id="languages-list">
                     <span class="item-marker" aria-hidden="true">&ndash;</span>
-                    <span>اجادة اللغتين الإنجليزية والروسية مع المام جيد باللغة العبرية، بالإضافة الى اللغة العربية
-                        الام.</span>
+                    <span data-i18n="ambassador:languages.list">اجادة اللغتين الإنجليزية والروسية مع المام جيد باللغة
+                        العبرية، بالإضافة الى اللغة العربية الام.</span>
                 </p>
             </section>
 
             <section class="cv-category-block" id="training-courses-section">
-                <h2 class="category-title" id="training-courses-heading">الدورات التدريبية</h2>
+                <h2 class="category-title" id="training-courses-heading" data-i18n="ambassador:trainingCourses.heading">
+                    الدورات التدريبية</h2>
                 <p class="cv-item-paragraph" id="training-courses-list">
                     <span class="item-marker" aria-hidden="true">&ndash;</span>
-                    <span>المشاركة في العديد من الدورات التدريبية في المجالات الدبلوماسية والاستراتيجية المختلفة في
-                        الداخل والخارج.</span>
+                    <span data-i18n="ambassador:trainingCourses.list">المشاركة في العديد من الدورات التدريبية في
+                        المجالات الدبلوماسية والاستراتيجية المختلفة في الداخل والخارج.</span>
                 </p>
             </section>
 
             <section class="ambassador-final-gallery" id="ambassador-page-gallery">
                 <div class="ambassador-final-photos-grid">
-                    <div class="photo-container"><img src="../images/faed2.jpg" alt="السفير خلال مناسبة رسمية"
-                            id="ambassador-gallery-main1-alt"></div>
-                    <div class="photo-container"><img src="../images/faed3.jpg" alt="السفير مع شخصيات دبلوماسية"
-                            id="ambassador-gallery-main2-alt"></div>
-                    <div class="photo-container"><img src="../images/faed4.jpg" alt="السفير خلال كلمة في مؤتمر"
-                            id="ambassador-gallery-main3-alt"></div>
+                    <div class="photo-container">
+                        <img src="../images/faed2.jpg" data-i18n="[alt]ambassador:gallery.main1Alt"
+                            alt="السفير خلال مناسبة رسمية" id="ambassador-gallery-main1-alt">
+                    </div>
+                    <div class="photo-container">
+                        <img src="../images/faed3.jpg" data-i18n="[alt]ambassador:gallery.main2Alt"
+                            alt="السفير مع شخصيات دبلوماسية" id="ambassador-gallery-main2-alt">
+                    </div>
+                    <div class="photo-container">
+                        <img src="../images/faed4.jpg" data-i18n="[alt]ambassador:gallery.main3Alt"
+                            alt="السفير خلال كلمة في مؤتمر" id="ambassador-gallery-main3-alt">
+                    </div>
                 </div>
             </section>
         </div>
     </div>
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
+    <!-- JavaScript Files - MUST be in correct order -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 </body>
 
 </html>

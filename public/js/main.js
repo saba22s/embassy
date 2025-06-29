@@ -21,6 +21,10 @@ class ComponentLoader {
       // Initialize all page features after components are loaded
       await this.initializeFeatures();
 
+      // Dispatch componentsLoaded event after all features are initialized
+      document.dispatchEvent(new CustomEvent('componentsLoaded'));
+      console.log('✅ All components loaded and componentsLoaded event dispatched');
+
     } catch (error) {
       console.error('Failed to initialize components:', error);
       this.handleFallback();
@@ -61,31 +65,14 @@ class ComponentLoader {
   }
 
   async initializeFeatures() {
-    // Check if global initializer is available
-    if (typeof globalPageInitializer === 'function') {
-      try {
-        globalPageInitializer();
-        console.log('✅ Page features initialized successfully');
-      } catch (error) {
-        console.error('❌ Error initializing page features:', error);
-      }
-    } else {
-      console.error('❌ globalPageInitializer function not found. Ensure language-switcher.js is loaded.');
-    }
-
-    // Initialize additional features specific to the current page
-    this.initializePageSpecificFeatures();
+    this.setupExternalLinks();
+    this.setupFormValidation();
+    this.setupSmoothScrolling();
+    console.log('✅ Core app features initialized successfully');
   }
 
   initializePageSpecificFeatures() {
-    // Setup external links to open in new tab
-    this.setupExternalLinks();
-    
-    // Setup form validation if forms exist
-    this.setupFormValidation();
-    
-    // Setup smooth scrolling for anchor links
-    this.setupSmoothScrolling();
+    // This method is now effectively integrated into initializeFeatures
   }
 
   setupExternalLinks() {
@@ -231,10 +218,11 @@ class ErrorHandler {
     // Handle JavaScript errors
     window.addEventListener('error', (event) => {
       console.error('🚨 JavaScript Error:', {
-        message: event.message,
+        message: event.error ? event.error.message : event.message,
         filename: event.filename,
         line: event.lineno,
-        column: event.colno
+        column: event.colno,
+        stack: event.error ? event.error.stack : 'No stack trace available'
       });
     });
 
@@ -273,9 +261,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     componentLoader = new ComponentLoader();
     
     // Load all components
-    await componentLoader.init();
-    
-    console.log('✅ All components loaded and initialized');
+    await componentLoader.init(); 
     
   } catch (error) {
     console.error('🚨 Critical error during page initialization:', error);

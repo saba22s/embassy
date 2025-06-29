@@ -4,46 +4,81 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-embassy">السفارة - سفارة دولة فلسطين</title>
+    <title id="title-embassy" data-i18n="embassy:pageTitle">السفارة - سفارة دولة فلسطين</title>
     <link rel="stylesheet" href="/public/css/pages/embassy.css" />
     <link rel="stylesheet" href="/public/css/main.css" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="سفارة دولة فلسطين في تركيا - تاريخ السفارة والعلاقات الفلسطينية التركية">
+    <meta name="keywords" content="سفارة فلسطين، تركيا، أنقرة، علاقات تاريخية، دبلوماسية">
+    <meta name="author" content="سفارة دولة فلسطين في تركيا">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/images/favicon.png">
+    
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
-<body>
+<body data-lang-direction="rtl">
+    <!-- Header Container -->
     <div id="header-container"></div>
 
+    <!-- Main Content -->
     <div class="embassy-page-wrapper" dir="rtl">
         <div class="embassy-container">
 
+            <!-- Header Section -->
             <section class="embassy-header-section">
-                <h1 class="main-title" id="embassy-page-main-title">سفارة دولة فلسطين</h1>
-                <p class="subtitle" id="embassy-page-subtitle">الجمهورية التركية - أنقرة</p>
+                <h1 class="main-title" 
+                    id="embassy-page-main-title" 
+                    data-i18n="embassy:header.mainTitle">سفارة دولة فلسطين</h1>
+                <p class="subtitle" 
+                   id="embassy-page-subtitle" 
+                   data-i18n="embassy:header.subtitle">الجمهورية التركية - أنقرة</p>
             </section>
 
+            <!-- Main Content Article -->
             <article class="embassy-info-card" id="about-embassy-section">
-                <h2 class="card-title" id="about-embassy-title">نبذة عن السفارة والعلاقات التاريخية</h2>
-                <p id="embassy-history-p1">
+                <h2 class="card-title" 
+                    id="about-embassy-title" 
+                    data-i18n="embassy:about.title">نبذة عن السفارة والعلاقات التاريخية</h2>
+                
+                <p id="embassy-history-p1" 
+                   data-i18n="embassy:about.paragraph1">
                     العلاقة الفلسطينية التركية قديمة ومضى عليها قرون طويلة من الزمن. أما العلاقة بين تركيا ومنظمة
                     التحرير الفلسطينية فبدأت مبكرًا، وتطورت بمرور الزمن، إلى أن تم الاتفاق في نهاية السبعينات على إفتتاح
                     ممثلية لمنظمة التحرير الفلسطينية في العاصمة أنقرة.
                 </p>
-                <p id="embassy-history-p2">
+                
+                <p id="embassy-history-p2" 
+                   data-i18n="embassy:about.paragraph2">
                     وبالفعل، خلال زيارة رسمية للرئيس الشهيد ياسر عرفات إلى الجمهورية التركية في عهد رئيس الوزراء التركي
                     الراحل بولنت أجاويد يوم الخامس من تشرين أول/أكتوبر 1979، تم رفع العلم الفلسطيني فوق مقر ممثلية منظمة
                     التحرير الفلسطينية في العاصمة أنقرة وسط حضور رسمي وشعبي كبير. وتم تعيين السيد ربحي حلوم حجازي كأول
                     ممثل لمنظمة التحرير في تركيا، لتبدأ بعدها مرحلة جديدة في العلاقات الفلسطينية التركية.
                 </p>
-                <p id="embassy-history-p3">
+                
+                <p id="embassy-history-p3" 
+                   data-i18n="embassy:about.paragraph3">
                     وقد تم يوم 27 أغسطس 1987 تسمية الشارع الذي يقع فيه مبنى ممثلية منظمة التحرير الفلسطينية بشارع
                     فلسطين، وسط احتفال رسمي وشعبي شارك فيه رئيس بلدية أنقرة في حينه السيد محمد ألتينسوي إلى جانب ممثلي
                     السلك الدبلوماسي في تركيا.
                 </p>
-                <p id="embassy-history-p4">
+                
+                <p id="embassy-history-p4" 
+                   data-i18n="embassy:about.paragraph4">
                     بتاريخ 15 نوفمبر 1988، تم إعلان الاستقلال في الجزائر، وكانت تركيا ثاني دولة في العالم تعلن الاعتراف
                     بالدولة الفلسطينية. وفي مطلع العام 1989، تم تجسيد هذا الاعتراف بتحول ممثلية منظمة التحرير الفلسطينية
                     في العاصمة أنقرة إلى سفارة دولة فلسطين لدى الجمهورية التركية. وفي العام 2009، انتقلت السفارة إلى
@@ -51,27 +86,42 @@
                     السفارة بشارع القدس.
                 </p>
 
+                <!-- Gallery Section -->
                 <div class="embassy-elegant-gallery">
                     <div class="gallery-image-wrapper">
-                        <img src="../images/embassy1.jpg" alt="صورة أنيقة للسفارة 1" id="embassy-gallery-img1-alt">
+                        <img src="../images/embassy1.jpg" 
+                             data-i18n="[alt]embassy:gallery.img1Alt" 
+                             alt="صورة أنيقة للسفارة 1" 
+                             id="embassy-gallery-img1-alt"
+                             loading="lazy">
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="../images/embassy2.jpg" alt="مدخل مبنى السفارة" id="embassy-gallery-img2-alt">
+                        <img src="../images/embassy2.jpg" 
+                             data-i18n="[alt]embassy:gallery.img2Alt" 
+                             alt="مدخل مبنى السفارة" 
+                             id="embassy-gallery-img2-alt"
+                             loading="lazy">
                     </div>
                     <div class="gallery-image-wrapper">
-                        <img src="../images/embassy3.jpg" alt="فعالية دبلوماسية في السفارة"
-                            id="embassy-gallery-img3-alt">
+                        <img src="../images/embassy3.jpg" 
+                             data-i18n="[alt]embassy:gallery.img3Alt" 
+                             alt="فعالية دبلوماسية في السفارة"
+                             id="embassy-gallery-img3-alt"
+                             loading="lazy">
                     </div>
                 </div>
             </article>
 
         </div>
     </div>
+
+    <!-- Footer Container -->
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 
 </body>
 
