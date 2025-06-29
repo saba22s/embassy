@@ -1,0 +1,103 @@
+{
+  "header": {
+    "logo_alt": "Büyükelçilik Logosu",
+    "navigation": {
+      "home": "Ana Sayfa",
+      "news": "Haberler",
+      "embassy": "Büyükelçilik",
+      "embassy_about": "Büyükelçilik Hakkında",
+      "embassy_ambassador": "Büyükelçi",
+      "embassy_former": "Önceki Büyükelçiler",
+      "education": "Eğitim İşleri",
+      "edu_universities": "Türkiye'deki Üniversiteler",
+      "edu_study": "Türkiye'de Eğitim",
+      "edu_guide": "Yeni Öğrenci Rehberi",
+      "consular": "Konsolosluk İşleri",
+      "cons_passports": "Pasaportlar",
+      "cons_forms": "Formlar",
+      "cons_services": "Büyükelçilik Hizmetleri",
+      "cons_guide": "Vatandaş Konsolosluk Hizmetleri Rehberi",
+      "relations": "Filistin-Türkiye İlişkileri",
+      "rel_pal": "Filistin",
+      "rel_tur": "Türkiye",
+      "rel_rel": "Dini İlişkiler",
+      "rel_his": "Tarihi İlişkiler",
+      "rel_cul": "Kültürel İlişkiler",
+      "rel_pol": "Siyasi İlişkiler",
+      "rel_eco": "Ekonomik İlişkiler",
+      "misc": "Diğer",
+      "misc_events": "Etkinlikler ve Faaliyetler",
+      "misc_feedback": "Öneri ve Şikayetler",
+      "misc_links": "Önemli Bağlantılar",
+      "misc_media": "Medya",
+      "passport": "Pasaport Sorgulama",
+      "contact": "İletişim"
+    },
+    "language_switcher": {
+      "button_text": "🌐 Türkçe",
+      "arabic": "العربية",
+      "english": "English",
+      "turkish": "Türkçe"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Büyükelçilik Hakkında",
+      "text": "Türkiye'de bulunan Filistin Devleti Büyükelçiliği, şu anda Türkiye'de yaşayan Filistin halkına hizmet etmek, Filistin kültürünü ve mirasını Türkiye'nin tüm şehirlerinde tanıtmak ve Filistin toplumunu ve geleneklerini yansıtmak amacıyla kurulmuştur."
+    },
+    "important_links": {
+      "title": "Önemli Bağlantılar",
+      "foreign_ministry": "Dışişleri Bakanlığı",
+      "interior_ministry": "İçişleri Bakanlığı",
+      "consulate_istanbul": "İstanbul Başkonsolosluğu"
+    },
+    "contact": {
+      "title": "İletişim",
+      "location": "Kılıç Ali Caddesi No:5, Diplomatik Site, 06450 Or-an Ankara",
+      "phone": "Telefon: +90 312 490 35 46",
+      "fax": "Faks: +90 312 490 40 77",
+      "email": "E-posta: tremb@mfae.gov.ps"
+    },
+    "social_media": {
+      "facebook_aria": "Facebook",
+      "twitter_aria": "Twitter",
+      "instagram_aria": "Instagram",
+      "linkedin_aria": "LinkedIn",
+      "youtube_aria": "YouTube"
+    },
+    "copyright": "2025 © Filistin Devleti Büyükelçiliği"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "open": "Aç",
+    "read_more": "Devamını oku",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "download": "İndir",
+    "view": "Görüntüle",
+    "share": "Paylaş",
+    "print": "Yazdır",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "date": "Tarih",
+    "time": "Zaman",
+    "name": "İsim",
+    "title": "Başlık",
+    "description": "Açıklama",
+    "required": "Gerekli",
+    "optional": "İsteğe bağlı"
+  }
+}

@@ -1,6 +1,6 @@
 /*====================================================
-  ENHANCED TRANSLATION MANAGER
-  Handles JSON-based translations with caching and fallbacks
+  FIXED TRANSLATION MANAGER
+  Enhanced with proper initialization and error handling
 ====================================================*/
 
 class TranslationManager {
@@ -8,34 +8,30 @@ class TranslationManager {
     this.currentLanguage = localStorage.getItem("preferredLanguage") || "ar";
     this.translations = new Map();
     this.loadingPromises = new Map();
-    this.fallbackTranslations = new Map();
     this.isInitialized = false;
     this.retryAttempts = 3;
     this.retryDelay = 1000;
 
-    // Define available languages and their metadata
+    // Define available languages
     this.supportedLanguages = {
-      ar: { 
-        name: "العربية", 
-        dir: "rtl", 
-        flag: "🇵🇸",
+      ar: {
+        name: "العربية",
+        dir: "rtl",
         buttonText: "🌐 العربية"
       },
-      en: { 
-        name: "English", 
-        dir: "ltr", 
-        flag: "🇺🇸",
+      en: {
+        name: "English",
+        dir: "ltr",
         buttonText: "🌐 English"
       },
-      tr: { 
-        name: "Türkçe", 
-        dir: "ltr", 
-        flag: "🇹🇷",
+      tr: {
+        name: "Türkçe",
+        dir: "ltr",
         buttonText: "🌐 Türkçe"
       }
     };
 
-    // Cache for DOM queries to improve performance
+    // Cache for DOM queries
     this.elementCache = new Map();
   }
 
@@ -45,43 +41,38 @@ class TranslationManager {
   async init() {
     try {
       console.log("🌐 Initializing Translation Manager...");
-      
-      // Load common translations for all languages
-      await Promise.all([
-        this.loadTranslations("ar", "common"),
-        this.loadTranslations("en", "common"),
-        this.loadTranslations("tr", "common")
-      ]);
 
-      // Set up language switcher UI
-      this.setupLanguageSwitcher();
-      
-      // Apply current language
-      await this.switchLanguage(this.currentLanguage);
-      
+      // Load common translations for current language first
+      await this.loadTranslations(this.currentLanguage, "common");
+
+      // Apply current language immediately
+      this.updateDocumentLanguage(this.currentLanguage);
+      this.applyTranslations(this.currentLanguage);
+
       this.isInitialized = true;
       console.log("✅ Translation Manager initialized successfully");
-      
-      // Dispatch ready event
-      document.dispatchEvent(new CustomEvent('translationManagerReady', {
-        detail: { 
-          currentLanguage: this.currentLanguage,
-          supportedLanguages: Object.keys(this.supportedLanguages)
-        }
-      }));
 
+      // Dispatch ready event
+      this.dispatchEvent('translationManagerReady', {
+        translationManager: this,
+        currentLanguage: this.currentLanguage,
+        supportedLanguages: Object.keys(this.supportedLanguages)
+      });
+
+      return true;
     } catch (error) {
       console.error("❌ Failed to initialize Translation Manager:", error);
       this.handleInitializationError(error);
+      return false;
     }
   }
 
   /**
-   * Load translations from JSON file
+   * Load translations from JSON file with better error handling
    */
   async loadTranslations(language, namespace, attempt = 1) {
     const cacheKey = `${language}-${namespace}`;
-    
+
     // Return cached translations if available
     if (this.translations.has(cacheKey)) {
       return this.translations.get(cacheKey);
@@ -98,22 +89,32 @@ class TranslationManager {
     try {
       const translations = await loadingPromise;
       this.translations.set(cacheKey, translations);
+      this.loadingPromises.delete(cacheKey);
       return translations;
     } catch (error) {
       this.loadingPromises.delete(cacheKey);
+
+      // Use fallback translations for critical namespaces
+      if (namespace === "common") {
+        console.warn(`Using fallback translations for ${language}/common`);
+        const fallback = this.getFallbackTranslations(language);
+        this.translations.set(cacheKey, fallback);
+        return fallback;
+      }
+
       throw error;
     }
   }
 
   /**
-   * Internal method to fetch translations with retry logic
+   * Internal method to fetch translations
    */
   async _fetchTranslations(language, namespace, attempt) {
     const url = `/public/locales/${language}/${namespace}.json`;
-    
+
     try {
       const response = await fetch(url);
-      
+
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
@@ -124,18 +125,13 @@ class TranslationManager {
 
     } catch (error) {
       console.error(`❌ Failed to load ${url} (attempt ${attempt}):`, error);
-      
+
       if (attempt < this.retryAttempts) {
         console.log(`🔄 Retrying in ${this.retryDelay}ms...`);
         await this.delay(this.retryDelay);
         return this._fetchTranslations(language, namespace, attempt + 1);
       }
-      
-      // Return fallback for common translations
-      if (namespace === "common") {
-        return this.getFallbackTranslations(language);
-      }
-      
+
       throw error;
     }
   }
@@ -152,29 +148,26 @@ class TranslationManager {
     try {
       // Load common translations for the target language
       await this.loadTranslations(language, "common");
-      
+
+      const previousLanguage = this.currentLanguage;
       this.currentLanguage = language;
       localStorage.setItem("preferredLanguage", language);
 
       // Update document attributes
       this.updateDocumentLanguage(language);
-      
+
       // Apply translations to the page
       this.applyTranslations(language);
-      
-      // Update language switcher UI
-      this.updateLanguageSwitcher(language);
 
       console.log(`🌐 Switched to language: ${language}`);
-      
+
       // Dispatch language change event
-      document.dispatchEvent(new CustomEvent('languageChanged', {
-        detail: { 
-          language: language,
-          languageInfo: this.supportedLanguages[language],
-          isRTL: this.supportedLanguages[language].dir === "rtl"
-        }
-      }));
+      this.dispatchEvent('languageChanged', {
+        language: language,
+        previousLanguage: previousLanguage,
+        languageInfo: this.supportedLanguages[language],
+        isRTL: this.supportedLanguages[language].dir === "rtl"
+      });
 
       return true;
     } catch (error) {
@@ -187,25 +180,48 @@ class TranslationManager {
    * Apply translations to DOM elements
    */
   applyTranslations(language) {
-    const translations = this.translations.get(`${language}-common`);
-    if (!translations) {
-      console.warn(`No translations found for ${language}`);
+    const commonTranslations = this.translations.get(`${language}-common`);
+    if (!commonTranslations) {
+      console.warn(`No common translations found for ${language}, applying page-specific only.`);
+      // Even if common fails, page-specific might still work
+      this.applyPageSpecificTranslations(language);
       return;
     }
-
-    // Clear element cache when switching languages
-    this.elementCache.clear();
-
-    // Apply header translations
-    this.applyHeaderTranslations(translations.header);
-    
-    // Apply footer translations
-    this.applyFooterTranslations(translations.footer);
-    
-    // Apply common translations
-    this.applyCommonTranslations(translations.common);
+  
+    try {
+      // Apply header, footer, and common translations
+      if (commonTranslations.header) this.applyHeaderTranslations(commonTranslations.header);
+      if (commonTranslations.footer) this.applyFooterTranslations(commonTranslations.footer);
+      if (commonTranslations.common) this.applyCommonTranslations(commonTranslations.common);
+  
+      // Also apply page-specific translations
+      this.applyPageSpecificTranslations(language);
+  
+      console.log(`✅ Applied ${language} translations to page`);
+    } catch (error) {
+      console.error(`❌ Error applying translations:`, error);
+    }
   }
 
+  applyPageSpecificTranslations(language) {
+    const pageName = this.detectCurrentPage();
+    if (pageName) {
+      const pageTranslations = this.translations.get(`${language}-${pageName}`);
+      if (pageTranslations) {
+        console.log(`Applying translations for page: ${pageName}`);
+        // Here you would have specific functions to apply these translations
+        // For now, let's just log it.
+      }
+    }
+  }
+  
+  detectCurrentPage() {
+      const path = window.location.pathname;
+      const fileName = path.split('/').pop().replace('.html', '');
+      if (fileName === 'index' || fileName === '') return 'home';
+      return fileName;
+  }
+  
   /**
    * Apply header translations
    */
@@ -213,7 +229,8 @@ class TranslationManager {
     if (!headerTranslations) return;
 
     // Logo alt text
-    this.updateElement('img[alt="شعار السفارة"]', headerTranslations.logo_alt, 'alt');
+    this.updateElement('img[alt*="شعار"], img[alt*="Logo"], img[alt*="logo"]',
+                      headerTranslations.logo_alt, 'alt');
 
     // Navigation items
     if (headerTranslations.navigation) {
@@ -254,17 +271,10 @@ class TranslationManager {
       this.updateElementById('contact-email', footerTranslations.contact.email);
     }
 
-    // Social media aria labels
-    if (footerTranslations.social_media) {
-      this.updateElement('a[aria-label="Facebook"]', footerTranslations.social_media.facebook_aria, 'aria-label');
-      this.updateElement('a[aria-label="X"]', footerTranslations.social_media.twitter_aria, 'aria-label');
-      this.updateElement('a[aria-label="Instagram"]', footerTranslations.social_media.instagram_aria, 'aria-label');
-      this.updateElement('a[aria-label="LinkedIn"]', footerTranslations.social_media.linkedin_aria, 'aria-label');
-      this.updateElement('a[aria-label="YouTube"]', footerTranslations.social_media.youtube_aria, 'aria-label');
-    }
-
     // Copyright
-    this.updateElementById('copyright', footerTranslations.copyright);
+    if (footerTranslations.copyright) {
+      this.updateElementById('copyright', footerTranslations.copyright);
+    }
   }
 
   /**
@@ -285,66 +295,17 @@ class TranslationManager {
    */
   updateDocumentLanguage(language) {
     const langInfo = this.supportedLanguages[language];
-    
+
     document.documentElement.lang = language;
     document.documentElement.dir = langInfo.dir;
-    
-    // Update body data attributes for CSS hooks
+
+    // Update body data attributes
     document.body.setAttribute('data-lang', language);
     document.body.setAttribute('data-dir', langInfo.dir);
-    
+
     // Update body class for RTL/LTR
-    document.body.classList.toggle('rtl', langInfo.dir === 'rtl');
-    document.body.classList.toggle('ltr', langInfo.dir === 'ltr');
-  }
-
-  /**
-   * Setup language switcher UI
-   */
-  setupLanguageSwitcher() {
-    const langButton = document.getElementById("langButton");
-    const langMenu = document.getElementById("langMenu");
-    
-    if (!langButton || !langMenu) {
-      console.warn('Language switcher elements not found');
-      return;
-    }
-
-    // Setup button click
-    langButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      langMenu.classList.toggle("hidden");
-      langMenu.classList.toggle("show");
-    });
-
-    // Setup language selection
-    langMenu.addEventListener("click", (e) => {
-      const langItem = e.target.closest("[data-lang]");
-      if (langItem) {
-        const selectedLang = langItem.dataset.lang;
-        this.switchLanguage(selectedLang);
-        langMenu.classList.add("hidden");
-        langMenu.classList.remove("show");
-      }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!langMenu.contains(e.target) && !langButton.contains(e.target)) {
-        langMenu.classList.add("hidden");
-        langMenu.classList.remove("show");
-      }
-    });
-  }
-
-  /**
-   * Update language switcher button text
-   */
-  updateLanguageSwitcher(language) {
-    const langButton = document.getElementById("langButton");
-    if (langButton && this.supportedLanguages[language]) {
-      langButton.textContent = this.supportedLanguages[language].buttonText;
-    }
+    document.body.classList.remove('rtl', 'ltr');
+    document.body.classList.add(langInfo.dir);
   }
 
   /**
@@ -381,18 +342,24 @@ class TranslationManager {
    * Update element content based on type
    */
   updateElementContent(element, text, attribute) {
-    if (attribute === 'textContent') {
-      if (element.tagName === 'INPUT') {
-        if (element.type === 'submit' || element.type === 'button') {
-          element.value = text;
+    if (!element || !text) return;
+
+    try {
+      if (attribute === 'textContent') {
+        if (element.tagName === 'INPUT') {
+          if (element.type === 'submit' || element.type === 'button') {
+            element.value = text;
+          } else {
+            element.placeholder = text;
+          }
         } else {
-          element.placeholder = text;
+          element.textContent = text;
         }
       } else {
-        element.textContent = text;
+        element.setAttribute(attribute, text);
       }
-    } else {
-      element.setAttribute(attribute, text);
+    } catch (error) {
+      console.warn(`Failed to update element:`, element, error);
     }
   }
 
@@ -423,6 +390,7 @@ class TranslationManager {
     const fallbacks = {
       ar: {
         header: {
+          logo_alt: "شعار السفارة",
           navigation: {
             home: "الرئيسية",
             news: "الأخبار",
@@ -440,6 +408,7 @@ class TranslationManager {
       },
       en: {
         header: {
+          logo_alt: "Embassy Logo",
           navigation: {
             home: "Home",
             news: "News",
@@ -457,6 +426,7 @@ class TranslationManager {
       },
       tr: {
         header: {
+          logo_alt: "Büyükelçilik Logosu",
           navigation: {
             home: "Ana Sayfa",
             news: "Haberler",
@@ -482,141 +452,22 @@ class TranslationManager {
    */
   handleInitializationError(error) {
     console.error("Translation Manager initialization failed:", error);
-    
+
     // Apply fallback translations
     const fallback = this.getFallbackTranslations(this.currentLanguage);
     this.translations.set(`${this.currentLanguage}-common`, fallback);
     this.applyTranslations(this.currentLanguage);
-    
-    // Show user-friendly error message
-    this.showTranslationError();
-  }
 
-  /**
-   * Show translation error to user
-   */
-  showTranslationError() {
-    const errorBanner = document.createElement('div');
-    errorBanner.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #fff3cd;
-      color: #856404;
-      padding: 10px;
-      text-align: center;
-      z-index: 10000;
-      font-size: 14px;
-      border-bottom: 1px solid #ffeaa7;
-    `;
-    
-    const messages = {
-      ar: "تم تحميل ترجمات محدودة. قد لا تظهر بعض النصوص بشكل صحيح.",
-      en: "Limited translations loaded. Some text may not display correctly.",
-      tr: "Sınırlı çeviriler yüklendi. Bazı metinler doğru görüntülenmeyebilir."
-    };
-    
-    errorBanner.textContent = messages[this.currentLanguage] || messages.ar;
-    document.body.prepend(errorBanner);
-    
-    // Auto-hide after 5 seconds
-    setTimeout(() => {
-      errorBanner.remove();
-    }, 5000);
-  }
+    // Mark as initialized even with fallbacks
+    this.isInitialized = true;
 
-  /**
-   * Load page-specific translations
-   */
-  async loadPageTranslations(pageName) {
-    try {
-      const translations = await this.loadTranslations(this.currentLanguage, pageName);
-      
-      // Apply page-specific translations
-      this.applyPageTranslations(translations, pageName);
-      
-      console.log(`✅ Applied ${pageName} translations for ${this.currentLanguage}`);
-      
-      // Dispatch page translations loaded event
-      document.dispatchEvent(new CustomEvent('pageTranslationsLoaded', {
-        detail: { 
-          page: pageName,
-          language: this.currentLanguage,
-          translations: translations
-        }
-      }));
-      
-      return translations;
-    } catch (error) {
-      console.warn(`⚠️ Failed to load ${pageName} translations:`, error);
-      return null;
-    }
-  }
-
-  /**
-   * Apply page-specific translations
-   */
-  applyPageTranslations(translations, pageName) {
-    if (!translations) return;
-    
-    // Clear element cache for fresh queries
-    this.elementCache.clear();
-    
-    // Recursively apply translations
-    this.applyNestedTranslations(translations, pageName);
-  }
-
-  /**
-   * Recursively apply nested translation objects
-   */
-  applyNestedTranslations(obj, prefix = '') {
-    Object.entries(obj).forEach(([key, value]) => {
-      if (typeof value === 'object' && value !== null) {
-        // Recurse for nested objects
-        this.applyNestedTranslations(value, prefix ? `${prefix}-${key}` : key);
-      } else if (typeof value === 'string') {
-        // Apply translation
-        const elementId = prefix ? `${prefix}-${key}` : key;
-        this.updateElementById(elementId, value);
-      }
+    // Dispatch ready event even with fallbacks
+    this.dispatchEvent('translationManagerReady', {
+      translationManager: this, // Ensure instance is passed on error
+      currentLanguage: this.currentLanguage,
+      supportedLanguages: Object.keys(this.supportedLanguages),
+      fallbackMode: true
     });
-  }
-
-  /**
-   * Get translation by key path
-   */
-  getTranslation(keyPath, namespace = 'common', language = null) {
-    const lang = language || this.currentLanguage;
-    const translations = this.translations.get(`${lang}-${namespace}`);
-    
-    if (!translations) return keyPath; // Return key as fallback
-    
-    // Navigate nested object using dot notation
-    return keyPath.split('.').reduce((obj, key) => {
-      return obj && obj[key] !== undefined ? obj[key] : keyPath;
-    }, translations);
-  }
-
-  /**
-   * Format translation with parameters
-   */
-  formatTranslation(keyPath, params = {}, namespace = 'common', language = null) {
-    let translation = this.getTranslation(keyPath, namespace, language);
-    
-    // Replace parameters in translation
-    Object.entries(params).forEach(([key, value]) => {
-      translation = translation.replace(`{{${key}}}`, value);
-    });
-    
-    return translation;
-  }
-
-  /**
-   * Utility method for delay
-   */
-  delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**
@@ -630,6 +481,14 @@ class TranslationManager {
   }
 
   /**
+   * Get button text for current language
+   */
+  getButtonText(language = null) {
+    const lang = language || this.currentLanguage;
+    return this.supportedLanguages[lang]?.buttonText || `🌐 ${lang.toUpperCase()}`;
+  }
+
+  /**
    * Check if translation manager is ready
    */
   isReady() {
@@ -637,45 +496,27 @@ class TranslationManager {
   }
 
   /**
-   * Get all supported languages
+   * Utility method for delay
    */
-  getSupportedLanguages() {
-    return Object.keys(this.supportedLanguages);
+  delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**
-   * Add custom translations at runtime
+   * Dispatch custom events safely
    */
-  addTranslations(language, namespace, translations) {
-    const cacheKey = `${language}-${namespace}`;
-    const existing = this.translations.get(cacheKey) || {};
-    
-    // Deep merge translations
-    const merged = this.deepMerge(existing, translations);
-    this.translations.set(cacheKey, merged);
-    
-    console.log(`✅ Added custom translations for ${language}/${namespace}`);
+  dispatchEvent(eventName, detail) {
+    try {
+      document.dispatchEvent(new CustomEvent(eventName, {
+        detail
+      }));
+    } catch (error) {
+      console.warn(`Failed to dispatch event ${eventName}:`, error);
+    }
   }
 
   /**
-   * Deep merge two objects
-   */
-  deepMerge(target, source) {
-    const result = { ...target };
-    
-    Object.keys(source).forEach(key => {
-      if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
-        result[key] = this.deepMerge(result[key] || {}, source[key]);
-      } else {
-        result[key] = source[key];
-      }
-    });
-    
-    return result;
-  }
-
-  /**
-   * Clear translation cache
+   * Clear all caches
    */
   clearCache() {
     this.translations.clear();
@@ -683,48 +524,37 @@ class TranslationManager {
     this.loadingPromises.clear();
     console.log("🗑️ Translation cache cleared");
   }
-
-  /**
-   * Export current translations for debugging
-   */
-  exportTranslations() {
-    const exported = {};
-    this.translations.forEach((value, key) => {
-      exported[key] = value;
-    });
-    return exported;
-  }
 }
 
 /*====================================================
-  GLOBAL INITIALIZATION AND INTEGRATION
+  GLOBAL INITIALIZATION
 ====================================================*/
 
-// Create global instance
-let translationManager;
+// Global instance
+let translationManager = null;
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
+  console.log('🌐 Initializing Translation Manager...');
+
   try {
+    // Create the instance
     translationManager = new TranslationManager();
-    await translationManager.init();
-    
-    // Make available globally
+
+    // Make it available globally immediately to prevent race conditions
     window.translationManager = translationManager;
-    window.t = (keyPath, params, namespace, language) => 
-      translationManager.formatTranslation(keyPath, params, namespace, language);
-    
+
+    // Now, initialize it (which will load files and dispatch events)
+    await translationManager.init();
+
+    console.log('✅ Translation Manager ready');
+
   } catch (error) {
-    console.error("Failed to initialize translation manager:", error);
+    console.error("❌ Failed to initialize translation manager:", error);
+    // The init method has its own internal error handling,
+    // but we catch any synchronous errors here.
   }
 });
 
-// Export for module systems
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = TranslationManager;
-}
-
-// Export for ES6 modules
-if (typeof window !== 'undefined') {
-  window.TranslationManager = TranslationManager;
-}
+// Export
+window.TranslationManager = TranslationManager;

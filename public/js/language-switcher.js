@@ -18,7 +18,7 @@ class EnhancedLanguageSwitcher {
       this.init();
     } else {
       document.addEventListener('translationManagerReady', (event) => {
-        this.translationManager = window.translationManager;
+        this.translationManager = event.detail.translationManager; // Corrected line
         this.init();
       });
     }
