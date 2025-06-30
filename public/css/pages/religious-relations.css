@@ -1,4 +1,4 @@
- :root {
+:root {
      --rr-bg: #0A0B0D;
      /* خلفية داكنة جداً وأنيقة */
      --rr-text-primary: #E8EAED;
@@ -143,13 +143,6 @@
      margin-left: -2px;
  }
 
- body.rtl .rr-timeline::after {
-     left: auto;
-     right: 50%;
-     margin-left: 0;
-     margin-right: -2px;
- }
-
  .rr-timeline-item {
      padding: 10px 40px;
      position: relative;
@@ -164,7 +157,6 @@
      position: absolute;
      width: 20px;
      height: 20px;
-     right: -10px;
      background-color: var(--rr-accent-gold);
      border: 3px solid var(--rr-card-bg);
      top: 15px;
@@ -173,42 +165,24 @@
      box-shadow: 0 0 10px rgba(var(--rr-accent-gold-rgb), 0.5);
  }
 
- body.rtl .rr-timeline-item::after {
-     right: auto;
-     left: -10px;
- }
-
-
  /* Place the container to the left */
  .rr-timeline-item.left {
-     left: 0;
+     margin-left: 0;
+     margin-right: auto;
  }
 
- body.rtl .rr-timeline-item.left {
-     left: auto;
-     right: 0;
+ .rr-timeline-item.left::after {
+     right: -50px;
  }
-
 
  /* Place the container to the right */
  .rr-timeline-item.right {
-     left: 50%;
+     margin-left: auto;
+     margin-right: 0;
  }
 
- body.rtl .rr-timeline-item.right {
-     left: auto;
-     right: 50%;
- }
-
-
- /* Fix the circle for containers on the right side */
  .rr-timeline-item.right::after {
-     left: -10px;
- }
-
- body.rtl .rr-timeline-item.right::after {
-     left: auto;
-     right: -10px;
+     left: -50px;
  }
 
  .rr-timeline-content {
@@ -218,6 +192,7 @@
      border-radius: 8px;
      border: 1px solid var(--rr-border-color);
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+     text-align: center;
  }
 
  .rr-timeline-content h3 {
@@ -319,17 +294,6 @@
      right: -5px;
  }
 
- body.rtl .rr-jerusalem-focus-quote::before {
-     left: auto;
-     right: -5px;
- }
-
- body.rtl .rr-jerusalem-focus-quote::after {
-     right: auto;
-     left: -5px;
- }
-
-
  .rr-jerusalem-focus-text {
      font-size: clamp(1rem, 2.5vw, 1.15rem);
      max-width: 800px;
@@ -382,18 +346,9 @@
      transform: translateX(-30px);
  }
 
- body.rtl .rr-animate-on-scroll.fade-in-left {
-     transform: translateX(30px);
- }
-
  .rr-animate-on-scroll.fade-in-right {
      transform: translateX(30px);
  }
-
- body.rtl .rr-animate-on-scroll.fade-in-right {
-     transform: translateX(-30px);
- }
-
 
  /* Responsive adjustments for timeline */
  @media screen and (max-width: 768px) {
@@ -405,54 +360,22 @@
          left: 10px;
      }
 
-     /* Central line to the far left */
-     body.rtl .rr-timeline::after {
-         left: auto;
-         right: 10px;
-     }
-
      .rr-timeline-item {
          width: 100%;
          padding-left: 50px;
-         /* Space for icon and line */
          padding-right: 15px;
          margin-bottom: 40px;
      }
 
-     body.rtl .rr-timeline-item {
-         padding-left: 15px;
-         padding-right: 50px;
-     }
-
      .rr-timeline-item.left,
      .rr-timeline-item.right {
-         left: 0%;
-     }
-
-     body.rtl .rr-timeline-item.left,
-     body.rtl .rr-timeline-item.right {
-         left: auto;
-         right: 0%;
+         margin-left: 0;
+         margin-right: 0;
      }
 
      .rr-timeline-item::after {
-         /* Adjust icon position */
-         left: 0px;
-     }
-
-     body.rtl .rr-timeline-item::after {
-         left: auto;
-         right: 0px;
-     }
-
-     .rr-timeline-item.right::after {
-         left: 0px;
-     }
-
-     /* Same for right on mobile */
-     body.rtl .rr-timeline-item.right::after {
-         left: auto;
-         right: 0px;
+         left: 0px !important;
+         right: auto !important;
      }
 
      .rr-jerusalem-focus-quote::before,

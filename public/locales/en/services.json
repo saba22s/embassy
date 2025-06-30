@@ -1,4 +1,38 @@
 {
-  "title": "Economic Relations - EN",
-  "description": "Translated content for economic_relations page in EN."
+  "pageTitle": "Embassy Services - Embassy of the State of Palestine",
+  "header": {
+    "title": "Embassy Services",
+    "intro": "The Embassy of the State of Palestine to the Republic of Turkey - Ankara, provides a range of consular, educational and cultural services to Palestinian citizens residing and visiting, in addition to its diplomatic tasks in strengthening bilateral relations between Palestine and Turkey."
+  },
+  "consularServices": {
+    "title": "First: Consular Services",
+    "services": [
+      "Issuing and renewing Palestinian passports (including cases of loss or damage).",
+      "Registration of births, deaths and personal events.",
+      "Authentication of marriage and divorce contracts.",
+      "Certification of official documents (academic certificates, birth certificates, personal status documents, and others).",
+      "Issuing no objection certificates and entry permits.",
+      "Assistance in legal and consular issues for citizens in Turkey.",
+      "Providing support in emergency cases and humanitarian procedures.",
+      "Issuing general and special power of attorney and organizing legal transactions in coordination with relevant authorities."
+    ]
+  },
+  "educationalServices": {
+    "title": "Second: Educational and Cultural Affairs",
+    "services": [
+      "Providing guidance and information to Palestinian students wishing to study in Turkey.",
+      "Publishing the \"Palestinian Student Guide in Turkey\".",
+      "Organizing cultural events to promote Palestinian identity and introduce Palestinian heritage.",
+      "Coordination with Turkish educational institutions regarding Palestinian students.",
+      "Supporting youth initiatives and student activities."
+    ]
+  },
+  "publicRelations": {
+    "title": "Third: Public and Community Relations",
+    "services": [
+      "Continuous communication with members of the Palestinian community in Turkey.",
+      "Organizing national events and official occasions in cooperation with Palestinian and Turkish institutions.",
+      "Receiving complaints and observations and following them up with relevant authorities."
+    ]
+  }
 }

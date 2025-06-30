@@ -1,4 +1,25 @@
 {
-  "title": "Turkey - AR",
-  "description": "Translated content for turkey page in AR."
+    "pageTitle": "Passports - Embassy of the State of Palestine",
+    "mainTitle": "Passports",
+    "intro": "How to renew or obtain Palestinian passports through the Palestinian Embassy in the Republic of Turkey as follows:",
+    "requiredDocuments": {
+        "title": "Required Documents",
+        "docReqId": "Required documents for issuing and renewing Palestinian passport with ID number",
+        "docReqLost": "Required documents for issuing a replacement passport for lost passport",
+        "docReqNewborn": "Required documents for issuing passport for newborns whose parents or one of them holds Palestinian identity",
+        "docReqExternal": "Required documents for issuing and renewing special passport for external use",
+        "formReqRegular": "Application for Palestinian passport",
+        "formReqExternal": "Application for special Palestinian passport for external use",
+        "downloadFile": "Download File"
+    },
+    "importantNotes": {
+        "title": "Important Notes",
+        "noteRenewalTiming": "All those who hold Palestinian passports are requested to renew them six months before their expiration to take necessary action as quickly as possible.",
+        "noteProfessionProof": "Regarding profession accreditation on the passport, please attach proof of profession in Arabic or English and certified by the embassy.",
+        "noteUnder18": "For those under 18 years old, the guardian's (father's) declaration must be filled in the designated place in the application.",
+        "noteIdModification": "If any modification has been made to the identity, please send a copy of the modified identity, especially for Gaza citizens, so that it can be modified in our civil registry and the passport will be printed according to the data stored in the civil registry computer at the Ministry of Interior.",
+        "noteLostPassport": "In case of passport loss, a police report, letter from the police and newspaper announcement must be attached.",
+        "noteDamagedPassport": "In case of passport damage, the damaged passport must be attached with the transaction to ensure its final cancellation.",
+        "notePersonalAttendance": "No transaction should be received or sent for any person without their presence before the embassy and ensuring the identification of the transaction owner."
+    }
 }

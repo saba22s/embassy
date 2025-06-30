@@ -1,4 +1,77 @@
 {
-  "title": "Feedback - EN",
-  "description": "Translated content for feedback page in EN."
+  "pageTitle": "Türkiye - Filistin Devleti Büyükelçiliği",
+  "mainTitle": "Türkiye",
+  "aboutTurkey": {
+    "title": "Türkiye Hakkında",
+    "geoIntro": "Türkiye, güneydoğu Avrupa ve güneybatı Asya'da Akdeniz'in kuzeydoğu ucunda yer almaktadır. Kuzeyde Karadeniz ve batıda Ege Denizi bulunmaktadır. Komşuları batıda Yunanistan ve Bulgaristan, kuzey ve kuzeybatıda (Karadeniz üzerinden) Rusya, Ukrayna ve Romanya, doğuda Gürcistan, Ermenistan, Azerbaycan ve İran, güneyde Suriye ve Irak'tır.",
+    "establishment": "1923 yılında kurulan Türkiye, kelimenin tam anlamıyla Avrupa ile Asya arasında bir köprü oluşturur; ülke her iki kıtada da bulunur. Çoğunluğu Batı Asya'da yer alsa da Suriye, Irak ve İran ile sınırları bulunurken, küçük bir bölümü güneydoğu Avrupa'da yer alır ve Bulgaristan, Yunanistan ve Gürcistan ile sınırları vardır. Ülke ayrıca Ege Denizi, Karadeniz ve Akdeniz olmak üzere üç denizde sahillere sahiptir. Türkiye, uzun tarihi boyunca ülke genelinde ziyaretçilerin İskender gibi efsanelerden izler bulabileceği sayısız tarihi site ve arkeolojik dönüm noktasında yansıyan çok kültürlü bir ülkedir. Türkiye, Birleşmiş Milletler ve Ekonomik İşbirliği ve Kalkınma Teşkilatı'nın (OECD) kurucu üyesi olmuştur.",
+    "facts": {
+      "capital": {
+        "label": "Başkent:",
+        "value": "Ankara"
+      },
+      "language": {
+        "label": "Resmi Diller:",
+        "value": "Türkçe"
+      },
+      "government": {
+        "label": "Hükümet:",
+        "value": "Üniter Parlamenter Cumhuriyet"
+      },
+      "population": {
+        "label": "Nüfus:",
+        "value": "75.627.384"
+      },
+      "gdp": {
+        "label": "GSYİH:",
+        "value": "1,306 trilyon dolar"
+      },
+      "currency": {
+        "label": "Para Birimi:",
+        "value": "Türk Lirası (TRY)"
+      },
+      "timezone": {
+        "label": "Saat Dilimi:",
+        "value": "(UTC+3)"
+      }
+    },
+    "mapAlt": "Türkiye haritası"
+  },
+  "climate": {
+    "title": "İklim",
+    "description": "Türkiye'nin kıyı bölgeleri genellikle ılıman Akdeniz iklimine sahip olsa da, açık ovalar ve dağlar gibi özellikler geniş bir iklim koşulları yelpazesi yaratır. İstanbul'da ortalama yüksek sıcaklıklar Ağustos'ta yaklaşık 29°C, Ocak'ta ortalama düşük sıcaklıklar yaklaşık 3°C'dir. Akdeniz ve güneydoğu Anadolu bölgelerinde ortalama sıcaklıklar 35°C kadar yüksek, Ankara'da ortalama düşük sıcaklıklar -7°C kadar düşüktür."
+  },
+  "culture": {
+    "title": "Kültür",
+    "description": "Türkiye uzun zamandır çok kültürlülüğü benimser ve ülke laik ve Batılı fikirleri toplum ve kültüre entegre etmeye çalışır. Kuruluşunda Latin alfabesi Arap alfabesinin yerini aldı ve kadınlara oy hakkı verildi. Modern Türkiye'de farklı din ve geleneklerden insanlar uyum içinde yaşar. Giyim kot pantolon gibi Batılı kıyafetlerden zarif gece kıyafetlerine ve renkli eşarp ve şapkalar içeren geleneksel kıyafetlere kadar değişir."
+  },
+  "livingCosts": {
+    "title": "Yaşam Maliyetleri",
+    "description": "2025 yılında Türkiye'deki yaşam maliyeti önceki yıllara kıyasla belirgin bir artış göstermiş ancak diğer ülkelere kıyasla hâlâ nispeten düşük kabul edilmektedir. Uluslararası bir öğrenci barınma, yemek, ulaşım ve kişisel harcamaları karşılamak için ayda 400 ila 600 USD arasında ödeme yapması beklenebilir. Türk üniversiteleri genellikle nominal fiyatlarla devlet öğrenci konutları sağlarken, özel yurtlar veya ortak daireler gibi diğer seçeneklere ek olarak öğrencilerin ihtiyaç ve bütçelerine göre maliyetleri azaltmalarına yardımcı olur."
+  },
+  "officialWebsites": {
+    "title": "Önemli Resmi Türk Web Siteleri",
+    "links": {
+      "mofa": "Türk Dışişleri Bakanlığı",
+      "presidency": "Türkiye Cumhuriyeti Cumhurbaşkanlığı",
+      "ytb": "Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı (Türk eğitim burslarından sorumlu makam)"
+    }
+  },
+  "relations": {
+    "title": "Filistin-Türkiye İlişkileri",
+    "types": {
+      "religious": "Dini İlişkiler",
+      "historical": "Tarihi İlişkiler",
+      "cultural": "Kültürel İlişkiler",
+      "political": "Siyasi İlişkiler",
+      "economic": "Ekonomik İlişkiler"
+    },
+    "imageAlts": {
+      "religious": "Dini ilişkileri temsil eden resim",
+      "historical": "Tarihi ilişkileri temsil eden resim",
+      "cultural": "Kültürel ilişkileri temsil eden resim",
+      "political": "Siyasi ilişkileri temsil eden resim",
+      "economic": "Ekonomik ilişkileri temsil eden resim"
+    }
+  }
 }

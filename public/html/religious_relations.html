@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-religious-relations-page">العلاقات الدينية - سفارة دولة فلسطين</title>
-        <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="religious-relations:pageTitle">العلاقات الدينية - سفارة دولة فلسطين</title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
 
-    <link rel="stylesheet" href="/public/css/main.css" />
-    <link rel="stylesheet" href="/public/css/pages/religious-relations.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/religious-relations.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* This style block was originally embedded. Its content has been moved to religious-relations.css */
-    </style>
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="العلاقات الدينية بين فلسطين وتركيا - جسور الإيمان والتاريخ المشترك">
+    <meta name="keywords" content="العلاقات الدينية, فلسطين, تركيا, القدس, الإسلام, التراث">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
-<body data-lang-direction="rtl">
+<body>
+    <!-- Header Container -->
     <div id="header-container"></div>
 
     <div class="rr-page-wrapper">
+        <!-- Hero Section -->
         <section class="rr-hero-section">
-            <h1 class="rr-hero-title" id="religious-relations-main-heading">جسور الإيمان والتاريخ</h1>
-            <p class="rr-hero-subtitle" id="religious-relations-hero-sub">
+            <h1 class="rr-hero-title" data-i18n="religious-relations:hero.title">جسور الإيمان والتاريخ</h1>
+            <p class="rr-hero-subtitle" data-i18n="religious-relations:hero.subtitle">
                 استكشاف عمق العلاقات الروحية والتاريخية التي تربط فلسطين وتركيا، إرث مشترك من القيم والتطلعات.
             </p>
         </section>
 
+        <!-- Introduction Section -->
         <section class="rr-content-section rr-introduction-text">
-            <h2 class="rr-section-title rr-animate-on-scroll fade-in-up" id="rr-introduction-section-title">مقدمة في عمق
-                الروابط</h2>
+            <h2 class="rr-section-title rr-animate-on-scroll fade-in-up"
+                data-i18n="religious-relations:introduction.title">
+                مقدمة في عمق الروابط
+            </h2>
             <div class="rr-text-content rr-animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
-                <p id="religious-relations-p1">
+                <p data-i18n="religious-relations:introduction.text">
                     تميزت العلاقات الفلسطينية التركية تحديدا بقدسية خاصة في ظل تنمية وعي الأتراك بالقضية الفلسطينية
                     وقضية القدس وأهميتها لدى المسلمين عموما والأتراك بشكل خاص، ولا ننسى ان العثمانيين هم من أسمو مدينة
                     القدس بالقدس الشريف.
@@ -43,115 +58,163 @@
             </div>
         </section>
 
+        <!-- Timeline Section -->
         <section class="rr-content-section rr-timeline-section">
-            <h2 class="rr-section-title rr-animate-on-scroll fade-in-up" id="rr-timeline-section-main-title">محطات
-                تاريخية وروحية</h2>
+            <h2 class="rr-section-title rr-animate-on-scroll fade-in-up" data-i18n="religious-relations:timeline.title">
+                محطات تاريخية وروحية
+            </h2>
             <div class="rr-timeline">
+                <!-- Event 1 -->
                 <div class="rr-timeline-item left rr-animate-on-scroll fade-in-left">
                     <div class="rr-timeline-content">
-                        <h3 id="timeline-event1-heading">موقف السلطان عبد الحميد الثاني من الهجرة اليهودية</h3>
-                        <span class="rr-timeline-year" id="timeline-event1-date">أواخر القرن التاسع عشر وأوائل القرن
-                            العشرين (حوالي 1880-1909)</span>
-                        <p id="timeline-event1-detail">السلطان عبد الحميد الثاني منع بيع الأراضي الفلسطينية لليهود وفرض
-                            قيود صارمة على دخول اليهود إلى القدس. الهدف كان الحد من الهجرة اليهودية التي بدأت تزداد بفعل
-                            الحركة الصهيونية، وكان يعتبرها تهديدًا لاستقرار الدولة العثمانية وأهلها المسلمين والمسيحيين.
-                            هذا الموقف أدى إلى تأخير استيطان اليهود في فلسطين لفترة، رغم الضغوط الأوروبية والصهيونية.
+                        <h3 data-i18n="religious-relations:timeline.events.event1.heading">
+                            موقف السلطان عبد الحميد الثاني من الهجرة اليهودية
+                        </h3>
+                        <span class="rr-timeline-year" data-i18n="religious-relations:timeline.events.event1.date">
+                            أواخر القرن التاسع عشر وأوائل القرن العشرين (حوالي 1880-1909)
+                        </span>
+                        <p data-i18n="religious-relations:timeline.events.event1.detail">
+                            السلطان عبد الحميد الثاني منع بيع الأراضي الفلسطينية لليهود وفرض قيود صارمة على دخول اليهود
+                            إلى القدس. الهدف كان الحد من الهجرة اليهودية التي بدأت تزداد بفعل الحركة الصهيونية، وكان
+                            يعتبرها تهديدًا لاستقرار الدولة العثمانية وأهلها المسلمين والمسيحيين. هذا الموقف أدى إلى
+                            تأخير استيطان اليهود في فلسطين لفترة، رغم الضغوط الأوروبية والصهيونية.
                         </p>
                     </div>
                 </div>
+
+                <!-- Event 2 -->
                 <div class="rr-timeline-item right rr-animate-on-scroll fade-in-right">
                     <div class="rr-timeline-content">
-                        <h3 id="timeline-event2-heading">نهاية الحكم العثماني وانعكاسه على فلسطين</h3>
-                        <span class="rr-timeline-year" id="timeline-event2-date">بعد الحرب العالمية الأولى (1918)</span>
-                        <p id="timeline-event2-detail">هزيمة الدولة العثمانية في الحرب العالمية الأولى أنهت حكمها لقرون
-                            على فلسطين، وأدت إلى تسليم فلسطين للانتداب البريطاني بموجب اتفاقيات سايكس بيكو وعدد من
-                            القرارات الدولية. هذا الانتقال من حكم إسلامي عثماني إلى سلطة غربية وضع فلسطين تحت تأثير
-                            جديد، حيث بدأت الحركة الصهيونية في الحصول على دعم أوسع من بريطانيا، مما أثّر بشكل مباشر على
-                            العلاقات الدينية والسياسية في المنطقة.</p>
+                        <h3 data-i18n="religious-relations:timeline.events.event2.heading">
+                            نهاية الحكم العثماني وانعكاسه على فلسطين
+                        </h3>
+                        <span class="rr-timeline-year" data-i18n="religious-relations:timeline.events.event2.date">
+                            بعد الحرب العالمية الأولى (1918)
+                        </span>
+                        <p data-i18n="religious-relations:timeline.events.event2.detail">
+                            هزيمة الدولة العثمانية في الحرب العالمية الأولى أنهت حكمها لقرون على فلسطين، وأدت إلى تسليم
+                            فلسطين للانتداب البريطاني بموجب اتفاقيات سايكس بيكو وعدد من القرارات الدولية. هذا الانتقال
+                            من حكم إسلامي عثماني إلى سلطة غربية وضع فلسطين تحت تأثير جديد، حيث بدأت الحركة الصهيونية في
+                            الحصول على دعم أوسع من بريطانيا، مما أثّر بشكل مباشر على العلاقات الدينية والسياسية في
+                            المنطقة.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Event 3 -->
                 <div class="rr-timeline-item left rr-animate-on-scroll fade-in-left">
                     <div class="rr-timeline-content">
-                        <h3 id="timeline-event3-heading">إحياء تقليد زيارة القدس من تركيا</h3>
-                        <span class="rr-timeline-year" id="timeline-event3-date">2014</span>
-                        <p id="timeline-event3-detail">رئاسة شؤون الأديان التركية أصدرت توجيهات رسمية بتشجيع المواطنين
-                            الأتراك على زيارة القدس كجزء من واجب ديني ووطني، مع إقامة لا تقل عن ثلاثة أيام فيها. الهدف
-                            كان تعزيز الروابط الدينية التاريخية بين المسلمين الأتراك وفلسطين، خصوصًا القدس التي لها
-                            مكانة دينية عظيمة في الإسلام، وكذلك لترسيخ حضور تركي شعبي وثقافي في المدينة.</p>
+                        <h3 data-i18n="religious-relations:timeline.events.event3.heading">
+                            إحياء تقليد زيارة القدس من تركيا
+                        </h3>
+                        <span class="rr-timeline-year" data-i18n="religious-relations:timeline.events.event3.date">
+                            2014
+                        </span>
+                        <p data-i18n="religious-relations:timeline.events.event3.detail">
+                            رئاسة شؤون الأديان التركية أصدرت توجيهات رسمية بتشجيع المواطنين الأتراك على زيارة القدس كجزء
+                            من واجب ديني ووطني، مع إقامة لا تقل عن ثلاثة أيام فيها. الهدف كان تعزيز الروابط الدينية
+                            التاريخية بين المسلمين الأتراك وفلسطين، خصوصًا القدس التي لها مكانة دينية عظيمة في الإسلام،
+                            وكذلك لترسيخ حضور تركي شعبي وثقافي في المدينة.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Event 4 -->
                 <div class="rr-timeline-item right rr-animate-on-scroll fade-in-right">
                     <div class="rr-timeline-content">
-                        <h3 id="timeline-event4-heading">تزايد الزيارات التركية لفلسطين</h3>
-                        <span class="rr-timeline-year" id="timeline-event4-date">مستمر، خاصة من 2010 حتى الآن</span>
-                        <p id="timeline-event4-detail">عدد زيارات الأتراك لفلسطين، وخصوصًا القدس، ازداد بشكل ملحوظ في
-                            العقد الماضي. هذه الزيارات تشمل حج وزيارة دينية، مع استمرار دعم تركيا السياسي والإعلامي
-                            لفلسطين. زيارات الأتراك أدت إلى دعم الحركة السياحية والاقتصادية في القدس، وزادت من التواصل
-                            الشعبي بين الشعوب، مع استمرار تركيا في دعم القضايا الدينية والتاريخية لفلسطين على المستويات
-                            الرسمية والشعبية.</p>
+                        <h3 data-i18n="religious-relations:timeline.events.event4.heading">
+                            تزايد الزيارات التركية لفلسطين
+                        </h3>
+                        <span class="rr-timeline-year" data-i18n="religious-relations:timeline.events.event4.date">
+                            مستمر، خاصة من 2010 حتى الآن
+                        </span>
+                        <p data-i18n="religious-relations:timeline.events.event4.detail">
+                            عدد زيارات الأتراك لفلسطين، وخصوصًا القدس، ازداد بشكل ملحوظ في العقد الماضي. هذه الزيارات
+                            تشمل حج وزيارة دينية، مع استمرار دعم تركيا السياسي والإعلامي لفلسطين. زيارات الأتراك أدت إلى
+                            دعم الحركة السياحية والاقتصادية في القدس، وزادت من التواصل الشعبي بين الشعوب، مع استمرار
+                            تركيا في دعم القضايا الدينية والتاريخية لفلسطين على المستويات الرسمية والشعبية.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Event 5 -->
                 <div class="rr-timeline-item left rr-animate-on-scroll fade-in-left">
                     <div class="rr-timeline-content">
-                        <h3 id="timeline-event5-heading">بناء وإعادة تأهيل الأوقاف والمقدسات الإسلامية</h3>
-                        <span class="rr-timeline-year" id="timeline-event5-date">من 2000 حتى الآن</span>
-                        <p id="timeline-event5-detail">تركيا استثمرت بشكل كبير في إعادة ترميم المساجد والمقدسات
-                            الإسلامية في القدس وفلسطين، مثل المسجد الأقصى ومحيطه. مؤسسة الوقف التركية (Vakif) مسؤولة عن
-                            إدارة وصيانة عدة مواقع تاريخية إسلامية في فلسطين. هذا الاستثمار يعكس استمرار الاهتمام التركي
-                            بالبعد الديني والتاريخي لفلسطين، وهو جانب مهم من العلاقات الدينية بين البلدين.</p>
+                        <h3 data-i18n="religious-relations:timeline.events.event5.heading">
+                            بناء وإعادة تأهيل الأوقاف والمقدسات الإسلامية
+                        </h3>
+                        <span class="rr-timeline-year" data-i18n="religious-relations:timeline.events.event5.date">
+                            من 2000 حتى الآن
+                        </span>
+                        <p data-i18n="religious-relations:timeline.events.event5.detail">
+                            تركيا استثمرت بشكل كبير في إعادة ترميم المساجد والمقدسات الإسلامية في القدس وفلسطين، مثل
+                            المسجد الأقصى ومحيطه. مؤسسة الوقف التركية (Vakif) مسؤولة عن إدارة وصيانة عدة مواقع تاريخية
+                            إسلامية في فلسطين. هذا الاستثمار يعكس استمرار الاهتمام التركي بالبعد الديني والتاريخي
+                            لفلسطين، وهو جانب مهم من العلاقات الدينية بين البلدين.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Jerusalem Focus Section -->
         <section class="rr-jerusalem-focus-section rr-animate-on-scroll fade-in-up">
-            <h2 class="rr-section-title" id="rr-jerusalem-focus-section-title">القدس الشريف: في قلب الروابط</h2>
+            <h2 class="rr-section-title" data-i18n="religious-relations:jerusalemFocus.title">
+                القدس الشريف: في قلب الروابط
+            </h2>
             <blockquote class="rr-jerusalem-focus-quote rr-animate-on-scroll fade-in-up" style="animation-delay: 0.2s;"
-                id="rr-jerusalem-focus-quote-text">
+                data-i18n="religious-relations:jerusalemFocus.quote">
                 "القدس، المدينة التي أسماها العثمانيون بالشريفة، تظل محوراً للقدسية والإيمان المشترك بين الشعبين
                 الفلسطيني والتركي."
             </blockquote>
             <p class="rr-jerusalem-focus-text rr-animate-on-scroll fade-in-up" style="animation-delay: 0.4s;"
-                id="rr-jerusalem-focus-paragraph">
+                data-i18n="religious-relations:jerusalemFocus.paragraph">
                 تتجلى أهمية القدس في كونها ملتقى الأديان ورمزاً تاريخياً عميقاً يعكس استمرارية الروابط الروحية
                 والثقافية. إن الاهتمام التركي المتواصل بالقدس ومقدساتها يؤكد على هذا الإرث الممتد عبر العصور.
             </p>
         </section>
 
-
+        <!-- Gallery Section -->
         <section class="rr-content-section rr-gallery-section">
             <div class="rr-gallery-grid">
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
-                    <img src="../images/religious_relations/religious_relations1.jpg" alt="AI 1" id="gallery-img-alt-1">
+                    <img src="../images/religious_relations/religious_relations1.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt1"
+                        alt="صورة تمثل العلاقات الدينية بين فلسطين وتركيا">
                 </div>
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
-                    <img src="../images/religious_relations/religious_relations2.jpg" alt="AI 2" id="gallery-img-alt-2">
+                    <img src="../images/religious_relations/religious_relations2.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt2" alt="مشهد من المقدسات الإسلامية في القدس">
                 </div>
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
-                    <img src="../images/religious_relations/religious_relations3.jpg" alt="AI 3" id="gallery-img-alt-3">
+                    <img src="../images/religious_relations/religious_relations3.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt3" alt="زيارة تركية للأماكن المقدسة في فلسطين">
                 </div>
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">
-                    <img src="../images/religious_relations/religious_relations4.jpg" alt="AI 4" id="gallery-img-alt-4">
+                    <img src="../images/religious_relations/religious_relations4.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt4" alt="ترميم المساجد والأوقاف في فلسطين">
                 </div>
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.5s;">
-                    <img src="../images/religious_relations/religious_relations5.jpg" alt="AI 5" id="gallery-img-alt-5">
+                    <img src="../images/religious_relations/religious_relations5.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt5"
+                        alt="الحج والزيارات الدينية من تركيا إلى فلسطين">
                 </div>
                 <div class="rr-gallery-item rr-animate-on-scroll fade-in-up" style="animation-delay: 0.6s;">
-                    <img src="../images/religious_relations/religious_relations6.jpg" alt="AI 6" id="gallery-img-alt-6">
+                    <img src="../images/religious_relations/religious_relations6.jpg"
+                        data-i18n="[alt]religious-relations:gallery.alt6" alt="التراث الإسلامي المشترك بين البلدين">
                 </div>
             </div>
         </section>
-
     </div>
 
+    <!-- Footer Container -->
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/page-specific/religious_relations.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
-
-
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
+    <script src="/public/js/page-specific/religious_relations.js"></script>
 </body>
 
 </html>

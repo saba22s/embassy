@@ -2,29 +2,43 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-embassy-services-page">خدمات السفارة - سفارة دولة فلسطين</title>
-        <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="services:pageTitle">خدمات السفارة - سفارة دولة فلسطين</title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
 
-    <link rel="stylesheet" href="/public/css/main.css" />
-    <link rel="stylesheet" href="/public/css/pages/services.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/services.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="خدمات سفارة دولة فلسطين في تركيا - خدمات قنصلية وتعليمية وثقافية">
+    <meta name="keywords" content="خدمات السفارة, فلسطين, تركيا, قنصلية, تعليم">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
-    <div id="header-container">
-    </div>
+    <!-- Header Container -->
+    <div id="header-container"></div>
 
     <div class="services-page-wrapper">
+        <!-- Header Hero Section -->
         <header class="services-header-hero">
-            <h1 class="main-title-services" id="services-main-title">خدمات السفارة</h1>
-            <p class="intro-text-services" id="services-intro-text">
+            <h1 class="main-title-services" data-i18n="services:header.title">خدمات السفارة</h1>
+            <p class="intro-text-services" data-i18n="services:header.intro">
                 تقدم سفارة دولة فلسطين لدى جمهورية تركيا – أنقرة، مجموعة من الخدمات القنصلية والتعليمية والثقافية
                 للمواطنين الفلسطينيين المقيمين والزائرين، بالإضافة إلى مهامها الدبلوماسية في تعزيز العلاقات الثنائية بين
                 فلسطين وتركيا.
@@ -32,55 +46,86 @@
         </header>
 
         <div class="services-content-container">
+            <!-- Consular Services Section -->
             <section class="service-category-card" id="consular-services-section">
-                <h2 class="category-title-main" id="consular-services-title">أولاً: الخدمات القنصلية</h2>
+                <h2 class="category-title-main" data-i18n="services:consularServices.title">أولاً: الخدمات القنصلية</h2>
                 <ul class="services-list">
-                    <li id="cons-serv-item1">إصدار وتجديد جوازات السفر الفلسطينية (بما في ذلك حالات الفقدان أو التلف).
+                    <li data-i18n="services:consularServices.services.0">
+                        إصدار وتجديد جوازات السفر الفلسطينية (بما في ذلك حالات الفقدان أو التلف).
                     </li>
-                    <li id="cons-serv-item2">تسجيل المواليد والوفيات والوقائع الشخصية.</li>
-                    <li id="cons-serv-item3">توثيق عقود الزواج والطلاق.</li>
-                    <li id="cons-serv-item4">تصديق الوثائق الرسمية (الشهادات الدراسية، شهادات الميلاد، وثائق الأحوال
-                        الشخصية، وغيرها).</li>
-                    <li id="cons-serv-item5">إصدار كتب عدم الممانعة وتصاريح الدخول.</li>
-                    <li id="cons-serv-item6">المساعدة في القضايا القانونية والقنصلية للمواطنين في تركيا.</li>
-                    <li id="cons-serv-item7">تقديم الدعم في حالات الطوارئ والإجراءات الإنسانية.</li>
-                    <li id="cons-serv-item8">إصدار وكالات عامة وخاصة وتنظيم المعاملات القانونية بالتنسيق مع الجهات
-                        المعنية.</li>
+                    <li data-i18n="services:consularServices.services.1">
+                        تسجيل المواليد والوفيات والوقائع الشخصية.
+                    </li>
+                    <li data-i18n="services:consularServices.services.2">
+                        توثيق عقود الزواج والطلاق.
+                    </li>
+                    <li data-i18n="services:consularServices.services.3">
+                        تصديق الوثائق الرسمية (الشهادات الدراسية، شهادات الميلاد، وثائق الأحوال الشخصية، وغيرها).
+                    </li>
+                    <li data-i18n="services:consularServices.services.4">
+                        إصدار كتب عدم الممانعة وتصاريح الدخول.
+                    </li>
+                    <li data-i18n="services:consularServices.services.5">
+                        المساعدة في القضايا القانونية والقنصلية للمواطنين في تركيا.
+                    </li>
+                    <li data-i18n="services:consularServices.services.6">
+                        تقديم الدعم في حالات الطوارئ والإجراءات الإنسانية.
+                    </li>
+                    <li data-i18n="services:consularServices.services.7">
+                        إصدار وكالات عامة وخاصة وتنظيم المعاملات القانونية بالتنسيق مع الجهات المعنية.
+                    </li>
                 </ul>
             </section>
 
+            <!-- Educational and Cultural Services Section -->
             <section class="service-category-card" id="edu-cultural-services-section">
-                <h2 class="category-title-main" id="edu-cultural-services-title">ثانيًا: الشؤون التعليمية والثقافية</h2>
+                <h2 class="category-title-main" data-i18n="services:educationalServices.title">ثانيًا: الشؤون التعليمية
+                    والثقافية</h2>
                 <ul class="services-list">
-                    <li id="edu-serv-item1">تقديم الإرشاد والمعلومات للطلاب الفلسطينيين الراغبين في الدراسة في تركيا.
+                    <li data-i18n="services:educationalServices.services.0">
+                        تقديم الإرشاد والمعلومات للطلاب الفلسطينيين الراغبين في الدراسة في تركيا.
                     </li>
-                    <li id="edu-serv-item2">إصدار "دليل الطالب الفلسطيني في تركيا".</li>
-                    <li id="edu-serv-item3">تنظيم فعاليات ثقافية لتعزيز الهوية الفلسطينية والتعريف بالتراث الفلسطيني.
+                    <li data-i18n="services:educationalServices.services.1">
+                        إصدار "دليل الطالب الفلسطيني في تركيا".
                     </li>
-                    <li id="edu-serv-item4">التنسيق مع المؤسسات التعليمية التركية فيما يخص الطلاب الفلسطينيين.</li>
-                    <li id="edu-serv-item5">دعم المبادرات الشبابية والأنشطة الطلابية.</li>
+                    <li data-i18n="services:educationalServices.services.2">
+                        تنظيم فعاليات ثقافية لتعزيز الهوية الفلسطينية والتعريف بالتراث الفلسطيني.
+                    </li>
+                    <li data-i18n="services:educationalServices.services.3">
+                        التنسيق مع المؤسسات التعليمية التركية فيما يخص الطلاب الفلسطينيين.
+                    </li>
+                    <li data-i18n="services:educationalServices.services.4">
+                        دعم المبادرات الشبابية والأنشطة الطلابية.
+                    </li>
                 </ul>
             </section>
 
+            <!-- Public Relations Services Section -->
             <section class="service-category-card" id="public-relations-services-section">
-                <h2 class="category-title-main" id="public-relations-services-title">ثالثًا: العلاقات العامة والمجتمعية
-                </h2>
+                <h2 class="category-title-main" data-i18n="services:publicRelations.title">ثالثًا: العلاقات العامة
+                    والمجتمعية</h2>
                 <ul class="services-list">
-                    <li id="pr-serv-item1">التواصل المستمر مع أبناء الجالية الفلسطينية في تركيا.</li>
-                    <li id="pr-serv-item2">تنظيم فعاليات وطنية ومناسبات رسمية بالتعاون مع مؤسسات فلسطينية وتركية.</li>
-                    <li id="pr-serv-item3">استقبال الشكاوى والملاحظات ومتابعتها مع الجهات المختصة.</li>
+                    <li data-i18n="services:publicRelations.services.0">
+                        التواصل المستمر مع أبناء الجالية الفلسطينية في تركيا.
+                    </li>
+                    <li data-i18n="services:publicRelations.services.1">
+                        تنظيم فعاليات وطنية ومناسبات رسمية بالتعاون مع مؤسسات فلسطينية وتركية.
+                    </li>
+                    <li data-i18n="services:publicRelations.services.2">
+                        استقبال الشكاوى والملاحظات ومتابعتها مع الجهات المختصة.
+                    </li>
                 </ul>
             </section>
         </div>
     </div>
 
-    <div id="footer-container">
-    </div>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
-
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 </body>
 
 </html>

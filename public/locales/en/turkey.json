@@ -1,4 +1,77 @@
 {
-  "title": "Feedback - EN",
-  "description": "Translated content for feedback page in EN."
+  "pageTitle": "Turkey - Embassy of the State of Palestine",
+  "mainTitle": "Turkey",
+  "aboutTurkey": {
+    "title": "About Turkey",
+    "geoIntro": "Turkey is located at the northeastern end of the Mediterranean Sea in southeastern Europe and southwestern Asia. To the north is the Black Sea and to the west is the Aegean Sea. Its neighbors are Greece and Bulgaria to the west, Russia, Ukraine, and Romania to the north and northwest (across the Black Sea), and Georgia, Armenia, Azerbaijan, and Iran to the east, and Syria and Iraq to the south.",
+    "establishment": "Established in 1923, Turkey literally forms a bridge between Europe and Asia; the country exists on both continents. Although the majority lies in western Asia and has borders with Syria, Iraq, and Iran, a small part is located in southeastern Europe and has borders with Bulgaria, Greece, and Georgia. The country also has coastlines on three seas, including the Aegean Sea, the Black Sea, and the Mediterranean Sea. Turkey is a multicultural country with a long history reflected in numerous historical sites and archaeological landmarks throughout the country where visitors can find traces of legends like Alexander. Turkey was a founding member of the United Nations and the Organization for Economic Cooperation and Development (OECD).",
+    "facts": {
+      "capital": {
+        "label": "Capital:",
+        "value": "Ankara"
+      },
+      "language": {
+        "label": "Official Languages:",
+        "value": "Turkish"
+      },
+      "government": {
+        "label": "Government:",
+        "value": "Unitary Parliamentary Republic"
+      },
+      "population": {
+        "label": "Population:",
+        "value": "75,627,384"
+      },
+      "gdp": {
+        "label": "GDP:",
+        "value": "$1.306 trillion"
+      },
+      "currency": {
+        "label": "Currency:",
+        "value": "Turkish Lira (TRY)"
+      },
+      "timezone": {
+        "label": "Time Zone:",
+        "value": "(UTC+3)"
+      }
+    },
+    "mapAlt": "Map of Turkey"
+  },
+  "climate": {
+    "title": "Climate",
+    "description": "Although the coastal areas of Turkey generally have a temperate Mediterranean climate, features like open plains and mountains create a wide range of climatic conditions. Average high temperatures in Istanbul are about 29°C in August and average lows about 3°C in January. Average temperatures in the Mediterranean and southeastern Anatolia regions are as high as 35°C, and average low temperatures in Ankara are as low as -7°C."
+  },
+  "culture": {
+    "title": "Culture",
+    "description": "Turkey has long embraced multiculturalism, and the country strives to integrate secular and Western ideas into society and culture. Upon its establishment, the Latin alphabet replaced the Arabic alphabet, and women were given the right to vote. In modern Turkey, people of different religions and traditions live in harmony. Dress ranges from Western clothing like jeans to elegant evening wear and traditional clothing that includes colorful scarves and hats."
+  },
+  "livingCosts": {
+    "title": "Living Costs",
+    "description": "The cost of living in Turkey in 2025 has seen a notable increase compared to previous years, but it is still considered relatively low compared to other countries. An international student can expect to pay between $400 to $600 USD per month to cover housing, food, transportation, and personal expenses. Turkish universities generally provide government student housing at nominal prices, in addition to other options such as private dormitories or shared apartments, helping students reduce costs according to their needs and budgets."
+  },
+  "officialWebsites": {
+    "title": "Important Official Turkish Websites",
+    "links": {
+      "mofa": "Turkish Ministry of Foreign Affairs",
+      "presidency": "Presidency of the Republic of Turkey",
+      "ytb": "Presidency for Turks Abroad and Related Communities (The authority responsible for Turkish educational scholarships)"
+    }
+  },
+  "relations": {
+    "title": "Palestinian-Turkish Relations",
+    "types": {
+      "religious": "Religious Relations",
+      "historical": "Historical Relations",
+      "cultural": "Cultural Relations",
+      "political": "Political Relations",
+      "economic": "Economic Relations"
+    },
+    "imageAlts": {
+      "religious": "Image representing religious relations",
+      "historical": "Image representing historical relations",
+      "cultural": "Image representing cultural relations",
+      "political": "Image representing political relations",
+      "economic": "Image representing economic relations"
+    }
+  }
 }

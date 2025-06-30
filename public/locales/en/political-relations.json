@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Political Relations - Embassy of the State of Palestine",
+  "hero": {
+    "title": "Political Relations: Steadfast Solidarity and Principled Positions",
+    "subtitle": "The Republic of Turkey supports and stands with the right of the Palestinian people to establish their independent state on the borders of June 4, 1967, with East Jerusalem as its capital."
+  },
+  "foundations": {
+    "title": "Foundations of the Turkish Approach to the Palestinian Issue",
+    "card1": {
+      "title": "Principled Constants",
+      "description": "Turkey proceeds from its belief in the existence of an oppressed people, occupied territories, and a just cause, which it sees as its duty to support as part of its historical and humanitarian responsibility."
+    },
+    "card2": {
+      "title": "Legal Foundations",
+      "description": "Turkey affirms the resolutions issued by international legitimacy and the rights stipulated by international law, and condemns their disregard and violation."
+    },
+    "card3": {
+      "title": "Political Dimensions",
+      "description": "Turkey considers the Palestinian issue a pivotal cause and an integral part of the stability of the Middle East region, and works to prevent its exploitation and manipulation."
+    }
+  },
+  "keyMoments": {
+    "title": "Prominent Diplomatic Milestones",
+    "moment1": {
+      "year": "2012",
+      "title": "Recognition of Palestine as a Non-Member Observer State in the United Nations",
+      "description": "On November 29, 2012, the UN General Assembly voted with a majority of 138 countries in favor of Resolution 67/19. In this historic moment, the then Turkish Foreign Minister, His Excellency Dr. Ahmet Davutoğlu, was the only Foreign Minister present in the meeting hall to support the Palestinian delegation, a strong indication of Turkey's advanced position."
+    },
+    "moment2": {
+      "year": "2017",
+      "title": "Leading International Efforts to Preserve the Status of Jerusalem",
+      "description": "On December 21, 2017, after the American decision to recognize Jerusalem as the capital of Israel, the Republic of Turkey and the Republic of Yemen, on behalf of the Arab Group and the Organization of Islamic Cooperation, submitted a draft resolution to the General Assembly. The resolution was adopted by a majority of 128 votes, affirming that any action aimed at changing the character of Jerusalem is null and void. The Foreign Ministers of Palestine and Turkey traveled together to New York to successfully lead this diplomatic effort."
+    },
+    "consultationsText": "There is an increasing eagerness from both sides to conduct regular political consultations between the two countries, whether at the presidential level or at the level of foreign ministers in both countries."
+  },
+  "agreements": {
+    "title": "Agreements Signed Between the Two Countries",
+    "cooperation2018": {
+      "button": "Cooperation Agreements (2018-2019)",
+      "items": [
+        "Cooperation agreement between the Palestinian Ministry of Education and Higher Education and the Turkish Knowledge Foundation (19/03/2019).",
+        "Agreement in the field of security cooperation between the Government of the State of Palestine and the Government of the Republic of Turkey (25/10/2018).",
+        "Cooperation agreement between the Ministry of Agriculture in the State of Palestine and the Ministry of Agriculture and Forestry in the Republic of Turkey (25/10/2018).",
+        "Cooperation agreement between the Public Prosecution in the State of Palestine and the Public Prosecution in the Republic of Turkey (15/02/2018).",
+        "Cooperation agreement between the Palestinian International Coordination and Cooperation Agency (PICCA) and the International Coordination and Cooperation Agency (TIKA) (15/02/2018)."
+      ]
+    },
+    "memorandums": {
+      "button": "Memorandums of Understanding and Protocols",
+      "items": [
+        "Memorandum of understanding between the Government of the State of Palestine and the Government of the Republic of Turkey in the field of women's empowerment (24/11/2018).",
+        "Memorandum of understanding in the field of communications and information technology (25/10/2018).",
+        "Memorandum of understanding between the Government of the State of Palestine and the Government of the Republic of Turkey in the field of civil defense (25/10/2018).",
+        "Memorandum of understanding between the Turkish Court of Accounts and the Palestinian Financial and Administrative Control Bureau (18/04/2016).",
+        "Cooperation protocol between the Palestinian Supreme Council for Creativity and Excellence and the Turkish Scientific and Technological Research Council (15/01/2016).",
+        "Protocol for establishing the Economic Cooperation Council between the State of Palestine and the Republic of Turkey (24/10/2013)."
+      ]
+    },
+    "economicLegal": {
+      "button": "Economic and Legal Agreements",
+      "items": [
+        "Agreement on avoiding double taxation on income taxes (25/10/2018).",
+        "Investment protection agreement between the two countries (04/09/2018).",
+        "Agreement between the Turkish Union of Chambers and Commodity Exchanges (TOBB) and the Palestinian Union of Commercial, Industrial and Agricultural Chambers (31/01/2016).",
+        "Agreement on cooperation and mutual assistance in customs affairs (15/04/2013)."
+      ]
+    },
+    "sectoral": {
+      "button": "Sectoral Agreements (Culture, Education, Sports and Others)",
+      "items": [
+        "Agreement in the youth and sports sector (06/02/2018).",
+        "Cultural cooperation agreement (08/02/2017).",
+        "Agreement between the Ministries of Education and Higher Education (01/02/2016).",
+        "Postal agreement (2017).",
+        "Forest agreement (03/07/2013).",
+        "Tourism cooperation agreement (24/04/2000, renewed on 14/07/2005).",
+        "Health agreement (21/05/2003).",
+        "Social development and economic development support agreement (10/07/2006).",
+        "Many twinning agreements between Palestinian and Turkish municipalities."
+      ]
+    },
+    "pending": {
+      "button": "Agreements Under Signature",
+      "items": [
+        "Cooperation agreement between the Turkish Anadolu Agency and the Palestinian WAFA Agency.",
+        "Agreement between the Palestinian Ministry of Women's Affairs and the Turkish Ministry of Labor and Family Development.",
+        "Agreement between the Palestinian Ministry of Social Development and the Turkish Ministry of Labor and Family Development."
+      ]
+    }
+  },
+  "finalSection": {
+    "card1": {
+      "title": "Cooperation in Ottoman Archives",
+      "description": "The states of Palestine and Turkey cooperate in the field of old Ottoman documents related to Palestine, including the Ottoman Tabu which contains land records. Turkish authorities have delivered copies of these vital records to the Embassy of the State of Palestine, which in turn delivered them to the Palestinian Land Authority, providing important legal and historical documentation for citizens and official entities in the context of the struggle against Israeli occupation that targets our land."
+    },
+    "card2": {
+      "title": "Turkish Development Assistance",
+      "description": "Turkey has provided and continues to provide numerous developmental and humanitarian assistance aimed at alleviating the effects of the difficult reality that our people live. This assistance is implemented by the TIKA agency, which has completed major projects such as the Turkish Tubas Hospital, the Friendship Hospital in Gaza, school construction, restoration of homes and places of worship, in addition to housing projects for students and needy families, and sending relief aid, reflecting the depth of practical solidarity on the ground."
+    }
+  }
+}

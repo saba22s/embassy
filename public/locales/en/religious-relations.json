@@ -1,0 +1,54 @@
+{
+  "pageTitle": "Religious Relations - Embassy of the State of Palestine",
+  "hero": {
+    "title": "Bridges of Faith and History",
+    "subtitle": "Exploring the depth of spiritual and historical relations that bind Palestine and Turkey, a shared legacy of values and aspirations."
+  },
+  "introduction": {
+    "title": "Introduction to the Depth of Bonds",
+    "text": "Palestinian-Turkish relations have been particularly characterized by special sanctity in light of developing Turkish awareness of the Palestinian cause and the issue of Jerusalem and its importance to Muslims in general and Turks in particular. We must not forget that the Ottomans were the ones who named the city of Jerusalem as 'Al-Quds Al-Sharif' (Noble Jerusalem)."
+  },
+  "timeline": {
+    "title": "Historical and Spiritual Milestones",
+    "events": {
+      "event1": {
+        "heading": "Sultan Abdul Hamid II's Position on Jewish Immigration",
+        "date": "Late 19th and early 20th centuries (around 1880-1909)",
+        "detail": "Sultan Abdul Hamid II prevented the sale of Palestinian land to Jews and imposed strict restrictions on Jewish entry to Jerusalem. The goal was to limit Jewish immigration that began to increase due to the Zionist movement, which he considered a threat to the stability of the Ottoman Empire and its Muslim and Christian inhabitants. This position led to delaying Jewish settlement in Palestine for a period, despite European and Zionist pressures."
+      },
+      "event2": {
+        "heading": "End of Ottoman Rule and Its Impact on Palestine",
+        "date": "After World War I (1918)",
+        "detail": "The defeat of the Ottoman Empire in World War I ended its centuries-long rule over Palestine, leading to Palestine's transfer to the British Mandate under the Sykes-Picot agreements and several international decisions. This transition from Islamic Ottoman rule to Western authority placed Palestine under new influence, where the Zionist movement began to receive broader support from Britain, directly affecting religious and political relations in the region."
+      },
+      "event3": {
+        "heading": "Revival of the Tradition of Visiting Jerusalem from Turkey",
+        "date": "2014",
+        "detail": "The Turkish Presidency of Religious Affairs issued official directives encouraging Turkish citizens to visit Jerusalem as part of religious and national duty, with a stay of at least three days. The goal was to strengthen the historical religious ties between Turkish Muslims and Palestine, especially Jerusalem which has great religious significance in Islam, as well as to establish a Turkish popular and cultural presence in the city."
+      },
+      "event4": {
+        "heading": "Increase in Turkish Visits to Palestine",
+        "date": "Ongoing, especially from 2010 to present",
+        "detail": "The number of Turkish visits to Palestine, especially Jerusalem, has increased significantly in the past decade. These visits include pilgrimage and religious visits, with Turkey's continued political and media support for Palestine. Turkish visits have led to supporting tourism and economic movement in Jerusalem, and increased popular communication between peoples, with Turkey continuing to support Palestine's religious and historical causes at official and popular levels."
+      },
+      "event5": {
+        "heading": "Construction and Rehabilitation of Islamic Endowments and Sacred Sites",
+        "date": "From 2000 to present",
+        "detail": "Turkey has invested significantly in restoring mosques and Islamic sacred sites in Jerusalem and Palestine, such as Al-Aqsa Mosque and its surroundings. The Turkish Endowment Foundation (Vakif) is responsible for managing and maintaining several historical Islamic sites in Palestine. This investment reflects the continuation of Turkish interest in the religious and historical dimension of Palestine, and is an important aspect of religious relations between the two countries."
+      }
+    }
+  },
+  "jerusalemFocus": {
+    "title": "Noble Jerusalem: At the Heart of Bonds",
+    "quote": "Jerusalem, the city that the Ottomans named as Noble, remains a center of sanctity and shared faith between the Palestinian and Turkish peoples.",
+    "paragraph": "The importance of Jerusalem is manifested in being a meeting point of religions and a deep historical symbol that reflects the continuity of spiritual and cultural bonds. The continuous Turkish interest in Jerusalem and its sacred sites confirms this legacy extending across the ages."
+  },
+  "gallery": {
+    "alt1": "Image representing religious relations between Palestine and Turkey",
+    "alt2": "Scene from Islamic sacred sites in Jerusalem",
+    "alt3": "Turkish visit to holy places in Palestine",
+    "alt4": "Restoration of mosques and endowments in Palestine",
+    "alt5": "Pilgrimage and religious visits from Turkey to Palestine",
+    "alt6": "Shared Islamic heritage between the two countries"
+  }
+}

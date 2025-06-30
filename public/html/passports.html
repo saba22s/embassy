@@ -3,111 +3,149 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-passports-page">الجوازات - سفارة دولة فلسطين</title>
-        <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="passports:pageTitle">الجوازات - سفارة دولة فلسطين</title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
 
-    <link rel="stylesheet" href="/public/css/main.css" />
-    <link rel="stylesheet" href="/public/css/pages/passports.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/passports.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="معلومات حول إصدار وتجديد جوازات السفر الفلسطينية في تركيا">
+    <meta name="keywords" content="جوازات, فلسطين, تركيا, سفارة, تجديد, إصدار">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
+    <!-- Header Container -->
     <div id="header-container"></div>
 
     <div class="passports-page-wrapper">
         <header class="passports-header-main">
-            <h1 class="page-main-title" id="passports-main-title">الجوازات</h1>
-            <p class="page-intro" id="passports-intro">
+            <h1 class="page-main-title" data-i18n="passports:mainTitle">الجوازات</h1>
+            <p class="page-intro" data-i18n="passports:intro">
                 كيفية تجديد أو حصول على جوازات سفر فلسطينية من خلال السفارة الفلسطينية في الجمهورية التركية على النحو
                 التالي:
             </p>
         </header>
 
         <div class="passports-content-container">
+            <!-- Required Documents Section -->
             <section class="passports-section" id="required-documents-section">
-                <h2 class="section-title-passports" id="passports-docs-title">الوثائق المطلوبة</h2>
+                <h2 class="section-title-passports" data-i18n="passports:requiredDocuments.title">الوثائق المطلوبة</h2>
                 <ul class="document-list">
                     <li class="document-item">
-                        <span class="document-item-title" id="doc-req-id">الوثائق المطلوبة لاصدار وتجديد جواز السفر
-                            الفلسطيني برقم هوية</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.docReqId">
+                            الوثائق المطلوبة لاصدار وتجديد جواز السفر الفلسطيني برقم هوية
+                        </span>
                         <a href="../pdf/1passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-1">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                     <li class="document-item">
-                        <span class="document-item-title" id="doc-req-lost">الوثائق المطلوبة لاصدار جواز سفر بدل
-                            فاقد</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.docReqLost">
+                            الوثائق المطلوبة لاصدار جواز سفر بدل فاقد
+                        </span>
                         <a href="../pdf/2passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-2">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                     <li class="document-item">
-                        <span class="document-item-title" id="doc-req-newborn">الوثائق المطلوبة لاصدار جواز سفر للمواليد
-                            الذي يحمل ابوية او احداهما هوية فلسطينية</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.docReqNewborn">
+                            الوثائق المطلوبة لاصدار جواز سفر للمواليد الذي يحمل ابوية او احداهما هوية فلسطينية
+                        </span>
                         <a href="../pdf/3passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-3">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                     <li class="document-item">
-                        <span class="document-item-title" id="doc-req-external">الوثائق المطلوبة لاصدار وتجديد جواز
-                            السفر الخاص للاستخدام الخارجي</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.docReqExternal">
+                            الوثائق المطلوبة لاصدار وتجديد جواز السفر الخاص للاستخدام الخارجي
+                        </span>
                         <a href="../pdf/4passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-4">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                     <li class="document-item">
-                        <span class="document-item-title" id="form-req-regular">طلب الحصول على جواز السفر
-                            الفلسطيني</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.formReqRegular">
+                            طلب الحصول على جواز السفر الفلسطيني
+                        </span>
                         <a href="../pdf/5passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-5">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                     <li class="document-item">
-                        <span class="document-item-title" id="form-req-external">طلب الحصول على جواز سفر فلسطيني خاص
-                            للاستخدام الخارجي</span>
+                        <span class="document-item-title" data-i18n="passports:requiredDocuments.formReqExternal">
+                            طلب الحصول على جواز سفر فلسطيني خاص للاستخدام الخارجي
+                        </span>
                         <a href="../pdf/6passport.pdf" class="document-download-link" target="_blank" rel="noopener">
-                            <i class="fas fa-file-pdf"></i> <span id="passports-pdf-download-6">تحميل الملف</span>
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-i18n="passports:requiredDocuments.downloadFile">تحميل الملف</span>
                         </a>
                     </li>
                 </ul>
             </section>
 
+            <!-- Important Notes Section -->
             <section class="passports-section" id="important-notes-section">
-                <h2 class="section-title-passports" id="passports-notes-title">ملاحظات هامة</h2>
+                <h2 class="section-title-passports" data-i18n="passports:importantNotes.title">ملاحظات هامة</h2>
                 <ul class="notes-list">
-                    <li id="note-renewal-timing">على جميع الاخوة الذين يحملون جوازات سفر فلسطينية يرجى تجديدها قبل
-                        انتهاء صلاحيتها بستة شهور لإجراء اللازم بالسرعة الممكنة.</li>
-                    <li id="note-profession-proof">بخصوص إعتماد المهنة على الجواز يرجى إرفاق إثبات مهنة باللغة العربية
-                        او الانجليزية و مصدقة من السفارة.</li>
-                    <li id="note-under-18">لمن هم اقل من ١٨ عام يجب تعبئة اقرار ولي الامر (الاب) في المكان المخصص لذلك
-                        في الطلب.</li>
-                    <li id="note-id-modification">ان تم اجراء اي تعديل في الهوية يرجى ارسال نسخة من الهويه المعدل فيها
-                        خاصة لمواطني غزه ليتم تعديله في الاحوال المدنيه لدينا والاسيتم طباعة الجواز حسب البيانات المخزنه
-                        في حاسوب الاحوال المدنية في وزارة الداخلية.</li>
-                    <li id="note-lost-passport">في حال فقدان الجواز يجب ارفاق بلاغ شرطه و كتاب من الشرطه و اعلان في
-                        الجريدة.</li>
-                    <li id="note-damaged-passport">في حال تلف الجواز يجب ارفاق الجواز التالف مع المعاملة للتاكد من
-                        الغائه بشكل نهائي.</li>
-                    <li id="note-personal-attendance">عدم استلام و ارسال اي معاملة لاي شخص دون حضوره امام السفاره و
-                        التاكد من تشخيص صاحب المعاملة.</li>
+                    <li data-i18n="passports:importantNotes.noteRenewalTiming">
+                        على جميع الاخوة الذين يحملون جوازات سفر فلسطينية يرجى تجديدها قبل انتهاء صلاحيتها بستة شهور
+                        لإجراء اللازم بالسرعة الممكنة.
+                    </li>
+                    <li data-i18n="passports:importantNotes.noteProfessionProof">
+                        بخصوص إعتماد المهنة على الجواز يرجى إرفاق إثبات مهنة باللغة العربية او الانجليزية و مصدقة من
+                        السفارة.
+                    </li>
+                    <li data-i18n="passports:importantNotes.noteUnder18">
+                        لمن هم اقل من ١٨ عام يجب تعبئة اقرار ولي الامر (الاب) في المكان المخصص لذلك في الطلب.
+                    </li>
+                    <li data-i18n="passports:importantNotes.noteIdModification">
+                        ان تم اجراء اي تعديل في الهوية يرجى ارسال نسخة من الهويه المعدل فيها خاصة لمواطني غزه ليتم
+                        تعديله في الاحوال المدنيه لدينا والاسيتم طباعة الجواز حسب البيانات المخزنه في حاسوب الاحوال
+                        المدنية في وزارة الداخلية.
+                    </li>
+                    <li data-i18n="passports:importantNotes.noteLostPassport">
+                        في حال فقدان الجواز يجب ارفاق بلاغ شرطه و كتاب من الشرطه و اعلان في الجريدة.
+                    </li>
+                    <li data-i18n="passports:importantNotes.noteDamagedPassport">
+                        في حال تلف الجواز يجب ارفاق الجواز التالف مع المعاملة للتاكد من الغائه بشكل نهائي.
+                    </li>
+                    <li data-i18n="passports:importantNotes.notePersonalAttendance">
+                        عدم استلام و ارسال اي معاملة لاي شخص دون حضوره امام السفاره و التاكد من تشخيص صاحب المعاملة.
+                    </li>
                 </ul>
             </section>
-
         </div>
     </div>
 
+    <!-- Footer Container -->
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
-
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
 </body>
 
 </html>

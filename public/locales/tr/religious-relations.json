@@ -1,0 +1,54 @@
+{
+  "pageTitle": "Dini İlişkiler - Filistin Devleti Büyükelçiliği",
+  "hero": {
+    "title": "İman ve Tarihin Köprüleri",
+    "subtitle": "Filistin ve Türkiye'yi birbirine bağlayan manevi ve tarihi ilişkilerin derinliğini keşfetmek, değerler ve özlemlerin ortak mirası."
+  },
+  "introduction": {
+    "title": "Bağların Derinliğine Giriş",
+    "text": "Filistin-Türkiye ilişkileri, özellikle Türklerin Filistin davasına ve Kudüs meselesine olan farkındalığının artması ve bunun genel olarak Müslümanlara, özel olarak da Türklere olan öneminin gelişmesi ışığında özel bir kutsallıkla karakterize edilmiştir. Osmanlıların Kudüs şehrini Kudüs-ü Şerif olarak adlandıranların kendileri olduğunu unutmamalıyız."
+  },
+  "timeline": {
+    "title": "Tarihi ve Manevi Kilometre Taşları",
+    "events": {
+      "event1": {
+        "heading": "Sultan II. Abdülhamid'in Yahudi Göçüne Karşı Duruşu",
+        "date": "19. yüzyılın sonları ve 20. yüzyılın başları (yaklaşık 1880-1909)",
+        "detail": "Sultan II. Abdülhamid, Filistin topraklarının Yahudilere satılmasını yasakladı ve Yahudilerin Kudüs'e girişine sıkı kısıtlamalar getirdi. Amaç, Siyonist hareketin etkisiyle artmaya başlayan Yahudi göçünü sınırlamaktı, bunu Osmanlı Devleti'nin ve Müslüman ve Hristiyan halkının istikrarı için bir tehdit olarak görüyordu. Bu duruş, Avrupa ve Siyonist baskılara rağmen Yahudilerin Filistin'e yerleşimini bir süre geciktirdi."
+      },
+      "event2": {
+        "heading": "Osmanlı Yönetiminin Sonu ve Filistin'e Etkisi",
+        "date": "Birinci Dünya Savaşı sonrası (1918)",
+        "detail": "Osmanlı İmparatorluğu'nun Birinci Dünya Savaşı'ndaki yenilgisi, Filistin üzerindeki asırlık yönetimini sona erdirdi ve Sykes-Picot anlaşmaları ve çeşitli uluslararası kararlar uyarınca Filistin'in İngiliz Mandası'na devredilmesine yol açtı. İslami Osmanlı yönetiminden Batılı otoriteye bu geçiş, Filistin'i yeni bir etki altına soktu, burada Siyonist hareket İngiltere'den daha geniş destek almaya başladı ve bu durum bölgedeki dini ve siyasi ilişkileri doğrudan etkiledi."
+      },
+      "event3": {
+        "heading": "Türkiye'den Kudüs Ziyareti Geleneğinin Yeniden Canlandırılması",
+        "date": "2014",
+        "detail": "Türkiye Diyanet İşleri Başkanlığı, Türk vatandaşlarını dini ve milli görevin bir parçası olarak en az üç gün konaklayarak Kudüs'ü ziyaret etmeye teşvik eden resmi yönergeler yayınladı. Amaç, Türk Müslümanları ile özellikle İslam'da büyük dini öneme sahip olan Kudüs başta olmak üzere Filistin arasındaki tarihi dini bağları güçlendirmek ve şehirde Türk halk ve kültür varlığını pekiştirmekti."
+      },
+      "event4": {
+        "heading": "Filistin'e Türk Ziyaretlerinin Artışı",
+        "date": "Devam ediyor, özellikle 2010'dan günümüze",
+        "detail": "Türklerin Filistin'e, özellikle Kudüs'e ziyaret sayısı geçtiğimiz on yılda önemli ölçüde arttı. Bu ziyaretler hac ve dini ziyaretleri içeriyor, Türkiye'nin Filistin'e siyasi ve medya desteği devam ediyor. Türk ziyaretleri Kudüs'te turizm ve ekonomik hareketi destekledi ve halklar arasında halk iletişimini artırdı, Türkiye resmi ve halk düzeylerinde Filistin'in dini ve tarihi davalarını desteklemeye devam ediyor."
+      },
+      "event5": {
+        "heading": "İslami Vakıflar ve Kutsal Mekanların İnşası ve Rehabilitasyonu",
+        "date": "2000'den günümüze",
+        "detail": "Türkiye, Kudüs ve Filistin'deki Mescid-i Aksa ve çevresi gibi cami ve İslami kutsal mekanların restorasyonuna büyük yatırımlar yaptı. Türk Vakıf Kurumu (Vakıf), Filistin'deki çeşitli tarihi İslami mekanların yönetimi ve bakımından sorumludur. Bu yatırım, Türkiye'nin Filistin'in dini ve tarihi boyutuna olan ilgisinin devamını yansıtıyor ve iki ülke arasındaki dini ilişkilerin önemli bir yönüdür."
+      }
+    }
+  },
+  "jerusalemFocus": {
+    "title": "Kudüs-ü Şerif: Bağların Kalbinde",
+    "quote": "Osmanlıların Şerif olarak adlandırdığı şehir Kudüs, Filistin ve Türk halkları arasında kutsallık ve ortak imanın merkezi olmaya devam ediyor.",
+    "paragraph": "Kudüs'ün önemi, dinlerin buluşma noktası olması ve manevi ve kültürel bağların sürekliliğini yansıtan derin tarihi bir sembol olmasında kendini gösterir. Türkiye'nin Kudüs ve kutsal mekanlarına olan sürekli ilgisi, çağlar boyunca uzanan bu mirası doğrular."
+  },
+  "gallery": {
+    "alt1": "Filistin ve Türkiye arasındaki dini ilişkileri temsil eden görüntü",
+    "alt2": "Kudüs'teki İslami kutsal mekanlardan sahne",
+    "alt3": "Filistin'deki kutsal yerlere Türk ziyareti",
+    "alt4": "Filistin'de cami ve vakıfların restorasyonu",
+    "alt5": "Türkiye'den Filistin'e hac ve dini ziyaretler",
+    "alt6": "İki ülke arasında ortak İslami miras"
+  }
+} 

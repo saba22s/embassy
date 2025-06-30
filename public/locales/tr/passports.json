@@ -1,4 +1,25 @@
 {
-  "title": "Turkey - AR",
-  "description": "Translated content for turkey page in AR."
+    "pageTitle": "Pasaportlar - Filistin Devleti Büyükelçiliği",
+    "mainTitle": "Pasaportlar",
+    "intro": "Türkiye Cumhuriyeti'ndeki Filistin Büyükelçiliği aracılığıyla Filistin pasaportlarının nasıl yenileneceği veya alınacağı aşağıdaki gibidir:",
+    "requiredDocuments": {
+        "title": "Gerekli Belgeler",
+        "docReqId": "Kimlik numaralı Filistin pasaportu düzenleme ve yenileme için gerekli belgeler",
+        "docReqLost": "Kayıp pasaport yerine pasaport düzenleme için gerekli belgeler",
+        "docReqNewborn": "Ebeveynleri veya birinin Filistin kimliğine sahip olduğu yenidoğanlar için pasaport düzenleme için gerekli belgeler",
+        "docReqExternal": "Dış kullanım için özel pasaport düzenleme ve yenileme için gerekli belgeler",
+        "formReqRegular": "Filistin pasaportu alma başvurusu",
+        "formReqExternal": "Dış kullanım için özel Filistin pasaportu alma başvurusu",
+        "downloadFile": "Dosyayı İndir"
+    },
+    "importantNotes": {
+        "title": "Önemli Notlar",
+        "noteRenewalTiming": "Filistin pasaportu taşıyan tüm kardeşler, gerekli işlemleri mümkün olan en hızlı şekilde yapmak için pasaportlarını süreleri dolmadan altı ay önce yenilemeleri rica olunur.",
+        "noteProfessionProof": "Pasaportta meslek onayı konusunda, lütfen Arapça veya İngilizce meslek belgesi ekleyip büyükelçilikten onaylatın.",
+        "noteUnder18": "18 yaşından küçükler için, başvurudaki özel yerde vasi (baba) beyanının doldurulması gerekmektedir.",
+        "noteIdModification": "Kimlikte herhangi bir değişiklik yapıldıysa, özellikle Gazze vatandaşları için değiştirilmiş kimliğin bir kopyasını gönderin, böylece bizim nüfus sicilimizde değiştirilebilir ve pasaport İçişleri Bakanlığı nüfus sicili bilgisayarında saklanan verilere göre basılacaktır.",
+        "noteLostPassport": "Pasaport kaybı durumunda polis raporu, polisten yazı ve gazete ilanı eklenmelidir.",
+        "noteDamagedPassport": "Pasaport hasarı durumunda, nihai iptalini sağlamak için hasarlı pasaport işlemle birlikte eklenmelidir.",
+        "notePersonalAttendance": "Büyükelçilik önünde hazır bulunmadan ve işlem sahibinin kimliğinin doğrulanması olmadan hiçbir kişi için herhangi bir işlem teslim alınmamalı veya gönderilmemelidir."
+    }
 }

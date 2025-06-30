@@ -1,4 +1,38 @@
 {
-  "title": "Economic Relations - EN",
-  "description": "Translated content for economic_relations page in EN."
+  "pageTitle": "Büyükelçilik Hizmetleri - Filistin Devleti Büyükelçiliği",
+  "header": {
+    "title": "Büyükelçilik Hizmetleri",
+    "intro": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği - Ankara, ikamet eden ve ziyaret eden Filistinli vatandaşlara konsolosluk, eğitim ve kültürel hizmetler sunmanın yanı sıra Filistin ve Türkiye arasındaki ikili ilişkileri güçlendirme diplomatik görevlerini de yerine getirmektedir."
+  },
+  "consularServices": {
+    "title": "Birinci: Konsolosluk Hizmetleri",
+    "services": [
+      "Filistin pasaportu düzenleme ve yenileme (kayıp veya hasar durumları dahil).",
+      "Doğum, ölüm ve kişisel olayların kaydı.",
+      "Evlilik ve boşanma sözleşmelerinin onaylanması.",
+      "Resmi belgelerin tasdiki (akademik sertifikalar, doğum belgeleri, kişisel durum belgeleri ve diğerleri).",
+      "Onay belgesi ve giriş izni düzenleme.",
+      "Türkiye'deki vatandaşların hukuki ve konsolosluk sorunlarında yardım.",
+      "Acil durumlarda ve insani prosedürlerde destek sağlama.",
+      "İlgili makamlarla koordineli olarak genel ve özel vekalet düzenleme ve hukuki işlemleri organize etme."
+    ]
+  },
+  "educationalServices": {
+    "title": "İkinci: Eğitim ve Kültürel İşler",
+    "services": [
+      "Türkiye'de eğitim görmek isteyen Filistinli öğrencilere rehberlik ve bilgi sağlama.",
+      "\"Türkiye'deki Filistinli Öğrenci Rehberi\" yayınlama.",
+      "Filistin kimliğini güçlendirmek ve Filistin mirasını tanıtmak için kültürel etkinlikler düzenleme.",
+      "Filistinli öğrencilerle ilgili Türk eğitim kurumlarıyla koordinasyon.",
+      "Gençlik girişimlerini ve öğrenci faaliyetlerini destekleme."
+    ]
+  },
+  "publicRelations": {
+    "title": "Üçüncü: Halkla İlişkiler ve Toplumsal İlişkiler",
+    "services": [
+      "Türkiye'deki Filistin topluluğu üyeleriyle sürekli iletişim.",
+      "Filistin ve Türk kurumlarıyla işbirliği içinde ulusal etkinlikler ve resmi törenler düzenleme.",
+      "Şikayet ve gözlemleri alma ve ilgili makamlarla takip etme."
+    ]
+  }
 }

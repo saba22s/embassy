@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Siyasi İlişkiler - Filistin Devleti Büyükelçiliği",
+  "hero": {
+    "title": "Siyasi İlişkiler: Sarsılmaz Dayanışma ve İlkeli Duruşlar",
+    "subtitle": "Türkiye Cumhuriyeti, Filistin halkının 4 Haziran 1967 sınırları içinde başkenti Doğu Kudüs olan bağımsız devletini kurma hakkını destekler ve yanında durur."
+  },
+  "foundations": {
+    "title": "Türkiye'nin Filistin Meselesine Yaklaşımının Temelleri",
+    "card1": {
+      "title": "İlkeli Sabiteler",
+      "description": "Türkiye, mazlum bir halkın, işgal altındaki toprakların ve adil bir davanın varlığına olan inancından hareket eder ve bunu tarihi ve insani sorumluluğunun bir parçası olarak desteklemeyi görev bilir."
+    },
+    "card2": {
+      "title": "Hukuki Temeller",
+      "description": "Türkiye, uluslararası meşruiyet tarafından çıkarılan kararları ve uluslararası hukukun öngördüğü hakları vurgular, bunların göz ardı edilmesini ve ihlal edilmesini kınar."
+    },
+    "card3": {
+      "title": "Siyasi Boyutlar",
+      "description": "Türkiye, Filistin meselesini merkezi bir dava ve Ortadoğu bölgesinin istikrarının ayrılmaz bir parçası olarak görür ve bunun istismar edilmesi ve araçsallaştırılmasını önlemeye çalışır."
+    }
+  },
+  "keyMoments": {
+    "title": "Öne Çıkan Diplomatik Kilometre Taşları",
+    "moment1": {
+      "year": "2012",
+      "title": "Filistin'in BM'de Gözlemci Üye Devlet Olarak Tanınması",
+      "description": "29 Kasım 2012'de BM Genel Kurulu 67/19 sayılı kararı 138 ülkenin çoğunluğuyla onayladı. Bu tarihi anda, o dönemki Türk Dışişleri Bakanı Sayın Dr. Ahmet Davutoğlu, Filistin heyetini desteklemek için toplantı salonunda bulunan tek Dışişleri Bakanıydı, bu da Türkiye'nin ileri görüşlü tutumunun güçlü bir göstergesiydi."
+    },
+    "moment2": {
+      "year": "2017",
+      "title": "Kudüs'ün Statüsünü Koruma Konusunda Uluslararası Çabalara Öncülük",
+      "description": "21 Aralık 2017'de, Amerika'nın Kudüs'ü İsrail'in başkenti olarak tanıma kararından sonra, Türkiye Cumhuriyeti ve Yemen Cumhuriyeti, Arap Grubu ve İslam İşbirliği Teşkilatı adına Genel Kurul'a bir karar tasarısı sundular. Karar 128 oyla kabul edildi ve Kudüs'ün karakterini değiştirmeyi amaçlayan herhangi bir eylemin geçersiz ve hükümsüz olduğunu teyit etti. Filistin ve Türkiye Dışişleri Bakanları bu diplomatik çabayı başarıyla yönetmek için birlikte New York'a gittiler."
+    },
+    "consultationsText": "Her iki tarafta da iki ülke arasında ister cumhurbaşkanlığı düzeyinde ister dışişleri bakanları düzeyinde düzenli siyasi istişareler yapma konusunda artan bir gayret bulunmaktadır."
+  },
+  "agreements": {
+    "title": "İki Ülke Arasında İmzalanan Anlaşmalar",
+    "cooperation2018": {
+      "button": "İşbirliği Anlaşmaları (2018-2019)",
+      "items": [
+        "Filistin Eğitim ve Yükseköğretim Bakanlığı ile Türk Maarif Vakfı arasında işbirliği anlaşması (19/03/2019).",
+        "Filistin Devleti Hükümeti ile Türkiye Cumhuriyeti Hükümeti arasında güvenlik işbirliği anlaşması (25/10/2018).",
+        "Filistin Devleti Tarım Bakanlığı ile Türkiye Cumhuriyeti Tarım ve Orman Bakanlığı arasında işbirliği anlaşması (25/10/2018).",
+        "Filistin Devleti Başsavcılığı ile Türkiye Cumhuriyeti Başsavcılığı arasında işbirliği anlaşması (15/02/2018).",
+        "Filistin Uluslararası Koordinasyon ve İşbirliği Ajansı (PICCA) ile Uluslararası Koordinasyon ve İşbirliği Ajansı (TİKA) arasında işbirliği anlaşması (15/02/2018)."
+      ]
+    },
+    "memorandums": {
+      "button": "Mutabakat Muhtıraları ve Protokoller",
+      "items": [
+        "Filistin Devleti Hükümeti ile Türkiye Cumhuriyeti Hükümeti arasında kadının güçlendirilmesi alanında mutabakat muhtırası (24/11/2018).",
+        "İletişim ve bilgi teknolojileri alanında mutabakat muhtırası (25/10/2018).",
+        "Filistin Devleti Hükümeti ile Türkiye Cumhuriyeti Hükümeti arasında sivil savunma alanında mutabakat muhtırası (25/10/2018).",
+        "Türk Sayıştayı ile Filistin Mali ve İdari Kontrol Dairesi arasında mutabakat muhtırası (18/04/2016).",
+        "Filistin Yaratıcılık ve Mükemmellik Yüksek Konseyi ile Türkiye Bilimsel ve Teknolojik Araştırma Kurumu arasında işbirliği protokolü (15/01/2016).",
+        "Filistin Devleti ile Türkiye Cumhuriyeti arasında Ekonomik İşbirliği Konseyi kurma protokolü (24/10/2013)."
+      ]
+    },
+    "economicLegal": {
+      "button": "Ekonomik ve Hukuki Anlaşmalar",
+      "items": [
+        "Gelir vergileri konusunda çifte vergilendirmeyi önleme anlaşması (25/10/2018).",
+        "İki ülke arasında yatırım koruma anlaşması (04/09/2018).",
+        "Türkiye Odalar ve Borsalar Birliği (TOBB) ile Filistin Ticaret, Sanayi ve Tarım Odaları Birliği arasında anlaşma (31/01/2016).",
+        "Gümrük işlerinde işbirliği ve karşılıklı yardım anlaşması (15/04/2013)."
+      ]
+    },
+    "sectoral": {
+      "button": "Sektörel Anlaşmalar (Kültür, Eğitim, Spor ve Diğerleri)",
+      "items": [
+        "Gençlik ve spor sektöründe anlaşma (06/02/2018).",
+        "Kültürel işbirliği anlaşması (08/02/2017).",
+        "Eğitim ve Yükseköğretim Bakanlıkları arasında anlaşma (01/02/2016).",
+        "Posta anlaşması (2017).",
+        "Ormanlar hakkında anlaşma (03/07/2013).",
+        "Turizm işbirliği anlaşması (24/04/2000, 14/07/2005'te yenilendi).",
+        "Sağlık anlaşması (21/05/2003).",
+        "Sosyal kalkınma ve ekonomik kalkınma desteği anlaşması (10/07/2006).",
+        "Filistin ve Türk belediyeleri arasında çok sayıda kardeşlik anlaşması."
+      ]
+    },
+    "pending": {
+      "button": "İmza Aşamasındaki Anlaşmalar",
+      "items": [
+        "Türk Anadolu Ajansı ile Filistin WAFA Ajansı arasında işbirliği anlaşması.",
+        "Filistin Kadın İşleri Bakanlığı ile Türk Çalışma ve Aile Kalkınma Bakanlığı arasında anlaşma.",
+        "Filistin Sosyal Kalkınma Bakanlığı ile Türk Çalışma ve Aile Kalkınma Bakanlığı arasında anlaşma."
+      ]
+    }
+  },
+  "finalSection": {
+    "card1": {
+      "title": "Osmanlı Arşivinde İşbirliği",
+      "description": "Filistin ve Türkiye devletleri, toprak kayıtlarını içeren Osmanlı Tapu defterleri dahil olmak üzere Filistin'le ilgili eski Osmanlı belgeleri alanında işbirliği yapmaktadır. Türk makamları bu hayati kayıtların kopyalarını Filistin Devleti Büyükelçiliği'ne teslim etmiş, büyükelçilik de bunları Filistin Toprak Otoritesi'ne iletmiştir. Bu, topraklarımızı hedef alan İsrail işgaline karşı mücadele çerçevesinde vatandaşlar ve resmi kurumlar için önemli hukuki ve tarihi belge sağlamaktadır."
+    },
+    "card2": {
+      "title": "Türk Kalkınma Yardımları",
+      "description": "Türkiye, halkımızın yaşadığı zorlu gerçekliğin etkilerini hafifletmeyi amaçlayan çok sayıda kalkınma ve insani yardım sağlamış ve sağlamaya devam etmektedir. Bu yardımlar, Türk Tubas Hastanesi, Gazze'deki Dostluk Hastanesi, okul inşaatı, ev ve ibadet yerlerinin restorasyonu gibi büyük projeleri tamamlayan TİKA ajansı tarafından yürütülmektedir. Ayrıca öğrenciler ve ihtiyaç sahibi aileler için konut projeleri ve yardım malzemesi gönderimi de dahil olmak üzere, sahada pratik dayanışmanın derinliğini yansıtmaktadır."
+    }
+  }
+} 
