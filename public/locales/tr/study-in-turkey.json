@@ -1,0 +1,105 @@
+{
+  "pageTitle": "Türkiye'de Eğitim - Filistin Devleti Büyükelçiliği",
+  "mainTitle": "Türkiye'de Eğitim",
+  "subtitle": "Türkiye'de eğitim görmek isteyen öğrenciler için Türkiye Cumhuriyeti hakkında bilgiler",
+  "updateDate": "Güncelleme 30-11-2022",
+  "generalInfo": {
+    "title": "Türkiye Hakkında Genel Bilgiler",
+    "paragraph1": "Türkiye Cumhuriyeti, büyüleyici güzelliği, büyüleyici doğası ve dostane halkının yanı sıra miras, gelenek ve göreneklerdeki çeşitliliği ile öne çıkmaktadır. Türk halkı, coğrafi yakınlık ve ortak dini karakter nedeniyle Arap halklarıyla birçok gelenekte ortak paydaya sahiptir; aile bağlılığı, misafirperverlik, sıcaklık ve iyi konukseverlik ile karakterize edilir.",
+    "paragraph2": "Türkiye'yi ziyaret edenlerin, insanlarla günlük etkileşimlerini kolaylaştırmak ve utanç verici durumlardan kaçınmak için Türk halkına özgü bazı kültür ve gelenekleri öğrenmeleri önemlidir. Bu gelenekler şunlardır:",
+    "customs": {
+      "greeting": "Herkesi selamlamak, çünkü selamlama ve karşılama geleneği vatandaşlar arasında yaygındır.",
+      "respect": "Herkese saygıyla davranmak, çünkü insanlar arasında ayrımcılık yoktur.",
+      "queues": "Her yerde sıralara uymak, hatta toplu taşıma kullanırken bile.",
+      "shoes": "Evin kapısında ayakkabıları çıkarmanın gerekliliği, çünkü kapıda ayakkabıları çıkarmadan herhangi bir eve girmek caiz değildir."
+    }
+  },
+  "languageCurrency": {
+    "title": "Dil ve Para Birimi",
+    "languageLabel": "Resmi Dil:",
+    "languageValue": "Türkçe, Türk vatandaşları dillerine çok bağlıdır ve Türk halkının çoğu başka bir dilde anlaşmayı reddeder.",
+    "currencyLabel": "Para Birimi:",
+    "currencyValue": "Türk Lirası."
+  },
+  "livingStandard": {
+    "title": "Yaşam Standardı",
+    "paragraph1": "Türkiye'de yaşam standardı şehirden şehire değişir. Ankara ve İstanbul gibi büyük şehirlerdeki yaşam maliyetleri, ister ev kiraları ister alışveriş ve satın almalar açısından olsun, daha küçük ve uzak şehirlerden daha yüksektir. Fiyatlar istikrarsız ve sürekli değiştiği için kesin bir yaşam standardı belirlenemez.",
+    "paragraph2": "Makul fiyatlarla alışveriş yapılabilecek yerler ise, özellikle sebze ve meyve için halk pazarlarıdır. Bunlar çoğu yerleşim mahallesinde bulunur ve her yerleşim mahallesi için haftada bir gün ayrılır. Ayrıca Türkiye Cumhuriyeti'nin tüm yerleşim mahallelerinde yaygın olan (ŞOK – BİM – A101) gibi bazı ünlü mağazalardan da alışveriş yapılabilir ve fiyatları diğer mağazalara göre makuldür."
+  },
+  "transportation": {
+    "title": "Ulaşım",
+    "paragraph1": "Türkiye'de tüm ulaşım araçları mevcuttur. Toplu taşıma, taksilere kıyasla en uygun maliyetlidir. Tramvay, dolmuş, otobüs, tren, metro gibi birçok toplu taşıma seçeneği vardır.",
+    "paragraph2": "Öğrenciler üniversiteye kaydolduktan sonra öğrenci kartı aldıktan sonra aylık veya yıllık indirimli abonelikler aracılığıyla toplu taşımada indirim alabilir."
+  },
+  "studyingDetails": {
+    "title": "Türkiye'de Eğitim Detayları",
+    "paragraph1": "Türkiye siyasi ve ekonomik istikrar yaşamaktadır ve devlet ve toplumu ilerletmedeki modern Türk deneyimi, bölgesel ve uluslararası düzeyde en önemli ilerleme modellerinden biri olarak kabul edilmektedir. Üçüncü bin yılın ilk on yılı büyük bir eğitim, ekonomik, sosyal ve siyasi patlama yaşandı ve eğitim sektörü Türk hükümetinin odağını aldı, çünkü Türkiye 2023 yılına kadar cumhuriyet düzeyinde 500 üniversiteye sahip olmayı planlıyor.",
+    "paragraph2": "Türkiye'yi eğitim destinasyonu yapan en önemli nedenler belki de Türkiye'de eğitimin kalitesi ve etkinliği, ayrıca üniversite ve dil enstitülerindeki yaşam maliyetleri ve öğrenim ücretlerinin Avrupa ülkelerine kıyasla biraz düşük olmasıdır. Türk eğitim kurumları küresel üne sahiptir ve çok sayıda ülkede küresel tanınırlığa sahiptir.",
+    "paragraph3": "Türkiye, 176'dan fazla ülkeyle eğitim ve bilimsel ve kültürel işbirliği için kapıları açmaya odaklanarak çok sayıda yabancı öğrenciyi çekmeyi başardı. Türk hükümeti ayrıca resmi burslar sağlayarak ve onlara özel koltuklar ayırarak, vize ve oturma izni alma prosedürlerini basitleştirmeye ek olarak onları çekmek için uygun koşullar sağlamakla ilgileniyordu.",
+    "paragraph4": "Türk şehirlerinin çoğu uzmanlaşmış üniversite ve kolejleri içerir ve yükseköğretim kurumları Yükseköğretim Kurulu (YÖK) tarafından izlenir ve yönetilir.",
+    "paragraph5": "Çoğu üniversitede eğitim Türkçe olarak yürütülür, ancak bazı devlet üniversitelerinde İngilizce olarak eğitim verilen bazı uzmanlıklar vardır, özel üniversiteler ise hem Türkçe hem de İngilizce uzmanlıklara sahiptir.",
+    "paragraph6": "Türk üniversitelerindeki kayıt ve kabul sistemi sadece lise akademik başarısına bağlı değildir, her üniversite kendi doğasına ve uzmanlıklarına göre belirlediği Türkçe dil ve yetenek sınavı (YÖS) vardır ve her öğrenci uzmanlaşmış koleje kabul edilebilmesi için bu testleri geçmelidir. Bu testlerde kayırmacılık veya aracılık için yer yoktur, çünkü otomatik olarak programlanmışlardır ve kimse bunlara müdahale edemez.",
+    "paragraph7": "Aynı şekilde, Türk üniversitelerine kayıt her üniversitenin web sitesi aracılığıyla yapılır. Kabul, her üniversiteye özgü ve web sitesinde açıklanan koşullara dayanır, bunlar yıldan yıla ve kolejden koleje farklılık gösterir, çünkü her üniversitenin kayıt olunan koleje göre kendi koşulları vardır."
+  },
+  "recognizedUniversities": {
+    "title": "Filistin'de Tanınan Türk Üniversiteleri",
+    "paragraph1": "Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı'nın web sitesinde ve aynı zamanda",
+    "linkText": "Türkiye Cumhuriyeti nezdinde Filistin Devleti Büyükelçiliği'nin web sitesinde",
+    "paragraph2": "Filistin'de tanınan Türk üniversitelerinin listesi bulunmaktadır. Üniversite web siteleri aracılığıyla kayıt olmak isteyen öğrencilere tanınan üniversiteler listesini gözden geçirmelerini veya kaydolmadan önce üniversitenin bakanlık tarafından tanınırlığından emin olmak için Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı ile iletişime geçmelerini tavsiye ediyoruz."
+  },
+  "scholarships": {
+    "title": "Türkiye Cumhuriyeti'nde Burslar",
+    "paragraph1": "Türkiye Cumhuriyeti, yabancı öğrencileri üniversitelerinde eğitim görmeye teşvik etmek için burslar sunmaktadır. Burslar, lisansüstü çalışmalar dahil olmak üzere tüm üniversite uzmanlıklarını kapsar, \"Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı\" (YTB) her yıl Ocak ve Şubat aylarında web sitesi aracılığıyla burs kaydını açar:",
+    "paragraph2": "Öğrenci web sitesine ilk kez kaydolur, ardından web sitesindeki gerekli verileri doldurur. Bu adımlar öğrenci ve burs yönetimi arasında web sitesi aracılığıyla, hiç kimsenin (devlet kurumu veya başka) müdahalesi olmadan gerçekleşir, ardından burs yönetimi başvuruları sıralar ve ardından koşulları karşılayan öğrencilerle mülakat tarihlerini belirlemek için e-postalarıyla iletişime geçer, ardından burs yönetimi kabul edilen öğrencileri yine e-postalarıyla bilgilendirir.",
+    "paragraph3": "Türk Yükseköğretim Kurulu (YÖK) ayrıca lisans ve doktora programları dahil olmak üzere Filistin Devleti'ne belirli sayıda burs sunar ve bu burslar Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı tarafından resmi web sitesi aracılığıyla duyurulur.",
+    "paragraph4": "Bunun dışında, Türk üniversitelerine başvuru bireyseldir ve her üniversitenin web sitesi aracılığıyla yapılır, burada gerekli koşullar ve kriterler üniversiteden üniversiteye farklılık gösterir ve bu başvuru ücretsiz ve elektroniktir. Üniversitelere başvuru her yıl Haziran ayında başlar ve bazen bu tarihten önce. Öğrenci, eğitim görmek istediği uzmanlığa ve ikamet etmek istediği bölgeye göre üniversiteleri aramalıdır.",
+    "paragraph5": "Başvurular sadece öğrencinin üniversitenin resmi web sitesinde verilerini kaydetmesi yoluyla kabul edilir ve yazışma veya elle başvurular kabul edilmez.",
+    "paragraph6": "Türk üniversitelerinin çoğu, özellikle devlet üniversiteleri, Türkçe eğitimi ve sertifika almayı gerektirir. Bazı üniversiteler TÖMER sertifikası, diğerleri YÖS sertifikası ister.",
+    "turkiyeBurslariTitle": "Türk Hükümeti Bursu: TÜRKİYE BURSLARI",
+    "paragraph9": "Bu hükümet bursu, dünyanın çeşitli ülkelerinden öğrencilerin yoğun talebi, sunduğu programların çeşitliliği ve kabul edilen öğrenci sayısının yıllık olarak istikrarlı bir şekilde artması nedeniyle Türkiye Cumhuriyeti düzeyinde en ünlü olarak kabul edilir. Bu burs lisans, lisansüstü ve doktora programlarını içerir ve kapsadığı giderler açısından kapsamlıdır çünkü yaşam giderleri, eğitim, sağlık sigortası ve dil eğitimi hazırlık aşaması (İngilizce-Türkçe) ve bir kez seyahat bileti rezervasyonu (geliş ve gidiş) kapsar.",
+    "bachelor": {
+      "title": "Lisans Öğrencileri:",
+      "qualificationsTitle": "Kabul Nitelikleri:",
+      "condition1": "Başvuru sahibi Türkiye dışında bir ülkenin vatandaşı olmalıdır (Türk vatandaşlığına sahip olanlar veya daha önce sahip olanlar bursa başvuramazlar).",
+      "condition2": "Katılmak istediği eğitim seviyesinde Türk üniversitelerinde kayıtlı öğrenci olmamalıdır.",
+      "condition3": "Lise eğitimini bitirmiş veya bitirmek üzere olmalıdır.",
+      "condition4": "21 yaşın altında olmalıdır.",
+      "condition5": "Tıp bilimleri için %90'dan az olmamak üzere, mühendislik lisans programları için %80 ve diğer lisans programları için %70 not ortalamasına sahip olmalıdır.",
+      "condition6": "Sağlıklı olmalı ve kronik hastalıklardan arınmış olmalıdır.",
+      "documentsNote": "Gerekli Belgeler: Burs web sitesinde mevcuttur.",
+      "benefitsTitle": "Burs Avantajları:",
+      "benefit1": "Aylık maaş.",
+      "benefit2": "Tam öğrenim ücreti kapsamı.",
+      "benefit3": "Burs yönetimi tarafından belirlenen devlet işletmeli konaklama tesislerinde ücretsiz barınma.",
+      "benefit4": "Gidiş-dönüş uçak bileti (bursun başında gelişte ve tam eğitimi tamamladıktan sonra bursun sonunda ayrılışta).",
+      "benefit5": "Sağlık sigortası kapsamı."
+    },
+    "mastersPhd": {
+      "title": "Yüksek Lisans ve Doktora Programları:",
+      "conditions": "Lisans programıyla aynı koşullar, farklı akademik ortalamalarla, ortalama %75'ten az olmamalıdır. Öğrenci yüksek lisans için 30 yaşın altında, doktora için 35 yaşın altında olmalıdır."
+    }
+  },
+  "studentProcedures": {
+    "title": "Öğrencilerin Tamamlaması Gereken İşlemler",
+    "paragraph1": "Türkiye Cumhuriyeti'nde eğitim görmek isteyen herhangi bir öğrenci, başlangıçta, havaalanında ve resmi işlemlerde hareket edebilmek ve işlem yapabilmek için bazı Türkçe kelime ve ifadeleri öğrenmelidir ve aşağıdaki konuları da anlamalıdır:",
+    "item1": "Türkiye Cumhuriyeti, Filistinli öğrencilere yukarıda açıklandığı gibi YTB web sitesi aracılığıyla veya Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı aracılığıyla burslar sunar.",
+    "item2": "Bunun dışında öğrenci doğrudan üniversitenin resmi web sitesi aracılığıyla üniversiteye başvurur ve üniversitenin kendi web sitesinde elektronik başvuru dışında hiçbir başvuru kabul edilmez.",
+    "item3": "Öğrenci üniversite kabulü aldıktan sonra, belgelerini hazırlamalı ve İngilizceye çevirtmeli, Dışişleri ve Gurbetçiler Bakanlığı'ndan onaylatmalı, ardından öğrenci sıfatıyla giriş vizesi almak için Filistin'deki Türk Büyükelçiliği ile iletişime geçmelidir.",
+    "item4": "Varıştan sonra öğrenci, sertifikalarını Ankara'daki Filistin Devleti Büyükelçiliği'nden veya İstanbul'daki Filistin Devleti Başkonsolosluğu'ndan onaylatır, ardından belgelerini Türkçeye çevirir ve devlet nezdinde yeminli tercüman tarafından mühürletir. Bu ofisler Türkiye Cumhuriyeti'nin her yerinde yaygındır.",
+    "item5": "Öğrenci daha sonra sertifikalarını Türk Milli Eğitim Bakanlığı'nda denkleştirir, lise diplomasının aslını ve denkleştirmenin tamamlanması için lise diplomasından önceki iki akademik yılın sertifikalarını sunar.",
+    "item6": "Öğrenci, oturma izni ihlali yapmamak için gelir gelmez öğrenci olarak ikamet kaydı yaptırmaya dikkat etmelidir.",
+    "item7": "Bundan sonra öğrenci dosyasını kabul edildiği üniversiteye sunar.",
+    "item8": "Eğitim Türkçe ise öğrenci bir dil enstitüsünde (Tömer) eğitim görmeli ve enstitüdeki eğitim süresi yaklaşık bir tam yıldır."
+  },
+  "studentAdvice": {
+    "title": "Öğrenciler İçin Önemli Tavsiyeler",
+    "paragraph1": "Filistin ve Filistin halkı Türk halkı nezdinde sevgi ve takdire sahiptir ve Filistinliler mücadele ve işgalle karşı koyma modelini temsil eder. Bu nedenle Türkiye'de eğitim görmek için gelen öğrenci ülkesi Filistin'i olumlu şekilde temsil etmeli ve kendisine ve Filistin'e zarar verecek kötü alışkanlıklardan ve eylemlerden uzak durmalıdır, çünkü büyükelçilik para cezası veya hapis ile cezalandırılan bu ihlal edici konulara müdahale edemez. Öğrencinin dikkate alması gereken konular arasında:",
+    "item1": "Ülkenin kanun ve düzenlemelerine saygı göstermek ve resmi ikamet ihlali yapmamak.",
+    "item2": "Genel ahlaka uymak ve gelenek ve göreneklere saygı göstermek.",
+    "item3": "Şüpheli yerlerde bulunmamak.",
+    "item4": "Uyuşturucu madde kullanmamak veya satmamak.",
+    "item5": "Kızları taciz etmemek veya ahlaksız davranışlarda bulunmamak.",
+    "item6": "Herhangi bir dolandırıcılık faaliyetinde bulunmamak veya katılmamak.",
+    "item7": "Herhangi bir isyanda katılmamak."
+  }
+}

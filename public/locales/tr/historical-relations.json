@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Tarihi İlişkiler - Filistin Devleti Büyükelçiliği",
+    "hero": {
+        "title": "Tarihin Bağları: Filistin-Türkiye İlişkilerinin Yolculuğu",
+        "subtitle": "Osmanlı mirasının derinliklerinden günümüzün dayanışmasına, olayların ördüğü ve değerlerin pekiştirdiği ortak tarihin sayfalarını inceliyoruz.",
+        "scrollDown": "Aşağı kaydır"
+    },
+    "intro": {
+        "text": "Filistin-Türkiye ilişkilerinin kökleri yüzyıllar boyunca uzanır; Filistin, yaklaşık dört yüz yıl boyunca Osmanlı İmparatorluğu'nun medeniyet dokusunun hayati bir parçasını oluşturmuştur. Bu tarihi uzanım sadece idari yönlerle sınırlı kalmamış, günümüze kadar açık izlerini bırakan derin kültürel ve sosyal etkileşimleri de kapsamıştır. Modern çağın şafağıyla birlikte, bu ilişkiler yeni boyutlar kazanmış ve siyasi ve diplomatik pozisyonlarda somutlaşmıştır; bunların en belirgin olanı Türkiye'nin Filistin davasına ve Filistin halkının devredilemez haklarına yönelik kararlı ve sürekli desteğidir."
+    },
+    "timeline": {
+        "title": "Ortak Yolculukta Aydınlatan Kilometre Taşları",
+        "events": {
+            "event1": {
+                "year": "1516 - 1917",
+                "title": "Filistin Osmanlı Çatısı Altında",
+                "description": "Filistin, Sultan I. Selim döneminde Osmanlı İmparatorluğu'nun bayrağı altına girdi ve dört asır süren bir dönem başladı. Bu süre zarfında bölgenin çeşitli karakterini koruyarak önemli idari, imar ve kültürel gelişmelere tanık oldu.",
+                "imageAlt": "Filistin Osmanlı Çatısı Altında"
+            },
+            "event2": {
+                "year": "1917",
+                "title": "Osmanlı Döneminin Sonu ve Mandater Yönetimin Başlangıcı",
+                "description": "Birinci Dünya Savaşı'nın gelişmeleri ve General Allenby komutasındaki İngiliz kuvvetlerinin girişiyle, Filistin'deki Osmanlı yönetiminin sayfası kapandı ve İngiliz Mandater yönetimi dönemi başladı.",
+                "imageAlt": "Osmanlı Döneminin Sonu ve Mandater Yönetimin Başlangıcı"
+            },
+            "event3": {
+                "year": "1925",
+                "title": "Kudüs'te Türk Başkonsolosluğu'nun Kurulması",
+                "description": "Tarihi ve dini önemi yansıtan bir adımda, genç Türkiye Cumhuriyeti Kudüs şehrinde başkonsolosluğunu kurdu ve diplomatik bir bağlantı noktası olarak rolünü sürdürdü.",
+                "imageAlt": "Kudüs'te Türk Başkonsolosluğu'nun Kurulması"
+            },
+            "event4": {
+                "year": "1979",
+                "title": "FKÖ Temsilciliğinin Açılması ve Ankara'da Filistin Bayrağının Dalgalanması",
+                "description": "Türkiye ile Filistin Kurtuluş Örgütü arasındaki gelişen ilişkiler, başkent Ankara'da örgüt için bir temsilcilik açılmasıyla doruğa ulaştı. 5 Ekim 1979, Başkan Yaser Arafat'ın resmi ziyareti sırasında temsilcilik binası üzerinde Filistin bayrağının ilk kez dalgalandığı tarihi bir ana tanık oldu.",
+                "imageAlt": "FKÖ Temsilciliğinin Açılması ve Ankara'da Filistin Bayrağının Dalgalanması"
+            },
+            "event5": {
+                "year": "1987",
+                "title": "Başkent Ankara'da \"Filistin Caddesi\"nin Adlandırılması",
+                "description": "Bağların derinliğinin bir ifadesi olarak, Filistin Kurtuluş Örgütü temsilcilik binasını barındıran caddeye \"Filistin Caddesi\" adı verildi; bu resmi ve halk töreniyle gerçekleştirildi.",
+                "imageAlt": "Başkent Ankara'da Filistin Caddesi'nin Adlandırılması"
+            },
+            "event6": {
+                "year": "1988",
+                "title": "Türkiye'nin Filistin Devleti'ni Tanıması",
+                "description": "15 Kasım tarihinde Cezayir'de Filistin bağımsızlığının ilan edilmesinin ardından, Türkiye Filistin devletini tanıyan ilk ülkeler arasında yer alarak Filistin haklarına olan sarsılmaz desteğini doğruladı.",
+                "imageAlt": "Türkiye'nin Filistin Devleti'ni Tanıması"
+            },
+            "event7": {
+                "year": "1989",
+                "title": "Diplomatik Temsilin Yükseltilmesi: Filistin Temsilciliği Büyükelçilik Oldu",
+                "description": "Resmi tanımanın bir çevirisi olarak, Ankara'daki Filistin diplomatik temsil seviyesi temsilcilikten Türkiye Cumhuriyeti nezdinde Filistin Devleti Büyükelçiliği'ne yükseltildi.",
+                "imageAlt": "Diplomatik Temsilin Yükseltilmesi: Filistin Temsilciliği Büyükelçilik Oldu"
+            },
+            "event8": {
+                "year": "2009",
+                "title": "Oran Bölgesinde Filistin Büyükelçiliği'nin Yeni Merkezi",
+                "description": "Filistin Devleti Büyükelçiliği, Ankara'nın seçkin Oran bölgesindeki yeni ve modern binasına taşındı; resmi açılış o dönemki Başkan Mahmud Abbas ve Türk mevkidaşının katılımıyla gerçekleştirildi.",
+                "imageAlt": "Oran Bölgesinde Filistin Büyükelçiliği'nin Yeni Merkezi"
+            },
+            "event9": {
+                "year": "2010",
+                "title": "Ankara'da \"Kudüs Caddesi\": Sembolik Konum",
+                "description": "Kudüs'ün Türk ve Filistin bilincindeki merkeziliğini doğrulayarak, Ankara Büyükşehir Belediyesi yeni Filistin büyükelçilik binasına komşu ticari caddeyi \"Kudüs Caddesi\" olarak adlandırdı.",
+                "imageAlt": "Ankara'da Kudüs Caddesi: Sembolik Konum"
+            }
+        }
+    }
+}

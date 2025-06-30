@@ -1,0 +1,37 @@
+{
+    "pageTitle": "Economic Relations - Embassy of the State of Palestine",
+    "hero": {
+        "title": "Building Economic Bridges for the Future",
+        "subtitle": "A growing Palestinian-Turkish partnership: from trade to investment and sustainable development."
+    },
+    "vision": {
+        "title": "A Vision for Economic Integration",
+        "description": "The trade relationship with Turkey has been characterized by a shared vision based on supporting economic relations between the two countries, expanding the base of interests and benefits in various fields, enhancing economic integration, and liberalizing trade exchange between them in a way that serves the economic development process permanently."
+    },
+    "fta": {
+        "title": "Free Trade Agreement",
+        "description": "Since 2005, the agreement has been the cornerstone of cooperation, including extensive customs exemptions for industrial products and quotas for agricultural products such as dates, along with regulating important standards such as intellectual property rights and anti-dumping measures.",
+        "industrial": {
+            "label": "Industrial Products",
+            "value": "Almost Complete Exemption"
+        },
+        "dates": {
+            "label": "Dates (Annual Quota)",
+            "value": "1,000 tons"
+        }
+    },
+    "jenin": {
+        "title": "Jenin Industrial Zone",
+        "description": "With strategic support from the Turkish Union of Chambers and Commodity Exchanges, this project is a pivotal driver for development, aiming to create thousands of direct and indirect job opportunities and develop the national industrial base.",
+        "trade": {
+            "label": "Million USD+ Trade Exchange"
+        },
+        "jobs": {
+            "label": "Expected Job Opportunities"
+        }
+    },
+    "council": {
+        "title": "Economic Cooperation Council",
+        "description": "As a culmination of strong relations, an agreement was reached to establish a joint Palestinian-Turkish economic cooperation council headed by the ministers of economy in both countries. The council works on establishing institutional frameworks to organize and deepen the partnership, follow up on the implementation of agreements, and explore new horizons for mutual growth."
+    }
+}

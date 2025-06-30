@@ -1,0 +1,37 @@
+{
+    "pageTitle": "Ekonomik İlişkiler - Filistin Devleti Büyükelçiliği",
+    "hero": {
+        "title": "Gelecek İçin Ekonomik Köprüler İnşa Etmek",
+        "subtitle": "Büyüyen Filistin-Türkiye ortaklığı: ticaretten yatırıma ve sürdürülebilir kalkınmaya."
+    },
+    "vision": {
+        "title": "Ekonomik Entegrasyon İçin Bir Vizyon",
+        "description": "Türkiye ile ticari ilişki, iki ülke arasındaki ekonomik ilişkileri destekleme, çeşitli alanlarda çıkar ve fayda tabanını genişletme, ekonomik entegrasyonu güçlendirme ve aralarındaki ticaret alışverişini ekonomik kalkınma sürecine kalıcı olarak hizmet edecek şekilde serbestleştirme üzerine kurulan ortak bir vizyonla karakterize edilmiştir."
+    },
+    "fta": {
+        "title": "Serbest Ticaret Anlaşması",
+        "description": "2005 yılından bu yana, anlaşma işbirliğinin temel taşı olmuş, sanayi ürünleri için kapsamlı gümrük muafiyetleri ve hurma gibi tarım ürünleri için kotalar içerirken, fikri mülkiyet hakları ve damping karşıtı önlemler gibi önemli standartları düzenlemiştir.",
+        "industrial": {
+            "label": "Sanayi Ürünleri",
+            "value": "Neredeyse Tam Muafiyet"
+        },
+        "dates": {
+            "label": "Hurma (Yıllık Kota)",
+            "value": "1.000 ton"
+        }
+    },
+    "jenin": {
+        "title": "Cenin Sanayi Bölgesi",
+        "description": "Türkiye Odalar ve Borsalar Birliği'nin stratejik desteğiyle, bu proje kalkınma için kritik bir itici güç olup, binlerce doğrudan ve dolaylı iş fırsatı yaratmayı ve ulusal sanayi tabanını geliştirmeyi hedeflemektedir.",
+        "trade": {
+            "label": "Milyon USD+ Ticaret Hacmi"
+        },
+        "jobs": {
+            "label": "Beklenen İş Fırsatları"
+        }
+    },
+    "council": {
+        "title": "Ekonomik İşbirliği Konseyi",
+        "description": "Güçlü ilişkilerin bir doruk noktası olarak, her iki ülkenin ekonomi bakanlarının başkanlığında ortak bir Filistin-Türkiye ekonomik işbirliği konseyi kurulması konusunda anlaşmaya varılmıştır. Konsey, ortaklığı organize etmek ve derinleştirmek için kurumsal çerçeveler oluşturmak, anlaşmaların uygulanmasını takip etmek ve karşılıklı büyüme için yeni ufuklar keşfetmek üzerinde çalışmaktadır."
+    }
+}

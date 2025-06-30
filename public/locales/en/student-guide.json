@@ -1,0 +1,171 @@
+{
+  "pageTitle": "New Student Guide - Embassy of the State of Palestine",
+  "mainTitle": "New Student Guide for Turkish Scholarships (2025 Update)",
+  "generalQuestions": {
+    "title": "General Questions About Turkish Scholarships",
+    "levels": {
+      "question": "What levels do Turkish Republic scholarships cover?",
+      "answer": "The scholarships include undergraduate, master's, doctoral, and research scholarships. There are also short-term and specialized scholarship programs, and special facilities or tracks may be offered for talented individuals in certain fields within these programs."
+    },
+    "uniAcceptance": {
+      "question": "Will I need to obtain acceptance from any university after receiving the scholarship?",
+      "answer": "No, once you receive the scholarship, the scholarship administration will officially place you in the appropriate department and university according to your application and qualifications."
+    },
+    "foreignLang": {
+      "question": "Can I receive education in a foreign language like English?",
+      "answer": "Yes, this is possible in many universities and specializations. However, the student must prove their proficiency in the foreign study language (such as English) through an internationally recognized language certificate (such as TOEFL or IELTS), which they upload during registration. If no certificate is available, they may be required to take a language test or enroll in a preparatory year for the relevant foreign language."
+    },
+    "currentStudent": {
+      "question": "Can a student currently enrolled in any university in Turkey apply for this scholarship?",
+      "answer": "No, individuals currently enrolled in programs at Turkish universities at the same level of education they would apply for are not eligible. For example, a current undergraduate student in Turkey cannot apply for another undergraduate scholarship."
+    },
+    "turkishLangLocation": {
+      "question": "Where will I be taught Turkish?",
+      "answer": "Turkish language education is provided free for one year to all students. You will learn Turkish with expert instructors at Turkish language teaching centers (TÖMER) within universities."
+    },
+    "turkishLangIfEnglish": {
+      "question": "Will I be taught Turkish if I am accepted to a department taught in English?",
+      "answer": "Yes, the Turkish language preparatory year is mandatory for all scholarship recipients, even if their academic studies are in another language. The goal is to enable students to integrate better and understand Turkish culture."
+    },
+    "scholarshipProvisions": {
+      "question": "What will Turkish Republic scholarships provide me?",
+      "intro": "The scholarship typically includes all of the following:",
+      "item1": "Monthly stipend (see details below).",
+      "item2": "University tuition coverage at Turkey's finest universities.",
+      "item3": "Comprehensive health insurance for accessing health services when needed.",
+      "item4": "Student accommodation (with different details depending on academic level).",
+      "item5": "One preparatory year to learn Turkish free of charge.",
+      "item6": "Flight ticket (once upon first arrival, and once upon final return after graduation).",
+      "item7": "Self-development opportunities through student clubs and associations in universities, plus the International Students Academy, specialization programs, student conferences and artistic competitions organized by the Turkish Scholarships administration.",
+      "item8": "Joining Turkey's extensive alumni network (more than 150,000 members in 160 countries) and networking through the Turkey Alumni electronic portal."
+    },
+    "monthlyStipend": {
+      "question": "What is the monthly stipend that Turkish Republic scholarships will provide me?",
+      "intro": "The monthly stipend is regularly deposited into the bank account that the student will open upon arrival in Turkey. Current amounts are:",
+      "item1": "Associate and undergraduate level: 4,500 Turkish Lira monthly.",
+      "item2": "Master's level: 6,500 Turkish Lira monthly.",
+      "item3": "Doctoral level: 9,000 Turkish Lira monthly.",
+      "item4": "Merit Scholarship Program: Academically outstanding qualified students may be rewarded with a monthly salary up to double the regular salary. (Please check the official Turkish scholarships website for any updates to these amounts)."
+    },
+    "accommodation": {
+      "question": "Can students live in the place they choose, and what are the accommodation arrangements?",
+      "bachelor": "Undergraduate (and associate) students: They can stay in student dormitories throughout their studies, and Turkish scholarships cover accommodation fees.",
+      "postgradIntro": "Graduate students (master's and doctoral): They are granted the right to stay in student accommodation during the first year of their education. In subsequent years, they can choose to rent a house while receiving a monthly accommodation allowance of:",
+      "item1": "6,000 Turkish Lira for students studying in Istanbul and Ankara.",
+      "item2": "5,000 Turkish Lira for students studying in other cities.",
+      "options": "Accommodation options: Students can stay in government KYK dormitories or private dormitories affiliated with the General Directorate of Credit and Dormitories. For students seeking private accommodation, several options are available, such as renting individual rooms, or renting complete properties through real estate agents or directly from owners."
+    },
+    "turkishPrepCost": {
+      "question": "Will I pay anything for studying Turkish in the preparatory year?",
+      "answer": "No, Turkish scholarships provide one year of Turkish language education free of charge to all their students."
+    },
+    "turkishPrepDurationBenefits": {
+      "question": "What is the duration of the Turkish language preparatory year, and will I benefit from student accommodation and health insurance during it?",
+      "answer": "The duration is one academic year. During this year, the student benefits from all scholarship advantages including monthly stipend, student accommodation, and health insurance."
+    },
+    "bachelorDuration": {
+      "question": "What is the duration of the undergraduate (and associate) scholarship within Turkish Republic scholarships?",
+      "answer": "It includes one preparatory year for Turkish language + the usual academic years of the program (for example, two years for associate degree, 4 years for most undergraduate specializations, or 5-6 years for medical specializations)."
+    },
+    "postgradDuration": {
+      "question": "What is the duration of master's and doctoral scholarships within Turkish Republic scholarships?",
+      "master": "Master's: One preparatory year for Turkish language + (scientific preparatory year if the department deems it necessary) + two years for academic study.",
+      "phd": "Doctoral: One preparatory year for Turkish language + (scientific preparatory year if needed) + four years for academic study."
+    },
+    "researchDuration": {
+      "question": "What is the duration of research scholarships within Turkish Republic scholarships?",
+      "answer": "Research scholarship duration usually ranges from 3 months to 12 months."
+    },
+    "applicationProcess": {
+      "question": "How and when do I apply for Turkish scholarships?",
+      "answer": "Registration for Turkish scholarships usually opens in January and continues until late February each year for all levels. Application is done only online through the Turkish Scholarships application system (TBBS) found on the official website (www.turkiyeburslari.gov.tr)."
+    },
+    "eligibility": {
+      "question": "Who is eligible to apply for Turkish scholarships? (Eligibility criteria)",
+      "eligibleIntro": "Eligible categories:",
+      "eligible1": "Citizens of all countries (except Turkey).",
+      "eligible2": "Graduates or those who will graduate at the end of the current academic year (usually before August).",
+      "eligible3": "Researchers and academics.",
+      "ineligibleIntro": "Ineligible categories:",
+      "ineligible1": "Turkish citizens and individuals who have lost Turkish citizenship.",
+      "ineligible2": "Individuals currently enrolled in programs at Turkish universities at the same level of education they would apply for."
+    },
+    "dualNationality": {
+      "question": "Can someone who holds dual citizenship, one of which is Turkish, apply for Turkish scholarships?",
+      "answer": "No, if a person holds Turkish citizenship in addition to another citizenship, they are considered a Turkish citizen and therefore ineligible for these scholarships."
+    },
+    "highschoolInTurkey": {
+      "question": "Can a foreign student who completed high school in Turkey apply for Turkish scholarships?",
+      "answer": "Yes, they are eligible as long as they meet the citizenship requirements (i.e., not a Turkish citizen) and other application requirements."
+    },
+    "notGraduatedYet": {
+      "question": "Must a student have completed their current academic stage to be able to apply for Turkish scholarships?",
+      "answer": "No, students who are in their final year of current studies can apply, provided they graduate officially before starting studies in Turkey (usually by August of the same acceptance year)."
+    },
+    "deferral": {
+      "question": "If I cannot complete my current academic stage by the end of the year, and I am accepted for Turkish scholarships, is it possible to defer my scholarship to the following year?",
+      "answer": "No, generally there is no deferral for the awarded scholarship. The official graduation document must be submitted and studies must begin in the academic year in which acceptance was received."
+    },
+    "minAcademicAchievement": {
+      "question": "What is the minimum academic achievement criterion required?",
+      "item1": "For associate and undergraduate degree candidates: 70%.",
+      "item2": "For graduate study candidates (master's and doctoral): 75%.",
+      "item3": "For health sciences candidates (medicine, dentistry, pharmacy): 90%."
+    },
+    "slightlyBelowMin": {
+      "question": "I got a grade slightly below the required minimum (e.g., 69% for undergraduate), can I apply?",
+      "answer": "The announced minimum is a basic requirement. The required percentage must be achieved as a minimum."
+    },
+    "ageCriteria": {
+      "question": "What is the age criterion required for different programs?",
+      "item1": "Associate and undergraduate programs: Applicant must be under 21 years old.",
+      "item2": "Master's programs: Applicant must be under 30 years old.",
+      "item3": "Doctoral programs: Applicant must be under 35 years old.",
+      "item4": "Research scholarship: Applicant must be under 50 years old."
+    },
+    "researchGrantEligibility": {
+      "question": "Who is eligible to apply for the research program scholarship?",
+      "answer": "Researchers and academics who hold a doctoral degree, or doctoral students who are in an advanced stage of their research, and meet the age requirement (under 50 years old). Often it is required that the applicant obtain an invitation or preliminary acceptance from a Turkish university or research institution."
+    },
+    "multipleProgramApplication": {
+      "question": "Can I apply for more than one scholarship program?",
+      "answer": "A student can apply for only one academic level in each application cycle."
+    },
+    "numberOfChoices": {
+      "question": "How many specializations (preferences) can I choose when applying?",
+      "answer": "Candidates are given the opportunity to choose from 12 options (specializations and universities) when applying through the Turkish Scholarships application system (TBBS)."
+    },
+    "placementOutsideChoices": {
+      "question": "Is it possible to be placed in a university outside the preferences I selected?",
+      "answer": "Placement is usually within the choices submitted by the student. It is recommended to carefully fill all 12 preferences to increase chances of acceptance in one of them."
+    },
+    "universityLocationRestriction": {
+      "question": "Is the choice limited to universities in Istanbul, Ankara and Izmir only when applying?",
+      "answer": "No, students can choose universities in any Turkish city."
+    },
+    "medicineChances": {
+      "question": "What are my chances of getting a medicine scholarship?",
+      "answer": "Medical and other medical specialization seats are very limited and competition for them is extremely intense. Achieving 90% minimum is required, in addition to clear excellence in scientific subjects, and a strong CV."
+    },
+    "engineeringSocialChances": {
+      "question": "What are my chances of getting a scholarship to study engineering or social subjects?",
+      "answer": "Competition exists in all specializations and varies in intensity. Generally, scientific and engineering specializations in prestigious universities see high competition. Some social specializations may have relatively less competition, but it always depends on the strength of the applicant's file and the chosen university and specialization."
+    },
+    "documentSubmission": {
+      "question": "Must I attach original documents and certificates during registration?",
+      "answer": "During the online application process, scanned copies of original documents are uploaded. If these documents are in a language other than Turkish or English, certified translations to one of these two languages must be attached with the original copies. Original documents or certified copies will be requested for verification in later stages."
+    },
+    "changeProgramAfterGrant": {
+      "question": "Can a student who obtained a seat through the scholarship program change it later within the scholarship program?",
+      "answer": "No, the student will only be able to study the department they were accepted into through the Turkish scholarships program."
+    },
+    "grantForPrivateAdmission": {
+      "question": "I got a seat through the scholarship program, and also got private acceptance at another university. Can I use the scholarship benefits for the private acceptance?",
+      "answer": "No, scholarship benefits can only be used to study the program obtained through registration for the scholarship itself."
+    },
+    "transferDepartmentSelfFunded": {
+      "question": "Can a student transfer from their granted department to another department at their own expense?",
+      "answer": "Yes, the student has the right to do so, but they will have to complete their studies at their own expense and lose all scholarship benefits."
+    }
+  }
+}

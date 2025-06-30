@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-study-in-turkey-page">الدراسة في تركيا - سفارة دولة فلسطين</title>
-        <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <title id="title-study-in-turkey-page" data-i18n="study-in-turkey:pageTitle">الدراسة في تركيا - سفارة دولة فلسطين
+    </title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
 
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="stylesheet" href="/public/css/pages/study-in-turkey.css" />
@@ -15,6 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body>
@@ -22,205 +27,268 @@
 
     <div class="study-in-turkey-page-wrapper">
         <header class="study-header-main">
-            <h1 class="page-main-title" id="study-main-title">الدراسة في تركيا</h1>
-            <p class="page-subtitle" id="study-subtitle">معلومات عن الجمهورية التركية خاصة بالطلاب الراغبين بالدراسة في
-                تركيا</p>
-            <p class="update-date" id="study-update-date">تحديث 30-11-2022</p>
+            <h1 class="page-main-title" id="study-main-title" data-i18n="study-in-turkey:mainTitle">الدراسة في تركيا
+            </h1>
+            <p class="page-subtitle" id="study-subtitle" data-i18n="study-in-turkey:subtitle">معلومات عن الجمهورية
+                التركية خاصة بالطلاب الراغبين بالدراسة في تركيا</p>
+            <p class="update-date" id="study-update-date" data-i18n="study-in-turkey:updateDate">تحديث 30-11-2022</p>
         </header>
 
         <div class="study-content-container">
             <section class="study-info-block" id="turkey-general-info">
-                <h2 class="section-title-study" id="turkey-general-info-title">معلومات عامة عن تركيا</h2>
-                <p id="turkey-intro-p1">تتميز الجمهورية التركية بجمالها الخلاب وطبيعتها الساحرة وشعبها الودود، وكذلك
-                    التنوع فى التراث والعادات والتقاليد. ويشترك الشعب التركي مع الشعوب العربية في كثير من العادات بحكم
-                    القرب الجغرافي والطابع الديني المشترك، حيث يتميز بالترابط الأسري والترحاب والود وحسن الضيافة.</p>
-                <p id="turkey-intro-p2">ومن الضروري على الزائر إلى تركيا التعرف إلى بعض الثقافات والعادات الخاصة بالشعب
-                    التركي، وذلك لتسهيل تعامله اليومي مع الناس، وتجنب الإحراج، ومن هذه العادات:</p>
+                <h2 class="section-title-study" id="turkey-general-info-title"
+                    data-i18n="study-in-turkey:generalInfo.title">معلومات عامة عن تركيا</h2>
+                <p id="turkey-intro-p1" data-i18n="study-in-turkey:generalInfo.paragraph1">تتميز الجمهورية التركية
+                    بجمالها الخلاب وطبيعتها الساحرة وشعبها الودود، وكذلك التنوع فى التراث والعادات والتقاليد. ويشترك
+                    الشعب التركي مع الشعوب العربية في كثير من العادات بحكم القرب الجغرافي والطابع الديني المشترك، حيث
+                    يتميز بالترابط الأسري والترحاب والود وحسن الضيافة.</p>
+                <p id="turkey-intro-p2" data-i18n="study-in-turkey:generalInfo.paragraph2">ومن الضروري على الزائر إلى
+                    تركيا التعرف إلى بعض الثقافات والعادات الخاصة بالشعب التركي، وذلك لتسهيل تعامله اليومي مع الناس،
+                    وتجنب الإحراج، ومن هذه العادات:</p>
                 <ul>
-                    <li id="turkey-custom-1">إلقاء التحية على أي شخص، فعادة إلقاء التحية والترحيب منتشرة بين المواطنين.
-                    </li>
-                    <li id="turkey-custom-2">التعامل بإحترام مع الجميع، فلا يوجد تفرقة بين الناس.</li>
-                    <li id="turkey-custom-3">الإلتزام بالطوابير في كل مكان، وحتى عند استخدام المواصلات العامة.</li>
-                    <li id="turkey-custom-4">ضرورة خلع الحذاء عند باب المنزل، فلا يجوز دخول أي منزل بدون خلع الحذاء عند
-                        الباب.</li>
+                    <li id="turkey-custom-1" data-i18n="study-in-turkey:generalInfo.customs.greeting">إلقاء التحية على
+                        أي شخص، فعادة إلقاء التحية والترحيب منتشرة بين المواطنين.</li>
+                    <li id="turkey-custom-2" data-i18n="study-in-turkey:generalInfo.customs.respect">التعامل بإحترام مع
+                        الجميع، فلا يوجد تفرقة بين الناس.</li>
+                    <li id="turkey-custom-3" data-i18n="study-in-turkey:generalInfo.customs.queues">الإلتزام بالطوابير
+                        في كل مكان، وحتى عند استخدام المواصلات العامة.</li>
+                    <li id="turkey-custom-4" data-i18n="study-in-turkey:generalInfo.customs.shoes">ضرورة خلع الحذاء عند
+                        باب المنزل، فلا يجوز دخول أي منزل بدون خلع الحذاء عند الباب.</li>
                 </ul>
             </section>
 
             <section class="study-info-block" id="language-currency">
-                <h2 class="section-title-study" id="language-currency-title">اللغة والعملة</h2>
+                <h2 class="section-title-study" id="language-currency-title"
+                    data-i18n="study-in-turkey:languageCurrency.title">اللغة والعملة</h2>
                 <p>
-                    <strong id="study-official-lang-label-text">اللغة الرسمية:</strong> <span
-                        id="official-language-value">اللغة التركية، والمواطن التركي مُتعصب للغته بشكل كبير، ومعظم الشعب
-                        التركي يرفضون التعامل بلغة أخرى.</span>
+                    <strong id="study-official-lang-label-text"
+                        data-i18n="study-in-turkey:languageCurrency.languageLabel">اللغة الرسمية:</strong> <span
+                        id="official-language-value" data-i18n="study-in-turkey:languageCurrency.languageValue">اللغة
+                        التركية، والمواطن التركي مُتعصب للغته بشكل كبير، ومعظم الشعب التركي يرفضون التعامل بلغة
+                        أخرى.</span>
                 </p>
                 <p>
-                    <strong id="study-currency-label-text">العملة:</strong> <span id="currency-value">الليرة
+                    <strong id="study-currency-label-text"
+                        data-i18n="study-in-turkey:languageCurrency.currencyLabel">العملة:</strong> <span
+                        id="currency-value" data-i18n="study-in-turkey:languageCurrency.currencyValue">الليرة
                         التركية.</span>
                 </p>
             </section>
 
             <section class="study-info-block" id="living-standard">
-                <h2 class="section-title-study" id="living-standard-title">مستوى المعيشة</h2>
-                <p id="living-standard-p1">يتباين مستوى المعيشة في تركيا من مدينة لأخرى، فتكاليف المعيشة في المدن
-                    الكبيرة مثل أنقرة وإسطنبول أعلى من المدن الأصغر والأبعد، سواء من حيث إيجارات المنازل أو التسوق
-                    والمشتريات، ولا يمكن تحديد مستوى دقيق للمعيشة لأن الأسعار غير ثابتة ومتغيرة باستمرار.</p>
-                <p id="living-standard-p2">أما بالنسبة إلى الأماكن التي يمكن التسوق منها بأسعار معقولة فهي الأسواق
-                    الشعبية، وخاصة في الخضروات والفواكه، وهي موجودة في معظم الأحياء السكنية، ويخصص يوم في الأسبوع لكل حي
-                    سكني، وكذلك يمكن التسوق من بعض المحلات المشهورة مثل: (ŞOK – BİM – A101) وهي منتشرة في كافة الأحياء
-                    السكنية في أرجاء الجمهورية التركية، وأسعارها معقولة بالنسبة للمحلات الأخرى.</p>
+                <h2 class="section-title-study" id="living-standard-title"
+                    data-i18n="study-in-turkey:livingStandard.title">مستوى المعيشة</h2>
+                <p id="living-standard-p1" data-i18n="study-in-turkey:livingStandard.paragraph1">يتباين مستوى المعيشة في
+                    تركيا من مدينة لأخرى، فتكاليف المعيشة في المدن الكبيرة مثل أنقرة وإسطنبول أعلى من المدن الأصغر
+                    والأبعد، سواء من حيث إيجارات المنازل أو التسوق والمشتريات، ولا يمكن تحديد مستوى دقيق للمعيشة لأن
+                    الأسعار غير ثابتة ومتغيرة باستمرار.</p>
+                <p id="living-standard-p2" data-i18n="study-in-turkey:livingStandard.paragraph2">أما بالنسبة إلى الأماكن
+                    التي يمكن التسوق منها بأسعار معقولة فهي الأسواق الشعبية، وخاصة في الخضروات والفواكه، وهي موجودة في
+                    معظم الأحياء السكنية، ويخصص يوم في الأسبوع لكل حي سكني، وكذلك يمكن التسوق من بعض المحلات المشهورة
+                    مثل: (ŞOK – BİM – A101) وهي منتشرة في كافة الأحياء السكنية في أرجاء الجمهورية التركية، وأسعارها
+                    معقولة بالنسبة للمحلات الأخرى.</p>
             </section>
 
             <section class="study-info-block" id="transportation">
-                <h2 class="section-title-study" id="transportation-title">وسائل المواصلات</h2>
-                <p id="transportation-p1">جميع وسائل المواصلات متوفرة في تركيا، وتُعد وسائل المواصلات العامة هي الأكثر
-                    توفيراً للمصاريف عن السيارات الأجرة، وهناك العديد من وسائل النقل العامة مثل: التروماي، الضولموش،
-                    الأوتوبيس، القطار، المترو.</p>
-                <p id="transportation-p2">ويستطيع الطالب الحصول على تخفيض في المواصلات العامة من خلال اشتراكات مُخفضة
-                    شهرية أو سنوية، وذلك بعد حصوله على بطاقة الطالب بعد التسجيل في الجامعة.</p>
+                <h2 class="section-title-study" id="transportation-title"
+                    data-i18n="study-in-turkey:transportation.title">وسائل المواصلات</h2>
+                <p id="transportation-p1" data-i18n="study-in-turkey:transportation.paragraph1">جميع وسائل المواصلات
+                    متوفرة في تركيا، وتُعد وسائل المواصلات العامة هي الأكثر توفيراً للمصاريف عن السيارات الأجرة، وهناك
+                    العديد من وسائل النقل العامة مثل: التروماي، الضولموش، الأوتوبيس، القطار، المترو.</p>
+                <p id="transportation-p2" data-i18n="study-in-turkey:transportation.paragraph2">ويستطيع الطالب الحصول
+                    على تخفيض في المواصلات العامة من خلال اشتراكات مُخفضة شهرية أو سنوية، وذلك بعد حصوله على بطاقة
+                    الطالب بعد التسجيل في الجامعة.</p>
             </section>
 
             <section class="study-info-block" id="studying-in-turkey-details">
-                <h2 class="section-title-study" id="studying-details-title">تفاصيل الدراسة في تركيا</h2>
-                <p id="studying-details-p1">تعيش تركيا استقراراً سياسيا واقتصاديا، وتُعتبر التجربة التركية الحديثة في
-                    النهوض بالدولة والمجتمع أحد أهم نماذج النهوض على المستوى الإقليمي والدولي، حيث شهد العقد الأول من
-                    الألفية الثالثة طفرة تعليمية واقتصادية واجتماعية وسياسية كبيرة، وحظي قطاع التعليم بتركيز الحكومة
-                    التركية، حيث تخطط تركيا أن يكون لديها 500 جامعة على مستوى الجمهورية بحلول العام 2023.</p>
-                <p id="studying-details-p2">ولعل أهم الأسباب التي جعلت من تركيا وجهة للتعليم هي جودة وفاعلية الدراسة في
-                    تركيا، بالإضافة إلى أن تكاليف المعيشة، ورسوم الدراسة في الجامعات ومعاهد اللغة منخفضة نوعا ما مقارنة
-                    بالدول الأوروبية. وتحظى المؤسسات التعليمية التركية بسمعة عالمية، والإعتراف العالمي بها في عدد كبير
-                    من الدول.</p>
-                <p id="studying-details-p3">وقد نجحت تركيا في استقطاب أعداد كبيرة من الطلاب الأجانب بتركيزها على فتح
-                    أبواب الدراسة والتعاون العلمي والثقافي مع العديد من الدول التي تعدت أكثر من 176 دولة. كما اهتمت
-                    الحكومة التركية بتوفير الظروف المناسبة لاستقطابهم عبر توفير منح رسمية وتخصيص مقاعد خاصة بهم، إضافة
-                    إلى تبسيط إجراءات الحصول على التأشيرة والإقامة.</p>
-                <p id="studying-details-p4">أغلب المدن التركية تضم جامعات وكليات متخصصة، وتتم مراقبة وإدارة مؤسسات
-                    التعليم العالي من قبل مجلس التعليم العالي (YÖK).</p>
-                <p id="studying-details-p5">الدراسة في أغلب الجامعات تتم باللغة التركية، لكن يوجد بعض التخصصات في عدد من
-                    الجامعات الحكومية تتم الدراسة فيها باللغة الإنجليزية، أما الجامعات الخاصة فيوجد بها التخصصات باللغة
-                    التركية واللغة الإنجليزية.</p>
-                <p id="studying-details-p6">نظام التسجيل والقبول داخل الجامعات التركية لا يعتمد على التحصيل الأكاديمي في
-                    الثانوية العامة فقط، ولكن هناك امتحان لغة تركية وقدرات (YÖS) تحدده كل جامعة حسب طبيعتها وتخصصاتها،
-                    ولابد لكل طالب أن يجتاز هذه الاختبارات حتى يتم قبوله في الكلية المتخصصة. وهذه الاختبارات لا مجال
-                    فيها للمحسوبية أو الوساطة، فهي مبرمجة آلياً، ولا يستطيع أحد التدخل فيها.</p>
-                <p id="studying-details-p7">كذلك فإن التسجيل في الجامعات التركية يتم من خلال الموقع الالكتروني الخاص بكل
-                    جامعة. ويتم القبول بناءً على الشروط الخاصة بكل جامعة، والموضحة على موقعها، والتي تختلف من سنة لأخرى
-                    ومن كلية لأخرى، حيث أن لكل جامعة شروطها الخاصة وحسب الكلية التي يتم التسجيل لها.</p>
+                <h2 class="section-title-study" id="studying-details-title"
+                    data-i18n="study-in-turkey:studyingDetails.title">تفاصيل الدراسة في تركيا</h2>
+                <p id="studying-details-p1" data-i18n="study-in-turkey:studyingDetails.paragraph1">تعيش تركيا استقراراً
+                    سياسيا واقتصاديا، وتُعتبر التجربة التركية الحديثة في النهوض بالدولة والمجتمع أحد أهم نماذج النهوض
+                    على المستوى الإقليمي والدولي، حيث شهد العقد الأول من الألفية الثالثة طفرة تعليمية واقتصادية
+                    واجتماعية وسياسية كبيرة، وحظي قطاع التعليم بتركيز الحكومة التركية، حيث تخطط تركيا أن يكون لديها 500
+                    جامعة على مستوى الجمهورية بحلول العام 2023.</p>
+                <p id="studying-details-p2" data-i18n="study-in-turkey:studyingDetails.paragraph2">ولعل أهم الأسباب التي
+                    جعلت من تركيا وجهة للتعليم هي جودة وفاعلية الدراسة في تركيا، بالإضافة إلى أن تكاليف المعيشة، ورسوم
+                    الدراسة في الجامعات ومعاهد اللغة منخفضة نوعا ما مقارنة بالدول الأوروبية. وتحظى المؤسسات التعليمية
+                    التركية بسمعة عالمية، والإعتراف العالمي بها في عدد كبير من الدول.</p>
+                <p id="studying-details-p3" data-i18n="study-in-turkey:studyingDetails.paragraph3">وقد نجحت تركيا في
+                    استقطاب أعداد كبيرة من الطلاب الأجانب بتركيزها على فتح أبواب الدراسة والتعاون العلمي والثقافي مع
+                    العديد من الدول التي تعدت أكثر من 176 دولة. كما اهتمت الحكومة التركية بتوفير الظروف المناسبة
+                    لاستقطابهم عبر توفير منح رسمية وتخصيص مقاعد خاصة بهم، إضافة إلى تبسيط إجراءات الحصول على التأشيرة
+                    والإقامة.</p>
+                <p id="studying-details-p4" data-i18n="study-in-turkey:studyingDetails.paragraph4">أغلب المدن التركية
+                    تضم جامعات وكليات متخصصة، وتتم مراقبة وإدارة مؤسسات التعليم العالي من قبل مجلس التعليم العالي (YÖK).
+                </p>
+                <p id="studying-details-p5" data-i18n="study-in-turkey:studyingDetails.paragraph5">الدراسة في أغلب
+                    الجامعات تتم باللغة التركية، لكن يوجد بعض التخصصات في عدد من الجامعات الحكومية تتم الدراسة فيها
+                    باللغة الإنجليزية، أما الجامعات الخاصة فيوجد بها التخصصات باللغة التركية واللغة الإنجليزية.</p>
+                <p id="studying-details-p6" data-i18n="study-in-turkey:studyingDetails.paragraph6">نظام التسجيل والقبول
+                    داخل الجامعات التركية لا يعتمد على التحصيل الأكاديمي في الثانوية العامة فقط، ولكن هناك امتحان لغة
+                    تركية وقدرات (YÖS) تحدده كل جامعة حسب طبيعتها وتخصصاتها، ولابد لكل طالب أن يجتاز هذه الاختبارات حتى
+                    يتم قبوله في الكلية المتخصصة. وهذه الاختبارات لا مجال فيها للمحسوبية أو الوساطة، فهي مبرمجة آلياً،
+                    ولا يستطيع أحد التدخل فيها.</p>
+                <p id="studying-details-p7" data-i18n="study-in-turkey:studyingDetails.paragraph7">كذلك فإن التسجيل في
+                    الجامعات التركية يتم من خلال الموقع الالكتروني الخاص بكل جامعة. ويتم القبول بناءً على الشروط الخاصة
+                    بكل جامعة، والموضحة على موقعها، والتي تختلف من سنة لأخرى ومن كلية لأخرى، حيث أن لكل جامعة شروطها
+                    الخاصة وحسب الكلية التي يتم التسجيل لها.</p>
             </section>
 
             <section class="study-info-block" id="recognized-universities">
-                <h2 class="section-title-study" id="recognized-universities-title">الجامعات التركية المعترف بها في
-                    فلسطين</h2>
-                <p id="recognized-universities-p1">هناك قائمة بالجامعات التركية المعترف بها في فلسطين على موقع وزارة
-                    التعليم العالي والبحث العلمي الفلسطينية، وكذلك على <a href="../html/turkish_universities.html"
-                        id="link-to-turkish-universities-page">موقع سفارة دولة فلسطين لدى الجمهورية التركية</a>.</p>
-                <p id="recognized-universities-p2">وننصح الطلاب الذين يرغبون بالتسجيل من خلال مواقع الجامعات بالإطلاع
-                    على قائمة الجامعات المعترف بها، أو التواصل مع وزارة التعليم العالي والبحث العلمي الفلسطينية للتأكد
-                    من الاعتراف بالجامعة لدى الوزارة قبل التسجيل بها.</p>
+                <h2 class="section-title-study" id="recognized-universities-title"
+                    data-i18n="study-in-turkey:recognizedUniversities.title">الجامعات التركية المعترف بها في فلسطين</h2>
+                <p id="recognized-universities-p1" data-i18n="study-in-turkey:recognizedUniversities.paragraph1">هناك
+                    قائمة بالجامعات التركية المعترف بها في فلسطين على موقع وزارة التعليم العالي والبحث العلمي
+                    الفلسطينية، وكذلك على <a href="../html/turkish_universities.html"
+                        id="link-to-turkish-universities-page"
+                        data-i18n="study-in-turkey:recognizedUniversities.linkText">موقع سفارة دولة فلسطين لدى الجمهورية
+                        التركية</a>.</p>
+                <p id="recognized-universities-p2" data-i18n="study-in-turkey:recognizedUniversities.paragraph2">وننصح
+                    الطلاب الذين يرغبون بالتسجيل من خلال مواقع الجامعات بالإطلاع على قائمة الجامعات المعترف بها، أو
+                    التواصل مع وزارة التعليم العالي والبحث العلمي الفلسطينية للتأكد من الاعتراف بالجامعة لدى الوزارة قبل
+                    التسجيل بها.</p>
             </section>
 
             <section class="study-info-block" id="scholarships">
-                <h2 class="section-title-study" id="scholarships-title">المنح الدراسية في الجمهورية التركية</h2>
-                <p id="scholarships-p1">تُقدم الجمهورية التركية منحا دراسية للطلاب الأجانب لتشجيعهم على الدراسة في
-                    جامعاتها، وتشمل المنح كافة التخصصات الجامعية بما في ذلك الدراسات العليا، حيث تقوم "رئاسة أتراك
-                    المهجر والمجتمعات ذوي القربى" (YTB) بفتح باب التسجيل للمنحة كل عام خلال شهري يناير وفبراير من خلال
-                    موقعها الإلكتروني: <a href="https://tbbs.turkiyeburslari.gov.tr/" target="_blank" rel="noopener"
+                <h2 class="section-title-study" id="scholarships-title" data-i18n="study-in-turkey:scholarships.title">
+                    المنح الدراسية في الجمهورية التركية</h2>
+                <p id="scholarships-p1" data-i18n="study-in-turkey:scholarships.paragraph1">تُقدم الجمهورية التركية منحا
+                    دراسية للطلاب الأجانب لتشجيعهم على الدراسة في جامعاتها، وتشمل المنح كافة التخصصات الجامعية بما في
+                    ذلك الدراسات العليا، حيث تقوم "رئاسة أتراك المهجر والمجتمعات ذوي القربى" (YTB) بفتح باب التسجيل
+                    للمنحة كل عام خلال شهري يناير وفبراير من خلال موقعها الإلكتروني: <a
+                        href="https://tbbs.turkiyeburslari.gov.tr/" target="_blank" rel="noopener"
                         id="ytb-link">https://tbbs.turkiyeburslari.gov.tr/</a></p>
-                <p id="scholarships-p2">حيث يقوم الطالب بالتسجيل على الموقع لأول مرة، ثم يقوم بتعبئة البيانات المطلوبة
-                    في الموقع. وهذه الخطوات تتم بين الطالب وإدارة المنحة من خلال موقعها، ودون تدخل من أحد (لا جهة حكومية
-                    أو غيرها)، ثم تقوم إدارة المنحة بفرز الطلبات، وبعد ذلك تقوم بمراسلة الطلاب المستوفيين للشروط على
-                    إيميلاتهم لتحديد مواعيد المقابلات، وبعد ذلك تقوم إدارة المنحة بإبلاغ الطلاب المقبولين من خلال
-                    إيميلاتهم أيضا.</p>
-                <p id="scholarships-p3">كذلك يُقدم مجلس التعليم العالي التركي (YÖK) عددا محددا من المنح لدولة فلسطين
-                    تشمل برنامجي البكالوريوس والدكتوراه، ويتم الإعلان عن هذه المنح من قبل وزارة التعليم العالي والبحث
-                    العلمي الفلسطينية وعبر موقعها الرسمي.</p>
-                <p id="scholarships-p4">عدا ذلك، يكون التقدم للجامعات التركية بشكل فردي، ومن خلال الموقع الالكتروني لكل
-                    جامعة، حيث تختلف الشروط والمعايير المطلوبة من جامعة إلى أخرى، وهذا التقديم إلكتروني مجاني. ويبدأ
-                    التقديم للجامعات من شهر يونيو/حزيران من كل عام وأحيانا قبل هذا التاريخ. وعلى الطالب البحث عن
-                    الجامعات حسب التخصص الذي يرغب بدراسته والمنطقة التي يرغب بالإقامة فيها.</p>
-                <p id="scholarships-p5">ولا يتم قبول الطلبات إلا من خلال تسجيل الطالب بياناته على الموقع الرسمي للجامعة،
-                    ولا يتم قبول طلبات بالمراسلة أو باليد.</p>
-                <p id="scholarships-p6">ومعظم الجامعات التركية وخاصة الحكومية منها تتطلب دراسة اللغة التركية والحصول على
-                    شهادة بها، فبعض الجامعات تطلب شهادة TOMER وأخرى تطلب شهادة YÖS.</p>
-                <p id="scholarships-p7"><strong>منحة الحكومة التركية: TÜRKIYE BURSLARI</strong></p>
+                <p id="scholarships-p2" data-i18n="study-in-turkey:scholarships.paragraph2">حيث يقوم الطالب بالتسجيل على
+                    الموقع لأول مرة، ثم يقوم بتعبئة البيانات المطلوبة في الموقع. وهذه الخطوات تتم بين الطالب وإدارة
+                    المنحة من خلال موقعها، ودون تدخل من أحد (لا جهة حكومية أو غيرها)، ثم تقوم إدارة المنحة بفرز الطلبات،
+                    وبعد ذلك تقوم بمراسلة الطلاب المستوفيين للشروط على إيميلاتهم لتحديد مواعيد المقابلات، وبعد ذلك تقوم
+                    إدارة المنحة بإبلاغ الطلاب المقبولين من خلال إيميلاتهم أيضا.</p>
+                <p id="scholarships-p3" data-i18n="study-in-turkey:scholarships.paragraph3">كذلك يُقدم مجلس التعليم
+                    العالي التركي (YÖK) عددا محددا من المنح لدولة فلسطين تشمل برنامجي البكالوريوس والدكتوراه، ويتم
+                    الإعلان عن هذه المنح من قبل وزارة التعليم العالي والبحث العلمي الفلسطينية وعبر موقعها الرسمي.</p>
+                <p id="scholarships-p4" data-i18n="study-in-turkey:scholarships.paragraph4">عدا ذلك، يكون التقدم
+                    للجامعات التركية بشكل فردي، ومن خلال الموقع الالكتروني لكل جامعة، حيث تختلف الشروط والمعايير
+                    المطلوبة من جامعة إلى أخرى، وهذا التقديم إلكتروني مجاني. ويبدأ التقديم للجامعات من شهر يونيو/حزيران
+                    من كل عام وأحيانا قبل هذا التاريخ. وعلى الطالب البحث عن الجامعات حسب التخصص الذي يرغب بدراسته
+                    والمنطقة التي يرغب بالإقامة فيها.</p>
+                <p id="scholarships-p5" data-i18n="study-in-turkey:scholarships.paragraph5">ولا يتم قبول الطلبات إلا من
+                    خلال تسجيل الطالب بياناته على الموقع الرسمي للجامعة، ولا يتم قبول طلبات بالمراسلة أو باليد.</p>
+                <p id="scholarships-p6" data-i18n="study-in-turkey:scholarships.paragraph6">ومعظم الجامعات التركية وخاصة
+                    الحكومية منها تتطلب دراسة اللغة التركية والحصول على شهادة بها، فبعض الجامعات تطلب شهادة TOMER وأخرى
+                    تطلب شهادة YÖS.</p>
+                <p id="scholarships-p7" data-i18n="study-in-turkey:scholarships.turkiyeBurslariTitle"><strong>منحة
+                        الحكومة التركية: TÜRKIYE BURSLARI</strong></p>
                 <p id="scholarships-p8"><a href="https://tbbs.turkiyeburslari.gov.tr/" target="_blank" rel="noopener"
                         id="turkiye-burslari-link">https://tbbs.turkiyeyburslari.gov.tr/</a></p>
-                <p id="scholarships-p9">تُعتبر هذه المنحة الحكومية هي الأشهر على مستوى الجمهورية التركية نظرا لكثرة
-                    الإقبال عليها من الطلاب من مختلف دول العالم، وتنوع البرامج التي تقدمها وعدد الطلاب المقبولين فيها
-                    والذي يزداد بشكل مطرد سنويا. وتشمل هذه المنحة برامج البكالوريوس والدراسات العليا والدكتوراه، وشاملة
-                    فيما تغطيه من نفقات حيث أنها تغطي نفقات المعيشة والدراسة والتأمين الصحي والمرحلة التحضيرية لدراسة
-                    اللغة (الإنجليزية- التركية) وحجز تذكرتي السفر لمرة واحدة (القدوم والمغادرة).</p>
+                <p id="scholarships-p9" data-i18n="study-in-turkey:scholarships.paragraph9">تُعتبر هذه المنحة الحكومية
+                    هي الأشهر على مستوى الجمهورية التركية نظرا لكثرة الإقبال عليها من الطلاب من مختلف دول العالم، وتنوع
+                    البرامج التي تقدمها وعدد الطلاب المقبولين فيها والذي يزداد بشكل مطرد سنويا. وتشمل هذه المنحة برامج
+                    البكالوريوس والدراسات العليا والدكتوراه، وشاملة فيما تغطيه من نفقات حيث أنها تغطي نفقات المعيشة
+                    والدراسة والتأمين الصحي والمرحلة التحضيرية لدراسة اللغة (الإنجليزية- التركية) وحجز تذكرتي السفر لمرة
+                    واحدة (القدوم والمغادرة).</p>
 
-                <h3 id="bachelor-students-title">طلاب البكالوريوس:</h3>
-                <p id="bachelor-qualifications-title"><strong>مؤهلات القبول:</strong></p>
+                <h3 id="bachelor-students-title" data-i18n="study-in-turkey:scholarships.bachelor.title">طلاب
+                    البكالوريوس:</h3>
+                <p id="bachelor-qualifications-title"
+                    data-i18n="study-in-turkey:scholarships.bachelor.qualificationsTitle"><strong>مؤهلات
+                        القبول:</strong></p>
                 <ul>
-                    <li id="bachelor-cond-1">يجب أن يكون مقدم الطلب مواطناً من دولة أخرى غير تركيا (لا يمكن لمن لديه
-                        جنسية تركية أو حاملها مسبقًا التقدم للمنحة).</li>
-                    <li id="bachelor-cond-2">ألا يكون طالباً مسجلاً في جامعات تركية في مستوى الدراسة الذي يرغب الالتحاق
-                        به.</li>
-                    <li id="bachelor-cond-3">أن يكون قد تخرج أو على وشك إنهاء تعليم المرحلة الثانوية.</li>
-                    <li id="bachelor-cond-4">أن يكون دون سن 21 عاما.</li>
-                    <li id="bachelor-cond-5">أن يكون حاصلًا على معدل لا يقل عن 90% للعلوم الطبية، و80% لبرامج بكالوريوس
-                        الهندسة، و 70% لبرامج البكالوريوس الأخرى.</li>
-                    <li id="bachelor-cond-6">أن يتمتع بصحة جيدة، وخاليا من الأمراض المزمنة.</li>
+                    <li id="bachelor-cond-1" data-i18n="study-in-turkey:scholarships.bachelor.condition1">يجب أن يكون
+                        مقدم الطلب مواطناً من دولة أخرى غير تركيا (لا يمكن لمن لديه جنسية تركية أو حاملها مسبقًا التقدم
+                        للمنحة).</li>
+                    <li id="bachelor-cond-2" data-i18n="study-in-turkey:scholarships.bachelor.condition2">ألا يكون
+                        طالباً مسجلاً في جامعات تركية في مستوى الدراسة الذي يرغب الالتحاق به.</li>
+                    <li id="bachelor-cond-3" data-i18n="study-in-turkey:scholarships.bachelor.condition3">أن يكون قد
+                        تخرج أو على وشك إنهاء تعليم المرحلة الثانوية.</li>
+                    <li id="bachelor-cond-4" data-i18n="study-in-turkey:scholarships.bachelor.condition4">أن يكون دون سن
+                        21 عاما.</li>
+                    <li id="bachelor-cond-5" data-i18n="study-in-turkey:scholarships.bachelor.condition5">أن يكون حاصلًا
+                        على معدل لا يقل عن 90% للعلوم الطبية، و80% لبرامج بكالوريوس الهندسة، و 70% لبرامج البكالوريوس
+                        الأخرى.</li>
+                    <li id="bachelor-cond-6" data-i18n="study-in-turkey:scholarships.bachelor.condition6">أن يتمتع بصحة
+                        جيدة، وخاليا من الأمراض المزمنة.</li>
                 </ul>
-                <p id="bachelor-docs-note"><strong>الوثائق المطلوبة:</strong> موجودة على موقع المنحة.</p>
-                <p id="bachelor-benefits-title"><strong>مزايا المنحة:</strong></p>
+                <p id="bachelor-docs-note" data-i18n="study-in-turkey:scholarships.bachelor.documentsNote">
+                    <strong>الوثائق المطلوبة:</strong> موجودة على موقع المنحة.</p>
+                <p id="bachelor-benefits-title" data-i18n="study-in-turkey:scholarships.bachelor.benefitsTitle">
+                    <strong>مزايا المنحة:</strong></p>
                 <ul>
-                    <li id="bachelor-benefit-1">راتب شهري.</li>
-                    <li id="bachelor-benefit-2">تغطية رسوم الدراسة كاملة.</li>
-                    <li id="bachelor-benefit-3">إقامة مجانية في سكن تديره الدولة، وتحدده إدارة المنحة.</li>
-                    <li id="bachelor-benefit-4">تذاكر سفر جوي ذهابا وإيابا (عند القدوم في بداية المنحة وعند المغادرة في
-                        نهاية المنحة بعد إنتهاء الدراسة كاملة).</li>
-                    <li id="bachelor-benefit-5">تغطية التأمين الصحي.</li>
+                    <li id="bachelor-benefit-1" data-i18n="study-in-turkey:scholarships.bachelor.benefit1">راتب شهري.
+                    </li>
+                    <li id="bachelor-benefit-2" data-i18n="study-in-turkey:scholarships.bachelor.benefit2">تغطية رسوم
+                        الدراسة كاملة.</li>
+                    <li id="bachelor-benefit-3" data-i18n="study-in-turkey:scholarships.bachelor.benefit3">إقامة مجانية
+                        في سكن تديره الدولة، وتحدده إدارة المنحة.</li>
+                    <li id="bachelor-benefit-4" data-i18n="study-in-turkey:scholarships.bachelor.benefit4">تذاكر سفر جوي
+                        ذهابا وإيابا (عند القدوم في بداية المنحة وعند المغادرة في نهاية المنحة بعد إنتهاء الدراسة
+                        كاملة).</li>
+                    <li id="bachelor-benefit-5" data-i18n="study-in-turkey:scholarships.bachelor.benefit5">تغطية التأمين
+                        الصحي.</li>
                 </ul>
 
-                <h3 id="masters-phd-title">برامج الماجستير والدكتوراه:</h3>
-                <p id="masters-phd-conditions">نفس شروط برنامج البكالوريوس، مع اختلاف المعدل الدراسي، حيث أنه يجب أن لا
-                    يقل المعدل عن 75%. وأن يكون الطالب دون سن 30 سنة للماجستير و35 سنة للدكتور.</p>
+                <h3 id="masters-phd-title" data-i18n="study-in-turkey:scholarships.mastersPhd.title">برامج الماجستير
+                    والدكتوراه:</h3>
+                <p id="masters-phd-conditions" data-i18n="study-in-turkey:scholarships.mastersPhd.conditions">نفس شروط
+                    برنامج البكالوريوس، مع اختلاف المعدل الدراسي، حيث أنه يجب أن لا يقل المعدل عن 75%. وأن يكون الطالب
+                    دون سن 30 سنة للماجستير و35 سنة للدكتور.</p>
             </section>
 
             <section class="study-info-block" id="student-procedures">
-                <h2 class="section-title-study" id="student-procedures-title">إجراءات على الطالب إنجازها</h2>
-                <p id="student-procedures-p1">أي طالب يرغب في الدراسة في الجمهورية التركية عليه، في البداية، تعلم بعض
-                    الكلمات والعبارات التركية، حتى يستطيع التحرك والتعامل في المطار، وفي المعاملات الرسمية، وعليه كذلك
-                    إدراك الأمور التالية:</p>
+                <h2 class="section-title-study" id="student-procedures-title"
+                    data-i18n="study-in-turkey:studentProcedures.title">إجراءات على الطالب إنجازها</h2>
+                <p id="student-procedures-p1" data-i18n="study-in-turkey:studentProcedures.paragraph1">أي طالب يرغب في
+                    الدراسة في الجمهورية التركية عليه، في البداية، تعلم بعض الكلمات والعبارات التركية، حتى يستطيع التحرك
+                    والتعامل في المطار، وفي المعاملات الرسمية، وعليه كذلك إدراك الأمور التالية:</p>
                 <ul>
-                    <li id="proc-item-1">الجمهورية التركية تُقدم منحا دراسية للطلبة الفلسطينيين إما من خلال موقع الـ YTB
-                        كما هو موضح سابقا، أو من خلال وزارة التعليم العالي والبحث العلمي الفلسطينية.</li>
-                    <li id="proc-item-2">عدا ذلك يتقدم الطالب مباشرة للجامعة من خلال موقعها الرسمي، ولا يتم قبول أي طلب
-                        إلا من خلال التقديم الإلكتروني على موقع الجامعة نفسها.</li>
-                    <li id="proc-item-3">بعد حصول الطالب على القبول الجامعي، عليه تجهيز أوراقه وترجمتها إلى اللغة
-                        الإنجليزية، واعتمادها من وزارة الخارجية والمغتربين، ثم التواصل مع السفارة التركية في فلسطين
-                        للحصول على تأشيرة الدخول بصفته طالبا.</li>
-                    <li id="proc-item-4">بعد الوصول يقوم الطالب بتصديق شهاداته من سفارة دولة فلسطين في أنقرة أو القنصلية
-                        العامة لدولة فلسطين في إسطنبول، ثم يقوم بترجمة أوراقه إلى اللغة التركية وختمها من مترجم محلف لدى
-                        الدولة، وهذه المكاتب منتشرة في جميع أرجاء الجمهورية التركية.</li>
-                    <li id="proc-item-5">يقوم الطالب بعد ذلك بمعادلة شهاداته في وزارة التعليم التركية، وذلك من خلال
-                        تقديم أصول شهادة الثانوية العامة، وشهادتي العامين الدراسيين السابقين لشهادة الثانوية العامة حتى
-                        تتم المعادلة.</li>
-                    <li id="proc-item-6">يجب على الطالب أن يكون حريصا على تسجيل الإقامة بإعتباره طالبا فور وصوله، حتى لا
-                        يقع في مخالفة التواجد في تركيا بدون إقامة.</li>
-                    <li id="proc-item-7">بعد ذلك يقوم الطالب بتقديم ملفه إلى الجامعة التي تم قبوله فيها.</li>
-                    <li id="proc-item-8">إذا كانت الدراسة باللغة التركية فعلى الطالب الدراسة في معهد لغة (Tömer) ومدة
-                        الدراسة في المعهد سنة كاملة تقريبا.</li>
+                    <li id="proc-item-1" data-i18n="study-in-turkey:studentProcedures.item1">الجمهورية التركية تُقدم
+                        منحا دراسية للطلبة الفلسطينيين إما من خلال موقع الـ YTB كما هو موضح سابقا، أو من خلال وزارة
+                        التعليم العالي والبحث العلمي الفلسطينية.</li>
+                    <li id="proc-item-2" data-i18n="study-in-turkey:studentProcedures.item2">عدا ذلك يتقدم الطالب مباشرة
+                        للجامعة من خلال موقعها الرسمي، ولا يتم قبول أي طلب إلا من خلال التقديم الإلكتروني على موقع
+                        الجامعة نفسها.</li>
+                    <li id="proc-item-3" data-i18n="study-in-turkey:studentProcedures.item3">بعد حصول الطالب على القبول
+                        الجامعي، عليه تجهيز أوراقه وترجمتها إلى اللغة الإنجليزية، واعتمادها من وزارة الخارجية
+                        والمغتربين، ثم التواصل مع السفارة التركية في فلسطين للحصول على تأشيرة الدخول بصفته طالبا.</li>
+                    <li id="proc-item-4" data-i18n="study-in-turkey:studentProcedures.item4">بعد الوصول يقوم الطالب
+                        بتصديق شهاداته من سفارة دولة فلسطين في أنقرة أو القنصلية العامة لدولة فلسطين في إسطنبول، ثم يقوم
+                        بترجمة أوراقه إلى اللغة التركية وختمها من مترجم محلف لدى الدولة، وهذه المكاتب منتشرة في جميع
+                        أرجاء الجمهورية التركية.</li>
+                    <li id="proc-item-5" data-i18n="study-in-turkey:studentProcedures.item5">يقوم الطالب بعد ذلك بمعادلة
+                        شهاداته في وزارة التعليم التركية، وذلك من خلال تقديم أصول شهادة الثانوية العامة، وشهادتي العامين
+                        الدراسيين السابقين لشهادة الثانوية العامة حتى تتم المعادلة.</li>
+                    <li id="proc-item-6" data-i18n="study-in-turkey:studentProcedures.item6">يجب على الطالب أن يكون
+                        حريصا على تسجيل الإقامة بإعتباره طالبا فور وصوله، حتى لا يقع في مخالفة التواجد في تركيا بدون
+                        إقامة.</li>
+                    <li id="proc-item-7" data-i18n="study-in-turkey:studentProcedures.item7">بعد ذلك يقوم الطالب بتقديم
+                        ملفه إلى الجامعة التي تم قبوله فيها.</li>
+                    <li id="proc-item-8" data-i18n="study-in-turkey:studentProcedures.item8">إذا كانت الدراسة باللغة
+                        التركية فعلى الطالب الدراسة في معهد لغة (Tömer) ومدة الدراسة في المعهد سنة كاملة تقريبا.</li>
                 </ul>
             </section>
 
             <section class="study-info-block" id="student-advice">
-                <h2 class="section-title-study" id="student-advice-title">نصائح هامة للطلاب</h2>
-                <p id="student-advice-p1">تحظى فلسطين ويحظى الشعب الفلسطيني بمحبة وتقدير لدى الشعب التركي، والفلسطيني
-                    يُمثل نموذجا للنضال ومواجهة الاحتلال، لذلك يجب على الطالب القادم للدراسة في تركيا أن يُمثل بلده
-                    فلسطين تمثيلا إيجابيا، وأن يبتعد عن العادات السيئة والأعمال التي من شأنها الإساءة له ولفلسطين، حيث
-                    لا تستطيع السفارة التدخل في هذه الأمور المُخالفة والتي يُعاقب عليها القانون بالغرامات أو الحبس، ومن
-                    الأمور التي يجب على الطالب مراعاتها:</p>
+                <h2 class="section-title-study" id="student-advice-title"
+                    data-i18n="study-in-turkey:studentAdvice.title">نصائح هامة للطلاب</h2>
+                <p id="student-advice-p1" data-i18n="study-in-turkey:studentAdvice.paragraph1">تحظى فلسطين ويحظى الشعب
+                    الفلسطيني بمحبة وتقدير لدى الشعب التركي، والفلسطيني يُمثل نموذجا للنضال ومواجهة الاحتلال، لذلك يجب
+                    على الطالب القادم للدراسة في تركيا أن يُمثل بلده فلسطين تمثيلا إيجابيا، وأن يبتعد عن العادات السيئة
+                    والأعمال التي من شأنها الإساءة له ولفلسطين، حيث لا تستطيع السفارة التدخل في هذه الأمور المُخالفة
+                    والتي يُعاقب عليها القانون بالغرامات أو الحبس، ومن الأمور التي يجب على الطالب مراعاتها:</p>
                 <ul>
-                    <li id="advice-item-1">احترام قوانين وأنظمة البلاد، وعدم الوقوع في مخالفة الإقامة الرسمية.</li>
-                    <li id="advice-item-2">الإلتزام بالأداب العامة، واحترام العادات والتقاليد.</li>
-                    <li id="advice-item-3">عدم التواجد في أماكن مشبوهة.</li>
-                    <li id="advice-item-4">عدم التعامل أو تعاطي المواد المخدرة.</li>
-                    <li id="advice-item-5">عدم التحرش بالفتيات، أو القيام بفعل فاضح.</li>
-                    <li id="advice-item-6">عدم القيام أو المشاركة في أي أعمال نصب.</li>
-                    <li id="advice-item-7">عدم المشاركة في أي أعمال شغب.</li>
+                    <li id="advice-item-1" data-i18n="study-in-turkey:studentAdvice.item1">احترام قوانين وأنظمة البلاد،
+                        وعدم الوقوع في مخالفة الإقامة الرسمية.</li>
+                    <li id="advice-item-2" data-i18n="study-in-turkey:studentAdvice.item2">الإلتزام بالأداب العامة،
+                        واحترام العادات والتقاليد.</li>
+                    <li id="advice-item-3" data-i18n="study-in-turkey:studentAdvice.item3">عدم التواجد في أماكن مشبوهة.
+                    </li>
+                    <li id="advice-item-4" data-i18n="study-in-turkey:studentAdvice.item4">عدم التعامل أو تعاطي المواد
+                        المخدرة.</li>
+                    <li id="advice-item-5" data-i18n="study-in-turkey:studentAdvice.item5">عدم التحرش بالفتيات، أو
+                        القيام بفعل فاضح.</li>
+                    <li id="advice-item-6" data-i18n="study-in-turkey:studentAdvice.item6">عدم القيام أو المشاركة في أي
+                        أعمال نصب.</li>
+                    <li id="advice-item-7" data-i18n="study-in-turkey:studentAdvice.item7">عدم المشاركة في أي أعمال شغب.
+                    </li>
                 </ul>
             </section>
 
@@ -229,9 +297,11 @@
 
     <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
+
+        <script src="/public/js/main.js"></script>
+        <script src="/public/js/i18n-init.js"></script>
+        <script src="/public/js/language-switcher.js"></script>
+
 
 </body>
 

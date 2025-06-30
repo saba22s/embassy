@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-student-guide-page">دليل الطالب الجديد - سفارة دولة فلسطين</title>
-        <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <title id="title-student-guide-page" data-i18n="student-guide:pageTitle">دليل الطالب الجديد - سفارة دولة فلسطين
+    </title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
 
     <link rel="stylesheet" href="/public/css/main.css" />
     <link rel="stylesheet" href="/public/css/pages/student-guide.css" />
@@ -15,6 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
@@ -22,316 +27,421 @@
 
     <div class="student-guide-page-wrapper">
         <header class="student-guide-header-main">
-            <h1 class="page-main-title" id="sg-main-page-title">دليل الطالب الجديد للمنح التركية (تحديث 2025)</h1>
+            <h1 class="page-main-title" id="sg-main-page-title" data-i18n="student-guide:mainTitle">دليل الطالب الجديد
+                للمنح التركية (تحديث 2025)</h1>
         </header>
 
         <div class="student-guide-content-container">
             <section class="sg-section">
-                <h2 class="sg-section-title" id="sg-general-questions-title">الأسئلة العامة المتعلقة بالمنح التركية</h2>
+                <h2 class="sg-section-title" id="sg-general-questions-title"
+                    data-i18n="student-guide:generalQuestions.title">الأسئلة العامة المتعلقة بالمنح التركية</h2>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-levels">أي المستويات التى تشملها منح الجمهورية التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-levels">تشمل المنح مستويات البكالوريوس، الماجستير، الدكتوراه، بالإضافة
-                        إلى منح البحث. كما توجد برامج منح قصيرة الأمد ومتخصصة، وقد تُقدم تسهيلات أو مسارات خاصة
-                        للموهوبين في مجالات معينة ضمن هذه البرامج.</p>
+                    <h3 class="sg-question" id="sg-q-levels" data-i18n="student-guide:generalQuestions.levels.question">
+                        أي المستويات التى تشملها منح الجمهورية التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-levels" data-i18n="student-guide:generalQuestions.levels.answer">تشمل
+                        المنح مستويات البكالوريوس، الماجستير، الدكتوراه، بالإضافة إلى منح البحث. كما توجد برامج منح
+                        قصيرة الأمد ومتخصصة، وقد تُقدم تسهيلات أو مسارات خاصة للموهوبين في مجالات معينة ضمن هذه البرامج.
+                    </p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-uni-acceptance">هل سيتحتم علي الحصول على قبول من أي جامعة بعد حصولي
-                        على المنحة؟</h3>
-                    <p class="sg-answer" id="sg-a-uni-acceptance">لا، بمجرد حصولكم على المنحة، تتكفل إدارة المنح
-                        بتنسيبكم رسمياً في القسم والجامعة المناسبين وفقاً لطلبكم ومؤهلاتكم.</p>
+                    <h3 class="sg-question" id="sg-q-uni-acceptance"
+                        data-i18n="student-guide:generalQuestions.uniAcceptance.question">هل سيتحتم علي الحصول على قبول
+                        من أي جامعة بعد حصولي على المنحة؟</h3>
+                    <p class="sg-answer" id="sg-a-uni-acceptance"
+                        data-i18n="student-guide:generalQuestions.uniAcceptance.answer">لا، بمجرد حصولكم على المنحة،
+                        تتكفل إدارة المنح بتنسيبكم رسمياً في القسم والجامعة المناسبين وفقاً لطلبكم ومؤهلاتكم.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-foreign-lang">هل يمكنني الحصول على تعليم بلغة أجنبية كالإنجليزية؟
-                    </h3>
-                    <p class="sg-answer" id="sg-a-foreign-lang">نعم، هذا الأمر ممكن في العديد من الجامعات والتخصصات.
-                        ولكن، يتحتم على الطالب إثبات كفاءته في لغة الدراسة الأجنبية (مثل الإنجليزية) من خلال شهادة لغة
-                        معترف بها دولياً (مثل TOEFL أو IELTS)، ويقوم بتحميلها أثناء التسجيل. إذا لم تتوفر شهادة، قد
-                        يُطلب منه اجتياز اختبار لغة أو الالتحاق بسنة تحضيرية للغة الأجنبية المعنية.</p>
+                    <h3 class="sg-question" id="sg-q-foreign-lang"
+                        data-i18n="student-guide:generalQuestions.foreignLang.question">هل يمكنني الحصول على تعليم بلغة
+                        أجنبية كالإنجليزية؟</h3>
+                    <p class="sg-answer" id="sg-a-foreign-lang"
+                        data-i18n="student-guide:generalQuestions.foreignLang.answer">نعم، هذا الأمر ممكن في العديد من
+                        الجامعات والتخصصات. ولكن، يتحتم على الطالب إثبات كفاءته في لغة الدراسة الأجنبية (مثل الإنجليزية)
+                        من خلال شهادة لغة معترف بها دولياً (مثل TOEFL أو IELTS)، ويقوم بتحميلها أثناء التسجيل. إذا لم
+                        تتوفر شهادة، قد يُطلب منه اجتياز اختبار لغة أو الالتحاق بسنة تحضيرية للغة الأجنبية المعنية.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-current-student">هل يمكن للطالب المنتسب لأي جامعة في تركيا التقدم
-                        لهذه المنحة؟</h3>
-                    <p class="sg-answer" id="sg-a-current-student">لا، الأفراد المسجلون حالياً في برامج في الجامعات
-                        التركية في نفس مستوى التعليم الذي سيتقدمون إليه ليسوا مؤهلين. على سبيل المثال، طالب البكالوريوس
-                        الحالي في تركيا لا يمكنه التقديم لمنحة بكالوريوس أخرى.</p>
+                    <h3 class="sg-question" id="sg-q-current-student"
+                        data-i18n="student-guide:generalQuestions.currentStudent.question">هل يمكن للطالب المنتسب لأي
+                        جامعة في تركيا التقدم لهذه المنحة؟</h3>
+                    <p class="sg-answer" id="sg-a-current-student"
+                        data-i18n="student-guide:generalQuestions.currentStudent.answer">لا، الأفراد المسجلون حالياً في
+                        برامج في الجامعات التركية في نفس مستوى التعليم الذي سيتقدمون إليه ليسوا مؤهلين. على سبيل المثال،
+                        طالب البكالوريوس الحالي في تركيا لا يمكنه التقديم لمنحة بكالوريوس أخرى.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-turkish-lang-location">أين سيتم تدريسي اللغة التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-turkish-lang-location">يتم تقديم تعليم اللغة التركية لمدة عام مجاناً
-                        لجميع الطلاب. ستتعلم اللغة التركية مع مدربين خبراء في مراكز تعليم اللغة التركية (TÖMER) داخل
-                        الجامعات.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-turkish-lang-if-english-major">هل سيتم تدريسي اللغة التركية في حال
-                        قبولي في قسم لغة تدريسه باللغة الإنجليزية؟</h3>
-                    <p class="sg-answer" id="sg-a-turkish-lang-if-english-major">نعم، السنة التحضيرية للغة التركية
-                        إلزامية لجميع الطلاب الحاصلين على المنحة، حتى لو كانت دراستهم الأكاديمية بلغة أخرى. الهدف هو
-                        تمكين الطلاب من الاندماج بشكل أفضل وفهم الثقافة التركية.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-scholarship-provisions">ما الذي ستوفره لي منح الجمهورية التركية؟
-                    </h3>
-                    <p class="sg-answer-intro" id="sg-a-scholarship-provisions-intro">تتضمن المنحة عادةً كل من:</p>
-                    <ul class="sg-answer-list" id="sg-a-scholarship-provisions-list">
-                        <li id="sg-a-sp-item1">راتب شهري (انظر التفاصيل أدناه).</li>
-                        <li id="sg-a-sp-item2">تغطية الرسوم الجامعية في أرقى الجامعات التركية.</li>
-                        <li id="sg-a-sp-item3">تأمين صحي شامل للاستفادة من الخدمات الصحية عند الحاجة.</li>
-                        <li id="sg-a-sp-item4">سكن طلابي (مع تفاصيل مختلفة حسب المستوى الدراسي).</li>
-                        <li id="sg-a-sp-item5">سنة تحضيرية لتعلم اللغة التركية مجاناً.</li>
-                        <li id="sg-a-sp-item6">تذكرة طيران (لمرة واحدة عند القدوم الأول، ولمرة واحدة عند العودة النهائية
-                            بعد التخرج).</li>
-                        <li id="sg-a-sp-item7">فرص تطوير الذات من خلال نوادي الطلاب والجمعيات في الجامعات، بالإضافة إلى
-                            الأكاديمية الدولية للطلاب، برامج التخصص، مؤتمرات الطلاب والمسابقات الفنية التي تنظمها إدارة
-                            المنح التركية.</li>
-                        <li id="sg-a-sp-item8">الانضمام إلى شبكة خريجي تركيا الواسعة (أكثر من 150,000 عضو في 160 دولة)
-                            والتواصل عبر بوابة خريجي تركيا الإلكترونية.</li>
-                    </ul>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-monthly-stipend">ما هو المعاش الشهري الذي ستوفره لي منح الجمهورية
+                    <h3 class="sg-question" id="sg-q-turkish-lang-location"
+                        data-i18n="student-guide:generalQuestions.turkishLangLocation.question">أين سيتم تدريسي اللغة
                         التركية؟</h3>
-                    <p class="sg-answer-intro" id="sg-a-monthly-stipend-intro">يتم إيداع الراتب الشهري بانتظام في الحساب
-                        البنكي الذي سيفتحه الطالب عند وصوله إلى تركيا. المبالغ الحالية هي:</p>
+                    <p class="sg-answer" id="sg-a-turkish-lang-location"
+                        data-i18n="student-guide:generalQuestions.turkishLangLocation.answer">يتم تقديم تعليم اللغة
+                        التركية لمدة عام مجاناً لجميع الطلاب. ستتعلم اللغة التركية مع مدربين خبراء في مراكز تعليم اللغة
+                        التركية (TÖMER) داخل الجامعات.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-turkish-lang-if-english-major"
+                        data-i18n="student-guide:generalQuestions.turkishLangIfEnglish.question">هل سيتم تدريسي اللغة
+                        التركية في حال قبولي في قسم لغة تدريسه باللغة الإنجليزية؟</h3>
+                    <p class="sg-answer" id="sg-a-turkish-lang-if-english-major"
+                        data-i18n="student-guide:generalQuestions.turkishLangIfEnglish.answer">نعم، السنة التحضيرية للغة
+                        التركية إلزامية لجميع الطلاب الحاصلين على المنحة، حتى لو كانت دراستهم الأكاديمية بلغة أخرى.
+                        الهدف هو تمكين الطلاب من الاندماج بشكل أفضل وفهم الثقافة التركية.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-scholarship-provisions"
+                        data-i18n="student-guide:generalQuestions.scholarshipProvisions.question">ما الذي ستوفره لي منح
+                        الجمهورية التركية؟</h3>
+                    <p class="sg-answer-intro" id="sg-a-scholarship-provisions-intro"
+                        data-i18n="student-guide:generalQuestions.scholarshipProvisions.intro">تتضمن المنحة عادةً كل من:
+                    </p>
+                    <ul class="sg-answer-list" id="sg-a-scholarship-provisions-list">
+                        <li id="sg-a-sp-item1" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item1">
+                            راتب شهري (انظر التفاصيل أدناه).</li>
+                        <li id="sg-a-sp-item2" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item2">
+                            تغطية الرسوم الجامعية في أرقى الجامعات التركية.</li>
+                        <li id="sg-a-sp-item3" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item3">
+                            تأمين صحي شامل للاستفادة من الخدمات الصحية عند الحاجة.</li>
+                        <li id="sg-a-sp-item4" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item4">
+                            سكن طلابي (مع تفاصيل مختلفة حسب المستوى الدراسي).</li>
+                        <li id="sg-a-sp-item5" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item5">
+                            سنة تحضيرية لتعلم اللغة التركية مجاناً.</li>
+                        <li id="sg-a-sp-item6" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item6">
+                            تذكرة طيران (لمرة واحدة عند القدوم الأول، ولمرة واحدة عند العودة النهائية بعد التخرج).</li>
+                        <li id="sg-a-sp-item7" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item7">
+                            فرص تطوير الذات من خلال نوادي الطلاب والجمعيات في الجامعات، بالإضافة إلى الأكاديمية الدولية
+                            للطلاب، برامج التخصص، مؤتمرات الطلاب والمسابقات الفنية التي تنظمها إدارة المنح التركية.</li>
+                        <li id="sg-a-sp-item8" data-i18n="student-guide:generalQuestions.scholarshipProvisions.item8">
+                            الانضمام إلى شبكة خريجي تركيا الواسعة (أكثر من 150,000 عضو في 160 دولة) والتواصل عبر بوابة
+                            خريجي تركيا الإلكترونية.</li>
+                    </ul>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-monthly-stipend"
+                        data-i18n="student-guide:generalQuestions.monthlyStipend.question">ما هو المعاش الشهري الذي
+                        ستوفره لي منح الجمهورية التركية؟</h3>
+                    <p class="sg-answer-intro" id="sg-a-monthly-stipend-intro"
+                        data-i18n="student-guide:generalQuestions.monthlyStipend.intro">يتم إيداع الراتب الشهري بانتظام
+                        في الحساب البنكي الذي سيفتحه الطالب عند وصوله إلى تركيا. المبالغ الحالية هي:</p>
                     <ul class="sg-answer-list" id="sg-a-monthly-stipend-list">
-                        <li id="sg-a-ms-item1">مستوى الزمالة والبكالوريوس: 4,500 ليرة تركية شهرياً.</li>
-                        <li id="sg-a-ms-item2">مستوى الماجستير: 6,500 ليرة تركية شهرياً.</li>
-                        <li id="sg-a-ms-item3">مستوى الدكتوراه: 9,000 ليرة تركية شهرياً.</li>
-                        <li id="sg-a-ms-item4">منحة الجدارة (Merit Scholarship Program): الطلاب المؤهلون أكاديمياً بشكل
-                            متميز قد يكافأون براتب شهري يصل إلى ضعف الراتب العادي.(يرجى مراجعة الموقع الرسمي للمنح
-                            التركية لأي تحديثات على هذه المبالغ).</li>
+                        <li id="sg-a-ms-item1" data-i18n="student-guide:generalQuestions.monthlyStipend.item1">مستوى
+                            الزمالة والبكالوريوس: 4,500 ليرة تركية شهرياً.</li>
+                        <li id="sg-a-ms-item2" data-i18n="student-guide:generalQuestions.monthlyStipend.item2">مستوى
+                            الماجستير: 6,500 ليرة تركية شهرياً.</li>
+                        <li id="sg-a-ms-item3" data-i18n="student-guide:generalQuestions.monthlyStipend.item3">مستوى
+                            الدكتوراه: 9,000 ليرة تركية شهرياً.</li>
+                        <li id="sg-a-ms-item4" data-i18n="student-guide:generalQuestions.monthlyStipend.item4">منحة
+                            الجدارة (Merit Scholarship Program): الطلاب المؤهلون أكاديمياً بشكل متميز قد يكافأون براتب
+                            شهري يصل إلى ضعف الراتب العادي.(يرجى مراجعة الموقع الرسمي للمنح التركية لأي تحديثات على هذه
+                            المبالغ).</li>
                     </ul>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-accommodation">هل يحق للطلبة السكن في المكان الذي يختارونه، وما هي
-                        ترتيبات السكن؟</h3>
-                    <p class="sg-answer" id="sg-a-accommodation-bachelor">طلاب مرحلة البكالوريوس (والزمالة): يمكنهم
-                        الإقامة في السكنات الطلابية طوال مدة دراستهم، وتغطي المنح التركية رسوم السكن.</p>
-                    <p class="sg-answer-intro" id="sg-a-accommodation-postgrad-intro">طلاب الدراسات العليا (الماجستير
-                        والدكتوراه): يُمنحون الحق في الإقامة في السكن الطلابي خلال السنة الأولى من تعليمهم. في السنوات
-                        التالية، يمكنهم اختيار استئجار منزل مع الحصول على بدل سكن شهري قدره:</p>
+                    <h3 class="sg-question" id="sg-q-accommodation"
+                        data-i18n="student-guide:generalQuestions.accommodation.question">هل يحق للطلبة السكن في المكان
+                        الذي يختارونه، وما هي ترتيبات السكن؟</h3>
+                    <p class="sg-answer" id="sg-a-accommodation-bachelor"
+                        data-i18n="student-guide:generalQuestions.accommodation.bachelor">طلاب مرحلة البكالوريوس
+                        (والزمالة): يمكنهم الإقامة في السكنات الطلابية طوال مدة دراستهم، وتغطي المنح التركية رسوم السكن.
+                    </p>
+                    <p class="sg-answer-intro" id="sg-a-accommodation-postgrad-intro"
+                        data-i18n="student-guide:generalQuestions.accommodation.postgradIntro">طلاب الدراسات العليا
+                        (الماجستير والدكتوراه): يُمنحون الحق في الإقامة في السكن الطلابي خلال السنة الأولى من تعليمهم.
+                        في السنوات التالية، يمكنهم اختيار استئجار منزل مع الحصول على بدل سكن شهري قدره:</p>
                     <ul class="sg-answer-list" id="sg-a-accommodation-postgrad-list">
-                        <li id="sg-a-ap-item1">6,000 ليرة تركية للطلاب الذين يدرسون في اسطنبول وأنقرة.</li>
-                        <li id="sg-a-ap-item2">5,000 ليرة تركية للطلاب الذين يدرسون في مدن أخرى.</li>
+                        <li id="sg-a-ap-item1" data-i18n="student-guide:generalQuestions.accommodation.item1">6,000 ليرة
+                            تركية للطلاب الذين يدرسون في اسطنبول وأنقرة.</li>
+                        <li id="sg-a-ap-item2" data-i18n="student-guide:generalQuestions.accommodation.item2">5,000 ليرة
+                            تركية للطلاب الذين يدرسون في مدن أخرى.</li>
                     </ul>
-                    <p class="sg-answer" id="sg-a-accommodation-options">خيارات السكن: يمكن للطلاب الإقامة في سكنات KYK
-                        الحكومية أو السكنات الخاصة التابعة للمديرية العامة للائتمان والسكنات. للطلاب الباحثين عن سكن
-                        خاص، هناك عدة خيارات متاحة، مثل استئجار غرف فردية، أو استئجار عقارات كاملة عبر وكلاء عقاريين أو
-                        مباشرة من المالكين.</p>
+                    <p class="sg-answer" id="sg-a-accommodation-options"
+                        data-i18n="student-guide:generalQuestions.accommodation.options">خيارات السكن: يمكن للطلاب
+                        الإقامة في سكنات KYK الحكومية أو السكنات الخاصة التابعة للمديرية العامة للائتمان والسكنات.
+                        للطلاب الباحثين عن سكن خاص، هناك عدة خيارات متاحة، مثل استئجار غرف فردية، أو استئجار عقارات
+                        كاملة عبر وكلاء عقاريين أو مباشرة من المالكين.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-turkish-prep-cost">هل سأقوم بدفع أي مقابل لدراسة اللغة التركية في
-                        السنة التحضيرية؟</h3>
-                    <p class="sg-answer" id="sg-a-turkish-prep-cost">لا، تقدم المنح التركية سنة واحدة من تعليم اللغة
-                        التركية مجاناً لجميع طلابها.</p>
+                    <h3 class="sg-question" id="sg-q-turkish-prep-cost"
+                        data-i18n="student-guide:generalQuestions.turkishPrepCost.question">هل سأقوم بدفع أي مقابل
+                        لدراسة اللغة التركية في السنة التحضيرية؟</h3>
+                    <p class="sg-answer" id="sg-a-turkish-prep-cost"
+                        data-i18n="student-guide:generalQuestions.turkishPrepCost.answer">لا، تقدم المنح التركية سنة
+                        واحدة من تعليم اللغة التركية مجاناً لجميع طلابها.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-turkish-prep-duration-benefits">ما هي مدة السنة التحضيرية للغة
-                        التركية، وهل سأستفيد من السكن الطلابي والتأمين الصحي خلالها؟</h3>
-                    <p class="sg-answer" id="sg-a-turkish-prep-duration-benefits">المدة هي عام دراسي واحد. خلال هذا
-                        العام، يستفيد الطالب من جميع مزايا المنحة بما في ذلك الراتب الشهري، السكن الطلابي، والتأمين
-                        الصحي.</p>
+                    <h3 class="sg-question" id="sg-q-turkish-prep-duration-benefits"
+                        data-i18n="student-guide:generalQuestions.turkishPrepDurationBenefits.question">ما هي مدة السنة
+                        التحضيرية للغة التركية، وهل سأستفيد من السكن الطلابي والتأمين الصحي خلالها؟</h3>
+                    <p class="sg-answer" id="sg-a-turkish-prep-duration-benefits"
+                        data-i18n="student-guide:generalQuestions.turkishPrepDurationBenefits.answer">المدة هي عام دراسي
+                        واحد. خلال هذا العام، يستفيد الطالب من جميع مزايا المنحة بما في ذلك الراتب الشهري، السكن
+                        الطلابي، والتأمين الصحي.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-bachelor-duration">ما هي مدة منحة البكالوريوس (والزمالة) ضمن منح
-                        الجمهورية التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-bachelor-duration">تشمل سنة واحدة تحضيرية للغة التركية + سنوات الدراسة
-                        الأكاديمية المعتادة للبرنامج (مثلاً، سنتان للزمالة، 4 سنوات لمعظم تخصصات البكالوريوس، أو 5-6
-                        سنوات للتخصصات الطبية).</p>
+                    <h3 class="sg-question" id="sg-q-bachelor-duration"
+                        data-i18n="student-guide:generalQuestions.bachelorDuration.question">ما هي مدة منحة البكالوريوس
+                        (والزمالة) ضمن منح الجمهورية التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-bachelor-duration"
+                        data-i18n="student-guide:generalQuestions.bachelorDuration.answer">تشمل سنة واحدة تحضيرية للغة
+                        التركية + سنوات الدراسة الأكاديمية المعتادة للبرنامج (مثلاً، سنتان للزمالة، 4 سنوات لمعظم تخصصات
+                        البكالوريوس، أو 5-6 سنوات للتخصصات الطبية).</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-postgrad-duration">ما هي مدة منحة الماجستير والدكتوراه ضمن منح
-                        الجمهورية التركية؟</h3>
+                    <h3 class="sg-question" id="sg-q-postgrad-duration"
+                        data-i18n="student-guide:generalQuestions.postgradDuration.question">ما هي مدة منحة الماجستير
+                        والدكتوراه ضمن منح الجمهورية التركية؟</h3>
                     <ul class="sg-answer-list" id="sg-a-postgrad-duration-list">
-                        <li id="sg-a-pd-master">الماجستير: سنة واحدة تحضيرية للغة التركية + (سنة تحضيرية علمية إذا قرر
-                            القسم ضرورة ذلك) + سنتان للدراسة الأكاديمية.</li>
-                        <li id="sg-a-pd-phd">الدكتوراه: سنة واحدة تحضيرية للغة التركية + (سنة تحضيرية علمية إذا لزم
-                            الأمر) + أربع سنوات للدراسة الأكاديمية.</li>
+                        <li id="sg-a-pd-master" data-i18n="student-guide:generalQuestions.postgradDuration.master">
+                            الماجستير: سنة واحدة تحضيرية للغة التركية + (سنة تحضيرية علمية إذا قرر القسم ضرورة ذلك) +
+                            سنتان للدراسة الأكاديمية.</li>
+                        <li id="sg-a-pd-phd" data-i18n="student-guide:generalQuestions.postgradDuration.phd">الدكتوراه:
+                            سنة واحدة تحضيرية للغة التركية + (سنة تحضيرية علمية إذا لزم الأمر) + أربع سنوات للدراسة
+                            الأكاديمية.</li>
                     </ul>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-research-duration">ما هي مدة منحة البحوث ضمن منح الجمهورية التركية؟
-                    </h3>
-                    <p class="sg-answer" id="sg-a-research-duration">تتراوح مدة منحة البحث عادة ما بين 3 أشهر إلى 12
-                        شهراً.</p>
+                    <h3 class="sg-question" id="sg-q-research-duration"
+                        data-i18n="student-guide:generalQuestions.researchDuration.question">ما هي مدة منحة البحوث ضمن
+                        منح الجمهورية التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-research-duration"
+                        data-i18n="student-guide:generalQuestions.researchDuration.answer">تتراوح مدة منحة البحث عادة ما
+                        بين 3 أشهر إلى 12 شهراً.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-application-process">كيف ومتى يتم التقديم للمنح التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-application-process">يتم فتح باب التسجيل للمنح التركية عادةً في شهر
-                        يناير ويستمر حتى أواخر شهر فبراير من كل عام لجميع المستويات. التقديم يتم فقط عبر الإنترنت من
-                        خلال نظام التقديم الخاص بالمنح التركية (TBBS) الموجود على الموقع الرسمي (<a
+                    <h3 class="sg-question" id="sg-q-application-process"
+                        data-i18n="student-guide:generalQuestions.applicationProcess.question">كيف ومتى يتم التقديم
+                        للمنح التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-application-process"
+                        data-i18n="student-guide:generalQuestions.applicationProcess.answer">يتم فتح باب التسجيل للمنح
+                        التركية عادةً في شهر يناير ويستمر حتى أواخر شهر فبراير من كل عام لجميع المستويات. التقديم يتم
+                        فقط عبر الإنترنت من خلال نظام التقديم الخاص بالمنح التركية (TBBS) الموجود على الموقع الرسمي (<a
                             href="http://www.turkiyeburslari.gov.tr" target="_blank"
                             rel="noopener">www.turkiyeburslari.gov.tr</a>).</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-eligibility">من الذي يحق له التقديم للمنح التركية؟ (معايير الأهلية)
-                    </h3>
-                    <p class="sg-answer-intro" id="sg-a-eligibility-eligible-intro">الفئات المؤهلة:</p>
+                    <h3 class="sg-question" id="sg-q-eligibility"
+                        data-i18n="student-guide:generalQuestions.eligibility.question">من الذي يحق له التقديم للمنح
+                        التركية؟ (معايير الأهلية)</h3>
+                    <p class="sg-answer-intro" id="sg-a-eligibility-eligible-intro"
+                        data-i18n="student-guide:generalQuestions.eligibility.eligibleIntro">الفئات المؤهلة:</p>
                     <ul class="sg-answer-list" id="sg-a-eligibility-eligible-list">
-                        <li id="sg-a-ee-item1">مواطنو جميع الدول (باستثناء تركيا).</li>
-                        <li id="sg-a-ee-item2">الخريجون أو أولئك الذين سيتخرجون في نهاية العام الدراسي الحالي (عادة قبل
-                            أغسطس).</li>
-                        <li id="sg-a-ee-item3">الباحثون والأكاديميون.</li>
+                        <li id="sg-a-ee-item1" data-i18n="student-guide:generalQuestions.eligibility.eligible1">مواطنو
+                            جميع الدول (باستثناء تركيا).</li>
+                        <li id="sg-a-ee-item2" data-i18n="student-guide:generalQuestions.eligibility.eligible2">الخريجون
+                            أو أولئك الذين سيتخرجون في نهاية العام الدراسي الحالي (عادة قبل أغسطس).</li>
+                        <li id="sg-a-ee-item3" data-i18n="student-guide:generalQuestions.eligibility.eligible3">الباحثون
+                            والأكاديميون.</li>
                     </ul>
-                    <p class="sg-answer-intro" id="sg-a-eligibility-ineligible-intro">الفئات غير المؤهلة:</p>
+                    <p class="sg-answer-intro" id="sg-a-eligibility-ineligible-intro"
+                        data-i18n="student-guide:generalQuestions.eligibility.ineligibleIntro">الفئات غير المؤهلة:</p>
                     <ul class="sg-answer-list" id="sg-a-eligibility-ineligible-list">
-                        <li id="sg-a-ei-item1">المواطنون الأتراك والأفراد الذين فقدوا الجنسية التركية.</li>
-                        <li id="sg-a-ei-item2">الأفراد المسجلون حالياً في برامج في الجامعات التركية في نفس مستوى التعليم
-                            الذي سيتقدمون إليه.</li>
+                        <li id="sg-a-ei-item1" data-i18n="student-guide:generalQuestions.eligibility.ineligible1">
+                            المواطنون الأتراك والأفراد الذين فقدوا الجنسية التركية.</li>
+                        <li id="sg-a-ei-item2" data-i18n="student-guide:generalQuestions.eligibility.ineligible2">
+                            الأفراد المسجلون حالياً في برامج في الجامعات التركية في نفس مستوى التعليم الذي سيتقدمون
+                            إليه.</li>
                     </ul>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-dual-nationality">هل يحق لمن يحمل جنسيتين إحداهما تركية التقديم
-                        للمنح التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-dual-nationality">لا، إذا كان الشخص يحمل الجنسية التركية بالإضافة إلى
-                        جنسية أخرى، فهو يعتبر مواطناً تركياً وبالتالي غير مؤهل لهذه المنح.</p>
+                    <h3 class="sg-question" id="sg-q-dual-nationality"
+                        data-i18n="student-guide:generalQuestions.dualNationality.question">هل يحق لمن يحمل جنسيتين
+                        إحداهما تركية التقديم للمنح التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-dual-nationality"
+                        data-i18n="student-guide:generalQuestions.dualNationality.answer">لا، إذا كان الشخص يحمل الجنسية
+                        التركية بالإضافة إلى جنسية أخرى، فهو يعتبر مواطناً تركياً وبالتالي غير مؤهل لهذه المنح.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-highschool-in-turkey">هل يحق للطالب الأجنبي الذي أتم الثانوية
-                        العامة في تركيا التقديم للمنح التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-highschool-in-turkey">نعم، يحق له ذلك طالما أنه يستوفي شروط الجنسية
-                        (أي ليس مواطناً تركياً) وبقية شروط التقديم.</p>
+                    <h3 class="sg-question" id="sg-q-highschool-in-turkey"
+                        data-i18n="student-guide:generalQuestions.highschoolInTurkey.question">هل يحق للطالب الأجنبي
+                        الذي أتم الثانوية العامة في تركيا التقديم للمنح التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-highschool-in-turkey"
+                        data-i18n="student-guide:generalQuestions.highschoolInTurkey.answer">نعم، يحق له ذلك طالما أنه
+                        يستوفي شروط الجنسية (أي ليس مواطناً تركياً) وبقية شروط التقديم.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-not-graduated-yet">هل يجب أن يكون الطالب قد أتم مرحلته الدراسية
-                        الحالية ليتمكن من التقديم للمنح التركية؟</h3>
-                    <p class="sg-answer" id="sg-a-not-graduated-yet">لا، يمكن للطلاب الذين هم في السنة الأخيرة من
-                        دراستهم الحالية التقديم، بشرط أن يتخرجوا بشكل رسمي قبل بدء الدراسة في تركيا (عادةً بحلول شهر
-                        أغسطس من نفس عام القبول).</p>
+                    <h3 class="sg-question" id="sg-q-not-graduated-yet"
+                        data-i18n="student-guide:generalQuestions.notGraduatedYet.question">هل يجب أن يكون الطالب قد أتم
+                        مرحلته الدراسية الحالية ليتمكن من التقديم للمنح التركية؟</h3>
+                    <p class="sg-answer" id="sg-a-not-graduated-yet"
+                        data-i18n="student-guide:generalQuestions.notGraduatedYet.answer">لا، يمكن للطلاب الذين هم في
+                        السنة الأخيرة من دراستهم الحالية التقديم، بشرط أن يتخرجوا بشكل رسمي قبل بدء الدراسة في تركيا
+                        (عادةً بحلول شهر أغسطس من نفس عام القبول).</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-deferral">في حال لم أتمكن من إتمام مرحلتي الدراسية الحالية نهاية
-                        العام، وتم قبولي للمنح التركية، فهل بالإمكان تأجيل منحتي للعام الذي يليه؟</h3>
-                    <p class="sg-answer" id="sg-a-deferral">لا، بشكل عام لا يوجد تأجيل للمنحة المكتسبة. يجب تقديم وثيقة
-                        التخرج الرسمية والبدء بالدراسة في العام الدراسي الذي تم فيه القبول.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-min-academic-achievement">ما هو معيار الحد الأدنى للتحصيل الأكاديمي
-                        المطلوب؟</h3>
-                    <ul class="sg-answer-list" id="sg-a-min-academic-achievement-list">
-                        <li id="sg-a-maa-item1">لمرشحي درجة الزمالة والبكالوريوس: 70%.</li>
-                        <li id="sg-a-maa-item2">لمرشحي الدراسات العليا (الماجستير والدكتوراه): 75%.</li>
-                        <li id="sg-a-maa-item3">لمرشحي العلوم الصحية (الطب البشري، طب الأسنان، الصيدلة): 90%.</li>
-                    </ul>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-slightly-below-min">حصلت على درجة أقل بقليل من الحد الأدنى المطلوب
-                        (مثلاً 69% للبكالوريوس)، فهل يحق لي التقدم؟</h3>
-                    <p class="sg-answer" id="sg-a-slightly-below-min">الحد الأدنى المعلن هو شرط أساسي. يجب تحقيق النسبة
-                        المطلوبة كحد أدنى.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-age-criteria">ما هو معيار السن المطلوب للبرامج المختلفة؟</h3>
-                    <ul class="sg-answer-list" id="sg-a-age-criteria-list">
-                        <li id="sg-a-ac-item1">برامج الزمالة والبكالوريوس: أن يكون عمر المتقدم أقل من 21 عاماً.</li>
-                        <li id="sg-a-ac-item2">برامج الماجستير: أن يكون عمر المتقدم أقل من 30 عاماً.</li>
-                        <li id="sg-a-ac-item3">برامج الدكتوراه: أن يكون عمر المتقدم أقل من 35 عاماً.</li>
-                        <li id="sg-a-ac-item4">منحة البحث: أن يكون عمر المتقدم أقل من 50 عاماً.</li>
-                    </ul>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-research-grant-eligibility">من الذي يحق له التقديم لمنحة برنامج
-                        البحوث؟</h3>
-                    <p class="sg-answer" id="sg-a-research-grant-eligibility">الباحثون والأكاديميون الحاصلون على درجة
-                        الدكتوراه، أو طلاب الدكتوراه الذين هم في مرحلة متقدمة من أبحاثهم، ويستوفون شرط العمر (أقل من 50
-                        عاماً). غالباً ما يُشترط حصول المتقدم على دعوة أو قبول مبدئي من جامعة تركية أو مؤسسة بحثية.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-multiple-program-application">هل يحق لي التقديم لأكثر من برنامج من
-                        برامج المنحة؟</h3>
-                    <p class="sg-answer" id="sg-a-multiple-program-application">يحق للطالب التقديم لمستوى دراسي واحد فقط
-                        في كل دورة تقديم.</p>
-                </div>
-
-                <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-number-of-choices">كم تخصصاً (ترجيحاً) يحق لي الاختيار عند التقديم؟
+                    <h3 class="sg-question" id="sg-q-deferral"
+                        data-i18n="student-guide:generalQuestions.deferral.question">في حال لم أتمكن من إتمام مرحلتي
+                        الدراسية الحالية نهاية العام، وتم قبولي للمنح التركية، فهل بالإمكان تأجيل منحتي للعام الذي يليه؟
                     </h3>
-                    <p class="sg-answer" id="sg-a-number-of-choices">يُمنح المرشحون فرصة الاختيار بين 12 خياراً (تخصصات
-                        وجامعات) عند التقديم عبر نظام التقديم الخاص بالمنح التركية (TBBS).</p>
+                    <p class="sg-answer" id="sg-a-deferral" data-i18n="student-guide:generalQuestions.deferral.answer">
+                        لا، بشكل عام لا يوجد تأجيل للمنحة المكتسبة. يجب تقديم وثيقة التخرج الرسمية والبدء بالدراسة في
+                        العام الدراسي الذي تم فيه القبول.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-placement-outside-choices">هل بالإمكان تنسيبي في جامعة خارج نطاق
-                        الترجيحات التى قمت باختيارها؟</h3>
-                    <p class="sg-answer" id="sg-a-placement-outside-choices">عادةً ما يتم التنسيب ضمن الاختيارات التي
-                        قدمها الطالب. يُنصح بملء جميع الترجيحات الـ 12 بعناية لزيادة فرص القبول في أحدها.</p>
+                    <h3 class="sg-question" id="sg-q-min-academic-achievement"
+                        data-i18n="student-guide:generalQuestions.minAcademicAchievement.question">ما هو معيار الحد
+                        الأدنى للتحصيل الأكاديمي المطلوب؟</h3>
+                    <ul class="sg-answer-list" id="sg-a-min-academic-achievement-list">
+                        <li id="sg-a-maa-item1" data-i18n="student-guide:generalQuestions.minAcademicAchievement.item1">
+                            لمرشحي درجة الزمالة والبكالوريوس: 70%.</li>
+                        <li id="sg-a-maa-item2" data-i18n="student-guide:generalQuestions.minAcademicAchievement.item2">
+                            لمرشحي الدراسات العليا (الماجستير والدكتوراه): 75%.</li>
+                        <li id="sg-a-maa-item3" data-i18n="student-guide:generalQuestions.minAcademicAchievement.item3">
+                            لمرشحي العلوم الصحية (الطب البشري، طب الأسنان، الصيدلة): 90%.</li>
+                    </ul>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-university-location-restriction">هل يقتصر الاختيار على جامعات
-                        اسطنبول وأنقرة وإزمير فقط عند التقديم؟</h3>
-                    <p class="sg-answer" id="sg-a-university-location-restriction">لا، يحق للطالب اختيار جامعات في أي
-                        مدينة تركية.</p>
+                    <h3 class="sg-question" id="sg-q-slightly-below-min"
+                        data-i18n="student-guide:generalQuestions.slightlyBelowMin.question">حصلت على درجة أقل بقليل من
+                        الحد الأدنى المطلوب (مثلاً 69% للبكالوريوس)، فهل يحق لي التقدم؟</h3>
+                    <p class="sg-answer" id="sg-a-slightly-below-min"
+                        data-i18n="student-guide:generalQuestions.slightlyBelowMin.answer">الحد الأدنى المعلن هو شرط
+                        أساسي. يجب تحقيق النسبة المطلوبة كحد أدنى.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-medicine-chances">ما هي فرص حصولي على منحة الطب؟</h3>
-                    <p class="sg-answer" id="sg-a-medicine-chances">مقاعد الطب والتخصصات الطبية الأخرى محدودة جداً
-                        والمنافسة عليها شديدة للغاية. يُشترط تحقيق 90% كحد أدنى، بالإضافة إلى تفوق واضح في المواد
-                        العلمية، وسيرة ذاتية قوية.</p>
+                    <h3 class="sg-question" id="sg-q-age-criteria"
+                        data-i18n="student-guide:generalQuestions.ageCriteria.question">ما هو معيار السن المطلوب للبرامج
+                        المختلفة؟</h3>
+                    <ul class="sg-answer-list" id="sg-a-age-criteria-list">
+                        <li id="sg-a-ac-item1" data-i18n="student-guide:generalQuestions.ageCriteria.item1">برامج
+                            الزمالة والبكالوريوس: أن يكون عمر المتقدم أقل من 21 عاماً.</li>
+                        <li id="sg-a-ac-item2" data-i18n="student-guide:generalQuestions.ageCriteria.item2">برامج
+                            الماجستير: أن يكون عمر المتقدم أقل من 30 عاماً.</li>
+                        <li id="sg-a-ac-item3" data-i18n="student-guide:generalQuestions.ageCriteria.item3">برامج
+                            الدكتوراه: أن يكون عمر المتقدم أقل من 35 عاماً.</li>
+                        <li id="sg-a-ac-item4" data-i18n="student-guide:generalQuestions.ageCriteria.item4">منحة البحث:
+                            أن يكون عمر المتقدم أقل من 50 عاماً.</li>
+                    </ul>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-engineering-social-chances">ما هي فرص حصولي على منحة لدراسة الهندسة
-                        أو المواد الاجتماعية؟</h3>
-                    <p class="sg-answer" id="sg-a-engineering-social-chances">المنافسة موجودة في جميع التخصصات وتختلف
-                        حدتها. بشكل عام، التخصصات العلمية والهندسية في الجامعات المرموقة تشهد منافسة عالية. بعض التخصصات
-                        الاجتماعية قد تكون المنافسة فيها أقل نسبياً، ولكن الأمر يعتمد دائماً على قوة ملف المتقدم
-                        والجامعة والتخصص المختار.</p>
+                    <h3 class="sg-question" id="sg-q-research-grant-eligibility"
+                        data-i18n="student-guide:generalQuestions.researchGrantEligibility.question">من الذي يحق له
+                        التقديم لمنحة برنامج البحوث؟</h3>
+                    <p class="sg-answer" id="sg-a-research-grant-eligibility"
+                        data-i18n="student-guide:generalQuestions.researchGrantEligibility.answer">الباحثون والأكاديميون
+                        الحاصلون على درجة الدكتوراه، أو طلاب الدكتوراه الذين هم في مرحلة متقدمة من أبحاثهم، ويستوفون شرط
+                        العمر (أقل من 50 عاماً). غالباً ما يُشترط حصول المتقدم على دعوة أو قبول مبدئي من جامعة تركية أو
+                        مؤسسة بحثية.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-document-submission">هل يجب عليّ إرفاق الوثائق والشهادات الأصلية
-                        أثناء التسجيل؟</h3>
-                    <p class="sg-answer" id="sg-a-document-submission">أثناء عملية التقديم عبر الإنترنت، يتم رفع نسخ
-                        ممسوحة ضوئياً (scans) من الوثائق الأصلية. إذا كانت هذه الوثائق بلغة غير التركية أو الإنجليزية،
-                        فيجب إرفاق ترجمات معتمدة لها إلى إحدى هاتين اللغتين مع النسخ الأصلية. ستُطلب الوثائق الأصلية أو
-                        نسخ مصدقة منها للتحقق في مراحل لاحقة.</p>
+                    <h3 class="sg-question" id="sg-q-multiple-program-application"
+                        data-i18n="student-guide:generalQuestions.multipleProgramApplication.question">هل يحق لي التقديم
+                        لأكثر من برنامج من برامج المنحة؟</h3>
+                    <p class="sg-answer" id="sg-a-multiple-program-application"
+                        data-i18n="student-guide:generalQuestions.multipleProgramApplication.answer">يحق للطالب التقديم
+                        لمستوى دراسي واحد فقط في كل دورة تقديم.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-change-program-after-grant">هل يحق للطالب الحاصل على مقعد من خلال
-                        برنامج المنحة تغييره لاحقاً ضمن برنامج المنحة؟</h3>
-                    <p class="sg-answer" id="sg-a-change-program-after-grant">لا، سيتمكن الطالب فقط من دراسة القسم الذي
-                        تم قبوله فيه من خلال برنامج المنح التركية.</p>
+                    <h3 class="sg-question" id="sg-q-number-of-choices"
+                        data-i18n="student-guide:generalQuestions.numberOfChoices.question">كم تخصصاً (ترجيحاً) يحق لي
+                        الاختيار عند التقديم؟</h3>
+                    <p class="sg-answer" id="sg-a-number-of-choices"
+                        data-i18n="student-guide:generalQuestions.numberOfChoices.answer">يُمنح المرشحون فرصة الاختيار
+                        بين 12 خياراً (تخصصات وجامعات) عند التقديم عبر نظام التقديم الخاص بالمنح التركية (TBBS).</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-grant-for-private-admission">حصلت على مقعد من خلال برنامج المنحة،
-                        وأيضاً على قبول خاص في جامعة أخرى. فهل يمكنني استخدام مزايا المنحة للقبول الخاص؟</h3>
-                    <p class="sg-answer" id="sg-a-grant-for-private-admission">لا، يمكن الاستفادة من مزايا المنحة فقط
-                        لدراسة البرنامج الذي تم الحصول عليه من خلال التسجيل للمنحة نفسها.</p>
+                    <h3 class="sg-question" id="sg-q-placement-outside-choices"
+                        data-i18n="student-guide:generalQuestions.placementOutsideChoices.question">هل بالإمكان تنسيبي
+                        في جامعة خارج نطاق الترجيحات التى قمت باختيارها؟</h3>
+                    <p class="sg-answer" id="sg-a-placement-outside-choices"
+                        data-i18n="student-guide:generalQuestions.placementOutsideChoices.answer">عادةً ما يتم التنسيب
+                        ضمن الاختيارات التي قدمها الطالب. يُنصح بملء جميع الترجيحات الـ 12 بعناية لزيادة فرص القبول في
+                        أحدها.</p>
                 </div>
 
                 <div class="qa-block">
-                    <h3 class="sg-question" id="sg-q-transfer-department-self-funded">هل يحق للطالب الانتقال من القسم
-                        الممنوح له إلى قسم آخر على نفقته الخاصة؟</h3>
-                    <p class="sg-answer" id="sg-a-transfer-department-self-funded">نعم، يحق للطالب ذلك ولكن سيترتب عليه
-                        إكمال دراسته على نفقته الخاصة وفقدان جميع مزايا المنحة.</p>
+                    <h3 class="sg-question" id="sg-q-university-location-restriction"
+                        data-i18n="student-guide:generalQuestions.universityLocationRestriction.question">هل يقتصر
+                        الاختيار على جامعات اسطنبول وأنقرة وإزمير فقط عند التقديم؟</h3>
+                    <p class="sg-answer" id="sg-a-university-location-restriction"
+                        data-i18n="student-guide:generalQuestions.universityLocationRestriction.answer">لا، يحق للطالب
+                        اختيار جامعات في أي مدينة تركية.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-medicine-chances"
+                        data-i18n="student-guide:generalQuestions.medicineChances.question">ما هي فرص حصولي على منحة
+                        الطب؟</h3>
+                    <p class="sg-answer" id="sg-a-medicine-chances"
+                        data-i18n="student-guide:generalQuestions.medicineChances.answer">مقاعد الطب والتخصصات الطبية
+                        الأخرى محدودة جداً والمنافسة عليها شديدة للغاية. يُشترط تحقيق 90% كحد أدنى، بالإضافة إلى تفوق
+                        واضح في المواد العلمية، وسيرة ذاتية قوية.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-engineering-social-chances"
+                        data-i18n="student-guide:generalQuestions.engineeringSocialChances.question">ما هي فرص حصولي على
+                        منحة لدراسة الهندسة أو المواد الاجتماعية؟</h3>
+                    <p class="sg-answer" id="sg-a-engineering-social-chances"
+                        data-i18n="student-guide:generalQuestions.engineeringSocialChances.answer">المنافسة موجودة في
+                        جميع التخصصات وتختلف حدتها. بشكل عام، التخصصات العلمية والهندسية في الجامعات المرموقة تشهد
+                        منافسة عالية. بعض التخصصات الاجتماعية قد تكون المنافسة فيها أقل نسبياً، ولكن الأمر يعتمد دائماً
+                        على قوة ملف المتقدم والجامعة والتخصص المختار.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-document-submission"
+                        data-i18n="student-guide:generalQuestions.documentSubmission.question">هل يجب عليّ إرفاق الوثائق
+                        والشهادات الأصلية أثناء التسجيل؟</h3>
+                    <p class="sg-answer" id="sg-a-document-submission"
+                        data-i18n="student-guide:generalQuestions.documentSubmission.answer">أثناء عملية التقديم عبر
+                        الإنترنت، يتم رفع نسخ ممسوحة ضوئياً (scans) من الوثائق الأصلية. إذا كانت هذه الوثائق بلغة غير
+                        التركية أو الإنجليزية، فيجب إرفاق ترجمات معتمدة لها إلى إحدى هاتين اللغتين مع النسخ الأصلية.
+                        ستُطلب الوثائق الأصلية أو نسخ مصدقة منها للتحقق في مراحل لاحقة.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-change-program-after-grant"
+                        data-i18n="student-guide:generalQuestions.changeProgramAfterGrant.question">هل يحق للطالب الحاصل
+                        على مقعد من خلال برنامج المنحة تغييره لاحقاً ضمن برنامج المنحة؟</h3>
+                    <p class="sg-answer" id="sg-a-change-program-after-grant"
+                        data-i18n="student-guide:generalQuestions.changeProgramAfterGrant.answer">لا، سيتمكن الطالب فقط
+                        من دراسة القسم الذي تم قبوله فيه من خلال برنامج المنح التركية.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-grant-for-private-admission"
+                        data-i18n="student-guide:generalQuestions.grantForPrivateAdmission.question">حصلت على مقعد من
+                        خلال برنامج المنحة، وأيضاً على قبول خاص في جامعة أخرى. فهل يمكنني استخدام مزايا المنحة للقبول
+                        الخاص؟</h3>
+                    <p class="sg-answer" id="sg-a-grant-for-private-admission"
+                        data-i18n="student-guide:generalQuestions.grantForPrivateAdmission.answer">لا، يمكن الاستفادة من
+                        مزايا المنحة فقط لدراسة البرنامج الذي تم الحصول عليه من خلال التسجيل للمنحة نفسها.</p>
+                </div>
+
+                <div class="qa-block">
+                    <h3 class="sg-question" id="sg-q-transfer-department-self-funded"
+                        data-i18n="student-guide:generalQuestions.transferDepartmentSelfFunded.question">هل يحق للطالب
+                        الانتقال من القسم الممنوح له إلى قسم آخر على نفقته الخاصة؟</h3>
+                    <p class="sg-answer" id="sg-a-transfer-department-self-funded"
+                        data-i18n="student-guide:generalQuestions.transferDepartmentSelfFunded.answer">نعم، يحق للطالب
+                        ذلك ولكن سيترتب عليه إكمال دراسته على نفقته الخاصة وفقدان جميع مزايا المنحة.</p>
                 </div>
 
             </section>
@@ -342,8 +452,7 @@
 
     <script defer src="/public/js/language-switcher.js"></script>
     <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
-
+    <script defer src="/public/js/i18n-init.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,171 @@
+{
+  "pageTitle": "Yeni Öğrenci Rehberi - Filistin Devleti Büyükelçiliği",
+  "mainTitle": "Türkiye Bursları Yeni Öğrenci Rehberi (2025 Güncellemesi)",
+  "generalQuestions": {
+    "title": "Türkiye Bursları İle İlgili Genel Sorular",
+    "levels": {
+      "question": "Türkiye Cumhuriyeti bursları hangi seviyeleri kapsamaktadır?",
+      "answer": "Burslar lisans, yüksek lisans, doktora ve araştırma burslarını içermektedir. Ayrıca kısa vadeli ve özelleşmiş burs programları da mevcuttur ve bu programlar kapsamında belirli alanlarda yetenekli bireyler için özel kolaylıklar veya yollar sunulabilir."
+    },
+    "uniAcceptance": {
+      "question": "Bursu aldıktan sonra herhangi bir üniversiteden kabul almam gerekecek mi?",
+      "answer": "Hayır, bursu aldığınız anda, burs yönetimi başvurunuza ve niteliklerinize göre uygun bölüm ve üniversiteye resmi olarak yerleştirmenizi sağlayacaktır."
+    },
+    "foreignLang": {
+      "question": "İngilizce gibi yabancı bir dilde eğitim alabilir miyim?",
+      "answer": "Evet, bu birçok üniversite ve uzmanlık alanında mümkündür. Ancak öğrenci, kayıt sırasında yüklediği uluslararası tanınmış bir dil sertifikası (TOEFL veya IELTS gibi) aracılığıyla yabancı öğrenim dilindeki (İngilizce gibi) yeterliliğini kanıtlamalıdır. Sertifika mevcut değilse, dil testi geçmesi veya ilgili yabancı dil için hazırlık yılına kaydolması istenebilir."
+    },
+    "currentStudent": {
+      "question": "Türkiye'de herhangi bir üniversiteye kayıtlı öğrenci bu bursa başvurabilir mi?",
+      "answer": "Hayır, şu anda Türk üniversitelerinde başvuracakları aynı eğitim seviyesindeki programlara kayıtlı bireyler uygun değildir. Örneğin, Türkiye'deki mevcut bir lisans öğrencisi başka bir lisans bursuna başvuramaz."
+    },
+    "turkishLangLocation": {
+      "question": "Türkçe nerede öğretilecek?",
+      "answer": "Tüm öğrencilere bir yıl boyunca ücretsiz Türkçe dil eğitimi verilmektedir. Üniversiteler bünyesindeki Türkçe öğretim merkezlerinde (TÖMER) uzman eğitmenlerle Türkçe öğreneceksiniz."
+    },
+    "turkishLangIfEnglish": {
+      "question": "İngilizce öğretim yapan bir bölüme kabul edilsem Türkçe öğretilecek mi?",
+      "answer": "Evet, Türkçe dil hazırlık yılı, akademik çalışmaları başka bir dilde olsa bile tüm burs alıcıları için zorunludur. Amaç, öğrencilerin daha iyi entegre olmalarını ve Türk kültürünü anlamalarını sağlamaktır."
+    },
+    "scholarshipProvisions": {
+      "question": "Türkiye Cumhuriyeti bursları bana ne sağlayacak?",
+      "intro": "Burs genellikle aşağıdakilerin tümünü içerir:",
+      "item1": "Aylık maaş (aşağıdaki ayrıntılara bakın).",
+      "item2": "Türkiye'nin en iyi üniversitelerinde üniversite ücret karşılama.",
+      "item3": "Gerektiğinde sağlık hizmetlerine erişim için kapsamlı sağlık sigortası.",
+      "item4": "Öğrenci konaklama (akademik seviyeye göre farklı detaylarla).",
+      "item5": "Türkçe öğrenmek için ücretsiz bir hazırlık yılı.",
+      "item6": "Uçak bileti (ilk gelişte bir kez ve mezuniyet sonrası son dönüşte bir kez).",
+      "item7": "Üniversitelerdeki öğrenci kulüpleri ve dernekleri aracılığıyla kişisel gelişim fırsatları, ayrıca Uluslararası Öğrenciler Akademisi, uzmanlık programları, öğrenci konferansları ve Türkiye Bursları yönetimi tarafından düzenlenen sanatsal yarışmalar.",
+      "item8": "Türkiye'nin geniş mezunlar ağına katılma (160 ülkede 150.000'den fazla üye) ve Türkiye Mezunları elektronik portalı aracılığıyla ağ oluşturma."
+    },
+    "monthlyStipend": {
+      "question": "Türkiye Cumhuriyeti burslarının bana sağlayacağı aylık maaş nedir?",
+      "intro": "Aylık maaş, öğrencinin Türkiye'ye varışında açacağı banka hesabına düzenli olarak yatırılır. Mevcut tutarlar:",
+      "item1": "Ön lisans ve lisans seviyesi: Aylık 4.500 Türk Lirası.",
+      "item2": "Yüksek lisans seviyesi: Aylık 6.500 Türk Lirası.",
+      "item3": "Doktora seviyesi: Aylık 9.000 Türk Lirası.",
+      "item4": "Liyakat Burs Programı: Akademik olarak üstün nitelikli öğrenciler normal maaşın iki katına kadar aylık maaşla ödüllendirilebilir. (Bu tutarlardaki güncellemeler için lütfen resmi Türkiye bursları web sitesini kontrol edin)."
+    },
+    "accommodation": {
+      "question": "Öğrenciler istedikleri yerde yaşayabilirler mi ve konaklama düzenlemeleri nelerdir?",
+      "bachelor": "Lisans (ve ön lisans) öğrencileri: Eğitimleri boyunca öğrenci yurtlarında kalabilirler ve Türkiye bursları konaklama ücretlerini karşılar.",
+      "postgradIntro": "Lisansüstü öğrenciler (yüksek lisans ve doktora): Eğitimlerinin ilk yılında öğrenci konaklamasında kalma hakkı verilir. Sonraki yıllarda aylık konaklama ödeneği alırken ev kiralayabilirler:",
+      "item1": "İstanbul ve Ankara'da okuyan öğrenciler için 6.000 Türk Lirası.",
+      "item2": "Diğer şehirlerde okuyan öğrenciler için 5.000 Türk Lirası.",
+      "options": "Konaklama seçenekleri: Öğrenciler devlet KYK yurtlarında veya Kredi ve Yurtlar Genel Müdürlüğü'ne bağlı özel yurtlarda kalabilirler. Özel konaklama arayan öğrenciler için bireysel oda kiralama veya emlak acenteleri aracılığıyla ya da doğrudan mal sahiplerinden tam mülk kiralama gibi çeşitli seçenekler mevcuttur."
+    },
+    "turkishPrepCost": {
+      "question": "Hazırlık yılında Türkçe çalışmak için herhangi bir ücret ödeyecek miyim?",
+      "answer": "Hayır, Türkiye bursları tüm öğrencilerine ücretsiz olarak bir yıl Türkçe dil eğitimi sağlamaktadır."
+    },
+    "turkishPrepDurationBenefits": {
+      "question": "Türkçe dil hazırlık yılının süresi nedir ve bu süre boyunca öğrenci konaklaması ve sağlık sigortasından faydalanacak mıyım?",
+      "answer": "Süre bir akademik yıldır. Bu yıl boyunca öğrenci aylık maaş, öğrenci konaklaması ve sağlık sigortası dahil tüm burs avantajlarından yararlanır."
+    },
+    "bachelorDuration": {
+      "question": "Türkiye Cumhuriyeti bursları kapsamında lisans (ve ön lisans) bursunun süresi nedir?",
+      "answer": "Türkçe dili için bir hazırlık yılı + programın olağan akademik yıllarını (örneğin, ön lisans için iki yıl, çoğu lisans uzmanlığı için 4 yıl veya tıp uzmanlıkları için 5-6 yıl) içerir."
+    },
+    "postgradDuration": {
+      "question": "Türkiye Cumhuriyeti bursları kapsamında yüksek lisans ve doktora burslarının süresi nedir?",
+      "master": "Yüksek Lisans: Türkçe dili için bir hazırlık yılı + (bölüm gerekli görürse bilimsel hazırlık yılı) + akademik çalışma için iki yıl.",
+      "phd": "Doktora: Türkçe dili için bir hazırlık yılı + (gerekirse bilimsel hazırlık yılı) + akademik çalışma için dört yıl."
+    },
+    "researchDuration": {
+      "question": "Türkiye Cumhuriyeti bursları kapsamında araştırma burslarının süresi nedir?",
+      "answer": "Araştırma bursu süresi genellikle 3 ay ile 12 ay arasında değişmektedir."
+    },
+    "applicationProcess": {
+      "question": "Türkiye burslarına nasıl ve ne zaman başvurabilirim?",
+      "answer": "Türkiye bursları kayıtları genellikle Ocak ayında açılır ve her yıl tüm seviyeler için Şubat ayı sonuna kadar devam eder. Başvuru yalnızca resmi web sitesinde (www.turkiyeburslari.gov.tr) bulunan Türkiye Bursları başvuru sistemi (TBBS) aracılığıyla çevrimiçi olarak yapılır."
+    },
+    "eligibility": {
+      "question": "Türkiye burslarına kimler başvurabilir? (Uygunluk kriterleri)",
+      "eligibleIntro": "Uygun kategoriler:",
+      "eligible1": "Tüm ülke vatandaşları (Türkiye hariç).",
+      "eligible2": "Mezunlar veya mevcut akademik yılın sonunda mezun olacaklar (genellikle Ağustos öncesi).",
+      "eligible3": "Araştırmacılar ve akademisyenler.",
+      "ineligibleIntro": "Uygun olmayan kategoriler:",
+      "ineligible1": "Türk vatandaşları ve Türk vatandaşlığını kaybetmiş bireyler.",
+      "ineligible2": "Şu anda Türk üniversitelerinde başvuracakları aynı eğitim seviyesindeki programlara kayıtlı bireyler."
+    },
+    "dualNationality": {
+      "question": "Biri Türk olmak üzere çifte vatandaşlığa sahip birisi Türkiye burslarına başvurabilir mi?",
+      "answer": "Hayır, bir kişi başka bir vatandaşlığa ek olarak Türk vatandaşlığına sahipse, Türk vatandaşı sayılır ve bu nedenle bu burslara uygun değildir."
+    },
+    "highschoolInTurkey": {
+      "question": "Türkiye'de liseyi tamamlayan yabancı öğrenci Türkiye burslarına başvurabilir mi?",
+      "answer": "Evet, vatandaşlık gereksinimlerini (yani Türk vatandaşı olmaması) ve diğer başvuru gereksinimlerini karşıladığı sürece uygundur."
+    },
+    "notGraduatedYet": {
+      "question": "Bir öğrencinin Türkiye burslarına başvurabilmesi için mevcut akademik aşamasını tamamlamış olması gerekir mi?",
+      "answer": "Hayır, mevcut öğrenimlerinin son yılında olan öğrenciler, Türkiye'de öğrenime başlamadan önce resmi olarak mezun olmaları şartıyla (genellikle kabul edilen yılın Ağustos ayına kadar) başvurabilirler."
+    },
+    "deferral": {
+      "question": "Mevcut akademik aşamımı yıl sonuna kadar tamamlayamazsam ve Türkiye burslarına kabul edilirsem, bursumu bir sonraki yıla ertelemek mümkün mü?",
+      "answer": "Hayır, genellikle verilen burs için erteleme yoktur. Resmi mezuniyet belgesi sunulmalı ve kabulün alındığı akademik yılda öğrenime başlanmalıdır."
+    },
+    "minAcademicAchievement": {
+      "question": "Gerekli minimum akademik başarı kriteri nedir?",
+      "item1": "Ön lisans ve lisans derece adayları için: %70.",
+      "item2": "Lisansüstü çalışma adayları için (yüksek lisans ve doktora): %75.",
+      "item3": "Sağlık bilimleri adayları için (tıp, diş hekimliği, eczacılık): %90."
+    },
+    "slightlyBelowMin": {
+      "question": "Gerekli minimumun biraz altında bir not aldım (örneğin lisans için %69), başvurabilir miyim?",
+      "answer": "Açıklanan minimum temel bir gerekliliktir. Gerekli yüzde minimum olarak başarılmalıdır."
+    },
+    "ageCriteria": {
+      "question": "Farklı programlar için gerekli yaş kriteri nedir?",
+      "item1": "Ön lisans ve lisans programları: Başvuran 21 yaşından küçük olmalıdır.",
+      "item2": "Yüksek lisans programları: Başvuran 30 yaşından küçük olmalıdır.",
+      "item3": "Doktora programları: Başvuran 35 yaşından küçük olmalıdır.",
+      "item4": "Araştırma bursu: Başvuran 50 yaşından küçük olmalıdır."
+    },
+    "researchGrantEligibility": {
+      "question": "Araştırma programı bursuna kimler başvurabilir?",
+      "answer": "Doktora derecesine sahip araştırmacılar ve akademisyenler veya araştırmalarının ileri aşamasında olan doktora öğrencileri ve yaş gereksinimini karşılayanlar (50 yaşından küçük). Genellikle başvuranın bir Türk üniversitesi veya araştırma kurumundan davet veya ön kabul alması gerekir."
+    },
+    "multipleProgramApplication": {
+      "question": "Birden fazla burs programına başvurabilir miyim?",
+      "answer": "Bir öğrenci her başvuru döngüsünde yalnızca bir akademik seviyeye başvurabilir."
+    },
+    "numberOfChoices": {
+      "question": "Başvururken kaç uzmanlık (tercih) seçebilirim?",
+      "answer": "Adaylara Türkiye Bursları başvuru sistemi (TBBS) aracılığıyla başvururken 12 seçenek (uzmanlık ve üniversiteler) arasından seçim yapma fırsatı verilir."
+    },
+    "placementOutsideChoices": {
+      "question": "Seçtiğim tercihlerin dışında bir üniversiteye yerleştirilmek mümkün mü?",
+      "answer": "Yerleştirme genellikle öğrenci tarafından sunulan seçimler dahilindedir. Bunlardan birinde kabul şansını artırmak için tüm 12 tercihi dikkatli bir şekilde doldurmanız önerilir."
+    },
+    "universityLocationRestriction": {
+      "question": "Başvururken seçim yalnızca İstanbul, Ankara ve İzmir üniversiteleriyle sınırlı mı?",
+      "answer": "Hayır, öğrenciler herhangi bir Türk şehrindeki üniversiteleri seçebilirler."
+    },
+    "medicineChances": {
+      "question": "Tıp bursu alma şansım nedir?",
+      "answer": "Tıp ve diğer tıp uzmanlık alanları koltuları çok sınırlıdır ve bunlar için rekabet son derece yoğundur. Minimum %90 başarı gereklidir, ayrıca fen bilimlerinde açık mükemmellik ve güçlü bir CV."
+    },
+    "engineeringSocialChances": {
+      "question": "Mühendislik veya sosyal konuları okumak için burs alma şansım nedir?",
+      "answer": "Tüm uzmanlık alanlarında rekabet vardır ve yoğunluğu değişir. Genel olarak, prestijli üniversitelerdeki bilimsel ve mühendislik uzmanlık alanları yüksek rekabet görür. Bazı sosyal uzmanlık alanları nispeten daha az rekabete sahip olabilir, ancak bu her zaman başvuranın dosyasının gücüne ve seçilen üniversite ve uzmanlık alanına bağlıdır."
+    },
+    "documentSubmission": {
+      "question": "Kayıt sırasında orijinal belge ve sertifikaları eklemek zorunda mıyım?",
+      "answer": "Çevrimiçi başvuru süreci sırasında orijinal belgelerin taranmış kopyaları yüklenir. Bu belgeler Türkçe veya İngilizce dışında bir dildeyse, orijinal kopyalarla birlikte bu iki dilden birine onaylı çevirileri eklenmelidir. Sonraki aşamalarda doğrulama için orijinal belgeler veya onaylı kopyalar istenecektir."
+    },
+    "changeProgramAfterGrant": {
+      "question": "Burs programı aracılığıyla koltuk alan bir öğrenci daha sonra burs programı içinde değiştirebilir mi?",
+      "answer": "Hayır, öğrenci yalnızca Türkiye bursları programı aracılığıyla kabul edildiği bölümü okuyabilecektir."
+    },
+    "grantForPrivateAdmission": {
+      "question": "Burs programı aracılığıyla koltuk aldım ve ayrıca başka bir üniversitede özel kabul aldım. Burs avantajlarını özel kabul için kullanabilir miyim?",
+      "answer": "Hayır, burs avantajları yalnızca bursun kendisi için kayıt yoluyla elde edilen programı okumak için kullanılabilir."
+    },
+    "transferDepartmentSelfFunded": {
+      "question": "Bir öğrenci kendisine verilen bölümden kendi masrafıyla başka bir bölüme transfer olabilir mi?",
+      "answer": "Evet, öğrencinin bunu yapma hakkı vardır, ancak öğrenimini kendi masrafıyla tamamlamak zorunda kalacak ve tüm burs avantajlarını kaybedecektir."
+    }
+  }
+}

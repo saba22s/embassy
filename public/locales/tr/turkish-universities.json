@@ -1,0 +1,22 @@
+{
+    "pageTitle": "Türkiye'deki Üniversiteler - Filistin Devleti Büyükelçiliği",
+    "header": {
+        "mainTitle": "Tanınan Türk Üniversiteleri",
+        "updateDate": "Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı nezdinde – Güncelleme (Kasım 2022)"
+    },
+    "sections": {
+        "turkish": {
+            "heading": "Türk Üniversiteleri"
+        },
+        "cyprus": {
+            "heading": "Kuzey Kıbrıs Üniversiteleri"
+        }
+    },
+    "footer": {
+        "sourceLabel": "Kaynak:",
+        "sourceText": "Yükseköğretim ve Bilimsel Araştırma Bakanlığı – Güncelleme (Kasım 2022)",
+        "sourceLink": "https://www.mohe.pna.ps/services/Accredited-Universities",
+        "contactIntro": "Belirli bir üniversite adını bulamadığınız takdirde,",
+        "contactInstruction": "üniversitenin akreditasyonu hakkında bilgi almak için aşağıdaki e-posta üzerinden Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı Denklik Dairesi ile iletişime geçiniz:"
+    }
+}

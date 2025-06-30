@@ -1,0 +1,27 @@
+{
+  "pageTitle": "Suggestions and Complaints - Embassy of the State of Palestine",
+  "heroTitle": "We Listen to You",
+  "heroSubtitle": "Please fill out the form below to send your suggestions or complaints.",
+  "form": {
+    "nameLabel": "Full Name:",
+    "emailLabel": "Email Address:",
+    "phoneLabel": "Phone Number (optional):",
+    "subjectLabel": "Subject:",
+    "messageLabel": "Your Message:",
+    "submitButton": "Send Message",
+    "phoneInfo": "Please enter a valid phone number.",
+    "validation": {
+      "nameRequired": "Full name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "phoneInvalid": "Please enter a valid phone number"
+    },
+    "status": {
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully. Thank you!",
+      "error": "An error occurred while sending the message. Please try again."
+    }
+  }
+}

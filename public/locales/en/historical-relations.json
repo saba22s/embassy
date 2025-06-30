@@ -1,0 +1,70 @@
+{
+    "pageTitle": "Historical Relations - Embassy of the State of Palestine",
+    "hero": {
+        "title": "Bonds of History: The Journey of Palestinian-Turkish Relations",
+        "subtitle": "From the depths of Ottoman heritage to present-day solidarity, we explore chapters of shared history woven by events and solidified by values.",
+        "scrollDown": "Scroll down"
+    },
+    "intro": {
+        "text": "The roots of Palestinian-Turkish relations extend across centuries, where Palestine formed a vital part of the Ottoman Empire's civilizational fabric for nearly four hundred years. This historical extension was not limited to administrative aspects alone, but extended to include deep cultural and social interactions that left their clear imprints to this day. With the dawn of the modern era, these relations took on new dimensions, embodied in firm political and diplomatic positions, most notably Turkey's steadfast and continuous support for the Palestinian cause and the inalienable rights of the Palestinian people."
+    },
+    "timeline": {
+        "title": "Illuminating Milestones in a Shared Journey",
+        "events": {
+            "event1": {
+                "year": "1516 - 1917",
+                "title": "Palestine Under the Ottoman Umbrella",
+                "description": "Palestine came under the banner of the Ottoman Empire during the reign of Sultan Selim I, beginning an era that lasted four centuries, during which it witnessed prominent administrative, urban, and cultural developments, while preserving the diverse character of the region.",
+                "imageAlt": "Palestine Under the Ottoman Umbrella"
+            },
+            "event2": {
+                "year": "1917",
+                "title": "End of the Ottoman Era and Beginning of the Mandate",
+                "description": "With the events of World War I and the entry of British forces led by General Allenby, the page of Ottoman rule in Palestine was turned, beginning the era of the British Mandate.",
+                "imageAlt": "End of the Ottoman Era and Beginning of the Mandate"
+            },
+            "event3": {
+                "year": "1925",
+                "title": "Establishment of the Turkish Consulate General in Jerusalem",
+                "description": "In a step reflecting historical and religious importance, the young Turkish Republic established its consulate general in Jerusalem, which continued to perform its role as a diplomatic link.",
+                "imageAlt": "Establishment of the Turkish Consulate General in Jerusalem"
+            },
+            "event4": {
+                "year": "1979",
+                "title": "Opening of the PLO Office and Raising the Palestinian Flag in Ankara",
+                "description": "The growing relations between Turkey and the Palestine Liberation Organization culminated in the opening of an office for the organization in the capital Ankara. October 5, 1979 witnessed a historic moment with the raising of the Palestinian flag for the first time over the office building during an official visit by President Yasser Arafat.",
+                "imageAlt": "Opening of the PLO Office and Raising the Palestinian Flag in Ankara"
+            },
+            "event5": {
+                "year": "1987",
+                "title": "Naming \"Palestine Street\" in the Capital Ankara",
+                "description": "As an expression of the depth of ties, the name \"Palestine Street\" was given to the street housing the Palestine Liberation Organization office building, in an official and popular ceremony.",
+                "imageAlt": "Naming Palestine Street in the Capital Ankara"
+            },
+            "event6": {
+                "year": "1988",
+                "title": "Turkish Recognition of the State of Palestine",
+                "description": "Following the declaration of Palestinian independence in Algeria on November 15, Turkey was quick to be among the first countries to recognize the Palestinian state, thus confirming its firm support for Palestinian rights.",
+                "imageAlt": "Turkish Recognition of the State of Palestine"
+            },
+            "event7": {
+                "year": "1989",
+                "title": "Elevation of Diplomatic Representation: Palestinian Office Becomes Embassy",
+                "description": "As a translation of official recognition, the level of Palestinian diplomatic representation in Ankara was raised from an office to the Embassy of the State of Palestine to the Republic of Turkey.",
+                "imageAlt": "Elevation of Diplomatic Representation: Palestinian Office Becomes Embassy"
+            },
+            "event8": {
+                "year": "2009",
+                "title": "New Headquarters for the Palestinian Embassy in Oran District",
+                "description": "The Embassy of the State of Palestine moved to its new and modern building in the upscale Oran district of Ankara, with the official opening attended by President Mahmoud Abbas and his Turkish counterpart at the time.",
+                "imageAlt": "New Headquarters for the Palestinian Embassy in Oran District"
+            },
+            "event9": {
+                "year": "2010",
+                "title": "\"Jerusalem Street\" in Ankara: Symbolic Status",
+                "description": "Confirming the centrality of Jerusalem in Turkish and Palestinian consciousness, Ankara Municipality named the commercial street adjacent to the new Palestinian embassy building \"Jerusalem Street\".",
+                "imageAlt": "Jerusalem Street in Ankara: Symbolic Status"
+            }
+        }
+    }
+}

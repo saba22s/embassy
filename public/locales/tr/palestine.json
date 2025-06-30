@@ -1,0 +1,106 @@
+{
+  "pageTitle": "Filistin - Filistin Devleti Büyükelçiliği",
+  "mainTitle": "Filistin",
+  "navigation": {
+    "flag": "Filistin Bayrağı",
+    "capital": "Başkent",
+    "anthem": "Milli Marş",
+    "basicLaw": "Temel Kanun",
+    "population": "Nüfus"
+  },
+  "flag": {
+    "title": "Filistin Bayrağı",
+    "subtitle": "Filistin devletinin, ulusal otoritenin simgesi ve Filistin halkının çatısıdır",
+    "imageAlt": "Filistin Devleti bayrağı",
+    "imageCaption": "Filistin Devleti bayrağı",
+    "historyTitle": "Tarihi Bakış",
+    "history": {
+      "p1": "Filistin bayrağı, Filistinlilerin yirminci yüzyılın ilk yarısından beri ulusal özlemlerini ifade etmek için kullandıkları bir sancaktır.",
+      "p2": "Bu bayrak üç simetrik yatay çizgiden oluşur (yukarıdan aşağıya: siyah, beyaz ve yeşil) üzerinde bayrağın başlangıcında tabanı olan kırmızı ikizkenar üçgen (taban dikey olarak uzanır) ve üçgenin tepesi bayrağın uzunluğunun üçte birinde yatay olarak bulunur.",
+      "p3": "Şerif Hüseyin mevcut bayrağı 1916'da Arap Devrimi bayrağı olarak tasarladı. Filistinliler bayrağı 1917'de Filistin ulusal hareketine referans olarak kullandılar. 1947'de Arap Baas Partisi bayrağı özgürlük ve Arap birliği simgesi olarak yorumladı.",
+      "p4": "Filistinliler 1948'de Gazze'deki Filistin Konferansı'nda bayrağı yeniden benimsediler ve bayrak Arap Birliği tarafından Filistin halkının bayrağı olarak tanındı.",
+      "p5": "(28-5-1964) ilk toplantısında Filistin Ulusal Konseyi ulusal tüzüğünü oluşturdu ve 27. maddesi Filistin'in bayrak, yemin ve marşa sahip olması gerektiğini belirtti ve renklerini şu sırayla belirledi: yeşil, beyaz, sonra siyah kırmızı üçgenle.",
+      "p6": "(1-12-1964) tarihinde Kurtuluş Örgütü İcra Komitesi, ölçülerini ve boyutlarını belirleyen bayrak için özel bir sistem oluşturdu ve siyah ile yeşil renkler birbirinin yerini aldı. 1/1/1965'te Filistin devriminin başlamasıyla bayrağı amblem olarak benimsedi. 15 Kasım 1988'de Filistin Kurtuluş Örgütü bayrağı Filistin devletinin bayrağı olarak kabul etti.",
+      "p7": "Siyah ve beyazın Hz. Muhammed zamanında kaldırılan iki sancak olduğu, siyah sancağın da İslam öncesi dönemde intikam simgesi olarak kaldırıldığı belirtilmelidir. Abbasiler de Kerbela'da Hüseyin bin Ali'nin öldürülmesinin intikamını hatırlatmak için siyah sancağı standart olarak aldılar.",
+      "p8": "Yeşil renk için ise, Fatımiler onu Ali bin Ebi Talib'e bağlılıklarının işareti olarak kaldırdılar; o, Mekke'den Medine'ye hicret ederken 'müşriklerin' yokluğunu fark etmemeleri için gizlice Peygamber'in yatağında yattığında yeşil bir örtüyle örtünmüştü.",
+      "p9": "Emevi döneminde beyaz renk Bedir Savaşı sancağını anmak için sancak olarak benimsenmiştir. Kırmızı renk ise Halife Osman bin Affan'ın suikastından sonra ortaya çıkan ve böylece ilk 'cumhuriyetçi' grupları kuran Hariciler tarafından benimsenen renktir. Kuzey Afrika ve Endülüs'ün Müslüman fatihleri kırmızı sancaklar taşıdı ve kırmızı aynı zamanda 'Hicaz asilzadeleri' ve Haşimilerı ifade eder."
+    }
+  },
+  "capital": {
+    "title": "Başkent",
+    "imageAlt": "Kudüs, Filistin'in başkenti",
+    "mainText": "Kudüs, Filistin'in başkentidir. Bağımsızlık Bildirisi belgesinde belirtildiği gibi: 'Ulusal Konsey, Allah'ın ve Arap Filistin halkının adına, Filistin toprağımız üzerinde başkenti Kudüs olan Filistin Devleti'nin kurulduğunu ilan eder.'",
+    "lawQuote1": "Ayrıca değiştirilmiş Temel Kanun'un önsözünde belirtildiği gibi: 'Başkenti Kudüs olan Filistin devletinin kurulması; o ilk kıble, iki kutsal caminin üçüncüsü, Peygamberimiz Muhammed'in (s.a.v.) miraç yeri ve İsa Mesih'in (a.s.) doğum yeridir.'",
+    "lawQuote2": "Temel Kanun'un 3. maddesinin belirttiğine ek olarak: 'Kudüs Filistin'in başkentidir.'"
+  },
+  "anthem": {
+    "title": "Milli Marş",
+    "audioInstruction": "Filistin milli marşı 'Fedai'yi dinleyin",
+    "audioFallback": "Tarayıcınız ses öğesini desteklemiyor.",
+    "history": {
+      "p1": "Her egemen devletin bağımsızlığını kazandıktan sonra yaygınlaşan milli marşı vardır. Ancak Filistin milli marşı bağımsızlıktan önce gelmiştir, çünkü ilk gayri resmi Filistin milli marşı Filistinli şair İbrahim Tukan'ın (Vatanım) marşıydı ve bu Birleşik Arap Cumhuriyeti döneminde kullanılan aynı marştır ve aynı zamanda Irak milli marşıyla aynıdır, Lübnanlı müzisyen Muhammed Flayfel tarafından bestelenmiştir.",
+      "p2": "Modern marş (Fedai) (1972) yılında yaygınlaştı ve o yıl Filistin Kurtuluş Örgütü İcra Komitesi kararıyla Filistinliler için milli marş olarak kabul edildi ve o zamanlar Filistin devriminin marşı olarak biliniyordu. Bu, Filistin Ulusal Kurtuluş Hareketi Fetih'in, Fetih kurumsal isimlerini genel Filistin isimlerine dönüştürme bağlamında kullandığı bir marştır.",
+      "p3": "Fedai marşının bestecisi Devrim Genci olarak bilinen şair (Said el-Müzeyn)'dir, (Filistin Devrimi) adıyla yayınlanan ilk çağdaş Filistin dergilerinin kurucusudur, bestecisi ise büyük Mısırlı müzisyen (Ali İsmail)'dir. Büyük Yunan müzisyeni (Mikis Theodorakis) 1981'de Filistinliler ve onların haklı davasıyla dayanışmasını ifade eden sembolik bir adımda marşı müzikal olarak yeniden düzenledi, Filistinli besteci (Hüseyin Nazek) ise (2005) yılında marş için son müzikal düzenlemeyi yaptı.",
+      "p4": "Milli marş ulusal egemenliğin simgelerinden biri olduğundan, Filistin Bakanlar Kurulu ona büyük önem verdi, birleştirilmesi ve yeniden kaydedilmesi emrini verdi, hükümet kurumları ve büyükelçiliklere dağıtımını sağladı ve (2005) yılı için (181) numaralı onay kararı çıkardı."
+    },
+    "lyricsTitle": "Marş Metni",
+    "lyrics": "Fedai, Fedai, Fedai\nEy vatanım, ey atalar toprağı\nFedai, Fedai, Fedai\nEy halkım, ey ebediyet halkı\n\nKararlılığım ve ateşim ve intikamımın volkanıyla\nVe kanımın vatanım ve evim için özlemiyle\nDağlara tırmandım ve mücadeleye girdim\nİmkansızı yendim, zincirleri kırdım\nFedai, Fedai, Fedai\nEy vatanım, ey atalar toprağı\n\nRüzgarların fırtınası ve silahların ateşiyle\nVe halkımın mücadeleye girme kararlılığıyla\nFilistin evimdir, Filistin ateşimdir\nFilistin intikamımdır ve direnç toprağı\nFedai, Fedai, Fedai\nEy vatanım, ey atalar toprağı\n\nBayrağın gölgesi altında yeminin hakkıyla\nVatanım ve halkım ve acının ateşiyle\nFedai olarak yaşayacağım ve Fedai olarak ilerleyeceğim\nVe dönene kadar Fedai olarak öleceğim\nFedai, Fedai, Fedai\nEy vatanım, ey atalar toprağı"
+  },
+  "basicLaw": {
+    "title": "Temel Kanun",
+    "text": "(2003) yılının değiştirilmiş Filistin Temel Kanunu, Filistin'deki hükümet sisteminin yasal ve anayasal kapsamı olarak kabul edilir, çünkü hükümet sisteminin türü ve şeklinin belirleyicisi olarak kabul edilir. 5. madde 'Filistin'deki hükümet sistemi, siyasi ve parti çoğulculuğuna dayanan demokratik parlamenter bir sistemdir ve ulusal otorite başkanı halk tarafından doğrudan seçilir ve hükümet başkana ve Filistin Yasama Meclisi'ne karşı sorumludur' şeklinde belirtmektedir.",
+    "downloadText": "Temel Kanun'un bir kopyasını almak için buraya tıklayın"
+  },
+  "population": {
+    "title": "Nüfus",
+    "subtitle": "2015 yılı sonunda, 2016 Yeni Yılı arifesinde Filistinlilerin durumu şu şekildedir:",
+    "sections": {
+      "globalIncrease": {
+        "title": "Dünyada Filistinli sayısında artış",
+        "text": "Dünyada tahmini Filistinli sayısı yaklaşık 12.37 milyon Filistinliye ulaştı; Filistin Devleti'nde 4.75 milyon, İsrail'de yaklaşık 1.47 milyon Filistinli, Arap ülkelerinde yaklaşık 5.46 milyon ve yabancı ülkelerde yaklaşık 685 bin."
+      },
+      "gazaConcentration": {
+        "title": "Nüfusun üçte birinden fazlası Gazze Şeridi'nde yaşıyor",
+        "text": "Filistin Devleti'ndeki nüfus yaklaşık 4.75 milyon kişi olarak tahmin edildi; Batı Şeria'da yaklaşık 2.90 milyon ve Gazze Şeridi'nde 1.85 milyon. Mülteci nüfusun oranı Filistin Devleti'nde yaşayan toplam Filistinli nüfusun yaklaşık %42.8'ine ulaştı; Batı Şeria'da %27.1 ve Gazze Şeridi'nde %67.3."
+      },
+      "fertilityDecline": {
+        "title": "Son yıllarda doğurganlık oranlarında düşüş",
+        "text": "2011-2013 döneminde toplam doğurganlık oranı 1997'deki 6.0 doğuma kıyasla 4.1 doğuma düştü; Batı Şeria'da 3.7 doğum ve Gazze Şeridi'nde 4.5 doğum.",
+        "detailsText": "Öte yandan, özellikle 15-24 yaş grubundaki erken ve uzatılmış üreme aşamalarında ayrıntılı doğurganlık oranlarında düşüş var."
+      },
+      "familySizeDecline": {
+        "title": "Ortalama hane büyüklüğünde düşüş",
+        "text": "Ortalama hane büyüklüğü 2014'te 2000'deki 6.1 kişiye kıyasla 5.2 kişiye düştü; Batı Şeria'da 4.9 kişi ve Gazze Şeridi'nde 5.7 kişi."
+      },
+      "birthDeathRates": {
+        "title": "Ham doğum ve ölüm oranları düşüş eğiliminde",
+        "text": "2015'te Filistin'deki ham doğum oranı 1000 nüfus başına 31.9 doğuma ulaştı; Batı Şeria'da 29.0 doğum ve Gazze Şeridi'nde 36.3 doğum. Bu oranın 2020'de 29.0'a düşmesi bekleniyor. 2015'te Filistin'deki tahmini ham ölüm oranları da 1000 nüfus başına 3.6 ölüme ulaştı; Batı Şeria'da 3.7 ve Gazze Şeridi'nde 3.4, ve bu oranların 2020'de 3.4'e düşmesi bekleniyor."
+      },
+      "fertilityComparison": {
+        "title": "Ürdün'deki Filistinliler arasında Suriye ve Lübnan'daki Filistinlilere kıyasla yüksek doğurganlık oranları",
+        "text": "Ürdün'de yaşayan Filistinli kadınlar için toplam doğurganlık oranı 2010 için 3.3 doğuma ulaştı, 2010 için Suriye'de 2.5 doğuma kıyasla, 2011 için Lübnan'da oran 2.8 doğuma ulaştı.",
+        "note1": "Veriler 2010 yılını temsil ediyor",
+        "note2": "Veriler 2011 yılını temsil ediyor"
+      },
+      "israelYouth": {
+        "title": "İsrail'deki Filistin toplumu genç bir toplum",
+        "text": "2015 sonunda İsrail'deki tahmini Filistinli sayısı yaklaşık 1.47 milyon Filistinli, on beş yaş altındaki bireylerin oranı yaklaşık %34.8'e ulaştı, 2014 için 65 yaş ve üzeri bireyler için yaklaşık %4.2'ye karşılık."
+      },
+      "israelFertility": {
+        "title": "Filistin doğurganlığı Yahudi doğurganlığından daha yüksek",
+        "text": "İsrail'deki Filistinli kadınlar için toplam doğurganlık oranı 2014 için 3.2 doğuma ulaştı, İsrail'de kadın başına 3.1 doğuma kıyasla, İsrail'deki Filistinli ailelerin ortalama büyüklüğü 4.7 kişiye ulaştı ve ham doğum oranı 1000 nüfus başına yaklaşık 23.8 doğuma ulaştı."
+      },
+      "historicPalestine": {
+        "title": "Tarihi Filistin'deki Arap sayısı zamanla Yahudi sayısını aşacak",
+        "text": "2015 sonu tarihi Filistin'deki Filistinli sayısı yaklaşık 6.22 milyon, 2014 sonu İsrail İstatistik Dairesi tahminlerine göre Yahudi sayısı 6.22 milyona ulaştı ve 2015 sonu 6.34 milyona ulaşması bekleniyor. Arap ve Yahudi nüfus sayısı 2017 sonu öncesi eşit olacak. Yahudi nüfus oranı 2020 sonu nüfusun yaklaşık %49.4'ü olacak, sayıları 7.13 milyon Araba karşılık yaklaşık 6.96 milyon Yahudiye ulaşacak."
+      }
+    },
+    "chartAlts": {
+      "fertilityRate": "Filistin Devleti'nde doğurganlık oranını gösteren grafik",
+      "detailedFertility": "Filistin Devleti'nde ayrıntılı doğurganlık oranlarını gösteren grafik",
+      "familySize": "Filistin Devleti'nde ortalama hane büyüklüğünü gösteren grafik",
+      "demographicIndicators": "Filistinliler hakkında seçilmiş demografik göstergeleri gösteren grafik",
+      "arabJewish": "Tarihi Filistin'de Arap ve Yahudi nüfus sayısını gösteren grafik"
+    }
+  }
+}

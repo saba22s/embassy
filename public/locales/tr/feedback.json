@@ -1,0 +1,27 @@
+{
+  "pageTitle": "Öneriler ve Şikayetler - Filistin Devleti Büyükelçiliği",
+  "heroTitle": "Size Kulak Veriyoruz",
+  "heroSubtitle": "Öneri veya şikayetlerinizi göndermek için lütfen aşağıdaki formu doldurun.",
+  "form": {
+    "nameLabel": "Ad Soyad:",
+    "emailLabel": "E-posta Adresi:",
+    "phoneLabel": "Telefon Numarası (isteğe bağlı):",
+    "subjectLabel": "Konu:",
+    "messageLabel": "Mesajınız:",
+    "submitButton": "Mesaj Gönder",
+    "phoneInfo": "Lütfen geçerli bir telefon numarası girin.",
+    "validation": {
+      "nameRequired": "Ad soyad gereklidir",
+      "emailRequired": "E-posta adresi gereklidir",
+      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
+      "subjectRequired": "Konu gereklidir",
+      "messageRequired": "Mesaj gereklidir",
+      "phoneInvalid": "Lütfen geçerli bir telefon numarası girin"
+    },
+    "status": {
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız başarıyla gönderildi. Teşekkür ederiz!",
+      "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  }
+}

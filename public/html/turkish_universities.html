@@ -2,284 +2,329 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title-universities-page">الجامعات في تركيا - سفارة دولة فلسطين</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title id="title-universities-page" data-i18n="turkish-universities:pageTitle">الجامعات في تركيا - سفارة دولة
+                فلسطين</title>
         <link rel="icon" type="image/png" href="/public/images/logo.png">
 
+        <link rel="stylesheet" href="/public/css/main.css" />
+        <link rel="stylesheet" href="/public/css/pages/turkish-universities.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
+                rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/public/css/main.css" />
-    <link rel="stylesheet" href="/public/css/pages/turkish-universities.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Segoe+UI:wght@300;400;600;700&family=Tahoma&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- i18next Dependencies - MUST be loaded BEFORE other scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+        <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
 
 <body data-lang-direction="rtl">
-    <div id="header-container"></div>
+        <div id="header-container"></div>
 
-    <div class="universities-page-wrapper" dir="rtl">
-        <header class="universities-header-main">
-            <h1 class="page-main-title" id="universities-main-title">الجامعات التركية المعترف بها</h1>
-            <p class="page-subtitle" id="universities-update-date">لدى وزارة التعليم العالي والبحث العلمي الفلسطينية –
-                تحديث (نوفمبر 2022)</p>
-        </header>
+        <div class="universities-page-wrapper" dir="rtl">
+                <header class="universities-header-main">
+                        <h1 class="page-main-title" id="universities-main-title"
+                                data-i18n="turkish-universities:header.mainTitle">الجامعات التركية المعترف بها</h1>
+                        <p class="page-subtitle" id="universities-update-date"
+                                data-i18n="turkish-universities:header.updateDate">لدى وزارة التعليم العالي والبحث
+                                العلمي الفلسطينية – تحديث (نوفمبر 2022)</p>
+                </header>
 
-        <div class="universities-content-container">
-            <section class="university-section" id="turkish-universities">
-                <h2 class="section-title-uni" id="universities-turkey-heading">الجامعات التركية</h2>
-                <ul class="university-list">
-                    <li><span class="uni-name-main">Abant Izzet Baysal Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Abdullah Gül Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Acibadem Mehmet Ali Aydinlar University</span></li>
-                    <li><span class="uni-name-main">Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi
-                            (ATÜ)</span><span class="uni-name-alt">Adana Alparslan Turkes Science and Technology
-                            University</span></li>
-                    <li><span class="uni-name-main">Adıyaman University</span></li>
-                    <li><span class="uni-name-main">Afyon Kocatepe Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Agean University</span></li>
-                    <li><span class="uni-name-main">Agri Ibrahim Cecen University</span></li>
-                    <li><span class="uni-name-main">Ahi Evran University</span></li>
-                    <li><span class="uni-name-main">Ahmet Yesevi Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Akdeniz Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Aksaray University</span></li>
-                    <li><span class="uni-name-main">Alanya Hamdullah Emin Pasa University</span></li>
-                    <li><span class="uni-name-main">Altınbaş Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Amasya University</span></li>
-                    <li><span class="uni-name-main">Anadolu Üniversitesi</span><span class="uni-name-alt">University of
-                            Anatolia</span></li>
-                    <li><span class="uni-name-main">Ankara Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ankara Haci Bayram Veli Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ankara Sosyal Bilimler University</span></li>
-                    <li><span class="uni-name-main">Ankara Yildirim Beyazit Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Antalya Bilim University</span></li>
-                    <li><span class="uni-name-main">Ardahan University</span></li>
-                    <li><span class="uni-name-main">Artvin Coruh University</span></li>
-                    <li><span class="uni-name-main">Atatürk Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Atilim Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Avrasya University</span></li>
-                    <li><span class="uni-name-main">Aydın Adnan Menderes University</span></li>
-                    <li><span class="uni-name-main">Bahçesehir Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Balikesir Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Bandırma Onyedi Eylül Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Bartin University</span></li>
-                    <li><span class="uni-name-main">Baskent Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Batman Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Bayburt University</span></li>
-                    <li><span class="uni-name-main">Beykent Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Beykoz University</span></li>
-                    <li><span class="uni-name-main">Bezmiâlem Vakıf Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Bilecik Seyh Edebali University</span></li>
-                    <li><span class="uni-name-main">Bilkent University</span><span class="uni-name-alt">İhsan Doğramacı
-                            Bilkent University</span></li>
-                    <li><span class="uni-name-main">Bingol University</span></li>
-                    <li><span class="uni-name-main">Biruni University</span></li>
-                    <li><span class="uni-name-main">Bitlis Eren University</span></li>
-                    <li><span class="uni-name-main">Bogaziçi Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Bolu Abant Izzet Baysal University</span></li>
-                    <li><span class="uni-name-main">Bulent Ecevit Universities</span></li>
-                    <li><span class="uni-name-main">Burdur Mehmet Akif Ersoy University</span></li>
-                    <li><span class="uni-name-main">Bursa Teknik University</span></li>
-                    <li><span class="uni-name-main">Bursa Uludağ University</span></li>
-                    <li><span class="uni-name-main">Çag Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Çanakkale Onsekiz Mart Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Çankaya Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Çankırı Karatekin Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Celal Bayar Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Cerrahpasa Tip Faculty</span></li>
-                    <li><span class="uni-name-main">Çukurova Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Cumhuriyet Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Dicle Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Dogu Akdeniz Universiticsi</span><span class="uni-name-alt">Eastern
-                            Mediterranean University</span></li>
-                    <li><span class="uni-name-main">Doğuş Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Dokuz Eylül Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Dumlupinar Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Düzce University</span></li>
-                    <li><span class="uni-name-main">Duzce University Faculty of Medicine</span></li>
-                    <li><span class="uni-name-main">Ege Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Erciyes Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Erzincan Binali Yildirim University</span></li>
-                    <li><span class="uni-name-main">Erzurum Teknik Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Eskisehir Osmangazi Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Fatih Universitesi</span></li>
-                    <li><span class="uni-name-main">Fatih Sultan Mehmet Vakıf Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Fırat Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Galatasaray Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Gazi Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Gaziantep Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Gaziosmanpasa Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Gebze Yüksek Teknoloji Enstitüsü</span><span
-                            class="uni-name-alt">Gebze Institute of Technology</span></li>
-                    <li><span class="uni-name-main">Giresun University</span></li>
-                    <li><span class="uni-name-main">Gümüşhane Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Hacettepe Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Hakkari Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Haliç Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Harran Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Hasan Kalyoncu Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Hatay Mustafa Kemal Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Hitit University</span></li>
-                    <li><span class="uni-name-main">Iğdır Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Inönü Üniversitesi</span><span class="uni-name-alt">Inonu University
-                            Malatya</span></li>
-                    <li><span class="uni-name-main">Isik Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul 29 Mayıs Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Istanbul Arel University</span></li>
-                    <li><span class="uni-name-main">İstanbul Aydin Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Bilgi Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Esenyurt Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Gedik Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Gelişim Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Kültür Universitesi (IKU)</span></li>
-                    <li><span class="uni-name-main">Istanbul Medeniyet University</span></li>
-                    <li><span class="uni-name-main">Istanbul Medipol University</span></li>
-                    <li><span class="uni-name-main">Istanbul Okan University</span></li>
-                    <li><span class="uni-name-main">İstanbul Sabahattin Zaim Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Şehir Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Teknik Universitesi</span><span
-                            class="uni-name-alt">Istanbul Technical University</span></li>
-                    <li><span class="uni-name-main">İstanbul Ticaret Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Üniversitesi</span></li>
-                    <li><span class="uni-name-main">İstanbul Yeni Yüzyıl University</span></li>
-                    <li><span class="uni-name-main">İzmir Ekonomi Üniversitesi</span><span class="uni-name-alt">İzmir
-                            University of Economics</span></li>
-                    <li><span class="uni-name-main">Izmir Institute of Technology</span></li>
-                    <li><span class="uni-name-main">İzmir Kâtip Çelebi Üniversitesi (İKÇÜ)</span></li>
-                    <li><span class="uni-name-main">Izmir Yüksek Teknoloji Enstitüsü</span></li>
-                    <li><span class="uni-name-main">Kadir Has Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kafkas Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kahramanmaras Sütçü Imam Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kapadokya Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Karabük Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Karadeniz Teknik Üniversitesi</span><span
-                            class="uni-name-alt">Karadeniz Technical University</span></li>
-                    <li><span class="uni-name-main">Karamanoğlu Mehmetbey Üniversitesi (KMÜ)</span></li>
-                    <li><span class="uni-name-main">Kastamonu University</span></li>
-                    <li><span class="uni-name-main">Kilis 7 Aralık Üniversitesi (KİYÜ)</span></li>
-                    <li><span class="uni-name-main">Kirikkale Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kırşehir Ahi Evran Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Koç Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kocaeli Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Konya Gıda ve Tarım Üniversitesi</span></li>
-                    <li><span class="uni-name-main">KTO Karatay University</span></li>
-                    <li><span class="uni-name-main">Kütahya Dumlupınar Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Kütahya Sağlik Bilimleri Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Maltepe Universitesi</span></li>
-                    <li><span class="uni-name-main">Manisa Celal Bayar Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Mardin Artuklu Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Marmara Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Mersin Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Military Academy Turkey</span></li>
-                    <li><span class="uni-name-main">Mimar Sinan Güzel Sanatlar Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Muğla Sıtkı Koçman Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Munzur Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Muş Alparslan Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Mustafa Kemal Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Namik Kemal Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Necmettin Erbakan Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Nevşehir Hacı Bektaş Veli Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Niğde Ömer Halisdemir Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Nisantasi University</span></li>
-                    <li><span class="uni-name-main">Nuh Naci Yazgan Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ondokuz Mayis Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ordu University</span></li>
-                    <li><span class="uni-name-main">Orta Doğu Teknik Üniversitesi</span><span
-                            class="uni-name-alt">Middle East Technical University</span></li>
-                    <li><span class="uni-name-main">Osmaniye Korkut Ata Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ozyegin University</span></li>
-                    <li><span class="uni-name-main">Pamukkale Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Piri Reis Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Recep Tayyip Erdoğan Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Rize Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Robert College</span></li>
-                    <li><span class="uni-name-main">Sabanci Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sağlik Bilimleri Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sakarya Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sakarya Uygulamali Bilimler Universitesi</span></li>
-                    <li><span class="uni-name-main">Samsun Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sanko University</span></li>
-                    <li><span class="uni-name-main">Selçuk Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Siirt Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sinop Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Şırnak Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Sivas Cumhuriyet Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Süleyman Demirel Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Ted University</span></li>
-                    <li><span class="uni-name-main">Tekirdağ Namık Kemal Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Tobb Ekonomi ve Teknoloji Üniversitesi</span><span
-                            class="uni-name-alt">Tobb University of Economics and Technology</span></li>
-                    <li><span class="uni-name-main">Tokat Gaziosmanpaşa Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Toros University</span></li>
-                    <li><span class="uni-name-main">Trakya Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Türk-Alman Üniversitesi</span><span
-                            class="uni-name-alt">Türkisch-Deutsche Universität (TDU)</span><span
-                            class="uni-name-alt">Turkish-German University (TDU)</span></li>
-                    <li><span class="uni-name-main">Türk Hava Kurumu Üniversitesi</span><span
-                            class="uni-name-alt">University of Turkish Aeronautical Association</span></li>
-                    <li><span class="uni-name-main">Turkish Air Force Academy</span></li>
-                    <li><span class="uni-name-main">Ufuk Universitesi</span></li>
-                    <li><span class="uni-name-main">Uludag Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Usak Universitesi</span></li>
-                    <li><span class="uni-name-main">Uskudar Universitesi</span></li>
-                    <li><span class="uni-name-main">Van Yüzüncü Yıl Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Yalova University</span></li>
-                    <li><span class="uni-name-main">Yasar Universitesi</span></li>
-                    <li><span class="uni-name-main">Yeditepe Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Yildiz Teknik Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Yozgat Bozok universitesi</span></li>
-                    <li><span class="uni-name-main">Yüksek İhtisas University</span></li>
-                    <li><span class="uni-name-main">Yüzüncü Yil Üniversitesi</span></li>
-                    <li><span class="uni-name-main">Zonguldak Bülent Ecevit University</span></li>
-                    <li><span class="uni-name-main">Zonguldak Karaelmas Üniversitesi</span></li>
-                </ul>
-            </section>
+                <div class="universities-content-container">
+                        <section class="university-section" id="turkish-universities">
+                                <h2 class="section-title-uni" id="universities-turkey-heading"
+                                        data-i18n="turkish-universities:sections.turkish.heading">الجامعات التركية</h2>
+                                <ul class="university-list">
+                                        <li><span class="uni-name-main">Abant Izzet Baysal Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Abdullah Gül Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Acibadem Mehmet Ali Aydinlar University</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Adana Alparslan Türkeş Bilim ve Teknoloji
+                                                        Üniversitesi
+                                                        (ATÜ)</span><span class="uni-name-alt">Adana Alparslan Turkes
+                                                        Science and Technology
+                                                        University</span></li>
+                                        <li><span class="uni-name-main">Adıyaman University</span></li>
+                                        <li><span class="uni-name-main">Afyon Kocatepe Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Agean University</span></li>
+                                        <li><span class="uni-name-main">Agri Ibrahim Cecen University</span></li>
+                                        <li><span class="uni-name-main">Ahi Evran University</span></li>
+                                        <li><span class="uni-name-main">Ahmet Yesevi Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Akdeniz Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Aksaray University</span></li>
+                                        <li><span class="uni-name-main">Alanya Hamdullah Emin Pasa University</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Altınbaş Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Amasya University</span></li>
+                                        <li><span class="uni-name-main">Anadolu Üniversitesi</span><span
+                                                        class="uni-name-alt">University of
+                                                        Anatolia</span></li>
+                                        <li><span class="uni-name-main">Ankara Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ankara Haci Bayram Veli Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ankara Sosyal Bilimler University</span></li>
+                                        <li><span class="uni-name-main">Ankara Yildirim Beyazit Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Antalya Bilim University</span></li>
+                                        <li><span class="uni-name-main">Ardahan University</span></li>
+                                        <li><span class="uni-name-main">Artvin Coruh University</span></li>
+                                        <li><span class="uni-name-main">Atatürk Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Atilim Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Avrasya University</span></li>
+                                        <li><span class="uni-name-main">Aydın Adnan Menderes University</span></li>
+                                        <li><span class="uni-name-main">Bahçesehir Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Balikesir Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Bandırma Onyedi Eylül Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Bartin University</span></li>
+                                        <li><span class="uni-name-main">Baskent Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Batman Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Bayburt University</span></li>
+                                        <li><span class="uni-name-main">Beykent Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Beykoz University</span></li>
+                                        <li><span class="uni-name-main">Bezmiâlem Vakıf Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Bilecik Seyh Edebali University</span></li>
+                                        <li><span class="uni-name-main">Bilkent University</span><span
+                                                        class="uni-name-alt">İhsan Doğramacı
+                                                        Bilkent University</span></li>
+                                        <li><span class="uni-name-main">Bingol University</span></li>
+                                        <li><span class="uni-name-main">Biruni University</span></li>
+                                        <li><span class="uni-name-main">Bitlis Eren University</span></li>
+                                        <li><span class="uni-name-main">Bogaziçi Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Bolu Abant Izzet Baysal University</span></li>
+                                        <li><span class="uni-name-main">Bulent Ecevit Universities</span></li>
+                                        <li><span class="uni-name-main">Burdur Mehmet Akif Ersoy University</span></li>
+                                        <li><span class="uni-name-main">Bursa Teknik University</span></li>
+                                        <li><span class="uni-name-main">Bursa Uludağ University</span></li>
+                                        <li><span class="uni-name-main">Çag Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Çanakkale Onsekiz Mart Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Çankaya Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Çankırı Karatekin Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Celal Bayar Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Cerrahpasa Tip Faculty</span></li>
+                                        <li><span class="uni-name-main">Çukurova Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Cumhuriyet Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Dicle Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Dogu Akdeniz Universiticsi</span><span
+                                                        class="uni-name-alt">Eastern
+                                                        Mediterranean University</span></li>
+                                        <li><span class="uni-name-main">Doğuş Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Dokuz Eylül Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Dumlupinar Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Düzce University</span></li>
+                                        <li><span class="uni-name-main">Duzce University Faculty of Medicine</span></li>
+                                        <li><span class="uni-name-main">Ege Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Erciyes Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Erzincan Binali Yildirim University</span></li>
+                                        <li><span class="uni-name-main">Erzurum Teknik Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Eskisehir Osmangazi Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Fatih Universitesi</span></li>
+                                        <li><span class="uni-name-main">Fatih Sultan Mehmet Vakıf Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Fırat Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Galatasaray Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Gazi Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Gaziantep Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Gaziosmanpasa Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Gebze Yüksek Teknoloji Enstitüsü</span><span
+                                                        class="uni-name-alt">Gebze Institute of Technology</span></li>
+                                        <li><span class="uni-name-main">Giresun University</span></li>
+                                        <li><span class="uni-name-main">Gümüşhane Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Hacettepe Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Hakkari Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Haliç Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Harran Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Hasan Kalyoncu Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Hatay Mustafa Kemal Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Hitit University</span></li>
+                                        <li><span class="uni-name-main">Iğdır Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Inönü Üniversitesi</span><span
+                                                        class="uni-name-alt">Inonu University
+                                                        Malatya</span></li>
+                                        <li><span class="uni-name-main">Isik Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul 29 Mayıs Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Istanbul Arel University</span></li>
+                                        <li><span class="uni-name-main">İstanbul Aydin Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Bilgi Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Esenyurt Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Gedik Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Gelişim Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Kültür Universitesi (IKU)</span></li>
+                                        <li><span class="uni-name-main">Istanbul Medeniyet University</span></li>
+                                        <li><span class="uni-name-main">Istanbul Medipol University</span></li>
+                                        <li><span class="uni-name-main">Istanbul Okan University</span></li>
+                                        <li><span class="uni-name-main">İstanbul Sabahattin Zaim Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">İstanbul Şehir Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Teknik Universitesi</span><span
+                                                        class="uni-name-alt">Istanbul Technical University</span></li>
+                                        <li><span class="uni-name-main">İstanbul Ticaret Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">İstanbul Yeni Yüzyıl University</span></li>
+                                        <li><span class="uni-name-main">İzmir Ekonomi Üniversitesi</span><span
+                                                        class="uni-name-alt">İzmir
+                                                        University of Economics</span></li>
+                                        <li><span class="uni-name-main">Izmir Institute of Technology</span></li>
+                                        <li><span class="uni-name-main">İzmir Kâtip Çelebi Üniversitesi (İKÇÜ)</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Izmir Yüksek Teknoloji Enstitüsü</span></li>
+                                        <li><span class="uni-name-main">Kadir Has Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Kafkas Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Kahramanmaras Sütçü Imam Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Kapadokya Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Karabük Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Karadeniz Teknik Üniversitesi</span><span
+                                                        class="uni-name-alt">Karadeniz Technical University</span></li>
+                                        <li><span class="uni-name-main">Karamanoğlu Mehmetbey Üniversitesi (KMÜ)</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Kastamonu University</span></li>
+                                        <li><span class="uni-name-main">Kilis 7 Aralık Üniversitesi (KİYÜ)</span></li>
+                                        <li><span class="uni-name-main">Kirikkale Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Kırşehir Ahi Evran Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Koç Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Kocaeli Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Konya Gıda ve Tarım Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">KTO Karatay University</span></li>
+                                        <li><span class="uni-name-main">Kütahya Dumlupınar Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Kütahya Sağlik Bilimleri Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Maltepe Universitesi</span></li>
+                                        <li><span class="uni-name-main">Manisa Celal Bayar Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Mardin Artuklu Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Marmara Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Mersin Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Military Academy Turkey</span></li>
+                                        <li><span class="uni-name-main">Mimar Sinan Güzel Sanatlar Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Muğla Sıtkı Koçman Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Munzur Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Muş Alparslan Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Mustafa Kemal Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Namik Kemal Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Necmettin Erbakan Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Nevşehir Hacı Bektaş Veli Üniversitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Niğde Ömer Halisdemir Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Nisantasi University</span></li>
+                                        <li><span class="uni-name-main">Nuh Naci Yazgan Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ondokuz Mayis Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ordu University</span></li>
+                                        <li><span class="uni-name-main">Orta Doğu Teknik Üniversitesi</span><span
+                                                        class="uni-name-alt">Middle East Technical University</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Osmaniye Korkut Ata Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ozyegin University</span></li>
+                                        <li><span class="uni-name-main">Pamukkale Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Piri Reis Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Recep Tayyip Erdoğan Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Rize Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Robert College</span></li>
+                                        <li><span class="uni-name-main">Sabanci Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sağlik Bilimleri Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sakarya Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sakarya Uygulamali Bilimler Universitesi</span>
+                                        </li>
+                                        <li><span class="uni-name-main">Samsun Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sanko University</span></li>
+                                        <li><span class="uni-name-main">Selçuk Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Siirt Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sinop Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Şırnak Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Sivas Cumhuriyet Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Süleyman Demirel Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Ted University</span></li>
+                                        <li><span class="uni-name-main">Tekirdağ Namık Kemal Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Tobb Ekonomi ve Teknoloji
+                                                        Üniversitesi</span><span class="uni-name-alt">Tobb University of
+                                                        Economics and Technology</span></li>
+                                        <li><span class="uni-name-main">Tokat Gaziosmanpaşa Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Toros University</span></li>
+                                        <li><span class="uni-name-main">Trakya Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Türk-Alman Üniversitesi</span><span
+                                                        class="uni-name-alt">Türkisch-Deutsche Universität
+                                                        (TDU)</span><span class="uni-name-alt">Turkish-German University
+                                                        (TDU)</span></li>
+                                        <li><span class="uni-name-main">Türk Hava Kurumu Üniversitesi</span><span
+                                                        class="uni-name-alt">University of Turkish Aeronautical
+                                                        Association</span></li>
+                                        <li><span class="uni-name-main">Turkish Air Force Academy</span></li>
+                                        <li><span class="uni-name-main">Ufuk Universitesi</span></li>
+                                        <li><span class="uni-name-main">Uludag Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Usak Universitesi</span></li>
+                                        <li><span class="uni-name-main">Uskudar Universitesi</span></li>
+                                        <li><span class="uni-name-main">Van Yüzüncü Yıl Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Yalova University</span></li>
+                                        <li><span class="uni-name-main">Yasar Universitesi</span></li>
+                                        <li><span class="uni-name-main">Yeditepe Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Yildiz Teknik Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Yozgat Bozok universitesi</span></li>
+                                        <li><span class="uni-name-main">Yüksek İhtisas University</span></li>
+                                        <li><span class="uni-name-main">Yüzüncü Yil Üniversitesi</span></li>
+                                        <li><span class="uni-name-main">Zonguldak Bülent Ecevit University</span></li>
+                                        <li><span class="uni-name-main">Zonguldak Karaelmas Üniversitesi</span></li>
+                                </ul>
+                        </section>
 
-            <section class="university-section" id="northern-cyprus-universities">
-                <h2 class="section-title-uni" id="universities-cyprus-heading">جامعات قبرص الشمالية</h2>
-                <ul class="university-list">
-                    <li><span class="uni-name-main">Cyprus Health and Social Sciences University (CHSSU)</span></li>
-                    <li><span class="uni-name-main">Cyprus International University</span></li>
-                    <li><span class="uni-name-main">Cyprus Science University</span></li>
-                    <li><span class="uni-name-main">Eastern Mediterranean University</span></li>
-                    <li><span class="uni-name-main">European University Cyprus</span></li>
-                    <li><span class="uni-name-main">European University of lefke</span><span class="uni-name-alt">Lefke
-                            Avrupa Universitesi</span></li>
-                    <li><span class="uni-name-main">Final International University</span></li>
-                    <li><span class="uni-name-main">Girne American University</span></li>
-                    <li><span class="uni-name-main">Middle East Technical University Northern Cyprus Campus (METU
-                            NCC)</span></li>
-                    <li><span class="uni-name-main">Near East University</span></li>
-                    <li><span class="uni-name-main">University of Kyrenia (Girne Üniversitesi)</span></li>
-                    <li><span class="uni-name-main">University of Mediterranean Karpasia</span></li>
-                </ul>
-            </section>
+                        <section class="university-section" id="northern-cyprus-universities">
+                                <h2 class="section-title-uni" id="universities-cyprus-heading"
+                                        data-i18n="turkish-universities:sections.cyprus.heading">جامعات قبرص الشمالية
+                                </h2>
+                                <ul class="university-list">
+                                        <li><span class="uni-name-main">Cyprus Health and Social Sciences University
+                                                        (CHSSU)</span></li>
+                                        <li><span class="uni-name-main">Cyprus International University</span></li>
+                                        <li><span class="uni-name-main">Cyprus Science University</span></li>
+                                        <li><span class="uni-name-main">Eastern Mediterranean University</span></li>
+                                        <li><span class="uni-name-main">European University Cyprus</span></li>
+                                        <li><span class="uni-name-main">European University of lefke</span><span
+                                                        class="uni-name-alt">Lefke
+                                                        Avrupa Universitesi</span></li>
+                                        <li><span class="uni-name-main">Final International University</span></li>
+                                        <li><span class="uni-name-main">Girne American University</span></li>
+                                        <li><span class="uni-name-main">Middle East Technical University Northern Cyprus
+                                                        Campus (METU
+                                                        NCC)</span></li>
+                                        <li><span class="uni-name-main">Near East University</span></li>
+                                        <li><span class="uni-name-main">University of Kyrenia (Girne
+                                                        Üniversitesi)</span></li>
+                                        <li><span class="uni-name-main">University of Mediterranean Karpasia</span></li>
+                                </ul>
+                        </section>
 
-            <section class="universities-notes-section">
-                <p>
-                    <strong id="universities-source-label">المصدر:</strong>
-                    <span id="universities-source-text">وزارة التعليم العالي والبحث العلمي – تحديث (نوفمبر 2022)</span>
-                    <a href="https://www.mohe.pna.ps/services/Accredited-Universities" target="_blank" rel="noopener"
-                        id="universities-source-link">https://www.mohe.pna.ps/services/Accredited-Universities</a>
-                </p>
-                <p>
-                    <strong id="universities-contact-intro">في حال عدم العثور على اسم جامعة مُعينة،</strong>
-                    <span id="universities-contact-instruction">يُرجى التواصل مع إدارة المعادلات في وزارة التعليم العالي
-                        والبحث العلمي الفلسطينية للسؤال عن اعتماد الجامعة عبر الإيميل التالي:</span>
-                    <a href="mailto:uni.affairs@mohe.pna.ps" id="universities-contact-email">uni.affairs@mohe.pna.ps</a>
-                </p>
-            </section>
+                        <section class="universities-notes-section">
+                                <p>
+                                        <strong id="universities-source-label"
+                                                data-i18n="turkish-universities:footer.sourceLabel">المصدر:</strong>
+                                        <span id="universities-source-text"
+                                                data-i18n="turkish-universities:footer.sourceText">وزارة التعليم العالي
+                                                والبحث العلمي – تحديث (نوفمبر 2022)</span>
+                                        <a href="https://www.mohe.pna.ps/services/Accredited-Universities"
+                                                target="_blank" rel="noopener" id="universities-source-link"
+                                                data-i18n="turkish-universities:footer.sourceLink">https://www.mohe.pna.ps/services/Accredited-Universities</a>
+                                </p>
+                                <p>
+                                        <strong id="universities-contact-intro"
+                                                data-i18n="turkish-universities:footer.contactIntro">في حال عدم العثور
+                                                على اسم جامعة مُعينة،</strong>
+                                        <span id="universities-contact-instruction"
+                                                data-i18n="turkish-universities:footer.contactInstruction">يُرجى التواصل
+                                                مع إدارة المعادلات في وزارة التعليم العالي والبحث العلمي الفلسطينية
+                                                للسؤال عن اعتماد الجامعة عبر الإيميل التالي:</span>
+                                        <a href="mailto:uni.affairs@mohe.pna.ps"
+                                                id="universities-contact-email">uni.affairs@mohe.pna.ps</a>
+                                </p>
+                        </section>
+                </div>
         </div>
-    </div>
 
-    <div id="footer-container"></div>
+        <div id="footer-container"></div>
 
-    <script defer src="/public/js/language-switcher.js"></script>
-    <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/translation-manager.js"></script>
+        <!-- JavaScript Files - MUST be in correct order -->
+        <script src="/public/js/main.js"></script>
+        <script src="/public/js/i18n-init.js"></script>
+        <script src="/public/js/language-switcher.js"></script>
 
 </body>
 

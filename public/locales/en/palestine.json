@@ -1,0 +1,106 @@
+{
+  "pageTitle": "Palestine - Embassy of the State of Palestine",
+  "mainTitle": "Palestine",
+  "navigation": {
+    "flag": "Palestinian Flag",
+    "capital": "Capital",
+    "anthem": "National Anthem",
+    "basicLaw": "Basic Law",
+    "population": "Population"
+  },
+  "flag": {
+    "title": "Palestinian Flag",
+    "subtitle": "It is the symbol of the Palestinian state, the national authority, and the umbrella of the Palestinian people",
+    "imageAlt": "Flag of the State of Palestine",
+    "imageCaption": "Flag of the State of Palestine",
+    "historyTitle": "Historical Overview",
+    "history": {
+      "p1": "The Palestinian flag is a banner that Palestinians have used since the first half of the twentieth century to express their national aspirations.",
+      "p2": "This flag consists of three equal horizontal stripes (from top to bottom: black, white, and green) with a red isosceles triangle whose base is at the hoist side of the flag (the base extends vertically) and whose apex is located at one-third of the flag's length horizontally.",
+      "p3": "Sharif Hussein designed the current flag as the banner of the Arab Revolt in 1916. Palestinians used the flag as a reference to the Palestinian national movement in 1917. In 1947, the Arab Ba'ath Party interpreted the flag as a symbol of freedom and Arab unity.",
+      "p4": "Palestinians re-adopted the flag at the Palestinian Conference in Gaza in 1948, where it was recognized by the Arab League as the flag of the Palestinian people.",
+      "p5": "In the first meeting on May 28, 1964, the Palestinian National Council established its national charter, and Article 27 stipulated that Palestine should have a flag, an oath, and an anthem, specifying its colors in the following order: green, white, then black with a red triangle.",
+      "p6": "On December 1, 1964, the Executive Committee of the Palestine Liberation Organization established a special system for the flag that defined its measurements and dimensions, and the black and green colors replaced each other. With the launch of the Palestinian revolution on January 1, 1965, the flag was adopted as its emblem. On November 15, 1988, the Palestine Liberation Organization adopted the flag as the flag of the State of Palestine.",
+      "p7": "It should be noted that black and white were two banners that were raised during the era of Prophet Muhammad, and the black banner was also raised in the pre-Islamic period as a symbol of seeking revenge. The Abbasids also adopted the black banner as their standard as a reminder of revenge for the killing of Hussein ibn Ali in Karbala.",
+      "p8": "As for the green color, the Fatimids raised it as a sign of their loyalty to Ali ibn Abi Talib, who covered himself with a green blanket when he slept in the Prophet's bed during his departure from Mecca, migrating to Yathrib in disguise so that the 'polytheists' would not notice his absence.",
+      "p9": "In the Umayyad era, white was adopted as their banner in remembrance of the banner of the Battle of Badr. The red color was adopted by the Kharijites, who were among the first groups to emerge after the assassination of Caliph Uthman ibn Affan, thus establishing the first 'republican' groups. Muslim conquerors of North Africa and Andalusia carried red banners, and red also refers to the 'nobles of Hijaz' and the Hashemites."
+    }
+  },
+  "capital": {
+    "title": "Capital",
+    "imageAlt": "City of Jerusalem, capital of Palestine",
+    "mainText": "The city of Jerusalem is the capital of Palestine, as stated in the Declaration of Independence document: 'The National Council declares, in the name of God and in the name of the Arab Palestinian people, the establishment of the State of Palestine on our Palestinian land with Jerusalem the Holy as its capital.'",
+    "lawQuote1": "It was also stated in the preamble of the amended Basic Law: 'Establishing the Palestinian state with Jerusalem the Holy as its capital, which is the first of the two qiblas and the third of the two holy mosques, the site of our Prophet Muhammad's (PBUH) night journey, and the birthplace of our Lord Jesus Christ, peace be upon him.'",
+    "lawQuote2": "In addition to what Article 3 of the Basic Law states: 'Jerusalem is the capital of Palestine.'"
+  },
+  "anthem": {
+    "title": "National Anthem",
+    "audioInstruction": "Listen to the Palestinian national anthem 'Fidai'",
+    "audioFallback": "Your browser does not support the audio element.",
+    "history": {
+      "p1": "Every sovereign state has its national anthem, which becomes widespread after gaining independence. However, the Palestinian national anthem preceded independence, as the first unofficial Palestinian national anthem was 'Mawtini' (My Homeland) by Palestinian poet Ibrahim Tuqan, which was the same anthem used during the United Arab Republic era and was also the Iraqi national anthem, composed by Lebanese musician Muhammad Flayfel.",
+      "p2": "The modern anthem 'Fidai' became widespread in 1972 and was adopted as the national anthem for Palestinians by a decision of the Executive Committee of the Palestine Liberation Organization that year. It was then known as the Palestinian Revolution anthem, and it was used by the Palestinian National Liberation Movement (Fatah) in the context of converting Fatah institutional names to general Palestinian names.",
+      "p3": "The composer of the 'Fidai' anthem is the poet Said al-Muzayen, known as the Youth of the Revolution, founder of the first contemporary Palestinian magazines published under the name 'Palestinian Revolution.' The composer is the great Egyptian musician Ali Ismail. The great Greek musician Mikis Theodorakis re-orchestrated the anthem in 1981 in a symbolic step expressing his solidarity with Palestinians and their just cause, while Palestinian composer Hussein Nazek created the final musical arrangement for the anthem in 2005.",
+      "p4": "Since the national anthem is a symbol of national sovereignty, the Palestinian Council of Ministers gave it great importance and ordered its unification and re-recording, its distribution to government institutions and embassies, and issued a decision approving it numbered 181 for the year 2005."
+    },
+    "lyricsTitle": "Anthem Text",
+    "lyrics": "Fidai, Fidai, Fidai\nO my land, land of the ancestors\nFidai, Fidai, Fidai\nO my people, people of eternity\n\nWith my determination and fire and the volcano of my revenge\nAnd the longing of my blood for my land and home\nI climbed the mountains and waged the struggle\nI conquered the impossible and broke the chains\nFidai, Fidai, Fidai\nO my land, land of the ancestors\n\nWith the storm of winds and fire of weapons\nAnd my people's determination to wage the struggle\nPalestine is my home, Palestine is my fire\nPalestine is my revenge and land of steadfastness\nFidai, Fidai, Fidai\nO my land, land of the ancestors\n\nBy the right of the oath under the shadow of the flag\nBy my land and people and fire of pain\nI will live as Fidai and proceed as Fidai\nAnd die as Fidai until I return\nFidai, Fidai, Fidai\nO my land, land of the ancestors"
+  },
+  "basicLaw": {
+    "title": "Basic Law",
+    "text": "The amended Palestinian Basic Law of 2003 is considered the legal and constitutional framework for the system of government in Palestine, as it determines the type and form of the governmental system. Article 5 states that 'the system of government in Palestine is a democratic parliamentary system based on political and party pluralism, in which the President of the National Authority is elected directly by the people, and the government is responsible to the President and the Palestinian Legislative Council.'",
+    "downloadText": "To obtain a copy of the Basic Law, click here"
+  },
+  "population": {
+    "title": "Population",
+    "subtitle": "The situation of Palestinians at the end of 2015, on the eve of the New Year 2016, is as follows:",
+    "sections": {
+      "globalIncrease": {
+        "title": "Increase in the Number of Palestinians Worldwide",
+        "text": "The estimated number of Palestinians globally reached about 12.37 million Palestinians: 4.75 million in the State of Palestine, approximately 1.47 million Palestinians in Israel, about 5.46 million in Arab countries, and around 685 thousand in foreign countries."
+      },
+      "gazaConcentration": {
+        "title": "More Than One-Third of the Population Resides in the Gaza Strip",
+        "text": "The population in the State of Palestine was estimated at about 4.75 million people: approximately 2.90 million in the West Bank and 1.85 million in the Gaza Strip. The refugee population constituted about 42.8% of the total Palestinian population residing in the State of Palestine: 27.1% in the West Bank and 67.3% in the Gaza Strip."
+      },
+      "fertilityDecline": {
+        "title": "Decline in Fertility Rates During Recent Years",
+        "text": "The total fertility rate declined during the period 2011-2013 to 4.1 births, compared to 6.0 births in 1997: 3.7 births in the West Bank and 4.5 births in the Gaza Strip.",
+        "detailsText": "On the other hand, there is a decline in detailed fertility rates, especially in early and extended reproductive stages within the 15-24 age group."
+      },
+      "familySizeDecline": {
+        "title": "Decline in Average Household Size",
+        "text": "The average household size decreased to 5.2 individuals in 2014, compared to 6.1 individuals in 2000: 4.9 individuals in the West Bank and 5.7 individuals in the Gaza Strip."
+      },
+      "birthDeathRates": {
+        "title": "Crude Birth and Death Rates are Trending Downward",
+        "text": "The crude birth rate in Palestine in 2015 reached 31.9 births per 1,000 population: 29.0 births in the West Bank and 36.3 births in the Gaza Strip. This rate is expected to decrease to 29.0 by 2020. The estimated crude death rates in Palestine in 2015 also reached 3.6 deaths per 1,000 population: 3.7 in the West Bank and 3.4 in the Gaza Strip, and these rates are expected to decrease to 3.4 by 2020."
+      },
+      "fertilityComparison": {
+        "title": "Higher Fertility Rates Among Palestinians in Jordan Compared to Palestinians in Syria and Lebanon",
+        "text": "The total fertility rate for Palestinian women residing in Jordan reached 3.3 births for 2010, compared to 2.5 births in Syria for 2010, while the rate reached 2.8 births in Lebanon for 2011.",
+        "note1": "Data represents the year 2010",
+        "note2": "Data represents the year 2011"
+      },
+      "israelYouth": {
+        "title": "Palestinian Society in Israel is a Young Society",
+        "text": "The estimated number of Palestinians in Israel was about 1.47 million Palestinians at the end of 2015. The percentage of individuals under fifteen years of age reached about 34.8%, compared to approximately 4.2% for individuals aged 65 and older for the year 2014."
+      },
+      "israelFertility": {
+        "title": "Palestinian Fertility is Higher Than Jewish Fertility",
+        "text": "The total fertility rate for Palestinian women in Israel reached 3.2 births in 2014, compared to 3.1 births per woman in Israel. The average Palestinian household size in Israel reached 4.7 individuals, and the crude birth rate reached about 23.8 births per 1,000 population."
+      },
+      "historicPalestine": {
+        "title": "The Number of Arabs in Historic Palestine Will Exceed the Number of Jews Over Time",
+        "text": "The number of Palestinians in historic Palestine was about 6.22 million at the end of 2015, while the number of Jews reached 6.22 million based on Israeli Central Bureau of Statistics estimates at the end of 2014, and their number is expected to reach 6.34 million by the end of 2015. The number of Arab and Jewish populations will be equal before the end of 2017. The percentage of the Jewish population will become approximately 49.4% of the total population by the end of 2020, where their number will reach about 6.96 million Jews compared to 7.13 million Arabs."
+      }
+    },
+    "chartAlts": {
+      "fertilityRate": "Chart showing fertility rate in the State of Palestine",
+      "detailedFertility": "Chart showing detailed fertility rates in the State of Palestine",
+      "familySize": "Chart showing average household size in the State of Palestine",
+      "demographicIndicators": "Chart showing selected demographic indicators about Palestinians",
+      "arabJewish": "Chart showing the number of Arab and Jewish populations in historic Palestine"
+    }
+  }
+}

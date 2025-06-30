@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Forms - Embassy of the State of Palestine",
+  "mainTitle": "Forms",
+  "passports": {
+    "title": "Passports",
+    "description": "For information on issuing and renewing Palestinian passports, please visit the detailed passports page.",
+    "linkText": "Go to Passports Page"
+  },
+  "goodConduct": {
+    "title": "Good Conduct Certificate",
+    "description": "To request a good conduct certificate, please download the attached form, fill it out, and submit it to the embassy.",
+    "linkText": "Download Good Conduct Certificate Form"
+  },
+  "celibacy": {
+    "title": "Celibacy Certificate",
+    "description": "To request a celibacy certificate, please download the attached form, fill it out, and submit it to the embassy.",
+    "linkText": "Download Celibacy Certificate Form"
+  },
+  "childRegistration": {
+    "title": "Child ID Registration",
+    "intro": "Citizens living outside the State of Palestine who wish to return to the homeland to register their children in the ID before the child reaches five years of age (if older than five years, a permit must be obtained from the Palestinian Ministry of Interior, not exceeding 16 years). The following documents must be brought:",
+    "documents": {
+      "doc1": "Original birth certificate from the original place of birth + original marriage contract, translated and certified by the Turkish Ministries of Justice and Foreign Affairs and the Embassy of the State of Palestine.",
+      "doc2": "Bring the foreign passport if the child has one, or issue a Palestinian passport for external use (temporary).",
+      "doc3": "The citizen must ensure before entering the borders of the Palestinian state that they have obtained entry permission for the child (external form) which is an ID number given at the Israeli side, and then the citizen must follow up with the Palestinian Ministry of Interior."
+    },
+    "foreignSpouse": {
+      "title": "Regarding Foreign Wife",
+      "description": "If the wife has entry permission and is officially registered, she must bring the original marriage contract translated and certified by the Turkish Ministries of Justice and Foreign Affairs and the Embassy of the State of Palestine to the Republic of Turkey."
+    }
+  },
+  "documentCertification": {
+    "title": "Document Certification",
+    "intro": "How to certify the following certificates (university certificate, birth certificate, marriage contracts, certificate translations, etc.):",
+    "procedure": "The Embassy of the State of Palestine to the Republic of Turkey certifies various types of certificates and documents issued by various Turkish state institutions after they are certified by the Turkish Ministry of Foreign Affairs and after completing payment of the fees due at the embassy treasury."
+  }
+}

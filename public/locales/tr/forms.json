@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Formlar - Filistin Devleti Büyükelçiliği",
+  "mainTitle": "Formlar",
+  "passports": {
+    "title": "Pasaportlar",
+    "description": "Filistin pasaportlarının düzenlenmesi ve yenilenmesi hakkında bilgi almak için lütfen ayrıntılı pasaportlar sayfasını ziyaret edin.",
+    "linkText": "Pasaportlar Sayfasına Git"
+  },
+  "goodConduct": {
+    "title": "İyi Hal Belgesi",
+    "description": "İyi hal belgesi talep etmek için lütfen ekteki formu indirin, doldurun ve büyükelçiliğe sunun.",
+    "linkText": "İyi Hal Belgesi Formunu İndir"
+  },
+  "celibacy": {
+    "title": "Bekar Belgesi",
+    "description": "Bekar belgesi talep etmek için lütfen ekteki formu indirin, doldurun ve büyükelçiliğe sunun.",
+    "linkText": "Bekar Belgesi Formunu İndir"
+  },
+  "childRegistration": {
+    "title": "Çocuk Kimlik Kaydı",
+    "intro": "Filistin Devleti dışında yaşayan ve çocuklarını kimliğe kaydetmek için vatana dönmek isteyen vatandaş kardeşler, çocuk beş yaşına gelmeden önce (beş yaşından büyükse Filistin İçişleri Bakanlığı'ndan 16 yaşı geçmemek üzere izin alınmalıdır) aşağıdaki belgeleri getirmelidir:",
+    "documents": {
+      "doc1": "Doğum yerinden asıl doğum belgesi + asıl nikah cüzdanı, Türk Adalet ve Dışişleri Bakanlıkları ile Filistin Devleti Büyükelçiliği tarafından tercüme edilmiş ve onaylanmış.",
+      "doc2": "Çocukta varsa yabancı pasaport getirmek veya dış kullanım için Filistin pasaportu çıkarmak (geçici).",
+      "doc3": "Vatandaş, Filistin Devleti sınırlarına girmeden önce çocuk için giriş izni aldığından emin olmalıdır (dış form) İsrail tarafında verilen kimlik numarası şeklinde, daha sonra vatandaş Filistin İçişleri Bakanlığı ile takip etmelidir."
+    },
+    "foreignSpouse": {
+      "title": "Yabancı Eş Hakkında",
+      "description": "Eğer eş giriş iznine sahipse ve resmi olarak kayıtlıysa, Türk Adalet ve Dışişleri Bakanlıkları ile Türkiye Cumhuriyeti nezdinde Filistin Devleti Büyükelçiliği tarafından tercüme edilmiş ve onaylanmış asıl nikah cüzdanını getirmelidir."
+    }
+  },
+  "documentCertification": {
+    "title": "Belge Onaylatma",
+    "intro": "Aşağıdaki belgelerin nasıl onaylatılacağı (üniversite belgesi, doğum belgesi, nikah cüzdanları, belge çevirileri vb.):",
+    "procedure": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, Türk Dışişleri Bakanlığı tarafından onaylandıktan sonra ve büyükelçilik kasasında ödenmesi gereken ücretler tamamlandıktan sonra, çeşitli Türk devlet kurumları tarafından düzenlenen çeşitli türdeki sertifika ve belgeleri onaylar."
+  }
+}

@@ -67,7 +67,6 @@
 
         .feedback-form-card .form-group {
             margin-bottom: 20px;
-            text-align: right; /* Default for RTL */
         }
 
         .feedback-form-card .form-group label {
@@ -115,7 +114,6 @@
             color: #ff6b6b; /* Red color for errors */
             font-size: 0.85rem;
             margin-top: 5px;
-            text-align: right; /* Default for RTL */
         }
 
         .feedback-submit-button {
@@ -156,12 +154,7 @@
             color: #ff6347;
         }
 
-        /* RTL adjustments */
-        body.ltr .feedback-form-card .form-group,
-        body.ltr .feedback-form-card .error-message {
-            text-align: left;
-        }
-
+     
 
         @media (max-width: 768px) {
             .feedback-header-main {

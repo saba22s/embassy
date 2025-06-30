@@ -1,0 +1,73 @@
+{
+  "pageTitle": "Events and Activities - Embassy of the State of Palestine",
+  "heroTitle": "Events and Activities",
+  "heroSubtitle": "Follow the latest events and activities of the Embassy of the State of Palestine in the Republic of Turkey, and learn about our efforts in strengthening cultural and social ties.",
+  "events": {
+    "event1": {
+      "date": "15/05/2025",
+      "title": "Embassy of the State of Palestine to the Republic of Turkey Commemorates the 77th Nakba Anniversary",
+      "description": "The Embassy of the State of Palestine and the Palestinian community in Ankara organized an event to commemorate the seventy-seventh anniversary of the Nakba...",
+      "alt": "Commemorating the 77th Nakba Anniversary"
+    },
+    "event2": {
+      "date": "11/05/2025",
+      "title": "Nakba 77: We Will Not Leave... Palestine for Palestinians",
+      "description": "On the 77th anniversary of the Nakba, the Embassy of the State of Palestine and the Palestinian community in Ankara are honored to invite you to participate...",
+      "alt": "Invitation to Commemorate the Nakba"
+    },
+    "event3": {
+      "date": "28/02/2025",
+      "title": "Blessed Ramadan Month",
+      "description": "His Excellency Ambassador Dr. Faed Mustafa and all embassy staff extend their highest congratulations on the occasion of the holy month of Ramadan.",
+      "alt": "Ramadan Greetings"
+    },
+    "event4": {
+      "date": "21/01/2025",
+      "title": "Announcement Regarding Palestine Youth Orchestra",
+      "description": "The Edward Said National Conservatory of Music announces an invitation to all musicians of Palestinian origin to participate in the Palestine Youth Orchestra.",
+      "alt": "Palestine Youth Orchestra"
+    },
+    "event5": {
+      "date": "24/09/2023",
+      "title": "Participation in the International Cultures Festival",
+      "description": "The Embassy of the State of Palestine participated in the annual International Cultures Festival organized by the Ebrişem Foundation...",
+      "alt": "International Cultures Festival"
+    },
+    "event6": {
+      "date": "14/09/2023",
+      "title": "Dr. Fathiya Nasro Educational Research Award",
+      "description": "The Embassy announces the Ministry of Education's launch of the \"Dr. Fathiya Nasro Educational Research Award\" in honor of her spirit and in commemoration of her efforts.",
+      "alt": "Educational Research Award"
+    },
+    "event7": {
+      "date": "10/08/2023",
+      "title": "Second Palestinian Educational Innovation Conference in Istanbul",
+      "description": "The International Palestinian Innovation Foundation and the Supreme Council for Innovation and Excellence organized the Second Palestinian Educational Innovation Conference.",
+      "alt": "Educational Innovation Conference"
+    },
+    "event8": {
+      "date": "16/05/2023",
+      "title": "Embassy of the State of Palestine to the Republic of Turkey Commemorates the Nakba",
+      "description": "The Embassy of the State of Palestine and the Palestinian community in Ankara organized an event to commemorate the 75th anniversary of the Nakba at the embassy premises.",
+      "alt": "Commemorating the Nakba"
+    },
+    "event9": {
+      "date": "11/04/2023",
+      "title": "Solidarity Stand in Ankara in Support of Al-Aqsa and Solidarity with the Palestinian People",
+      "description": "The Turkish Hak-İş Labor Union organized a solidarity stand at the Embassy of the State of Palestine in support of Jerusalem and the blessed Al-Aqsa Mosque.",
+      "alt": "Solidarity Stand"
+    },
+    "event10": {
+      "date": "21/03/2023",
+      "title": "Ambassador Dr. Faed Mustafa Congratulates on the Arrival of the Holy Month of Ramadan",
+      "description": "His Excellency the Ambassador and all embassy staff extend their highest congratulations to all members of the community and Palestinian students on this occasion.",
+      "alt": "Ramadan Greetings"
+    },
+    "event11": {
+      "date": "08/02/2023",
+      "title": "General Union of Palestine Students Contributes to Earthquake Relief Efforts",
+      "description": "The General Union of Palestine Students in Turkey continues its relief and volunteer role in full coordination with the Embassy of the State of Palestine.",
+      "alt": "Earthquake Relief Efforts"
+    }
+  }
+}

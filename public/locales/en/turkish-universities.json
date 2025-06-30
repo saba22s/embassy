@@ -1,0 +1,22 @@
+{
+    "pageTitle": "Universities in Turkey - Embassy of the State of Palestine",
+    "header": {
+        "mainTitle": "Recognized Turkish Universities",
+        "updateDate": "By the Palestinian Ministry of Higher Education and Scientific Research – Updated (November 2022)"
+    },
+    "sections": {
+        "turkish": {
+            "heading": "Turkish Universities"
+        },
+        "cyprus": {
+            "heading": "Northern Cyprus Universities"
+        }
+    },
+    "footer": {
+        "sourceLabel": "Source:",
+        "sourceText": "Ministry of Higher Education and Scientific Research – Updated (November 2022)",
+        "sourceLink": "https://www.mohe.pna.ps/services/Accredited-Universities",
+        "contactIntro": "If you cannot find a specific university name,",
+        "contactInstruction": "please contact the Equivalency Department at the Palestinian Ministry of Higher Education and Scientific Research to inquire about university accreditation via the following email:"
+    }
+}

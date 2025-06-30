@@ -1,0 +1,105 @@
+{
+  "pageTitle": "Study in Turkey - Embassy of the State of Palestine",
+  "mainTitle": "Study in Turkey",
+  "subtitle": "Information about the Republic of Turkey for students wishing to study in Turkey",
+  "updateDate": "Updated 30-11-2022",
+  "generalInfo": {
+    "title": "General Information about Turkey",
+    "paragraph1": "The Republic of Turkey is distinguished by its stunning beauty, charming nature, and friendly people, as well as the diversity in heritage, customs and traditions. The Turkish people share many customs with Arab peoples due to geographical proximity and common religious character, where they are characterized by family bonding, hospitality, warmth and good hospitality.",
+    "paragraph2": "It is essential for visitors to Turkey to learn about some cultures and customs specific to the Turkish people, in order to facilitate their daily interaction with people and avoid embarrassment. Among these customs are:",
+    "customs": {
+      "greeting": "Greeting everyone, as the custom of greeting and welcoming is widespread among citizens.",
+      "respect": "Treating everyone with respect, as there is no discrimination between people.",
+      "queues": "Adhering to queues everywhere, even when using public transportation.",
+      "shoes": "The necessity of removing shoes at the door of the house, as it is not permissible to enter any house without removing shoes at the door."
+    }
+  },
+  "languageCurrency": {
+    "title": "Language and Currency",
+    "languageLabel": "Official Language:",
+    "languageValue": "Turkish language, and Turkish citizens are very devoted to their language, and most Turkish people refuse to deal in another language.",
+    "currencyLabel": "Currency:",
+    "currencyValue": "Turkish Lira."
+  },
+  "livingStandard": {
+    "title": "Standard of Living",
+    "paragraph1": "The standard of living in Turkey varies from city to city. Living costs in large cities such as Ankara and Istanbul are higher than in smaller and more distant cities, whether in terms of housing rents or shopping and purchases. An exact standard of living cannot be determined because prices are unstable and constantly changing.",
+    "paragraph2": "As for places where one can shop at reasonable prices, they are popular markets, especially for vegetables and fruits, which are found in most residential neighborhoods, with one day a week allocated for each residential neighborhood. Shopping can also be done at some famous stores such as: (ŞOK – BİM – A101) which are spread throughout all residential neighborhoods across the Republic of Turkey, and their prices are reasonable compared to other stores."
+  },
+  "transportation": {
+    "title": "Transportation",
+    "paragraph1": "All means of transportation are available in Turkey. Public transportation is the most cost-effective compared to taxis. There are many public transportation options such as: tram, dolmuş, bus, train, metro.",
+    "paragraph2": "Students can get discounts on public transportation through reduced monthly or annual subscriptions, after obtaining a student card after registering at the university."
+  },
+  "studyingDetails": {
+    "title": "Details of Studying in Turkey",
+    "paragraph1": "Turkey enjoys political and economic stability, and the modern Turkish experience in advancing the state and society is considered one of the most important models of advancement at the regional and international levels. The first decade of the third millennium witnessed a major educational, economic, social and political boom, and the education sector received focus from the Turkish government, as Turkey plans to have 500 universities at the republic level by 2023.",
+    "paragraph2": "Perhaps the most important reasons that made Turkey a destination for education are the quality and effectiveness of studying in Turkey, in addition to the fact that living costs and tuition fees in universities and language institutes are somewhat low compared to European countries. Turkish educational institutions enjoy a global reputation and global recognition in a large number of countries.",
+    "paragraph3": "Turkey has succeeded in attracting large numbers of foreign students by focusing on opening doors for study and scientific and cultural cooperation with many countries that exceeded more than 176 countries. The Turkish government was also interested in providing appropriate conditions to attract them by providing official scholarships and allocating special seats for them, in addition to simplifying procedures for obtaining visas and residence permits.",
+    "paragraph4": "Most Turkish cities include specialized universities and colleges, and higher education institutions are monitored and managed by the Higher Education Council (YÖK).",
+    "paragraph5": "Study in most universities is conducted in Turkish, but there are some specializations in a number of public universities where study is conducted in English, while private universities have specializations in both Turkish and English.",
+    "paragraph6": "The registration and admission system in Turkish universities does not depend only on academic achievement in high school, but there is a Turkish language and aptitude exam (YÖS) determined by each university according to its nature and specializations, and every student must pass these tests in order to be accepted into the specialized college. These tests have no room for favoritism or mediation, as they are automatically programmed, and no one can intervene in them.",
+    "paragraph7": "Likewise, registration in Turkish universities is done through the website of each university. Admission is based on the conditions specific to each university, as explained on its website, which differ from year to year and from college to college, as each university has its own conditions according to the college being registered for."
+  },
+  "recognizedUniversities": {
+    "title": "Turkish Universities Recognized in Palestine",
+    "paragraph1": "There is a list of Turkish universities recognized in Palestine on the website of the Palestinian Ministry of Higher Education and Scientific Research, as well as on",
+    "linkText": "the website of the Embassy of the State of Palestine to the Republic of Turkey",
+    "paragraph2": "We advise students who wish to register through university websites to review the list of recognized universities, or to contact the Palestinian Ministry of Higher Education and Scientific Research to ensure the university's recognition by the ministry before registering with it."
+  },
+  "scholarships": {
+    "title": "Scholarships in the Republic of Turkey",
+    "paragraph1": "The Republic of Turkey offers scholarships to foreign students to encourage them to study in its universities. The scholarships include all university specializations including graduate studies, where the \"Presidency for Turks Abroad and Related Communities\" (YTB) opens registration for the scholarship every year during January and February through its website:",
+    "paragraph2": "Where the student registers on the website for the first time, then fills in the required data on the website. These steps are carried out between the student and the scholarship administration through its website, without interference from anyone (no government agency or otherwise), then the scholarship administration sorts the applications, and then contacts students who meet the conditions via their emails to set interview dates, and then the scholarship administration notifies accepted students through their emails as well.",
+    "paragraph3": "The Turkish Higher Education Council (YÖK) also offers a specific number of scholarships to the State of Palestine including bachelor's and doctoral programs, and these scholarships are announced by the Palestinian Ministry of Higher Education and Scientific Research through its official website.",
+    "paragraph4": "Otherwise, application to Turkish universities is individual, through each university's website, where the required conditions and criteria differ from university to university, and this application is free and electronic. Application to universities begins in June of each year and sometimes before this date. The student must search for universities according to the specialization he wishes to study and the area he wishes to reside in.",
+    "paragraph5": "Applications are only accepted through the student registering their data on the university's official website, and applications by correspondence or hand are not accepted.",
+    "paragraph6": "Most Turkish universities, especially government ones, require studying Turkish and obtaining a certificate in it. Some universities require a TOMER certificate and others require a YÖS certificate.",
+    "turkiyeBurslariTitle": "Turkish Government Scholarship: TÜRKIYE BURSLARI",
+    "paragraph9": "This government scholarship is considered the most famous at the level of the Republic of Turkey due to the high demand from students from various countries around the world, and the diversity of programs it offers and the number of accepted students which increases steadily annually. This scholarship includes bachelor's, graduate and doctoral programs, and is comprehensive in what it covers in terms of expenses as it covers living expenses, study, health insurance and the preparatory stage for language study (English-Turkish) and booking travel tickets once (arrival and departure).",
+    "bachelor": {
+      "title": "Bachelor's Students:",
+      "qualificationsTitle": "Admission Qualifications:",
+      "condition1": "The applicant must be a citizen of a country other than Turkey (those who have Turkish citizenship or previously held it cannot apply for the scholarship).",
+      "condition2": "Must not be a student registered in Turkish universities at the level of study they wish to join.",
+      "condition3": "Must have graduated or be about to finish secondary education.",
+      "condition4": "Must be under 21 years old.",
+      "condition5": "Must have obtained a grade of no less than 90% for medical sciences, 80% for engineering bachelor's programs, and 70% for other bachelor's programs.",
+      "condition6": "Must be in good health and free from chronic diseases.",
+      "documentsNote": "Required Documents: Available on the scholarship website.",
+      "benefitsTitle": "Scholarship Benefits:",
+      "benefit1": "Monthly salary.",
+      "benefit2": "Full tuition fee coverage.",
+      "benefit3": "Free accommodation in state-run housing, determined by the scholarship administration.",
+      "benefit4": "Round-trip airline tickets (upon arrival at the beginning of the scholarship and upon departure at the end of the scholarship after completing the full study).",
+      "benefit5": "Health insurance coverage."
+    },
+    "mastersPhd": {
+      "title": "Master's and Doctoral Programs:",
+      "conditions": "Same conditions as the bachelor's program, with different academic averages, where the average must not be less than 75%. The student must be under 30 years old for master's and 35 years old for doctorate."
+    }
+  },
+  "studentProcedures": {
+    "title": "Procedures Students Must Complete",
+    "paragraph1": "Any student who wishes to study in the Republic of Turkey must, initially, learn some Turkish words and phrases, so that they can move and deal at the airport and in official transactions, and must also understand the following matters:",
+    "item1": "The Republic of Turkey offers scholarships to Palestinian students either through the YTB website as explained above, or through the Palestinian Ministry of Higher Education and Scientific Research.",
+    "item2": "Otherwise, the student applies directly to the university through its official website, and no application is accepted except through electronic application on the university's website itself.",
+    "item3": "After the student obtains university admission, they must prepare their papers and translate them into English, have them certified by the Ministry of Foreign Affairs and Expatriates, then contact the Turkish Embassy in Palestine to obtain an entry visa as a student.",
+    "item4": "After arrival, the student certifies their certificates from the Embassy of the State of Palestine in Ankara or the Consulate General of the State of Palestine in Istanbul, then translates their papers into Turkish and has them stamped by a sworn translator with the state. These offices are spread throughout the Republic of Turkey.",
+    "item5": "The student then equalizes their certificates at the Turkish Ministry of Education, by submitting originals of the high school diploma and certificates of the two academic years preceding the high school diploma for equalization to be completed.",
+    "item6": "The student must be careful to register residence as a student upon arrival, so as not to fall into violation of being in Turkey without residence.",
+    "item7": "After that, the student submits their file to the university they were accepted to.",
+    "item8": "If the study is in Turkish, the student must study at a language institute (Tömer) and the study period at the institute is approximately a full year."
+  },
+  "studentAdvice": {
+    "title": "Important Advice for Students",
+    "paragraph1": "Palestine and the Palestinian people enjoy love and appreciation among the Turkish people, and Palestinians represent a model of struggle and confronting occupation. Therefore, students coming to study in Turkey must represent their country Palestine positively, and stay away from bad habits and actions that would harm them and Palestine, as the embassy cannot intervene in these violating matters which are punishable by law with fines or imprisonment. Among the matters students must consider:",
+    "item1": "Respecting the laws and regulations of the country, and not falling into official residence violations.",
+    "item2": "Adhering to public ethics and respecting customs and traditions.",
+    "item3": "Not being present in suspicious places.",
+    "item4": "Not dealing with or using drugs.",
+    "item5": "Not harassing girls or committing indecent acts.",
+    "item6": "Not engaging in or participating in any fraudulent activities.",
+    "item7": "Not participating in any riots."
+  }
+}
