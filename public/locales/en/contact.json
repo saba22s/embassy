@@ -1,0 +1,46 @@
+{
+    "pageTitle": "Contact - Embassy of the State of Palestine in Turkey",
+    "pageSubtitle": "We are here to serve you and answer your inquiries",
+    "location": {
+        "title": "Location",
+        "address": "Oran, Kılıç Ali Cd., 06450 Çankaya/Ankara",
+        "country": "Turkey"
+    },
+    "phone": {
+        "title": "Phone Numbers",
+        "main": "Main Phone:",
+        "extension": "Extension:",
+        "mobile": "Mobile:",
+        "fax": "Fax:"
+    },
+    "whatsapp": {
+        "title": "WhatsApp",
+        "embassy": "Embassy WhatsApp:",
+        "consular": "Consular Department:"
+    },
+    "email": {
+        "title": "Email",
+        "official": "Official Email:",
+        "consular": "Consular & Educational Affairs:"
+    },
+    "hours": {
+        "title": "Working Hours",
+        "monday": "Monday:",
+        "tuesday": "Tuesday:",
+        "wednesday": "Wednesday:",
+        "thursday": "Thursday:",
+        "friday": "Friday:",
+        "saturday": "Saturday:",
+        "sunday": "Sunday:",
+        "weekday_time": "8:30 AM - 3:30 PM",
+        "closed": "Closed"
+    },
+    "social": {
+        "title": "Follow Us On"
+    },
+    "map": {
+        "title": "Location Map",
+        "subtitle": "Embassy location on the map",
+        "open_in_maps": "Open in Google Maps"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "pageTitle": "İletişim - Filistin Devleti Türkiye Büyükelçiliği",
+    "pageSubtitle": "Size hizmet etmek ve sorularınızı yanıtlamak için buradayız",
+    "location": {
+        "title": "Konum",
+        "address": "Oran, Kılıç Ali Cd., 06450 Çankaya/Ankara",
+        "country": "Türkiye"
+    },
+    "phone": {
+        "title": "Telefon Numaraları",
+        "main": "Ana Telefon:",
+        "extension": "Dahili:",
+        "mobile": "Cep Telefonu:",
+        "fax": "Faks:"
+    },
+    "whatsapp": {
+        "title": "WhatsApp",
+        "embassy": "Büyükelçilik WhatsApp:",
+        "consular": "Konsolosluk Bölümü:"
+    },
+    "email": {
+        "title": "E-posta",
+        "official": "Resmi E-posta:",
+        "consular": "Konsolosluk ve Eğitim İşleri:"
+    },
+    "hours": {
+        "title": "Çalışma Saatleri",
+        "monday": "Pazartesi:",
+        "tuesday": "Salı:",
+        "wednesday": "Çarşamba:",
+        "thursday": "Perşembe:",
+        "friday": "Cuma:",
+        "saturday": "Cumartesi:",
+        "sunday": "Pazar:",
+        "weekday_time": "08:30 - 15:30",
+        "closed": "Kapalı"
+    },
+    "social": {
+        "title": "Bizi Takip Edin"
+    },
+    "map": {
+        "title": "Konum Haritası",
+        "subtitle": "Büyükelçiliğin haritadaki konumu",
+        "open_in_maps": "Google Haritalar'da Aç"
+    }
+}
