@@ -2,26 +2,26 @@
   "pageTitle": "Suggestions and Complaints - Embassy of the State of Palestine",
   "heroTitle": "We Listen to You",
   "heroSubtitle": "Please fill out the form below to send your suggestions or complaints.",
-  "form": {
-    "nameLabel": "Full Name:",
-    "emailLabel": "Email Address:",
-    "phoneLabel": "Phone Number (optional):",
-    "subjectLabel": "Subject:",
-    "messageLabel": "Your Message:",
-    "submitButton": "Send Message",
-    "phoneInfo": "Please enter a valid phone number.",
-    "validation": {
-      "nameRequired": "Full name is required",
-      "emailRequired": "Email address is required",
-      "emailInvalid": "Please enter a valid email address",
-      "subjectRequired": "Subject is required",
-      "messageRequired": "Message is required",
-      "phoneInvalid": "Please enter a valid phone number"
+  "formHeader": {
+    "title": "Suggestions and Complaints Form",
+    "description": "We value your opinions and suggestions. You can send your suggestions or complaints through the form below and we will contact you as soon as possible.",
+    "directEmail": "Direct Email",
+    "quickCall": "Quick Call"
+  },
+  "formAlternative": {
+    "title": "Or open the form in a separate window",
+    "description": "If the form does not display correctly, you can open it in a new window",
+    "openForm": "Open Form"
+  },
+  "importantInfo": {
+    "title": "Important Information",
+    "points": {
+      "notification": "An instant notification will be sent to email upon receiving your message",
+      "security": "All data is securely stored",
+      "response": "We will respond to you within 24-48 business hours"
     },
-    "status": {
-      "sending": "Sending...",
-      "success": "Your message has been sent successfully. Thank you!",
-      "error": "An error occurred while sending the message. Please try again."
-    }
-  }
+    "emergency": "For urgent cases: +90 312 490 35 46",
+    "directEmail": "Direct email: tremb@mfae.gov.ps"
+  },
+  "loading": "Loading..."
 }

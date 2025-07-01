@@ -19,6 +19,124 @@
     <!-- i18next Dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
+
+    <style>
+        /* أنماط إضافية للـ Google Form */
+        .google-form-container {
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--feedback-border-color);
+        }
+
+        .google-form-container iframe {
+            width: 100%;
+            min-height: 800px;
+            border: none;
+            background-color: var(--feedback-card-bg);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: rgba(var(--feedback-accent-gold-rgb), 0.1);
+            border: 1px solid var(--feedback-border-color);
+            border-radius: 10px;
+        }
+
+        .form-header h3 {
+            color: var(--feedback-accent-gold);
+            margin-bottom: 10px;
+            font-family: var(--font-secondary-feedback);
+            font-size: 1.3rem;
+        }
+
+        .form-header p {
+            color: var(--feedback-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .direct-contact {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-quick-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--feedback-accent-gold);
+            color: var(--feedback-bg);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-quick-btn:hover {
+            background-color: var(--feedback-hover-accent);
+            transform: translateY(-2px);
+        }
+
+        .form-alternative {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: rgba(var(--feedback-accent-gold-rgb), 0.05);
+            border-radius: 10px;
+            border: 1px solid var(--feedback-border-color);
+        }
+
+        .form-alternative h4 {
+            color: var(--feedback-accent-gold);
+            margin-bottom: 10px;
+            font-family: var(--font-secondary-feedback);
+        }
+
+        .form-alternative p {
+            color: var(--feedback-text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .open-form-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4285F4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .open-form-btn:hover {
+            background-color: #3367D6;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .google-form-container iframe {
+                min-height: 600px;
+            }
+
+            .direct-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-quick-btn {
+                min-width: 200px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body data-lang-direction="rtl">
@@ -27,52 +145,82 @@
     <main class="feedback-page-wrapper">
         <header class="feedback-header-main">
             <h1 id="feedback-hero-title" class="page-main-title-feedback" data-i18n="feedback:heroTitle">نستمع إليك</h1>
-            <p id="feedback-hero-subtitle" class="page-subtitle-feedback" data-i18n="feedback:heroSubtitle">يرجى ملء النموذج أدناه لإرسال اقتراحاتكم أو
-                شكاويكم.</p>
+            <p id="feedback-hero-subtitle" class="page-subtitle-feedback" data-i18n="feedback:heroSubtitle">يرجى ملء
+                النموذج أدناه لإرسال اقتراحاتكم أو شكاويكم.</p>
         </header>
 
         <div class="feedback-content-container">
+
+            <!-- معلومات توضيحية -->
+            <div class="form-header">
+                <h3><i class="fas fa-comments"></i> <span data-i18n="feedback:formHeader.title">نموذج الاقتراحات
+                        والشكاوى</span></h3>
+                <p data-i18n="feedback:formHeader.description">نحن نقدر آراءكم ومقترحاتكم. يمكنكم إرسال اقتراحاتكم أو
+                    شكاويكم من خلال النموذج أدناه وسنتواصل معكم في
+                    أقرب وقت ممكن.</p>
+
+                <!-- خيارات التواصل السريع -->
+                <div class="direct-contact">
+                    <a href="mailto:ssaawwdd@gmail.com" class="contact-quick-btn">
+                        <i class="fas fa-envelope"></i> <span data-i18n="feedback:formHeader.directEmail">إيميل
+                            مباشر</span>
+                    </a>
+                    <a href="tel:+903124903546" class="contact-quick-btn">
+                        <i class="fas fa-phone"></i> <span data-i18n="feedback:formHeader.quickCall">اتصال فوري</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Google Form مدمج -->
             <section class="feedback-form-card">
-                <form id="contactForm" action="../../server/process_feedback.php" method="POST" novalidate>
-                    <div class="form-group">
-                        <label for="fullName" id="feedback-name-label" data-i18n="feedback:form.nameLabel">الاسم الكامل:</label>
-                        <input type="text" id="fullName" name="fullName" required aria-required="true"
-                            aria-describedby="fullName-error">
-                        <div class="error-message" id="fullName-error" aria-live="polite"></div>
-                    </div>
+                <div class="google-form-container">
+                    
+                    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
+                        frameborder="0" marginheight="0" marginwidth="0">
+                        <span data-i18n="feedback:loading">جاري التحميل...</span>
+                    </iframe>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email" id="feedback-email-label" data-i18n="feedback:form.emailLabel">البريد الإلكتروني:</label>
-                        <input type="email" id="email" name="email" required aria-required="true"
-                            aria-describedby="email-error">
-                        <div class="error-message" id="email-error" aria-live="polite"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone" id="feedback-phone-label" data-i18n="feedback:form.phoneLabel">رقم الهاتف (اختياري):</label>
-                        <input type="tel" id="phone" name="phone" aria-describedby="phone-info">
-                        <small id="phone-info" class="sr-only" data-i18n="feedback:form.phoneInfo">يرجى إدخال رقم هاتف صالح.</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject" id="feedback-subject-label" data-i18n="feedback:form.subjectLabel">الموضوع:</label>
-                        <input type="text" id="subject" name="subject" required aria-required="true"
-                            aria-describedby="subject-error">
-                        <div class="error-message" id="subject-error" aria-live="polite"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" id="feedback-message-label" data-i18n="feedback:form.messageLabel">رسالتك:</label>
-                        <textarea id="message" name="message" rows="6" required aria-required="true"
-                            aria-describedby="message-error"></textarea>
-                        <div class="error-message" id="message-error" aria-live="polite"></div>
-                    </div>
-
-                    <button type="submit" id="feedback-submit-button" class="feedback-submit-button" data-i18n="feedback:form.submitButton">إرسال
-                        الرسالة</button>
-                    <div id="formStatusMessage" class="feedback-message-status" role="status" aria-live="polite"></div>
-                </form>
+                <!-- بديل لفتح النموذج في نافذة منفصلة -->
+                <div class="form-alternative">
+                    <h4><i class="fas fa-external-link-alt"></i> <span data-i18n="feedback:formAlternative.title">أو
+                            افتح النموذج في نافذة منفصلة</span></h4>
+                    <p data-i18n="feedback:formAlternative.description">إذا كان النموذج لا يظهر بشكل صحيح، يمكنك فتحه في
+                        نافذة جديدة</p>
+                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank"
+                        class="open-form-btn">
+                        <i class="fab fa-google"></i> <span data-i18n="feedback:formAlternative.openForm">فتح
+                            النموذج</span>
+                    </a>
+                </div>
             </section>
+
+            <!-- معلومات إضافية -->
+            <div
+                style="background-color: rgba(var(--feedback-accent-gold-rgb), 0.1); border: 1px solid var(--feedback-border-color); border-radius: 10px; padding: 20px; margin-top: 25px; text-align: center;">
+                <h4 style="color: var(--feedback-accent-gold); margin-bottom: 10px;">
+                    <i class="fas fa-info-circle"></i> <span data-i18n="feedback:importantInfo.title">معلومات
+                        مهمة</span>
+                </h4>
+                <div style="color: var(--feedback-text-secondary); margin-bottom: 10px;">
+                    <p>• <span data-i18n="feedback:importantInfo.points.notification">سيتم إرسال إشعار فوري إلى البريد
+                            الإلكتروني عند استلام رسالتك</span></p>
+                    <p>• <span data-i18n="feedback:importantInfo.points.security">جميع البيانات محفوظة بشكل آمن</span>
+                    </p>
+                    <p>• <span data-i18n="feedback:importantInfo.points.response">سنرد عليك خلال 24-48 ساعة عمل</span>
+                    </p>
+                </div>
+
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--feedback-border-color);">
+                    <p style="color: var(--feedback-text-secondary); font-size: 0.9rem;">
+                        📞 <span data-i18n="feedback:importantInfo.emergency">للحالات العاجلة: +90 312 490 35
+                            46</span><br>
+                        📧 <span data-i18n="feedback:importantInfo.directEmail">البريد المباشر:
+                            tremb@mfae.gov.ps</span>
+                    </p>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -80,8 +228,32 @@
 
     <script defer src="/public/js/language-switcher.js"></script>
     <script defer src="/public/js/main.js"></script>
-    <script defer src="/public/js/page-specific/feedback-form.js"></script>
     <script defer src="/public/js/i18n-init.js"></script>
+
+    <script>
+        // تحسين عرض النموذج
+        document.addEventListener('DOMContentLoaded', function () {
+            const iframe = document.querySelector('.google-form-container iframe');
+
+            if (iframe) {
+                // تعديل ارتفاع النموذج حسب المحتوى
+                iframe.onload = function () {
+                    try {
+                        const iframeHeight = iframe.contentWindow.document.body.scrollHeight;
+                        if (iframeHeight > 400) {
+                            iframe.style.height = Math.min(iframeHeight + 50, 1000) + 'px';
+                        }
+                    } catch (e) {
+                        console.log('Cannot access iframe content due to CORS policy');
+                    }
+                };
+
+                console.log('✅ Google Form loaded successfully');
+            } else {
+                console.warn('⚠️ Google Form iframe not found');
+            }
+        });
+    </script>
 
 </body>
 

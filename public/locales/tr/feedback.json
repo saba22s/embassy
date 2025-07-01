@@ -2,26 +2,26 @@
   "pageTitle": "Öneriler ve Şikayetler - Filistin Devleti Büyükelçiliği",
   "heroTitle": "Size Kulak Veriyoruz",
   "heroSubtitle": "Öneri veya şikayetlerinizi göndermek için lütfen aşağıdaki formu doldurun.",
-  "form": {
-    "nameLabel": "Ad Soyad:",
-    "emailLabel": "E-posta Adresi:",
-    "phoneLabel": "Telefon Numarası (isteğe bağlı):",
-    "subjectLabel": "Konu:",
-    "messageLabel": "Mesajınız:",
-    "submitButton": "Mesaj Gönder",
-    "phoneInfo": "Lütfen geçerli bir telefon numarası girin.",
-    "validation": {
-      "nameRequired": "Ad soyad gereklidir",
-      "emailRequired": "E-posta adresi gereklidir",
-      "emailInvalid": "Lütfen geçerli bir e-posta adresi girin",
-      "subjectRequired": "Konu gereklidir",
-      "messageRequired": "Mesaj gereklidir",
-      "phoneInvalid": "Lütfen geçerli bir telefon numarası girin"
+  "formHeader": {
+    "title": "Öneri ve Şikayet Formu",
+    "description": "Görüşlerinizi ve önerilerinizi değerli buluyoruz. Öneri veya şikayetlerinizi aşağıdaki form aracılığıyla gönderebilirsiniz, en kısa sürede sizinle iletişime geçeceğiz.",
+    "directEmail": "Doğrudan E-posta",
+    "quickCall": "Hızlı Arama"
+  },
+  "formAlternative": {
+    "title": "Veya formu ayrı bir pencerede açın",
+    "description": "Form düzgün görüntülenmiyorsa, yeni bir pencerede açabilirsiniz",
+    "openForm": "Formu Aç"
+  },
+  "importantInfo": {
+    "title": "Önemli Bilgiler",
+    "points": {
+      "notification": "Mesajınız alındığında e-postaya anında bildirim gönderilecektir",
+      "security": "Tüm veriler güvenli bir şekilde saklanmaktadır",
+      "response": "24-48 iş saati içinde size geri döneceğiz"
     },
-    "status": {
-      "sending": "Gönderiliyor...",
-      "success": "Mesajınız başarıyla gönderildi. Teşekkür ederiz!",
-      "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin."
-    }
-  }
+    "emergency": "Acil durumlar için: +90 312 490 35 46",
+    "directEmail": "Doğrudan e-posta: tremb@mfae.gov.ps"
+  },
+  "loading": "Yükleniyor..."
 }
