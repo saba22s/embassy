@@ -11,8 +11,9 @@ function applyTranslations() {
 
     console.log('🔄 Applying translations...');
     
-    // ترجمة النصوص العادية
     let translatedCount = 0;
+    
+    // ترجمة النصوص العادية
     document.querySelectorAll('[data-i18n]:not([data-i18n*="["])').forEach(element => {
         const key = element.getAttribute('data-i18n');
         try {
@@ -20,7 +21,7 @@ function applyTranslations() {
             if (translation && translation !== key) {
                 element.textContent = translation;
                 translatedCount++;
-                console.log(`✅ Translated: ${key} -> ${translation.substring(0, 50)}...`);
+                console.log(`✅ Translated: ${key}`);
             } else {
                 console.warn(`⚠️ Missing translation for: ${key}`);
             }
@@ -29,7 +30,7 @@ function applyTranslations() {
         }
     });
 
-    // ترجمة السمات
+    // ترجمة السمات (attributes)
     document.querySelectorAll('[data-i18n*="["]').forEach(element => {
         const keyWithAttribute = element.getAttribute('data-i18n');
         const match = keyWithAttribute.match(/\[(\w+)\](.+)/);
@@ -52,20 +53,21 @@ function applyTranslations() {
     console.log(`📊 Total translations applied: ${translatedCount}`);
 
     // تحديث اتجاه الصفحة
+    updatePageDirection();
+}
+
+// وظيفة تحديث اتجاه الصفحة
+function updatePageDirection() {
     const currentLang = i18next.language;
     const direction = currentLang === 'ar' ? 'rtl' : 'ltr';
+    
     document.documentElement.setAttribute('dir', direction);
     document.documentElement.setAttribute('lang', currentLang);
-    
-    const body = document.body;
-    if (body && body.hasAttribute('data-lang-direction')) {
-        body.setAttribute('data-lang-direction', direction);
-    }
     
     console.log(`🌍 Language direction set to: ${direction} for ${currentLang}`);
 }
 
-// دالة ذكية لاكتشاف مساحة الاسم من اسم الملف
+// دالة اكتشاف مساحة الاسم من اسم الملف
 function detectPageNamespace() {
     const currentPath = window.location.pathname.toLowerCase();
     const fileName = currentPath.split('/').pop() || 'index.html';
@@ -83,7 +85,7 @@ function detectPageNamespace() {
         'embassy': 'embassy', 
         'former_ambassadors': 'former-ambassadors',
         
-        // العلاقات - تحويل underscore إلى dash
+        // العلاقات
         'cultural_relations': 'cultural-relations',
         'historical_relations': 'historical-relations',
         'economic_relations': 'economic-relations',
@@ -104,7 +106,9 @@ function detectPageNamespace() {
         'palestine': 'palestine',
         'turkey': 'turkey',
         'events': 'events',
-        'feedback': 'feedback'
+        'feedback': 'feedback',
+        'contact': 'contact',
+        'news': 'news'
     };
     
     const namespace = pageToNamespace[baseName] || baseName;
@@ -113,8 +117,8 @@ function detectPageNamespace() {
     return namespace;
 }
 
-// دالة تهيئة i18next المحسّنة
-window.initI18n = function() {
+// دالة تهيئة i18next
+function initI18n() {
     console.log('🚀 Starting i18next initialization...');
     
     // التحقق من المتطلبات
@@ -155,38 +159,21 @@ window.initI18n = function() {
                 allowMultiLoading: false,
                 crossDomain: false
             },
-            // إعدادات إضافية للتعامل مع الأخطاء
-            load: 'languageOnly', // تحميل اللغة فقط بدون regional code
-            preload: [savedLang], // تحميل اللغة المحفوظة مسبقاً
-            cleanCode: true // تنظيف كود اللغة
+            load: 'languageOnly',
+            preload: [savedLang],
+            cleanCode: true
         }, function(err, t) {
             if (err) {
                 console.error('❌ i18next initialization failed:', err);
-                console.error('📋 Error details:', {
-                    message: err.message,
-                    stack: err.stack,
-                    namespaces: namespaces,
-                    language: savedLang
-                });
-                
-                // fallback للنصوص الافتراضية
-                console.log('🔄 Using default text as fallback...');
                 return;
             }
             
             console.log('✅ i18next initialized successfully!');
             console.log(`📋 Loaded languages: ${Object.keys(i18next.store.data).join(', ')}`);
-            console.log(`📋 Available namespaces: ${JSON.stringify(i18next.options.ns)}`);
-            
-            // اختبار ترجمة بسيطة للتأكد
-            if (pageNamespace !== 'home') {
-                const testKey = `${pageNamespace}:pageTitle`;
-                const testTranslation = i18next.t(testKey);
-                console.log(`🧪 Test translation: ${testKey} -> ${testTranslation}`);
-            }
             
             applyTranslations();
             
+            // Dispatch ready event
             document.dispatchEvent(new CustomEvent('i18nextReady', {
                 detail: {
                     language: savedLang,
@@ -203,23 +190,21 @@ window.initI18n = function() {
         applyTranslations();
     });
 
-    // مراقبة أخطاء التحميل مع تفاصيل أكثر
+    // مراقبة أخطاء التحميل
     i18next.on('failedLoading', (lng, ns, msg) => {
         console.error(`❌ Failed to load ${lng}/${ns}:`, msg);
         console.error(`💡 Expected file: /public/locales/${lng}/${ns}.json`);
-        
-        // اقتراح البحث عن ملفات بديلة
-        if (ns.includes('-')) {
-            const alternativeNs = ns.replace(/-/g, '_');
-            console.log(`💡 Try checking for alternative file: /public/locales/${lng}/${alternativeNs}.json`);
-        }
     });
-};
+}
 
-// بدء التشغيل
+/*====================================================
+  INITIALIZATION
+====================================================*/
+
+// بدء التشغيل عند تحميل المكونات
 document.addEventListener('componentsLoaded', () => {
     console.log('📦 Components loaded, initializing i18n...');
-    window.initI18n();
+    initI18n();
 });
 
 // احتياطي للتشغيل المباشر
@@ -228,14 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         if (typeof i18next === 'undefined' || !i18next.isInitialized) {
             console.log('⏰ Timeout reached, forcing initialization...');
-            window.initI18n();
+            initI18n();
         }
     }, 2000);
 });
 
+/*====================================================
+  EXPORTS AND DEBUG UTILITIES
+====================================================*/
+
+// Export main function
+window.initI18n = initI18n;
+
 // دوال مساعدة للتصحيح
 window.I18nDebug = {
-    // اختبار ترجمة مفتاح معين
     testTranslation: function(key) {
         if (typeof i18next !== 'undefined') {
             console.log(`Testing key: ${key}`);
@@ -246,14 +237,12 @@ window.I18nDebug = {
         }
     },
     
-    // عرض جميع البيانات المحملة
     showLoadedData: function() {
         if (typeof i18next !== 'undefined') {
             console.log('Loaded data:', i18next.store.data);
         }
     },
     
-    // إعادة تطبيق الترجمات
     reapplyTranslations: function() {
         applyTranslations();
     }

@@ -1,6 +1,6 @@
 /*====================================================
-  MAIN.JS - Clean Module Loader
-  Handles loading header/footer and initializing components
+  MAIN.JS - Core Component Loader (Cleaned)
+  Handles loading header/footer only - NO page-specific features
 ====================================================*/
 
 class ComponentLoader {
@@ -18,15 +18,12 @@ class ComponentLoader {
         this.loadComponent('/partials/_footer.html', 'footer-container')
       ]);
 
-      // Initialize all page features after components are loaded
-      await this.initializeFeatures();
-
-      // Dispatch componentsLoaded event after all features are initialized
+      // Dispatch componentsLoaded event
       document.dispatchEvent(new CustomEvent('componentsLoaded'));
-      console.log('✅ All components loaded and componentsLoaded event dispatched');
+      console.log('✅ Components loaded and componentsLoaded event dispatched');
 
     } catch (error) {
-      console.error('Failed to initialize components:', error);
+      console.error('❌ Failed to initialize components:', error);
       this.handleFallback();
     }
   }
@@ -34,7 +31,7 @@ class ComponentLoader {
   async loadComponent(url, containerId, attempt = 1) {
     const container = document.getElementById(containerId);
     if (!container) {
-      console.warn(`Container with ID '${containerId}' not found`);
+      console.warn(`⚠️ Container with ID '${containerId}' not found`);
       return;
     }
 
@@ -64,81 +61,6 @@ class ComponentLoader {
     }
   }
 
-  async initializeFeatures() {
-    this.setupExternalLinks();
-    this.setupFormValidation();
-    this.setupSmoothScrolling();
-    console.log('✅ Core app features initialized successfully');
-  }
-
-  initializePageSpecificFeatures() {
-    // This method is now effectively integrated into initializeFeatures
-  }
-
-  setupExternalLinks() {
-    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
-    externalLinks.forEach(link => {
-      if (!link.hasAttribute('target')) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-      }
-    });
-  }
-
-  setupFormValidation() {
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      if (!form.dataset.validationInitialized) {
-        form.addEventListener('submit', this.validateForm);
-        form.dataset.validationInitialized = 'true';
-      }
-    });
-  }
-
-  validateForm(event) {
-    const form = event.target;
-    const requiredFields = form.querySelectorAll('[required]');
-    let isValid = true;
-
-    requiredFields.forEach(field => {
-      if (!field.value.trim()) {
-        isValid = false;
-        field.classList.add('error');
-      } else {
-        field.classList.remove('error');
-      }
-    });
-
-    if (!isValid) {
-      event.preventDefault();
-      console.warn('Form validation failed');
-    }
-  }
-
-  setupSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      if (!anchor.dataset.smoothScrollInitialized) {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          
-          try {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-              targetElement.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          } catch (error) {
-            console.warn('Invalid selector for smooth scroll:', targetId);
-          }
-        });
-        anchor.dataset.smoothScrollInitialized = 'true';
-      }
-    });
-  }
-
   renderFallback(container, url) {
     const fallbackHTML = `
       <div style="
@@ -162,7 +84,6 @@ class ComponentLoader {
   }
 
   handleFallback() {
-    // Show a global error message if critical components fail to load
     const fallbackBanner = document.createElement('div');
     fallbackBanner.style.cssText = `
       position: fixed;
@@ -206,108 +127,40 @@ class ComponentLoader {
 }
 
 /*====================================================
-  ERROR HANDLING
+  GLOBAL ERROR HANDLING
 ====================================================*/
+window.addEventListener('error', (event) => {
+  console.error('🚨 JavaScript Error:', {
+    message: event.error ? event.error.message : event.message,
+    filename: event.filename,
+    line: event.lineno,
+    column: event.colno
+  });
+});
 
-class ErrorHandler {
-  constructor() {
-    this.setupGlobalErrorHandling();
-  }
-
-  setupGlobalErrorHandling() {
-    // Handle JavaScript errors
-    window.addEventListener('error', (event) => {
-      console.error('🚨 JavaScript Error:', {
-        message: event.error ? event.error.message : event.message,
-        filename: event.filename,
-        line: event.lineno,
-        column: event.colno,
-        stack: event.error ? event.error.stack : 'No stack trace available'
-      });
-    });
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('🚨 Unhandled Promise Rejection:', event.reason);
-    });
-
-    // Handle resource loading errors
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        console.error('🚨 Resource Loading Error:', {
-          element: event.target.tagName,
-          source: event.target.src || event.target.href,
-          message: 'Failed to load resource'
-        });
-      }
-    }, true);
-  }
-}
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('🚨 Unhandled Promise Rejection:', event.reason);
+});
 
 /*====================================================
   MAIN INITIALIZATION
 ====================================================*/
-
-// Initialize error handling
-const errorHandler = new ErrorHandler();
 let componentLoader;
 
-// Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log('🚀 DOM Content Loaded - Initializing...');
+  console.log('🚀 DOM Content Loaded - Initializing ComponentLoader...');
   
   try {
-    // Initialize component loader
     componentLoader = new ComponentLoader();
-    
-    // Load all components
     await componentLoader.init(); 
-    
   } catch (error) {
     console.error('🚨 Critical error during page initialization:', error);
   }
 });
 
-// Handle page visibility changes (pause operations when hidden)
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    console.log('📱 Page hidden - pausing operations');
-  } else {
-    console.log('📱 Page visible - resuming operations');
-  }
-});
-
 /*====================================================
-  UTILITY FUNCTIONS
+  UTILITY FUNCTIONS (Essential only)
 ====================================================*/
-
-// Debounce function for performance
-function debounce(func, wait, immediate) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      timeout = null;
-      if (!immediate) func(...args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func(...args);
-  };
-}
-
-// Check if element is in viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// Wait for element to exist
 function waitForElement(selector, timeout = 5000) {
   return new Promise((resolve, reject) => {
     const element = document.querySelector(selector);
@@ -337,15 +190,8 @@ function waitForElement(selector, timeout = 5000) {
 }
 
 /*====================================================
-  EXPORTS FOR GLOBAL USE
+  EXPORTS
 ====================================================*/
-
-// Make utilities available globally
 window.ComponentLoader = ComponentLoader;
-window.ErrorHandler = ErrorHandler;
-window.debounce = debounce;
-window.isInViewport = isInViewport;
 window.waitForElement = waitForElement;
-
-// Export component loader instance for other scripts
 window.getComponentLoader = () => componentLoader;
