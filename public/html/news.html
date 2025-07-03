@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title-news-page" data-i18n="news:pageTitle">الأخبار - سفارة دولة فلسطين</title>
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/news.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="آخر الأخبار من سفارة دولة فلسطين في تركيا - أخبار السفارة والفعاليات والإعلانات الهامة">
+    <meta name="keywords" content="أخبار فلسطين، سفارة فلسطين، تركيا، إعلانات، فعاليات">
+    <meta name="author" content="سفارة دولة فلسطين في تركيا">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="الأخبار - سفارة دولة فلسطين في تركيا">
+    <meta property="og:description" content="تابع آخر الأخبار والإعلانات من سفارة دولة فلسطين في الجمهورية التركية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://embassy-palestine-turkey.com/news">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="news-main-content">
+        <!-- Page Header -->
+        <section class="news-page-header">
+            <div class="page-header-content">
+                <h1 class="page-main-title" data-i18n="news:pageTitle">الأخبار</h1>
+                <p class="page-subtitle" data-i18n="news:pageSubtitle">آخر الأخبار والفعاليات من سفارة دولة فلسطين في تركيا</p>
+            </div>
+        </section>
+
+        <!-- News Filter Section -->
+        <section class="news-filter-section">
+            <div class="filter-container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all" data-i18n="news:categories.all">جميع الأخبار</button>
+                    <button class="filter-btn" data-category="embassy" data-i18n="news:categories.embassy">أخبار السفارة</button>
+                    <button class="filter-btn" data-category="events" data-i18n="news:categories.events">الفعاليات</button>
+                    <button class="filter-btn" data-category="meetings" data-i18n="news:categories.meetings">اللقاءات</button>
+                    <button class="filter-btn" data-category="announcements" data-i18n="news:categories.announcements">الإعلانات</button>
+                    <button class="filter-btn" data-category="education" data-i18n="news:categories.education">الشؤون التعليمية</button>
+                    <button class="filter-btn" data-category="relations" data-i18n="news:categories.relations">العلاقات الثنائية</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Content Section -->
+        <section class="news-content-section">
+            <div class="news-container">
+                <div class="news-title-section">
+                    <div class="section-header">
+                        <div class="section-title-container">
+                            <span class="section-title-icon">
+                                <i class="fas fa-newspaper" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="section-title" id="main-news-title" data-i18n="news:main_title">أهم الأخبار</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p data-i18n="common:loading">جاري التحميل...</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" class="error-message" style="display: none;">
+                    <div class="error-content">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p data-i18n="common:error">حدث خطأ في تحميل الأخبار</p>
+                        <button id="retry-btn" class="retry-btn">إعادة المحاولة</button>
+                    </div>
+                </div>
+
+                <!-- News Grid -->
+                <div id="news-grid" class="news-grid">
+                    <!-- News items will be dynamically loaded here -->
+                </div>
+
+                <!-- Load More Section -->
+                <div class="load-more-section" id="load-more-section" style="display: none;">
+                    <button class="load-more-btn" id="loadMoreBtn" aria-label="تحميل المزيد من الأخبار">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                        <span data-i18n="news:load_more">تحميل المزيد</span>
+                    </button>
+                </div>
+
+                <!-- No News Message -->
+                <div id="no-news-message" class="no-news-message" style="display: none;">
+                    <div class="no-news-content">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>لا توجد أخبار</h3>
+                        <p>لا توجد أخبار متاحة في هذا التصنيف حالياً.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
+    <script src="/public/js/page-specific/news.js"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "سفارة دولة فلسطين في تركيا",
+        "url": "https://embassy-palestine-turkey.com",
+        "logo": "https://embassy-palestine-turkey.com/public/images/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/PalestineEmbassyTurkey",
+            "https://twitter.com/PalestineEmb_TR"
+        ]
+    }
+    </script>
+</body>
+
+</html>
