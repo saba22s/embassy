@@ -1,40 +1,93 @@
 {
-  "pageTitle": "Son Haberler",
-  "pageSubtitle": "En son gelişmeleri ve önemli olayları takip edin",
-  "detailTitle": "Haber Detayları",
-  "featured": "Öne Çıkan",
-  "embassy": "Büyükelçilik",
+  "pageTitle": "Haberler - Filistin Devleti Türkiye Büyükelçiliği",
+  "mainTitle": "Haberler ve Duyurular",
+  "subtitle": "Filistin Devleti Türkiye Büyükelçiliği'nden en son haberleri ve duyuruları takip edin",
   "searchPlaceholder": "Haberlerde ara...",
-  "allCategories": "Tüm Kategoriler",
-  "education": "Eğitim",
-  "consular": "Konsolosluk İşleri",
-  "cultural": "Kültürel",
-  "political": "Politik",
-  "events": "Etkinlikler",
-  "newestFirst": "En Yeni Önce",
-  "oldestFirst": "En Eski Önce",
-  "alphabetical": "Alfabetik",
+  "filterAll": "Tüm Haberler",
+  "filterAnnouncements": "Duyurular",
+  "filterEvents": "Etkinlikler",
+  "filterConsular": "Konsolosluk Hizmetleri",
+  "filterEducation": "Eğitim",
+  "featuredTitle": "Öne Çıkan Haberler",
+  "allNewsTitle": "Tüm Haberler",
+  "categoryAnnouncements": "Duyuru",
+  "categoryEvents": "Etkinlik",
+  "categoryConsular": "Konsolosluk Hizmetleri",
+  "categoryEducation": "Eğitim",
+  "categoryإعلان": "Duyuru",
+  "categoryفعالية": "Etkinlik",
+  "categoryخدماتقنصلية": "Konsolosluk Hizmetleri",
+  "categoryتعليم": "Eğitim",
+  "readingTime": "3 dakika okuma",
+  "loadMore": "Daha Fazla Haber Yükle",
+  "showAllNews": "Tüm Haberleri Göster",
+  "clearFilters": "Filtreleri Temizle",
+  "newsletterTitle": "Bültene Abone Ol",
+  "newsletterDescription": "En son haberleri ve duyuruları doğrudan e-postanızda alın",
+  "emailPlaceholder": "E-posta adresinizi girin",
+  "subscribe": "Abone Ol",
   "noResults": "Sonuç Bulunamadı",
-  "noResultsDesc": "Arama kriterlerinize uygun haber bulunamadı",
+  "tryDifferentSearch": "Farklı arama terimleri deneyin veya başka bir kategori seçin",
+  "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+  "subscriptionSuccess": "Başarıyla abone oldunuz! Teşekkürler",
+  "backToNews": "Haberlere Dön",
   "shareArticle": "Bu Makaleyi Paylaş",
   "relatedArticles": "İlgili Makaleler",
-  "backToNews": "Haberlere Dön",
+  "copyLink": "Bağlantıyı Kopyala",
+  "linkCopied": "Bağlantı Kopyalandı",
+  "errorLoading": "Haber Yüklenirken Hata",
+  "errorLoadingDetail": "Haber Detayları Yüklenirken Hata",
+  "tryAgain": "Tekrar Dene",
+  "newsCount": "Haber Sayısı",
+  "newsItem": "haber",
+  "newsItems": "haber",
+  "detailTitle": "Haber Detayları",
+  "publishedOn": "Yayınlanma Tarihi",
+  "readTime": "Okuma Süresi",
+  "author": "Yazar",
+  "tags": "Etiketler",
+  "category": "Kategori",
+  "lastUpdated": "Son Güncelleme",
+  "loading": "Yükleniyor...",
+  "error": "Bir hata oluştu",
+  "retry": "Tekrar Dene",
+  "close": "Kapat",
+  "viewDetails": "Detayları Görüntüle",
+  "readMore": "Devamını Oku",
+  "recent": "Son",
+  "popular": "Popüler",
+  "featured": "Öne Çıkan",
+  "archive": "Arşiv",
+  "search": "Ara",
+  "filter": "Filtrele",
+  "sort": "Sırala",
+  "sortByDate": "Tarihe Göre Sırala",
+  "sortByTitle": "Başlığa Göre Sırala",
+  "ascending": "Artan",
+  "descending": "Azalan",
   "news_articles": [
     {
       "id": "1",
       "title": "Filistin'in Katılımıyla Küresel Ulaştırma Bağlantısı Forumu Başladı",
       "date": "28 Haziran 2025",
       "category": "Duyurular",
+      "author": "Filistin Devleti Büyükelçiliği",
+      "readTime": "5 dakika",
+      "tags": ["ulaştırma", "forum", "istanbul", "uluslararası işbirliği"],
       "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı.",
       "image_title": "news.title.1.jpg",
       "content_parts": [
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı. Açılış oturumunda Türkiye Cumhuriyeti Cumhurbaşkanı Recep Tayyip Erdoğan ve Türkiye Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu'nun konuşmaları yer aldı. Büyükelçi Dr. Mustafa'nın, dünyanın çoğu ülkesinden karar vericileri ve uzmanları bir araya getiren bu küresel foruma katılımı, bir direniş ve varoluş mesajı ile halkların özgürce ve onurlu bir şekilde yaşama hakkına ve özgünlüğüne saygı duyan açık ve bağlantılı bir gelecek inşa etme konusundaki samimi arzusunun bir ifadesidir."
+        },
         {
           "type": "image",
           "value": "news.1.part1.jpg"
         },
         {
           "type": "text",
-          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı. Açılış oturumunda Türkiye Cumhuriyeti Cumhurbaşkanı Recep Tayyip Erdoğan ve Türkiye Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu'nun konuşmaları yer aldı. Büyükelçi Dr. Mustafa'nın, dünyanın çoğu ülkesinden karar vericileri ve uzmanları bir araya getiren bu küresel foruma katılımı, bir direniş ve varoluş mesajı ile halkların özgürce ve onurlu bir şekilde yaşama hakkına ve özgünlüğüne saygı duyan açık ve bağlantılı bir gelecek inşa etme konusundaki samimi arzusunun bir ifadesidir. Bu önemli forum kapsamında, Sayın Büyükelçi, Türkiye, Suudi Arabistan ve Ukrayna Ulaştırma ve Haberleşme Bakanlarının da katıldığı, Orta Asya, Arap bölgesi ve Avrupa'da ulaştırma alanında bölgesel işbirliği fırsatları üzerine özel bir seminere katıldı. Büyükelçi Mustafa, Filistin'in tüm bölgesel ve uluslararası işbirliği biçimlerine açık olduğunu vurguladı ve Filistin Devleti'nin bu sektörde karşılaştığı zorlukları gözden geçirdi. Bu zorluklar, İsrail'in sadece Filistin Devleti'nin dış geçişlerini değil, aynı zamanda şehirler, köyler ve mülteci kampları arasındaki Filistin içindeki hareketi de hala kontrol altında tutan uygulamaları ve prosedürlerinden kaynaklanmaktadır ve bu durum acil uluslararası müdahale gerektirmektedir."
+          "value": "Bu önemli forum kapsamında, Sayın Büyükelçi, Türkiye, Suudi Arabistan ve Ukrayna Ulaştırma ve Haberleşme Bakanlarının da katıldığı, Orta Asya, Arap bölgesi ve Avrupa'da ulaştırma alanında bölgesel işbirliği fırsatları üzerine özel bir seminere katıldı. Büyükelçi Mustafa, Filistin'in tüm bölgesel ve uluslararası işbirliği biçimlerine açık olduğunu vurguladı ve Filistin Devleti'nin bu sektörde karşılaştığı zorlukları gözden geçirdi. Bu zorluklar, İsrail'in sadece Filistin Devleti'nin dış geçişlerini değil, aynı zamanda şehirler, köyler ve mülteci kampları arasındaki Filistin içindeki hareketi de hala kontrol altında tutan uygulamaları ve prosedürlerinden kaynaklanmaktadır ve bu durum acil uluslararası müdahale gerektirmektedir."
         },
         {
           "type": "image",
@@ -43,10 +96,6 @@
         {
           "type": "image",
           "value": "news.1.part3.jpg"
-        },
-        {
-          "type": "image",
-          "value": "news.1.part4.jpg"
         }
       ]
     },
@@ -55,20 +104,19 @@
       "title": "Büyükelçi Dr. Faed Mustafa, AFAD Başkanı Sayın Ali Hamza Pehlivan ile Filistin'deki Durum Değerlendirmesini Görüştü",
       "date": "24 Haziran 2025",
       "category": "Duyurular",
+      "author": "Filistin Devleti Büyükelçiliği",
+      "readTime": "7 dakika",
+      "tags": ["AFAD", "afetler", "Gazze", "insani işbirliği"],
       "excerpt": "İsrail'in Filistin halkına yönelik cani saldırılarının devam etmesi ve insani felaketin derinleşmesi karşısında, Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Türk Afet ve Acil Durum Yönetimi (AFAD) Başkanı Sayın Ali Hamza Pehlivan ile kurumun Ankara'daki merkezinde bir araya geldi.",
       "image_title": "news.title.2.jpg",
       "content_parts": [
-        {
-          "type": "image",
-          "value": "news.2.part1.jpg"
-        },
         {
           "type": "text",
           "value": "İsrail'in Filistin halkına yönelik cani saldırılarının devam etmesi ve insani felaketin derinleşmesi karşısında, Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Türk Afet ve Acil Durum Yönetimi (AFAD) Başkanı Sayın Ali Hamza Pehlivan ile kurumun Ankara'daki merkezinde bir araya geldi ve yeni görevini üstlenmesi vesilesiyle kendisini tebrik ederek bu önemli görevde başarılar diledi. Sayın Büyükelçi, görüşmede Filistin topraklarındaki son saha ve insani gelişmeleri, özellikle de Gazze Şeridi'ndeki felaket durumunu gözden geçirdi. Gazze Şeridi, boğucu bir kuşatma ve sağlık altyapısı ile hayati tesisleri hedef alan kapsamlı bir yıkımdan muzdariptir. Doğrudan sivillerin hedef alınması sonucunda on binlerce şehit ve yaralı ile kuşatma altındaki Şerid'in dışına acil tedavi gerektiren giderek artan sayıda kritik tıbbi vaka bulunmaktadır."
         },
         {
           "type": "image",
-          "value": "news.2.part2.jpg"
+          "value": "news.2.part1.jpg"
         },
         {
           "type": "text",
@@ -76,7 +124,7 @@
         },
         {
           "type": "image",
-          "value": "news.2.part3.jpg"
+          "value": "news.2.part2.jpg"
         },
         {
           "type": "text",
@@ -84,7 +132,7 @@
         },
         {
           "type": "image",
-          "value": "news.2.part4.jpg"
+          "value": "news.2.part3.jpg"
         },
         {
           "type": "text",
@@ -92,7 +140,7 @@
         },
         {
           "type": "image",
-          "value": "news.2.part5.jpg"
+          "value": "news.2.part4.jpg"
         },
         {
           "type": "text",
@@ -100,7 +148,7 @@
         },
         {
           "type": "image",
-          "value": "news.2.part6.jpg"
+          "value": "news.2.part5.jpg"
         }
       ]
     },
@@ -109,7 +157,10 @@
       "title": "Duyuru: Ekim 2023 Saldırısı Sonrası Türkiye'ye Yerinden Edilen Filistinli Nitelikli Bireylerin Veri Kaydı",
       "date": "11 Haziran 2025",
       "category": "Duyurular",
-      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, İsrail'in Ekim 2023'te Gazze Şeridi'ne yönelik saldırısı ve sonrasında Türkiye Cumhuriyeti'ne gelen vatandaşlara, yükseköğrenim diplomasına sahip (en az lisans derecesi) vatandaşların verilerini kaydetmek üzere bir bağlantının açıldığını duyurmaktan memnuniyet duyar.",
+      "author": "Filistin Devleti Büyükelçiliği",
+      "readTime": "3 dakika",
+      "tags": ["kayıt", "nitelikli bireyler", "yerinden edilme", "istihdam"],
+      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, İsrail'in Ekim 2023'te Gazze Şeridi'ne yönelik saldırısı ve sonrasında Türkiye Cumhuriyeti'ne gelen vatandaşlara, yükseköğrenim diplomasına sahip vatandaşların verilerini kaydetmek üzere bir bağlantının açıldığını duyurmaktan memnuniyet duyar.",
       "image_title": "news.title.3.jpg",
       "content_parts": [
         {
@@ -120,19 +171,26 @@
     },
     {
       "id": "4",
-      "title": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma Etkinliği Görüşmesi",
+      "title": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nekbe Anma Etkinliği Görüşmesi",
       "date": "17 Mayıs 2025",
       "category": "Duyurular",
-      "excerpt": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma etkinliği üzerine bir görüşme. Mülakat videosu buraya eklenecektir.",
+      "author": "Filistin Devleti Büyükelçiliği",
+      "readTime": "4 dakika",
+      "tags": ["Nekbe", "röportaj", "TRT", "anma"],
+      "excerpt": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nekbe Anma etkinliği üzerine bir görüşme. Filistin davası ve Filistin-Türkiye ilişkileri hakkında kapsamlı bir televizyon röportajı.",
       "image_title": "news.title.4.jpg",
       "content_parts": [
         {
           "type": "text",
-          "value": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma etkinliği üzerine bir görüşme."
+          "value": "TRT Arapça kanalı, Filistin Nekbesi anma vesilesiyle Büyükelçi Dr. Faed Mustafa ile bir televizyon röportajı gerçekleştirdi. Büyükelçi röportajda mevcut Filistin durumu ve seçkin Filistin-Türkiye ilişkileri ile ilgili birçok önemli konuyu ele aldı."
         },
         {
           "type": "video",
           "value": "/public/videos/interview_video.mp4"
+        },
+        {
+          "type": "text",
+          "value": "Büyükelçi röportaj sırasında Türkiye'nin Filistin davasına sürekli desteğinin önemini ve Filistin acılarını sona erdirmek ve bölgede adalet ve barışı sağlamak için uluslararası çabaların birleştirilmesi gerekliliğini vurguladı."
         }
       ]
     }

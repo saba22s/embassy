@@ -1,48 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle"></title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pages/news.css">
+    <title id="pageTitle" data-i18n="news:pageTitle">الأخبار - سفارة دولة فلسطين في تركيا</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/news.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="تابع آخر الأخبار والإعلانات من سفارة دولة فلسطين في تركيا">
+    <meta name="keywords" content="أخبار، فلسطين، تركيا، سفارة، إعلانات، فعاليات">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="الأخبار - سفارة دولة فلسطين في تركيا">
+    <meta property="og:description" content="آخر الأخبار والإعلانات من سفارة دولة فلسطين في تركيا">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
+    
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
+
 <body>
-    <header id="mainHeader"></header>
+    <!-- Header Container -->
+    <div id="header-container"></div>
 
     <main>
+        <!-- News Hero Section -->
         <section class="news-hero">
-            <h1 id="mainNewsTitle"></h1>
-            <p id="newsSubtitle"></p>
+            <h1 id="mainNewsTitle" data-i18n="news:mainTitle">الأخبار والإعلانات</h1>
+            <p id="newsSubtitle" data-i18n="news:subtitle">تابع آخر الأخبار والإعلانات من سفارة دولة فلسطين في تركيا</p>
         </section>
 
+        <!-- Search and Filter Section -->
         <section class="news-filter-search">
-            <input type="text" id="newsSearchInput" placeholder="">
-            <select id="newsCategoryFilter">
-                <option value="all" id="filterAll"></option>
-                <option value="announcements" id="filterAnnouncements"></option>
-                <option value="events" id="filterEvents"></option>
-                <option value="consular" id="filterConsular"></option>
-                <option value="education" id="filterEducation"></option>
+            <input type="text" 
+                   id="newsSearchInput" 
+                   data-i18n="[placeholder]news:searchPlaceholder"
+                   placeholder="البحث في الأخبار..."
+                   aria-label="البحث في الأخبار">
+            
+            <select id="newsCategoryFilter" aria-label="تصفية حسب الفئة">
+                <option value="all" id="filterAll" data-i18n="news:filterAll">جميع الأخبار</option>
+                <option value="announcements" id="filterAnnouncements" data-i18n="news:filterAnnouncements">إعلانات</option>
+                <option value="events" id="filterEvents" data-i18n="news:filterEvents">فعاليات</option>
+                <option value="consular" id="filterConsular" data-i18n="news:filterConsular">خدمات قنصلية</option>
+                <option value="education" id="filterEducation" data-i18n="news:filterEducation">تعليم</option>
             </select>
+            
+            <button type="button" 
+                    id="clearFiltersBtn" 
+                    class="clear-filters-btn"
+                    aria-label="مسح جميع المرشحات"
+                    style="display: none;">
+                <i class="fas fa-times"></i>
+                <span data-i18n="news:clearFilters">مسح المرشحات</span>
+            </button>
         </section>
 
+        <!-- News List Section -->
         <section class="news-list-section">
-            <h2 id="allNewsTitle"></h2>
-            <div id="newsListContainer" class="news-grid">
+            <div class="news-section-header">
+                <h2 id="allNewsTitle" data-i18n="news:allNewsTitle">جميع الأخبار</h2>
+                <div class="news-count" id="newsCount" aria-live="polite"></div>
+            </div>
+            
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
                 </div>
-            <div id="noResultsMessage" class="no-results" style="display: none;">
-                <p id="noResultsText"></p>
-                <p id="tryDifferentSearchText"></p>
+                <p data-i18n="common:loading">جاري التحميل...</p>
+            </div>
+            
+            <!-- News Grid -->
+            <div id="newsListContainer" class="news-grid" role="main" aria-label="قائمة الأخبار">
+                <!-- News cards will be dynamically inserted here -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResultsMessage" class="no-results" style="display: none;" role="alert">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 id="noResultsText" data-i18n="news:noResults">لم يتم العثور على نتائج</h3>
+                <p id="tryDifferentSearchText" data-i18n="news:tryDifferentSearch">جرب مصطلحات بحث مختلفة أو اختر فئة أخرى</p>
+                <button type="button" 
+                        id="resetFiltersBtn" 
+                        class="reset-filters-btn">
+                    <i class="fas fa-refresh"></i>
+                    <span data-i18n="news:showAllNews">عرض جميع الأخبار</span>
+                </button>
+            </div>
+            
+            <!-- Load More Button -->
+            <div id="loadMoreSection" class="load-more-section" style="display: none;">
+                <button type="button" 
+                        id="loadMoreBtn" 
+                        class="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    <span data-i18n="news:loadMore">تحميل المزيد</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" id="newsletterSection" style="display: none;">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h3 data-i18n="news:newsletterTitle">اشترك في النشرة الإخبارية</h3>
+                    <p data-i18n="news:newsletterDescription">احصل على آخر الأخبار والإعلانات مباشرة في بريدك الإلكتروني</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" 
+                               id="newsletterEmail" 
+                               data-i18n="[placeholder]news:emailPlaceholder"
+                               placeholder="أدخل بريدك الإلكتروني"
+                               required
+                               aria-label="البريد الإلكتروني للاشتراك">
+                        <button type="submit" data-i18n="news:subscribe">اشتراك</button>
+                    </form>
+                    <div id="newsletterMessage" class="newsletter-message" style="display: none;"></div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer id="mainFooter"></footer>
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
 
-    <script src="../js/i18n-init.js"></script>
-    <script src="../js/language-switcher.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/page-specific/news.js"></script>
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
+    <script src="/public/js/page-specific/news.js"></script>
+
+    <!-- Error Boundary Script -->
+    <script>
+        window.addEventListener('error', function(e) {
+            console.error('Global error caught:', e.error);
+            
+            // عرض رسالة خطأ للمستخدم إذا فشل تحميل الأخبار
+            const container = document.getElementById('newsListContainer');
+            const noResults = document.getElementById('noResultsMessage');
+            
+            if (container && container.children.length === 0 && noResults) {
+                noResults.style.display = 'block';
+                document.getElementById('noResultsText').textContent = 'حدث خطأ في تحميل الأخبار';
+                document.getElementById('tryDifferentSearchText').textContent = 'يرجى إعادة تحميل الصفحة أو المحاولة لاحقاً';
+            }
+        });
+    </script>
 </body>
 </html>
