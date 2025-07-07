@@ -108,7 +108,8 @@ function detectPageNamespace() {
         'events': 'events',
         'feedback': 'feedback',
         'contact': 'contact',
-        'news': 'news'
+        'news': 'news',
+        'news-detail': 'news-detail'
     };
     
     const namespace = pageToNamespace[baseName] || baseName;

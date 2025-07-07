@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="news:pageTitle">الأخبار - سفارة دولة فلسطين في تركيا</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/pages/news.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="تصفح أحدث الأخبار من سفارة دولة فلسطين في تركيا">
+    <meta name="keywords" content="أخبار، فلسطين، تركيا، سفارة، أحداث، تطورات">
+    <meta name="author" content="سفارة دولة فلسطين في تركيا">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/images/logo.png">
+
+    <!-- i18next Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- News Page Wrapper -->
+    <div class="news-page-wrapper">
+        <div class="news-container">
+
+            <!-- Page Header -->
+            <section class="news-page-header">
+                <h1 class="news-page-title" data-i18n="news:pageTitle">أحدث الأخبار</h1>
+                <p class="news-page-subtitle" data-i18n="news:pageSubtitle">تابع آخر المستجدات والأحداث المهمة</p>
+            </section>
+
+            <!-- Featured News Section -->
+            <section class="featured-news">
+                <article class="featured-news-card" data-article-id="1">
+                    <div class="featured-image-container">
+                        <img class="featured-image" src="/public/images/news,9.jpg" alt="الخبر المميز" loading="lazy">
+                    </div>
+                    <div class="featured-content">
+                        <span class="featured-badge" data-i18n="news:featured">مميز</span>
+                        <h2 class="featured-title" data-i18n="news:featuredTitle">مؤتمر الإبداع التربوي الفلسطيني الثاني في إسطنبول</h2>
+                        <p class="featured-excerpt" data-i18n="news:featuredExcerpt">
+                            نظمت مؤسسة الإبداع الفلسطيني الدولية والمجلس الأعلى للإبداع والتميز بالتعاون مع وزارة التعليم العالي والبحث العلمي الفلسطينية مؤتمر الإبداع التربوي الفلسطيني الثاني تحت عنوان "الإبداع التربوي الفلسطيني ودوره في تحقيق التنمية المستدامة".
+                        </p>
+                        <div class="featured-meta">
+                            <span class="featured-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-i18n="news:featuredDate">10 أغسطس 2023</span>
+                            </span>
+                            <span class="featured-author">
+                                <i class="fas fa-user"></i>
+                                <span data-i18n="news:embassy">السفارة</span>
+                            </span>
+                        </div>
+                        <a href="/public/html/news-detail.html?id=1" class="featured-read-more" data-i18n="common:read_more">
+                            قراءة المزيد
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Search and Filter Controls -->
+            <section class="news-controls">
+                <div class="news-search-container">
+                    <i class="fas fa-search news-search-icon"></i>
+                    <input type="text" id="newsSearch" class="news-search-input" data-i18n="[placeholder]news:searchPlaceholder" placeholder="البحث في الأخبار...">
+                </div>
+                <div class="news-filters">
+                    <select id="categoryFilter" class="news-filter-select">
+                        <option value="" data-i18n="news:allCategories">جميع الفئات</option>
+                        <option value="education" data-i18n="news:education">تعليم</option>
+                        <option value="consular" data-i18n="news:consular">شؤون قنصلية</option>
+                        <option value="cultural" data-i18n="news:cultural">ثقافي</option>
+                        <option value="political" data-i18n="news:political">سياسي</option>
+                        <option value="events" data-i18n="news:events">أحداث</option>
+                    </select>
+                    <select id="sortFilter" class="news-filter-select">
+                        <option value="date-desc" data-i18n="news:newestFirst">الأحدث أولاً</option>
+                        <option value="date-asc" data-i18n="news:oldestFirst">الأقدم أولاً</option>
+                        <option value="title" data-i18n="news:alphabetical">أبجدياً</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- News Grid -->
+            <section class="news-content">
+                <div id="newsGrid" class="news-grid">
+                    <!-- News cards will be loaded here dynamically -->
+                </div>
+
+                <!-- Loading State -->
+                <div id="newsLoading" class="news-loading" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p data-i18n="common:loading">جاري التحميل...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="newsEmpty" class="news-empty" style="display: none;">
+                    <div class="empty-icon">📰</div>
+                    <h3 class="empty-title" data-i18n="news:noResults">لا توجد نتائج</h3>
+                    <p class="empty-description" data-i18n="news:noResultsDesc">لم يتم العثور على أخبار تطابق معايير البحث</p>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <nav class="news-pagination" id="newsPagination" style="display: none;">
+                <!-- Pagination will be generated dynamically -->
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/i18n-init.js"></script>
+    <script src="/public/js/language-switcher.js"></script>
+    <script src="/public/js/page-specific/news.js"></script>
+
+</body>
+</html>
