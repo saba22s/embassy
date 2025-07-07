@@ -3,9 +3,6 @@
   "pageSubtitle": "Follow the latest updates and important events",
   "detailTitle": "News Details",
   "featured": "Featured",
-  "featuredTitle": "Second Palestinian Educational Innovation Conference in Istanbul",
-  "featuredExcerpt": "The International Palestinian Innovation Foundation and the Supreme Council for Innovation and Excellence, in cooperation with the Palestinian Ministry of Higher Education and Scientific Research, organized the Second Palestinian Educational Innovation Conference under the title \"Palestinian Educational Innovation and its Role in Achieving Sustainable Development\".",
-  "featuredDate": "August 10, 2023",
   "embassy": "Embassy",
   "searchPlaceholder": "Search news...",
   "allCategories": "All Categories",
@@ -21,5 +18,123 @@
   "noResultsDesc": "No news found matching the search criteria",
   "shareArticle": "Share this Article",
   "relatedArticles": "Related Articles",
-  "backToNews": "Back to News"
+  "backToNews": "Back to News",
+  "news_articles": [
+    {
+      "id": "1",
+      "title": "Launch of the Global Transport Connectivity Forum with Palestine's Participation",
+      "date": "June 28, 2025",
+      "category": "Announcements",
+      "excerpt": "Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Eng. Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days.",
+      "image_title": "news.title.1.jpg",
+      "content_parts": [
+        {
+          "type": "image",
+          "value": "news.1.part1.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Eng. Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days. The opening session featured speeches by the President of the Republic of Turkey, Recep Tayyip Erdoğan, and the Turkish Minister of Transport and Infrastructure, Abdulkadir Uraloğlu. Ambassador Dr. Mustafa's participation in this global forum, which brings together decision-makers and experts from most countries of the world, expresses a message of steadfastness and presence, and a genuine desire to build an open and interconnected future that respects the specificity of peoples and their right to live in freedom and dignity. Within the framework of this important forum, His Excellency the Ambassador participated in a special seminar on opportunities for regional cooperation in the field of transport in Central Asia, the Arab region, and Europe, which also included the participation of the Ministers of Transport and Communications of Turkey, Saudi Arabia, and Ukraine. Ambassador Mustafa emphasized Palestine's openness to all forms of regional and international cooperation, reviewing the challenges facing the State of Palestine in this sector, which are primarily a result of the practices and measures of the occupying power, Israel, which still controls not only the external crossings of the State of Palestine but also movement within Palestine between cities, villages, and refugee camps, a matter that requires urgent international intervention."
+        },
+        {
+          "type": "image",
+          "value": "news.1.part2.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.1.part3.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.1.part4.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Ambassador Dr. Faed Mustafa Meets Mr. Ali Hamza Pehlivan, Head of Turkish Disaster and Emergency Management Authority (AFAD), Discussing Developments in Palestine",
+      "date": "June 24, 2025",
+      "category": "Announcements",
+      "excerpt": "Amidst the ongoing criminal Israeli aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the Head of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in Ankara.",
+      "image_title": "news.title.2.jpg",
+      "content_parts": [
+        {
+          "type": "image",
+          "value": "news.2.part1.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Amidst the ongoing criminal Israeli aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the Head of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in Ankara, where he congratulated him on assuming his new position and wished him success in this high mission. His Excellency reviewed during the meeting the latest field and humanitarian developments in the Palestinian territories, especially the catastrophic situation in the Gaza Strip, which suffers from a suffocating siege and widespread destruction affecting health infrastructure and vital facilities, in addition to the direct targeting of civilians, resulting in tens of thousands of martyrs and wounded, and an increasing number of critical medical cases requiring urgent treatment outside the besieged Strip."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part2.jpg"
+        },
+        {
+          "type": "text",
+          "value": "The two parties also extensively discussed the file of the wounded, sick, and their escorts who were evacuated from the Gaza Strip to Turkey. His Excellency the Ambassador praised the swift Turkish response and the prominent role played by the AFAD institution in coordination with official Turkish authorities in facilitating their reception and providing treatment, logistical, and medical care in various Turkish cities and hospitals."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part3.jpg"
+        },
+        {
+          "type": "text",
+          "value": "His Excellency affirmed that this noble humanitarian effort reflects the depth of brotherly relations between the Palestinian and Turkish peoples and embodies Turkey's steadfast stance in supporting the Palestinian cause, especially in the direst circumstances Gaza is experiencing today."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part4.jpg"
+        },
+        {
+          "type": "text",
+          "value": "For his part, Mr. Pehlivan, the head of AFAD, expressed Turkey's commitment, government and people, to continue its full support for the Palestinian people and the institution's readiness to provide all necessary assistance to alleviate the suffering caused by the Israeli aggression against the Palestinian people, emphasizing Turkey's firm positions regarding the just Palestinian cause."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part5.jpg"
+        },
+        {
+          "type": "text",
+          "value": "This meeting comes within the framework of continuous bilateral cooperation between the Palestinian Embassy and official Turkish authorities to provide a humanitarian and medical protection umbrella for those affected by the aggression and to activate all diplomatic and relief channels to confront the repercussions of the ongoing catastrophe on the Palestinian people."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part6.jpg"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Announcement: Registration of Data for Palestinian Competencies Displaced to Turkey After October 2023 Aggression",
+      "date": "June 11, 2025",
+      "category": "Announcements",
+      "excerpt": "The Embassy of the State of Palestine to the Republic of Turkey is pleased to announce to citizens arriving in the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data for citizens holding higher education degrees (at least a first university degree).",
+      "image_title": "news.title.3.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "The Embassy of the State of Palestine to the Republic of Turkey is pleased to announce to our brothers and sisters, citizens arriving in the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data for citizens holding higher education degrees (at least a first university degree). This initiative is part of an effort to collect data and track Palestinian competencies who have been displaced from the Gaza Strip after the Israeli aggression, to submit this data to the Palestine International Foundation, affiliated with the Presidential Office, with the aim of working with host countries to find employment opportunities for these competencies."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Meeting with H.E. Ambassador Dr. Faed Mustafa on Nakba Anniversary Event via TRT Arabic Channel",
+      "date": "May 17, 2025",
+      "category": "Announcements",
+      "excerpt": "A meeting with H.E. Ambassador Dr. Faed Mustafa on the Nakba Anniversary event via TRT Arabic channel. The interview video will be added here.",
+      "image_title": "news.title.4.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "A meeting with H.E. Ambassador Dr. Faed Mustafa on the Nakba Anniversary event via TRT Arabic channel."
+        },
+        {
+          "type": "video",
+          "value": "/public/videos/interview_video.mp4"
+        }
+      ]
+    }
+  ]
 }

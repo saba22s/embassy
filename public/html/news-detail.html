@@ -1,211 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="news:detailTitle">تفاصيل الخبر - سفارة دولة فلسطين في تركيا</title>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="/public/css/main.css">
-    <link rel="stylesheet" href="/public/css/pages/news.css">
-    <link rel="stylesheet" href="/public/css/pages/news-detail.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="تفاصيل الخبر من سفارة دولة فلسطين في تركيا">
-    <meta name="keywords" content="أخبار، فلسطين، تركيا، سفارة، تفاصيل">
-    <meta name="author" content="سفارة دولة فلسطين في تركيا">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/public/images/logo.png">
-
-    <!-- i18next Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
+    <title id="detailPageTitle"></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/news-detail.css">
 </head>
-
 <body>
-    <!-- Header Container -->
-    <div id="header-container"></div>
+    <header id="mainHeader"></header>
 
-    <!-- News Detail Wrapper -->
-    <div class="news-detail-wrapper">
-        <div class="news-detail-container">
-
-            <!-- Back Navigation -->
-            <nav class="news-back-nav">
-                <a href="/public/html/news.html" class="back-button">
-                    <i class="fas fa-arrow-right"></i>
-                    <span data-i18n="common:back">العودة إلى الأخبار</span>
-                </a>
-            </nav>
-
-            <!-- Article Container -->
-            <article class="news-article" id="newsArticle">
-                
-                <!-- Article Header -->
-                <header class="article-header">
-                    <span class="article-category" id="articleCategory">تعليم</span>
-                    <h1 class="article-title" id="articleTitle">
-                        مؤتمر الإبداع التربوي الفلسطيني الثاني في مدينة إسطنبول
-                    </h1>
-                    <div class="article-meta">
-                        <div class="meta-item">
-                            <i class="fas fa-calendar-alt meta-icon"></i>
-                            <span id="articleDate">10 أغسطس 2023</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-user meta-icon"></i>
-                            <span id="articleAuthor">السفارة</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-clock meta-icon"></i>
-                            <span id="readTime">5 دقائق قراءة</span>
-                        </div>
-                    </div>
-                </header>
-
-                <!-- Featured Image -->
-                <div class="article-image-container">
-                    <img class="article-image" id="articleImage" src="/public/images/news,9.jpg" alt="مؤتمر الإبداع التربوي" loading="lazy">
-                    <div class="image-caption" id="imageCaption">
-                        مؤتمر الإبداع التربوي الفلسطيني الثاني في إسطنبول
-                    </div>
+    <main>
+        <section class="news-detail-section">
+            <div id="newsDetailContainer" class="news-detail-container">
                 </div>
+        </section>
+    </main>
 
-                <!-- Article Content -->
-                <div class="article-content" id="articleContent">
-                    <p>
-                        نظمت مؤسسة الإبداع الفلسطيني الدولية والمجلس الأعلى للإبداع والتميز وبالتعاون مع وزارة التعليم العالي والبحث العلمي الفلسطينية مؤتمر الإبداع التربوي الفلسطيني الثاني تحت عنوان "الإبداع التربوي الفلسطيني ودوره في تحقيق التنمية المستدامة" في مدينة إسطنبول يومي 9 و 10 آب/أغسطس 2023.
-                    </p>
+    <footer id="mainFooter"></footer>
 
-                    <h2>أهداف المؤتمر</h2>
-                    <p>
-                        هدف المؤتمر إلى تسليط الضوء على أهمية الإبداع في التعليم الفلسطيني وكيفية توظيفه لخدمة التنمية المستدامة، بالإضافة إلى تبادل الخبرات والتجارب الناجحة في مجال التعليم الإبداعي بين المختصين والأكاديميين الفلسطينيين.
-                    </p>
-
-                    <blockquote>
-                        "الإبداع التربوي هو المحرك الأساسي للتقدم والتنمية في أي مجتمع، وفلسطين تحتاج إلى استثمار طاقاتها الإبداعية لبناء مستقبل أفضل لأجيالها القادمة"
-                    </blockquote>
-
-                    <h2>المشاركون والحضور</h2>
-                    <p>
-                        شارك في المؤتمر نخبة من الأكاديميين والباحثين والتربويين الفلسطينيين من مختلف الجامعات والمؤسسات التعليمية، بالإضافة إلى ممثلين عن وزارة التعليم العالي والبحث العلمي الفلسطينية وعدد من المؤسسات الأكاديمية التركية.
-                    </p>
-
-                    <h3>محاور المؤتمر الرئيسية</h3>
-                    <ul>
-                        <li>الإبداع التربوي ومفاهيمه المعاصرة</li>
-                        <li>دور التكنولوجيا في تعزيز الإبداع التعليمي</li>
-                        <li>التجارب الدولية الناجحة في التعليم الإبداعي</li>
-                        <li>التحديات والفرص في التعليم الفلسطيني</li>
-                        <li>استراتيجيات تطوير المناهج الإبداعية</li>
-                    </ul>
-
-                    <p>
-                        وقد تضمن المؤتمر جلسات نقاشية مثمرة وورش عمل تطبيقية، حيث تم استعراض العديد من البحوث والدراسات الحديثة في مجال التعليم الإبداعي، كما تم تبادل الخبرات والممارسات الفضلى بين المشاركين.
-                    </p>
-
-                    <h2>التوصيات والنتائج</h2>
-                    <p>
-                        خرج المؤتمر بعدة توصيات مهمة تهدف إلى تطوير التعليم الفلسطيني وتعزيز الجانب الإبداعي فيه، منها ضرورة إدماج التكنولوجيا الحديثة في العملية التعليمية، وتدريب المعلمين على أساليب التدريس الإبداعية، وتطوير المناهج لتواكب التطورات العالمية في مجال التعليم.
-                    </p>
-                </div>
-
-                <!-- Article Tags -->
-                <div class="article-tags">
-                    <span class="tags-label">الكلمات المفتاحية:</span>
-                    <div class="tags-list">
-                        <a href="#" class="tag-item">تعليم</a>
-                        <a href="#" class="tag-item">إبداع</a>
-                        <a href="#" class="tag-item">مؤتمر</a>
-                        <a href="#" class="tag-item">إسطنبول</a>
-                        <a href="#" class="tag-item">تنمية مستدامة</a>
-                    </div>
-                </div>
-
-                <!-- Share Section -->
-                <div class="article-share">
-                    <h3 class="share-title" data-i18n="news:shareArticle">شارك هذا المقال</h3>
-                    <div class="share-buttons">
-                        <a href="#" class="share-button share-facebook" onclick="shareOnFacebook()">
-                            <i class="fab fa-facebook-f"></i>
-                            <span>فيسبوك</span>
-                        </a>
-                        <a href="#" class="share-button share-twitter" onclick="shareOnTwitter()">
-                            <i class="fab fa-twitter"></i>
-                            <span>تويتر</span>
-                        </a>
-                        <a href="#" class="share-button share-linkedin" onclick="shareOnLinkedIn()">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span>لينكد إن</span>
-                        </a>
-                        <a href="#" class="share-button share-whatsapp" onclick="shareOnWhatsApp()">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>واتساب</span>
-                        </a>
-                        <a href="#" class="share-button share-email" onclick="shareByEmail()">
-                            <i class="fas fa-envelope"></i>
-                            <span>إيميل</span>
-                        </a>
-                    </div>
-                </div>
-
-            </article>
-
-            <!-- Related Articles -->
-            <section class="related-articles">
-                <h2 class="related-title" data-i18n="news:relatedArticles">مقالات ذات صلة</h2>
-                <div class="related-grid" id="relatedArticles">
-                    <!-- Related articles will be loaded dynamically -->
-                    <a href="#" class="related-card">
-                        <img class="related-image" src="/public/images/news,9.jpg" alt="مقال ذو صلة" loading="lazy">
-                        <div class="related-content">
-                            <h3 class="related-card-title">زيارة وفد من الطلاب الفلسطينيين للسفارة</h3>
-                            <p class="related-excerpt">استقبلت السفارة وفداً من الطلاب الفلسطينيين الدارسين في الجامعات التركية لبحث سبل تطوير الخدمات المقدمة لهم.</p>
-                            <span class="related-date">5 يوليو 2023</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="related-card">
-                        <img class="related-image" src="/public/images/news,9.jpg" alt="مقال ذو صلة" loading="lazy">
-                        <div class="related-content">
-                            <h3 class="related-card-title">ندوة عن الثقافة الفلسطينية في أنقرة</h3>
-                            <p class="related-excerpt">نظمت السفارة ندوة ثقافية في العاصمة التركية أنقرة لتعريف الجمهور التركي بالتراث والثقافة الفلسطينية.</p>
-                            <span class="related-date">2 يوليو 2023</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="related-card">
-                        <img class="related-image" src="/public/images/news,9.jpg" alt="مقال ذو صلة" loading="lazy">
-                        <div class="related-content">
-                            <h3 class="related-card-title">توقيع اتفاقية تعاون تعليمي جديدة</h3>
-                            <p class="related-excerpt">تم توقيع اتفاقية تعاون بين الجامعات الفلسطينية والتركية لتسهيل تبادل الطلاب والأساتذة.</p>
-                            <span class="related-date">28 يونيو 2023</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-        </div>
-    </div>
-
-    <!-- Footer Container -->
-    <div id="footer-container"></div>
-
-    <!-- JavaScript Files -->
-    <script src="/public/js/main.js"></script>
-    <script src="/public/js/i18n-init.js"></script>
-    <script src="/public/js/language-switcher.js"></script>
-    <script src="/public/js/page-specific/news-detail.js"></script>
-
+    <script src="../js/i18n-init.js"></script>
+    <script src="../js/language-switcher.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/page-specific/news-detail.js"></script>
 </body>
 </html>

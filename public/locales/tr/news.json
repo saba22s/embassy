@@ -3,9 +3,6 @@
   "pageSubtitle": "En son gelişmeleri ve önemli olayları takip edin",
   "detailTitle": "Haber Detayları",
   "featured": "Öne Çıkan",
-  "featuredTitle": "İstanbul'da İkinci Filistin Eğitim İnovasyonu Konferansı",
-  "featuredExcerpt": "Uluslararası Filistin İnovasyon Vakfı ve Yüksek İnovasyon ve Mükemmellik Konseyi, Filistin Yükseköğretim ve Bilimsel Araştırma Bakanlığı ile işbirliği içinde, \"Filistin Eğitim İnovasyonu ve Sürdürülebilir Kalkınmadaki Rolü\" başlığı altında İkinci Filistin Eğitim İnovasyonu Konferansını düzenledi.",
-  "featuredDate": "10 Ağustos 2023",
   "embassy": "Büyükelçilik",
   "searchPlaceholder": "Haberlerde ara...",
   "allCategories": "Tüm Kategoriler",
@@ -21,5 +18,123 @@
   "noResultsDesc": "Arama kriterlerinize uygun haber bulunamadı",
   "shareArticle": "Bu Makaleyi Paylaş",
   "relatedArticles": "İlgili Makaleler",
-  "backToNews": "Haberlere Dön"
+  "backToNews": "Haberlere Dön",
+  "news_articles": [
+    {
+      "id": "1",
+      "title": "Filistin'in Katılımıyla Küresel Ulaştırma Bağlantısı Forumu Başladı",
+      "date": "28 Haziran 2025",
+      "category": "Duyurular",
+      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı.",
+      "image_title": "news.title.1.jpg",
+      "content_parts": [
+        {
+          "type": "image",
+          "value": "news.1.part1.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı. Açılış oturumunda Türkiye Cumhuriyeti Cumhurbaşkanı Recep Tayyip Erdoğan ve Türkiye Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu'nun konuşmaları yer aldı. Büyükelçi Dr. Mustafa'nın, dünyanın çoğu ülkesinden karar vericileri ve uzmanları bir araya getiren bu küresel foruma katılımı, bir direniş ve varoluş mesajı ile halkların özgürce ve onurlu bir şekilde yaşama hakkına ve özgünlüğüne saygı duyan açık ve bağlantılı bir gelecek inşa etme konusundaki samimi arzusunun bir ifadesidir. Bu önemli forum kapsamında, Sayın Büyükelçi, Türkiye, Suudi Arabistan ve Ukrayna Ulaştırma ve Haberleşme Bakanlarının da katıldığı, Orta Asya, Arap bölgesi ve Avrupa'da ulaştırma alanında bölgesel işbirliği fırsatları üzerine özel bir seminere katıldı. Büyükelçi Mustafa, Filistin'in tüm bölgesel ve uluslararası işbirliği biçimlerine açık olduğunu vurguladı ve Filistin Devleti'nin bu sektörde karşılaştığı zorlukları gözden geçirdi. Bu zorluklar, İsrail'in sadece Filistin Devleti'nin dış geçişlerini değil, aynı zamanda şehirler, köyler ve mülteci kampları arasındaki Filistin içindeki hareketi de hala kontrol altında tutan uygulamaları ve prosedürlerinden kaynaklanmaktadır ve bu durum acil uluslararası müdahale gerektirmektedir."
+        },
+        {
+          "type": "image",
+          "value": "news.1.part2.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.1.part3.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.1.part4.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Büyükelçi Dr. Faed Mustafa, AFAD Başkanı Sayın Ali Hamza Pehlivan ile Filistin'deki Durum Değerlendirmesini Görüştü",
+      "date": "24 Haziran 2025",
+      "category": "Duyurular",
+      "excerpt": "İsrail'in Filistin halkına yönelik cani saldırılarının devam etmesi ve insani felaketin derinleşmesi karşısında, Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Türk Afet ve Acil Durum Yönetimi (AFAD) Başkanı Sayın Ali Hamza Pehlivan ile kurumun Ankara'daki merkezinde bir araya geldi.",
+      "image_title": "news.title.2.jpg",
+      "content_parts": [
+        {
+          "type": "image",
+          "value": "news.2.part1.jpg"
+        },
+        {
+          "type": "text",
+          "value": "İsrail'in Filistin halkına yönelik cani saldırılarının devam etmesi ve insani felaketin derinleşmesi karşısında, Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Türk Afet ve Acil Durum Yönetimi (AFAD) Başkanı Sayın Ali Hamza Pehlivan ile kurumun Ankara'daki merkezinde bir araya geldi ve yeni görevini üstlenmesi vesilesiyle kendisini tebrik ederek bu önemli görevde başarılar diledi. Sayın Büyükelçi, görüşmede Filistin topraklarındaki son saha ve insani gelişmeleri, özellikle de Gazze Şeridi'ndeki felaket durumunu gözden geçirdi. Gazze Şeridi, boğucu bir kuşatma ve sağlık altyapısı ile hayati tesisleri hedef alan kapsamlı bir yıkımdan muzdariptir. Doğrudan sivillerin hedef alınması sonucunda on binlerce şehit ve yaralı ile kuşatma altındaki Şerid'in dışına acil tedavi gerektiren giderek artan sayıda kritik tıbbi vaka bulunmaktadır."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part2.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Taraflar ayrıca, Gazze Şeridi'nden Türkiye'ye tahliye edilen yaralılar, hastalar ve refakatçileri dosyasını geniş bir şekilde ele aldılar. Sayın Büyükelçi, Türkiye'nin hızlı müdahalesini ve AFAD kurumunun Türk resmi makamlarıyla koordinasyon içinde, çeşitli Türk şehir ve hastanelerinde kabul, tedavi, lojistik ve tıbbi bakım sağlamada üstlendiği önemli rolü takdir etti."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part3.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Sayın Büyükelçi, bu asil insani çabanın Filistin ve Türk halkları arasındaki kardeşlik ilişkilerinin derinliğini yansıttığını ve Türkiye'nin Filistin davasının yanında, özellikle de Gazze'nin bugün içinde bulunduğu en zor koşullarda, sabit duruşunu somutlaştırdığını vurguladı."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part4.jpg"
+        },
+        {
+          "type": "text",
+          "value": "AFAD Başkanı Sayın Pehlivan ise, Türkiye'nin hükümeti ve halkıyla Filistin halkına tam desteğini sürdürme taahhüdünü ve kurumun, İsrail saldırılarının Filistin halkına neden olduğu acıyı hafifletmek için gereken her şeyi sağlamaya hazır olduğunu ifade ederek, Türkiye'nin adil Filistin davası konusundaki sağlam duruşunu yineledi."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part5.jpg"
+        },
+        {
+          "type": "text",
+          "value": "Bu görüşme, Filistin Büyükelçiliği ile Türk resmi makamları arasındaki sürekli ikili işbirliği çerçevesinde, saldırıdan etkilenenlere insani ve tıbbi koruma şemsiyesi sağlamak ve Filistin halkı üzerindeki devam eden felaketin sonuçlarıyla yüzleşmek için tüm diplomatik ve yardım kanallarını etkinleştirmek amacıyla gerçekleşmiştir."
+        },
+        {
+          "type": "image",
+          "value": "news.2.part6.jpg"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Duyuru: Ekim 2023 Saldırısı Sonrası Türkiye'ye Yerinden Edilen Filistinli Nitelikli Bireylerin Veri Kaydı",
+      "date": "11 Haziran 2025",
+      "category": "Duyurular",
+      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, İsrail'in Ekim 2023'te Gazze Şeridi'ne yönelik saldırısı ve sonrasında Türkiye Cumhuriyeti'ne gelen vatandaşlara, yükseköğrenim diplomasına sahip (en az lisans derecesi) vatandaşların verilerini kaydetmek üzere bir bağlantının açıldığını duyurmaktan memnuniyet duyar.",
+      "image_title": "news.title.3.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, İsrail'in Ekim 2023'te Gazze Şeridi'ne yönelik saldırısı ve sonrasında Türkiye Cumhuriyeti'ne gelen kardeş vatandaşlarımıza, yükseköğrenim diplomasına sahip (en az lisans derecesi) vatandaşların verilerini kaydetmek üzere bir bağlantının açıldığını duyurmaktan memnuniyet duyar. Bu girişim, İsrail saldırısı sonrası Gazze Şeridi'nden yerinden edilen Filistinli nitelikli bireylerin verilerini toplama ve izleme çabalarının bir parçasıdır. Bu veriler, Cumhurbaşkanlığı'na bağlı Filistin Uluslararası Vakfı'na sunularak, ev sahibi ülkelerle bu nitelikli bireylere istihdam fırsatları bulma hedefiyle çalışılacaktır."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma Etkinliği Görüşmesi",
+      "date": "17 Mayıs 2025",
+      "category": "Duyurular",
+      "excerpt": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma etkinliği üzerine bir görüşme. Mülakat videosu buraya eklenecektir.",
+      "image_title": "news.title.4.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nakba Anma etkinliği üzerine bir görüşme."
+        },
+        {
+          "type": "video",
+          "value": "/public/videos/interview_video.mp4"
+        }
+      ]
+    }
+  ]
 }
