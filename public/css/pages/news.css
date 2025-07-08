@@ -1,193 +1,141 @@
 /*====================================================
-  NEWS.CSS - إصدار محدث ومحسن
-  تحسينات الأداء والتصميم وإصلاح الأخطاء
+  NEWS.CSS - محدث ومتوافق مع تصميم الموقع
+  تصميم داكن أنيق متوافق مع main.css و index.css
 ====================================================*/
 
-/* CSS Variables for News Pages */
+/* CSS Variables متوافقة مع الموقع */
 :root {
-    --news-primary: #1a237e;
-    --news-primary-light: #3f51b5;
-    --news-secondary: #e0f2f7;
-    --news-accent: #01579b;
-    --news-text: #333;
-    --news-text-light: #666;
-    --news-border: #e0e0e0;
-    --news-hover: #f5f5f5;
-    --news-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    --news-shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
-    --news-transition: all 0.3s ease;
+    --news-bg-dark: #0A0B0D;
+    --news-bg-card: #14161a;
+    --news-text-primary: #E8EAED;
+    --news-text-secondary: #a2a8b1;
+    --news-accent: #C8B08A;
+    --news-accent-hover: #E0C8A0;
+    --news-border: rgba(200, 176, 138, 0.2);
+    --news-shadow: rgba(0, 0, 0, 0.4);
+    --news-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --news-radius: 12px;
-    --news-spacing: 20px;
+    --news-font-heading: 'Amiri', serif;
+    --news-font-body: 'Inter', sans-serif;
 }
 
 /*====================================================
-  BREADCRUMB NAVIGATION
+  صفحة الأخبار الرئيسية
 ====================================================*/
 
-.breadcrumb-nav {
-    background: #f8f9fa;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--news-border);
+/* تطبيق الخلفية الداكنة */
+body {
+    background-color: var(--news-bg-dark);
+    color: var(--news-text-primary);
+    font-family: var(--news-font-body);
 }
 
-.breadcrumb-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.breadcrumb {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    gap: 10px;
-}
-
-.breadcrumb li {
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb li:not(:last-child)::after {
-    content: '/';
-    margin: 0 10px;
-    color: var(--news-text-light);
-}
-
-.breadcrumb a {
-    color: var(--news-primary);
-    text-decoration: none;
-    transition: var(--news-transition);
-}
-
-.breadcrumb a:hover {
-    color: var(--news-primary-light);
-    text-decoration: underline;
-}
-
-.breadcrumb [aria-current="page"] span {
-    color: var(--news-text-light);
-    font-weight: 500;
-}
-
-/*====================================================
-  NEWS HERO SECTION
-====================================================*/
-
+/* Hero Section متوافق مع التصميم العام */
 .news-hero {
-    background: linear-gradient(135deg, var(--news-secondary) 0%, #ffffff 100%);
-    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--news-bg-dark) 0%, #1a1d23 100%);
+    padding: 80px 20px;
     text-align: center;
-    color: var(--news-text);
+    color: var(--news-text-primary);
     position: relative;
-    overflow: hidden;
-}
-
-.news-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/public/images/pattern.svg') center/cover;
-    opacity: 0.05;
-    z-index: 1;
-}
-
-.news-hero > * {
-    position: relative;
-    z-index: 2;
+    border-bottom: 1px solid var(--news-border);
+    margin-bottom: 0;
 }
 
 .news-hero h1 {
-    font-size: clamp(2.2em, 5vw, 3.2em);
-    color: var(--news-primary);
-    margin-bottom: 15px;
+    font-family: var(--news-font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--news-accent);
+    margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .news-hero p {
-    font-size: clamp(1em, 3vw, 1.3em);
-    color: var(--news-text);
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: var(--news-text-secondary);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
 /*====================================================
-  SEARCH AND FILTER SECTION
+  البحث والتصفية
 ====================================================*/
 
 .news-filter-search {
+    background: var(--news-bg-card);
+    border: 1px solid var(--news-border);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: var(--news-radius);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 30px 20px;
-    background: var(--news-secondary);
-    border-bottom: 1px solid var(--news-border);
+    gap: 20px;
     flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px var(--news-shadow);
 }
 
 .news-filter-search input[type="text"],
 .news-filter-search select {
+    background: var(--news-bg-dark);
+    border: 1px solid var(--news-border);
+    color: var(--news-text-primary);
     padding: 12px 20px;
-    border: 2px solid transparent;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 1rem;
     width: 250px;
-    background: white;
-    box-shadow: var(--news-shadow);
-    transition: var(--news-transition);
     font-family: inherit;
+    transition: var(--news-transition);
 }
 
 .news-filter-search input[type="text"]:focus,
 .news-filter-search select:focus {
-    border-color: var(--news-primary-light);
-    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
+    border-color: var(--news-accent);
+    box-shadow: 0 0 0 3px rgba(200, 176, 138, 0.1);
     outline: none;
     transform: translateY(-2px);
 }
 
+.news-filter-search input[type="text"]::placeholder {
+    color: var(--news-text-secondary);
+}
+
+.news-filter-search select option {
+    background: var(--news-bg-card);
+    color: var(--news-text-primary);
+}
+
 .clear-filters-btn,
 .reset-filters-btn {
+    background: var(--news-accent);
+    color: var(--news-bg-dark);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--news-transition);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 20px;
-    background: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: var(--news-transition);
-    font-weight: 500;
 }
 
 .clear-filters-btn:hover,
 .reset-filters-btn:hover {
-    background: #c82333;
+    background: var(--news-accent-hover);
     transform: translateY(-2px);
-    box-shadow: var(--news-shadow);
+    box-shadow: 0 4px 15px rgba(200, 176, 138, 0.3);
 }
 
 /*====================================================
-  NEWS LIST SECTION
+  قسم الأخبار الرئيسي
 ====================================================*/
 
 .news-list-section {
+    background: var(--news-bg-dark);
     padding: 40px 20px;
-    background: #ffffff;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 60vh;
@@ -200,58 +148,53 @@
     margin-bottom: 40px;
     flex-wrap: wrap;
     gap: 20px;
+    border-bottom: 1px solid var(--news-border);
+    padding-bottom: 20px;
 }
 
 .news-section-header h2 {
-    font-size: clamp(2em, 4vw, 2.5em);
-    color: var(--news-primary);
+    font-family: var(--news-font-heading);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--news-accent);
     margin: 0;
-    position: relative;
-}
-
-.news-section-header h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--news-primary-light);
-    margin: 15px 0 0 0;
-    border-radius: 5px;
+    font-weight: 700;
 }
 
 .news-count {
-    background: var(--news-secondary);
+    background: var(--news-bg-card);
     color: var(--news-accent);
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 20px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-weight: 600;
+    border: 1px solid var(--news-border);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .news-count::before {
     content: '📰';
+    opacity: 0.8;
 }
 
 /*====================================================
-  NEWS GRID
+  شبكة الأخبار
 ====================================================*/
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
 
 .news-card {
-    background: #fff;
+    background: var(--news-bg-card);
     border: 1px solid var(--news-border);
     border-radius: var(--news-radius);
     overflow: hidden;
-    box-shadow: var(--news-shadow);
+    box-shadow: 0 4px 15px var(--news-shadow);
     transition: var(--news-transition);
     display: flex;
     flex-direction: column;
@@ -265,7 +208,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--news-primary), var(--news-primary-light));
+    background: linear-gradient(90deg, var(--news-accent), var(--news-accent-hover));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -273,8 +216,8 @@
 
 .news-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--news-shadow-hover);
-    border-color: var(--news-primary-light);
+    box-shadow: 0 12px 30px var(--news-shadow);
+    border-color: var(--news-accent);
 }
 
 .news-card:hover::before {
@@ -286,7 +229,6 @@
     height: 220px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid var(--news-border);
     transition: var(--news-transition);
 }
 
@@ -295,34 +237,26 @@
 }
 
 .news-card-content {
-    padding: var(--news-spacing);
+    padding: 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
 
+/* إزالة عرض فئة الأخبار */
 .news-category {
-    display: inline-block;
-    background: linear-gradient(135deg, #ffe0b2, #ffcc80);
-    color: #e65100;
-    font-size: 0.8em;
-    padding: 6px 12px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    align-self: flex-start;
-    border: 1px solid rgba(230, 81, 0, 0.2);
+    display: none !important;
 }
 
 .news-card h3 {
-    font-size: 1.4em;
-    color: var(--news-text);
+    font-family: var(--news-font-heading);
+    font-size: 1.4rem;
+    color: var(--news-text-primary);
     margin: 0;
     line-height: 1.4;
     flex-grow: 1;
+    font-weight: 700;
 }
 
 .news-card h3 a {
@@ -333,13 +267,13 @@
 }
 
 .news-card h3 a:hover {
-    color: var(--news-primary-light);
+    color: var(--news-accent);
 }
 
 .news-excerpt {
-    font-size: 0.95em;
-    color: var(--news-text-light);
-    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--news-text-secondary);
+    line-height: 1.7;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -348,13 +282,21 @@
     -webkit-box-orient: vertical;
 }
 
-.news-date {
-    font-size: 0.85em;
-    color: var(--news-accent);
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid var(--news-border);
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: var(--news-accent);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     font-weight: 500;
 }
 
@@ -363,8 +305,13 @@
     opacity: 0.7;
 }
 
+/* إخفاء وقت القراءة */
+.news-read-time {
+    display: none !important;
+}
+
 /*====================================================
-  LOADING INDICATOR
+  مؤشر التحميل ورسائل الخطأ
 ====================================================*/
 
 .loading-indicator {
@@ -372,56 +319,61 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background: var(--news-bg-card);
+    border-radius: var(--news-radius);
+    margin: 40px auto;
+    max-width: 600px;
+    border: 1px solid var(--news-border);
 }
 
 .loading-spinner {
-    font-size: 2rem;
-    color: var(--news-primary);
+    font-size: 3rem;
+    color: var(--news-accent);
     margin-bottom: 20px;
 }
 
 .loading-indicator p {
-    color: var(--news-text-light);
-    font-size: 1.1em;
+    color: var(--news-text-secondary);
+    font-size: 1.2rem;
     margin: 0;
 }
 
-/*====================================================
-  NO RESULTS MESSAGE
-====================================================*/
-
 .no-results {
     text-align: center;
-    padding: 60px 20px;
-    background: #f9f9f9;
+    padding: 80px 20px;
+    background: var(--news-bg-card);
     border-radius: var(--news-radius);
-    margin-top: 30px;
-    border: 2px dashed var(--news-border);
+    margin: 40px auto;
+    max-width: 600px;
+    border: 1px solid var(--news-border);
 }
 
 .no-results-icon {
-    font-size: 3rem;
-    color: var(--news-text-light);
+    font-size: 4rem;
+    color: var(--news-text-secondary);
     margin-bottom: 20px;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .no-results h3 {
-    font-size: 1.5em;
-    color: var(--news-text);
-    margin: 0 0 10px 0;
+    font-family: var(--news-font-heading);
+    font-size: 1.8rem;
+    color: var(--news-text-primary);
+    margin: 0 0 15px 0;
+    font-weight: 700;
 }
 
 .no-results p {
-    color: var(--news-text-light);
-    margin: 0 0 25px 0;
-    font-size: 1.1em;
+    color: var(--news-text-secondary);
+    margin: 0 0 30px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /*====================================================
-  LOAD MORE SECTION
+  تحميل المزيد
 ====================================================*/
 
 .load-more-section {
@@ -430,41 +382,39 @@
 }
 
 .load-more-btn {
+    background: var(--news-accent);
+    color: var(--news-bg-dark);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--news-transition);
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 30px;
-    background: var(--news-primary);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: var(--news-transition);
-    font-weight: 600;
 }
 
 .load-more-btn:hover {
-    background: var(--news-primary-light);
+    background: var(--news-accent-hover);
     transform: translateY(-2px);
-    box-shadow: var(--news-shadow);
-}
-
-.load-more-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
+    box-shadow: 0 6px 20px rgba(200, 176, 138, 0.3);
 }
 
 /*====================================================
-  NEWSLETTER SECTION
+  النشرة الإخبارية
 ====================================================*/
 
 .newsletter-section {
-    background: linear-gradient(135deg, var(--news-primary) 0%, var(--news-primary-light) 100%);
-    color: white;
-    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--news-bg-card) 0%, #1f2228 100%);
+    color: var(--news-text-primary);
+    padding: 80px 20px;
     text-align: center;
+    border: 1px solid var(--news-border);
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: var(--news-radius);
 }
 
 .newsletter-container {
@@ -473,22 +423,24 @@
 }
 
 .newsletter-content h3 {
-    font-size: 2em;
+    font-family: var(--news-font-heading);
+    font-size: 2.2rem;
     margin-bottom: 15px;
     font-weight: 700;
+    color: var(--news-accent);
 }
 
 .newsletter-content p {
-    font-size: 1.1em;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    opacity: 0.9;
+    color: var(--news-text-secondary);
     line-height: 1.6;
 }
 
 .newsletter-form {
     display: flex;
-    gap: 10px;
-    max-width: 400px;
+    gap: 15px;
+    max-width: 450px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
@@ -496,153 +448,175 @@
 .newsletter-form input {
     flex: 1;
     padding: 15px 20px;
-    border: none;
+    background: var(--news-bg-dark);
+    border: 1px solid var(--news-border);
+    color: var(--news-text-primary);
     border-radius: 8px;
-    font-size: 1em;
-    min-width: 200px;
+    font-size: 1rem;
+    min-width: 250px;
+}
+
+.newsletter-form input::placeholder {
+    color: var(--news-text-secondary);
 }
 
 .newsletter-form button {
     padding: 15px 25px;
-    background: #28a745;
-    color: white;
+    background: var(--news-accent);
+    color: var(--news-bg-dark);
     border: none;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--news-transition);
-    font-weight: 600;
     white-space: nowrap;
 }
 
 .newsletter-form button:hover {
-    background: #218838;
+    background: var(--news-accent-hover);
     transform: translateY(-2px);
 }
 
-.newsletter-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.newsletter-message.success {
-    background: rgba(40, 167, 69, 0.2);
-    border: 1px solid rgba(40, 167, 69, 0.3);
-    color: #fff;
-}
-
-.newsletter-message.error {
-    background: rgba(220, 53, 69, 0.2);
-    border: 1px solid rgba(220, 53, 69, 0.3);
-    color: #fff;
-}
-
 /*====================================================
-  ERROR CONTAINER
+  صفحة تفاصيل الخبر
 ====================================================*/
 
-.error-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    padding: 40px 20px;
-}
-
-.error-content {
-    text-align: center;
-    max-width: 500px;
-    background: #f8f9fa;
+.news-detail-container {
+    background: var(--news-bg-card);
+    color: var(--news-text-primary);
+    max-width: 900px;
+    margin: 40px auto;
     padding: 40px;
     border-radius: var(--news-radius);
-    box-shadow: var(--news-shadow);
+    box-shadow: 0 8px 25px var(--news-shadow);
+    border: 1px solid var(--news-border);
 }
 
-.error-icon {
-    font-size: 4rem;
-    color: #dc3545;
-    margin-bottom: 20px;
+.news-detail-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--news-border);
+    padding-bottom: 30px;
 }
 
-.error-title {
-    font-size: 1.8em;
-    color: #dc3545;
-    margin-bottom: 15px;
+/* إخفاء فئة الخبر في صفحة التفاصيل */
+.news-detail-category {
+    display: none !important;
+}
+
+.news-detail-header h1 {
+    font-family: var(--news-font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--news-text-primary);
+    margin: 20px 0;
+    line-height: 1.3;
     font-weight: 700;
 }
 
-.error-message {
-    color: var(--news-text-light);
-    margin-bottom: 30px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.error-actions {
+.news-detail-meta {
     display: flex;
-    gap: 15px;
     justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.retry-btn,
-.back-to-news-btn {
-    display: inline-flex;
+.meta-item {
+    display: flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 20px;
+    color: var(--news-text-secondary);
+    font-size: 0.95rem;
+}
+
+.meta-item i {
+    color: var(--news-accent);
+}
+
+.news-detail-image-main {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--news-radius);
+    margin: 40px 0;
+    box-shadow: 0 6px 20px var(--news-shadow);
+}
+
+.news-detail-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--news-text-primary);
+    margin: 40px 0;
+}
+
+.news-detail-content p {
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.news-detail-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
     border-radius: 8px;
+    box-shadow: 0 4px 12px var(--news-shadow);
+}
+
+.news-detail-content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+.news-detail-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background: var(--news-accent);
+    color: var(--news-bg-dark);
     text-decoration: none;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
     transition: var(--news-transition);
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
 }
 
-.retry-btn {
-    background: var(--news-primary);
-    color: white;
-}
-
-.retry-btn:hover {
-    background: var(--news-primary-light);
+.news-detail-back-link:hover {
+    background: var(--news-accent-hover);
     transform: translateY(-2px);
-}
-
-.back-to-news-btn {
-    background: #6c757d;
-    color: white;
-}
-
-.back-to-news-btn:hover {
-    background: #5a6268;
-    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 176, 138, 0.3);
+    text-decoration: none;
 }
 
 /*====================================================
-  SOCIAL SHARING
+  المشاركة الاجتماعية
 ====================================================*/
 
 .social-share-section {
-    background: #f8f9fa;
+    background: var(--news-bg-card);
     padding: 40px 20px;
-    border-top: 1px solid var(--news-border);
+    border: 1px solid var(--news-border);
+    border-radius: var(--news-radius);
+    margin: 40px auto;
+    max-width: 800px;
 }
 
 .social-share-container {
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
 }
 
 .social-share-container h4 {
-    font-size: 1.3em;
-    color: var(--news-text);
+    font-family: var(--news-font-heading);
+    font-size: 1.5rem;
+    color: var(--news-accent);
     margin-bottom: 25px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .social-share-buttons {
@@ -666,57 +640,33 @@
     text-decoration: none;
 }
 
-.social-share-btn.facebook {
-    background: #1877f2;
-}
-
-.social-share-btn.twitter {
-    background: #1da1f2;
-}
-
-.social-share-btn.whatsapp {
-    background: #25d366;
-}
-
-.social-share-btn.copy-link {
-    background: #6c757d;
-}
+.social-share-btn.facebook { background: #1877f2; }
+.social-share-btn.twitter { background: #1da1f2; }
+.social-share-btn.whatsapp { background: #25d366; }
+.social-share-btn.copy-link { background: #6c757d; }
 
 .social-share-btn:hover {
     transform: translateY(-3px);
-    box-shadow: var(--news-shadow);
-}
-
-.copy-message {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #28a745;
-    color: white;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /*====================================================
-  RELATED ARTICLES
+  المقالات ذات الصلة
 ====================================================*/
 
 .related-articles-section {
+    background: var(--news-bg-card);
     padding: 60px 20px;
-    background: white;
-    border-top: 1px solid var(--news-border);
-}
-
-.related-articles-container {
+    border: 1px solid var(--news-border);
+    border-radius: var(--news-radius);
+    margin: 40px auto;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 .related-articles-container h3 {
-    font-size: 2em;
-    color: var(--news-primary);
+    font-family: var(--news-font-heading);
+    font-size: 2.2rem;
+    color: var(--news-accent);
     text-align: center;
     margin-bottom: 40px;
     font-weight: 700;
@@ -724,31 +674,24 @@
 
 .related-articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
 /*====================================================
-  RESPONSIVE DESIGN
+  التصميم المتجاوب
 ====================================================*/
 
 @media (max-width: 768px) {
     .news-hero {
-        padding: 40px 15px;
-    }
-    
-    .news-hero h1 {
-        font-size: 2em;
-    }
-    
-    .news-hero p {
-        font-size: 1em;
+        padding: 60px 15px;
     }
     
     .news-filter-search {
         flex-direction: column;
         align-items: stretch;
-        padding: 20px 15px;
+        padding: 20px;
+        margin: 20px;
     }
     
     .news-filter-search input[type="text"],
@@ -793,17 +736,14 @@
         justify-content: center;
     }
     
-    .error-actions {
+    .news-detail-container {
+        margin: 20px 10px;
+        padding: 25px;
+    }
+    
+    .news-detail-meta {
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .breadcrumb-container {
-        padding: 0 15px;
-    }
-    
-    .breadcrumb {
-        font-size: 0.9em;
+        gap: 10px;
     }
 }
 
@@ -813,15 +753,15 @@
     }
     
     .news-card-content {
-        padding: 15px;
+        padding: 20px;
     }
     
     .news-hero {
-        padding: 30px 10px;
+        padding: 40px 10px;
     }
     
     .newsletter-section {
-        padding: 40px 15px;
+        padding: 50px 15px;
     }
     
     .social-share-section {
@@ -831,10 +771,14 @@
     .related-articles-section {
         padding: 40px 15px;
     }
+    
+    .news-detail-container {
+        padding: 20px;
+    }
 }
 
 /*====================================================
-  ACCESSIBILITY ENHANCEMENTS
+  إمكانية الوصول
 ====================================================*/
 
 @media (prefers-reduced-motion: reduce) {
@@ -847,21 +791,22 @@
 
 @media (prefers-contrast: high) {
     :root {
-        --news-primary: #000080;
-        --news-primary-light: #0000ff;
-        --news-text: #000000;
-        --news-text-light: #333333;
-        --news-border: #000000;
+        --news-bg-dark: #000000;
+        --news-bg-card: #1a1a1a;
+        --news-text-primary: #ffffff;
+        --news-text-secondary: #cccccc;
+        --news-accent: #ffff00;
+        --news-border: #ffffff;
     }
 }
 
-/* Focus styles for accessibility */
+/* Focus styles */
 .news-card:focus,
 .news-card a:focus,
 button:focus,
 input:focus,
 select:focus {
-    outline: 3px solid var(--news-primary-light);
+    outline: 3px solid var(--news-accent);
     outline-offset: 2px;
 }
 
@@ -881,6 +826,11 @@ select:focus {
     
     .news-hero {
         background: none;
+        color: black;
+    }
+    
+    body {
+        background: white;
         color: black;
     }
 }
