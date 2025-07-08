@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="detailPageTitle" data-i18n="news:detailTitle">تفاصيل الخبر - سفارة دولة فلسطين في تركيا</title>
     
-    <!-- CSS Files -->
+    <!-- CSS Files - التصميم الموحد -->
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="stylesheet" href="/public/css/pages/news-detail.css">
     
@@ -29,7 +29,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/public/images/logo.png">
     
-    <!-- i18next Dependencies -->
+    <!-- i18next Dependencies - تحميل مبكر -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.11.5/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.4.3/i18nextHttpBackend.min.js"></script>
 </head>
@@ -131,17 +131,60 @@
     <!-- Footer Container -->
     <div id="footer-container"></div>
 
-    <!-- JavaScript Files -->
+    <!-- JavaScript Files - ترتيب محسن للتحميل -->
     <script src="/public/js/main.js"></script>
     <script src="/public/js/i18n-init.js"></script>
     <script src="/public/js/language-switcher.js"></script>
+    
+    <!-- تحميل news-detail.js في النهاية -->
     <script src="/public/js/page-specific/news-detail.js"></script>
 
-    <!-- Debug Information -->
+    <!-- Language Change Event Dispatcher -->
     <script>
-        // Debug helper for translation testing
+        // إرسال حدث عندما تتغير اللغة في HTML
+        const htmlObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+                    const newLang = document.documentElement.lang;
+                    console.log(`🔄 HTML lang attribute changed to: ${newLang}`);
+                    
+                    // إرسال حدث مخصص
+                    document.dispatchEvent(new CustomEvent('languageChanged', {
+                        detail: { language: newLang, source: 'html-attribute' }
+                    }));
+                }
+            });
+        });
+        
+        htmlObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['lang']
+        });
+        
+        // إرسال حدث عندما يتم تهيئة i18next
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkI18nReady = () => {
+                if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+                    console.log('📡 Dispatching i18nextReady event');
+                    document.dispatchEvent(new CustomEvent('i18nextReady', {
+                        detail: { 
+                            language: i18next.language,
+                            source: 'i18next-initialization'
+                        }
+                    }));
+                } else {
+                    setTimeout(checkI18nReady, 100);
+                }
+            };
+            
+            setTimeout(checkI18nReady, 500);
+        });
+    </script>
+
+    <!-- Debug Information للتطوير فقط -->
+    <script>
+        // Debug helper for development
         window.addEventListener('load', () => {
-            // Check URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const newsId = urlParams.get('id');
             
@@ -150,279 +193,67 @@
                 currentLang: document.documentElement.lang,
                 direction: document.documentElement.dir,
                 i18nextLoaded: typeof i18next !== 'undefined',
-                i18nextInitialized: typeof i18next !== 'undefined' ? i18next.isInitialized : false
+                i18nextInitialized: typeof i18next !== 'undefined' ? i18next.isInitialized : false,
+                pageURL: window.location.href
             });
             
             if (!newsId) {
                 console.warn('⚠️ No news ID in URL. Add ?id=1 to test.');
             }
             
-            // Test translation function
-            window.testTranslation = (key) => {
-                if (typeof i18next !== 'undefined' && i18next.isInitialized) {
-                    console.log(`Translation for "${key}":`, i18next.t(key));
-                } else {
-                    console.log('i18next not ready yet');
-                }
-            };
-            
-            // Quick test links
+            // Test functions for development
             window.testLinks = {
-                article1: () => window.location.href = '/public/html/news-detail.html?id=1',
-                article2: () => window.location.href = '/public/html/news-detail.html?id=2',
-                article3: () => window.location.href = '/public/html/news-detail.html?id=3',
-                article4: () => window.location.href = '/public/html/news-detail.html?id=4'
+                article1: () => window.location.href = window.location.pathname + '?id=1',
+                article2: () => window.location.href = window.location.pathname + '?id=2',
+                article3: () => window.location.href = window.location.pathname + '?id=3',
+                article4: () => window.location.href = window.location.pathname + '?id=4'
             };
             
             console.log('🧪 Test functions available:', {
-                'testTranslation(key)': 'Test a translation key',
                 'testLinks.article1()': 'Go to article 1',
                 'testLinks.article2()': 'Go to article 2',
+                'testLinks.article3()': 'Go to article 3',
+                'testLinks.article4()': 'Go to article 4',
                 'NewsDetailDebug.getState()': 'Get current state',
-                'NewsDetailDebug.checkI18next()': 'Check i18next status'
+                'NewsDetailDebug.testLanguageSwitch()': 'Test language switching'
             });
         });
+        
+        // إضافة مراقب للأخطاء العامة
+        window.addEventListener('error', function(e) {
+            console.error('🚨 Global error caught:', {
+                message: e.message,
+                filename: e.filename,
+                lineno: e.lineno,
+                colno: e.colno,
+                error: e.error
+            });
+            
+            // عرض رسالة خطأ للمستخدم إذا كان هناك خطأ في تحميل الصفحة
+            const container = document.getElementById('newsDetailContainer');
+            const loading = document.getElementById('loadingIndicator');
+            const errorContainer = document.getElementById('errorContainer');
+            
+            if (loading && loading.style.display !== 'none') {
+                loading.style.display = 'none';
+                if (errorContainer) {
+                    errorContainer.style.display = 'block';
+                    const errorMsg = errorContainer.querySelector('#errorMessage');
+                    if (errorMsg) {
+                        errorMsg.textContent = 'حدث خطأ تقني في تحميل الصفحة';
+                    }
+                }
+            }
+        });
+        
+        // مراقب للأحداث المخصصة
+        document.addEventListener('languageChanged', (event) => {
+            console.log('🌍 Language change event received:', event.detail);
+        });
+        
+        document.addEventListener('i18nextReady', (event) => {
+            console.log('🎯 i18next ready event received:', event.detail);
+        });
     </script>
-
-    <!-- Inline CSS for better loading -->
-    <style>
-        /* Enhanced Loading Styles */
-        .loading-indicator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 12px;
-            margin: 20px;
-        }
-
-        .loading-content {
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .loading-spinner {
-            font-size: 3rem;
-            color: #007bff;
-            margin-bottom: 25px;
-            animation: spin 1.5s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading-content p {
-            color: #6c757d;
-            font-size: 1.2em;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        /* Enhanced Error Styles */
-        .error-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            padding: 40px 20px;
-        }
-
-        .error-content {
-            text-align: center;
-            max-width: 600px;
-            background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
-        }
-
-        .error-icon {
-            font-size: 5rem;
-            color: #dc3545;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 4px 8px rgba(220,53,69,0.2));
-        }
-
-        .error-title {
-            font-size: 2.2em;
-            color: #dc3545;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        .error-message {
-            color: #6c757d;
-            margin-bottom: 35px;
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .error-actions {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .retry-btn,
-        .back-to-news-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            min-width: 160px;
-            justify-content: center;
-        }
-
-        .retry-btn {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
-        }
-
-        .retry-btn:hover {
-            background: linear-gradient(135deg, #0056b3, #004085);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
-        }
-
-        .back-to-news-btn {
-            background: linear-gradient(135deg, #6c757d, #5a6268);
-            color: white;
-            box-shadow: 0 4px 15px rgba(108,117,125,0.3);
-        }
-
-        .back-to-news-btn:hover {
-            background: linear-gradient(135deg, #5a6268, #495057);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(108,117,125,0.4);
-            text-decoration: none;
-            color: white;
-        }
-
-        /* Breadcrumb Enhancement */
-        .breadcrumb-nav {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            padding: 20px 0;
-            border-bottom: 1px solid #e9ecef;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .breadcrumb-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .breadcrumb {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.05em;
-        }
-
-        .breadcrumb li {
-            display: flex;
-            align-items: center;
-        }
-
-        .breadcrumb li:not(:last-child)::after {
-            content: '→';
-            margin: 0 12px;
-            color: #6c757d;
-            font-weight: bold;
-        }
-
-        .breadcrumb a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 6px;
-        }
-
-        .breadcrumb a:hover {
-            color: #0056b3;
-            background: rgba(0,123,255,0.1);
-            text-decoration: none;
-        }
-
-        .breadcrumb [aria-current="page"] span {
-            color: #495057;
-            font-weight: 600;
-            padding: 5px 10px;
-            background: rgba(73,80,87,0.1);
-            border-radius: 6px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .error-content {
-                padding: 30px 20px;
-                margin: 0 15px;
-            }
-
-            .error-title {
-                font-size: 1.8em;
-            }
-
-            .error-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .retry-btn,
-            .back-to-news-btn {
-                width: 100%;
-                max-width: 250px;
-            }
-
-            .breadcrumb {
-                font-size: 0.95em;
-            }
-
-            .breadcrumb-container {
-                padding: 0 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .loading-content p {
-                font-size: 1em;
-            }
-
-            .loading-spinner {
-                font-size: 2.5rem;
-            }
-
-            .error-icon {
-                font-size: 4rem;
-            }
-
-            .error-title {
-                font-size: 1.5em;
-            }
-
-            .error-message {
-                font-size: 1em;
-            }
-        }
-    </style>
 </body>
 </html>

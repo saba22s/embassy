@@ -1,59 +1,70 @@
 {
   "pageTitle": "News - Embassy of the State of Palestine in Turkey",
+  "detailTitle": "News Details",
   "mainTitle": "News & Announcements",
   "subtitle": "Follow the latest news and announcements from the Embassy of the State of Palestine in Turkey",
+  "allNewsTitle": "All News",
   "searchPlaceholder": "Search news...",
+  
   "filterAll": "All News",
   "filterAnnouncements": "Announcements",
   "filterEvents": "Events",
   "filterConsular": "Consular Services",
   "filterEducation": "Education",
-  "featuredTitle": "Featured News",
-  "allNewsTitle": "All News",
-  "categoryAnnouncements": "Announcement",
-  "categoryEvents": "Event",
+  
+  "noResults": "No results found",
+  "tryDifferentSearch": "Try different search terms or select another category",
+  "clearFilters": "Clear Filters",
+  "showAllNews": "Show All News",
+  "resetFilters": "Reset Filters",
+  
+  "loadMore": "Load More",
+  "newsItem": "news item",
+  "newsItems": "news items",
+  "newsCount": "News count",
+  
+  "loadingArticle": "Loading article details...",
+  "errorLoading": "Error Loading News",
+  "tryAgain": "Try Again",
+  "backToNews": "Back to News",
+  
+  "untitled": "Title Not Available",
+  "tags": "Tags",
+  "noContent": "Content for this article is currently not available",
+  "publishedOn": "Published on",
+  "author": "Author",
+  "readTime": "Reading Time",
+  "category": "Category",
+  
+  "shareArticle": "Share this Article",
+  "copyLink": "Copy Link",
+  "linkCopied": "Link Copied",
+  "relatedArticles": "Related Articles",
+  
+  "categoryAnnouncement": "Announcement",
+  "categoryEvent": "Event",
   "categoryConsular": "Consular Services",
   "categoryEducation": "Education",
-  "categoryإعلان": "Announcement",
-  "categoryفعالية": "Event",
-  "categoryخدماتقنصلية": "Consular Services",
-  "categoryتعليم": "Education",
-  "readingTime": "3 minutes read",
-  "loadMore": "Load More News",
-  "showAllNews": "Show All News",
-  "clearFilters": "Clear Filters",
+  
+  "articleNotFound": "Article not found",
+  "noIdProvided": "No news ID provided",
+  "loadingError": "Error occurred while loading news",
+  
   "newsletterTitle": "Subscribe to Newsletter",
   "newsletterDescription": "Get the latest news and announcements directly in your email",
   "emailPlaceholder": "Enter your email address",
   "subscribe": "Subscribe",
-  "noResults": "No Results Found",
-  "tryDifferentSearch": "Try different search terms or select another category",
   "invalidEmail": "Please enter a valid email address",
   "subscriptionSuccess": "Successfully subscribed! Thank you",
-  "backToNews": "Back to News",
-  "shareArticle": "Share this Article",
-  "relatedArticles": "Related Articles",
-  "copyLink": "Copy Link",
-  "linkCopied": "Link Copied",
-  "errorLoading": "Error Loading News",
-  "errorLoadingDetail": "Error Loading News Details",
-  "tryAgain": "Try Again",
-  "newsCount": "News Count",
-  "newsItem": "news item",
-  "newsItems": "news items",
-  "detailTitle": "News Details",
-  "publishedOn": "Published on",
-  "readTime": "Reading Time",
-  "author": "Author",
-  "tags": "Tags",
-  "category": "Category",
-  "lastUpdated": "Last Updated",
-  "loading": "Loading...",
+  
+  "featuredTitle": "Featured News",
+  "lastUpdated": "Last updated",
   "error": "An error occurred",
   "retry": "Retry",
   "close": "Close",
   "viewDetails": "View Details",
   "readMore": "Read More",
+  
   "recent": "Recent",
   "popular": "Popular",
   "featured": "Featured",
@@ -65,21 +76,22 @@
   "sortByTitle": "Sort by Title",
   "ascending": "Ascending",
   "descending": "Descending",
+
   "news_articles": [
     {
       "id": "1",
-      "title": "Launch of the Global Transport Connectivity Forum with Palestine's Participation",
+      "title": "Global Transport Connectivity Forum Launches with Palestine's Participation",
       "date": "June 28, 2025",
-      "category": "Announcements",
+      "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "5 minutes",
       "tags": ["transport", "forum", "istanbul", "international cooperation"],
-      "excerpt": "Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Eng. Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days.",
+      "excerpt": "The Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Engineer Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days.",
       "image_title": "news.title.1.jpg",
       "content_parts": [
         {
           "type": "text",
-          "value": "Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Eng. Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days. The opening session featured speeches by the President of the Republic of Turkey, Recep Tayyip Erdoğan, and the Turkish Minister of Transport and Infrastructure, Abdulkadir Uraloğlu. Ambassador Dr. Mustafa's participation in this global forum, which brings together decision-makers and experts from most countries of the world, expresses a message of steadfastness and presence, and a genuine desire to build an open and interconnected future that respects the specificity of peoples and their right to live in freedom and dignity."
+          "value": "The Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Engineer Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days. The opening session featured speeches by Turkish President Recep Tayyip Erdoğan and Turkish Minister of Transport and Infrastructure Abdul Qadir Ural Oğlu. Ambassador Dr. Mustafa's participation in this global forum, which brings together decision-makers and experts from most countries of the world, represents a message of resilience and presence, and a genuine desire to build an open and interconnected future that respects the uniqueness of peoples and their right to live in freedom and dignity."
         },
         {
           "type": "image",
@@ -87,7 +99,7 @@
         },
         {
           "type": "text",
-          "value": "Within the framework of this important forum, His Excellency the Ambassador participated in a special seminar on opportunities for regional cooperation in the field of transport in Central Asia, the Arab region, and Europe, which also included the participation of the Ministers of Transport and Communications of Turkey, Saudi Arabia, and Ukraine. Ambassador Mustafa emphasized Palestine's openness to all forms of regional and international cooperation, reviewing the challenges facing the State of Palestine in this sector, which are primarily a result of the practices and measures of the occupying power, Israel, which still controls not only the external crossings of the State of Palestine but also movement within Palestine between cities, villages, and refugee camps, a matter that requires urgent international intervention."
+          "value": "As part of this important forum, His Excellency the Ambassador participated in a special seminar on regional cooperation opportunities in transport within Central Asia, the Arab region, and Europe, which also included Transport Ministers from Turkey, Saudi Arabia, and Ukraine. Ambassador Mustafa emphasized Palestine's openness to all forms of regional and international cooperation, reviewing the challenges facing the State of Palestine in this sector, which are primarily due to the practices and procedures of the Israeli occupation state that continues to control not only the external crossings of the State of Palestine but also movement within Palestine between cities, villages, and camps, requiring urgent international intervention."
         },
         {
           "type": "image",
@@ -101,18 +113,18 @@
     },
     {
       "id": "2",
-      "title": "Ambassador Dr. Faed Mustafa Meets Mr. Ali Hamza Pehlivan, Head of Turkish Disaster and Emergency Management Authority (AFAD), Discussing Developments in Palestine",
+      "title": "Ambassador Dr. Faed Mustafa Meets AFAD President Mr. Ali Hamza Pehlivan to Discuss Developments in Palestine",
       "date": "June 24, 2025",
-      "category": "Announcements",
+      "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "7 minutes",
       "tags": ["AFAD", "disasters", "Gaza", "humanitarian cooperation"],
-      "excerpt": "Amidst the ongoing criminal Israeli aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the Head of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in Ankara.",
+      "excerpt": "In light of the ongoing Israeli criminal aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the President of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in the capital Ankara.",
       "image_title": "news.title.2.jpg",
       "content_parts": [
         {
           "type": "text",
-          "value": "Amidst the ongoing criminal Israeli aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the Head of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in Ankara, where he congratulated him on assuming his new position and wished him success in this high mission. His Excellency reviewed during the meeting the latest field and humanitarian developments in the Palestinian territories, especially the catastrophic situation in the Gaza Strip, which suffers from a suffocating siege and widespread destruction affecting health infrastructure and vital facilities, in addition to the direct targeting of civilians, resulting in tens of thousands of martyrs and wounded, and an increasing number of critical medical cases requiring urgent treatment outside the besieged Strip."
+          "value": "In light of the ongoing Israeli criminal aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the President of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in the capital Ankara, where he congratulated him on assuming his new position and wished him success in this important mission. His Excellency reviewed during the meeting the latest field and humanitarian developments in the Palestinian territories, especially the catastrophic conditions in the Gaza Strip, which suffers from a suffocating siege and comprehensive destruction that has affected health infrastructure and vital facilities, in addition to the direct targeting of civilians, resulting in tens of thousands of martyrs and wounded and increasing numbers of critical medical cases requiring urgent treatment outside the besieged Strip."
         },
         {
           "type": "image",
@@ -120,7 +132,7 @@
         },
         {
           "type": "text",
-          "value": "The two parties also extensively discussed the file of the wounded, sick, and their escorts who were evacuated from the Gaza Strip to Turkey. His Excellency the Ambassador praised the swift Turkish response and the prominent role played by the AFAD institution in coordination with official Turkish authorities in facilitating their reception and providing treatment, logistical, and medical care in various Turkish cities and hospitals."
+          "value": "The two sides also extensively discussed the file of wounded, patients, and companions who were evacuated from the Gaza Strip to Turkey, with His Excellency the Ambassador praising the rapid Turkish response and the prominent role played by AFAD in coordination with Turkish official authorities in facilitating their reception and providing treatment, logistical and medical care in various Turkish cities and hospitals."
         },
         {
           "type": "image",
@@ -128,7 +140,7 @@
         },
         {
           "type": "text",
-          "value": "His Excellency affirmed that this noble humanitarian effort reflects the depth of brotherly relations between the Palestinian and Turkish peoples and embodies Turkey's steadfast stance in supporting the Palestinian cause, especially in the direst circumstances Gaza is experiencing today."
+          "value": "His Excellency emphasized that this noble humanitarian effort reflects the depth of brotherly relations between the Palestinian and Turkish peoples and embodies Turkey's steadfast position in standing with the Palestinian cause, especially in the darkest circumstances Gaza is experiencing today."
         },
         {
           "type": "image",
@@ -136,7 +148,7 @@
         },
         {
           "type": "text",
-          "value": "For his part, Mr. Pehlivan, the head of AFAD, expressed Turkey's commitment, government and people, to continue its full support for the Palestinian people and the institution's readiness to provide all necessary assistance to alleviate the suffering caused by the Israeli aggression against the Palestinian people, emphasizing Turkey's firm positions regarding the just Palestinian cause."
+          "value": "For his part, AFAD President Mr. Pehlivan expressed Turkey's commitment, both government and people, to continue its full support for the Palestinian people and the institution's readiness to provide everything necessary to alleviate the suffering caused by the Israeli aggression against the Palestinian people, emphasizing Turkey's steadfast positions towards the just Palestinian cause."
         },
         {
           "type": "image",
@@ -144,7 +156,7 @@
         },
         {
           "type": "text",
-          "value": "This meeting comes within the framework of continuous bilateral cooperation between the Palestinian Embassy and official Turkish authorities to provide a humanitarian and medical protection umbrella for those affected by the aggression and to activate all diplomatic and relief channels to confront the repercussions of the ongoing catastrophe on the Palestinian people."
+          "value": "This meeting comes within the framework of ongoing bilateral cooperation between the Palestinian Embassy and Turkish official authorities in order to provide a humanitarian and medical protection umbrella for those affected by the aggression and activate all diplomatic and relief channels to face the consequences of the ongoing catastrophe on the Palestinian people."
         },
         {
           "type": "image",
@@ -154,35 +166,35 @@
     },
     {
       "id": "3",
-      "title": "Announcement: Registration of Data for Palestinian Competencies Displaced to Turkey After October 2023 Aggression",
+      "title": "Announcement: Registration of Palestinian Skilled Personnel Displaced to Turkey After October 2023 Aggression",
       "date": "June 11, 2025",
-      "category": "Announcements",
+      "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "3 minutes",
-      "tags": ["registration", "competencies", "displacement", "employment"],
-      "excerpt": "The Embassy of the State of Palestine to the Republic of Turkey is pleased to announce to citizens arriving in the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data for citizens holding higher education degrees.",
+      "tags": ["registration", "skilled personnel", "displacement", "employment"],
+      "excerpt": "The Embassy of the State of Palestine in the Republic of Turkey is pleased to announce to our brothers and sisters who came to the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data of citizens holding higher education degrees.",
       "image_title": "news.title.3.jpg",
       "content_parts": [
         {
           "type": "text",
-          "value": "The Embassy of the State of Palestine to the Republic of Turkey is pleased to announce to our brothers and sisters, citizens arriving in the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data for citizens holding higher education degrees (at least a first university degree). This initiative is part of an effort to collect data and track Palestinian competencies who have been displaced from the Gaza Strip after the Israeli aggression, to submit this data to the Palestine International Foundation, affiliated with the Presidential Office, with the aim of working with host countries to find employment opportunities for these competencies."
+          "value": "The Embassy of the State of Palestine in the Republic of Turkey is pleased to announce to our brothers and sisters who came to the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data of citizens holding higher education degrees (at least a bachelor's degree), as part of collecting data and monitoring Palestinian skilled personnel who were displaced from the Gaza Strip after the Israeli aggression, to be submitted to the Palestine International Foundation affiliated with the Presidential Office, with the aim of working with host countries to find employment opportunities for these skilled personnel."
         }
       ]
     },
     {
       "id": "4",
-      "title": "Meeting with H.E. Ambassador Dr. Faed Mustafa on Nakba Anniversary Event via TRT Arabic Channel",
+      "title": "Interview with Ambassador Dr. Faed Mustafa on Nakba Memorial Event via TRT Arabic Channel",
       "date": "May 17, 2025",
-      "category": "Announcements",
+      "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "4 minutes",
-      "tags": ["Nakba", "interview", "TRT", "anniversary"],
-      "excerpt": "A meeting with H.E. Ambassador Dr. Faed Mustafa on the Nakba Anniversary event via TRT Arabic channel. A comprehensive television interview about the Palestinian cause and Palestinian-Turkish relations.",
+      "tags": ["Nakba", "interview", "TRT", "memorial"],
+      "excerpt": "Interview with His Excellency Ambassador Dr. Faed Mustafa on the Nakba memorial event via TRT Arabic channel. A comprehensive television interview about the Palestinian cause and distinguished Palestinian-Turkish relations.",
       "image_title": "news.title.4.jpg",
       "content_parts": [
         {
           "type": "text",
-          "value": "TRT Arabic channel conducted a television interview with H.E. Ambassador Dr. Faed Mustafa on the occasion of the Palestinian Nakba anniversary, where the Ambassador addressed many important issues related to the current Palestinian situation and the distinguished Palestinian-Turkish relations."
+          "value": "TRT Arabic channel conducted a television interview with His Excellency Ambassador Dr. Faed Mustafa on the occasion of the Palestinian Nakba memorial, where the Ambassador addressed many important issues related to the current Palestinian situation and the distinguished Palestinian-Turkish relations."
         },
         {
           "type": "video",
@@ -190,7 +202,7 @@
         },
         {
           "type": "text",
-          "value": "The Ambassador emphasized during the interview the importance of continued Turkish support for the Palestinian cause and the need for concerted international efforts to end Palestinian suffering and achieve justice and peace in the region."
+          "value": "The Ambassador emphasized during the interview the importance of Turkey's continued support for the Palestinian cause and the necessity of international efforts to end Palestinian suffering and achieve justice and peace in the region."
         }
       ]
     }

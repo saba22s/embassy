@@ -1,10 +1,10 @@
 /*====================================================
-  NEWS-DETAIL.JS - إصدار متكامل مع نظام الترجمة i18next
-  حل شامل لمشكلة الترجمة وعرض تفاصيل الأخبار
+  NEWS-DETAIL.JS - إصدار مُصحح مع دعم تغيير اللغة
+  متوافق مع التصميم الموحد مع حل مشكلة تغيير اللغة
 ====================================================*/
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('🚀 News Detail with i18n Integration - Starting...');
+    console.log('🚀 News Detail Page - Fixed Language Support Starting...');
     
     // State Management
     let pageState = {
@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         newsArticles: [],
         isLoading: false,
         isInitialized: false,
-        currentLanguage: 'ar'
+        currentLanguage: 'ar',
+        languageChangeInProgress: false
     };
     
     // DOM Elements
@@ -49,29 +50,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     /*====================================================
-      انتظار تهيئة i18next
+      انتظار تهيئة i18next مع تحسينات
     ====================================================*/
     
     function waitForI18next() {
         return new Promise((resolve) => {
             if (typeof i18next !== 'undefined' && i18next.isInitialized) {
-                pageState.currentLanguage = i18next.language || 'ar';
+                pageState.currentLanguage = i18next.language || document.documentElement.lang || 'ar';
                 console.log('✅ i18next already initialized, language:', pageState.currentLanguage);
                 resolve();
             } else {
                 console.log('⏳ Waiting for i18next initialization...');
                 
-                // الاستماع لحدث i18nextReady
-                document.addEventListener('i18nextReady', (event) => {
-                    pageState.currentLanguage = event.detail?.language || 'ar';
-                    console.log('✅ i18next ready, language:', pageState.currentLanguage);
-                    resolve();
-                });
+                // محاولة الحصول على اللغة من HTML
+                pageState.currentLanguage = document.documentElement.lang || 'ar';
                 
-                // احتياطي بعد 5 ثوانِ
+                // الاستماع لحدث i18nextReady
+                const handleI18nReady = (event) => {
+                    pageState.currentLanguage = event.detail?.language || pageState.currentLanguage;
+                    console.log('✅ i18next ready via event, language:', pageState.currentLanguage);
+                    document.removeEventListener('i18nextReady', handleI18nReady);
+                    resolve();
+                };
+                
+                document.addEventListener('i18nextReady', handleI18nReady);
+                
+                // فحص دوري
+                const checkInterval = setInterval(() => {
+                    if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+                        pageState.currentLanguage = i18next.language || pageState.currentLanguage;
+                        clearInterval(checkInterval);
+                        document.removeEventListener('i18nextReady', handleI18nReady);
+                        console.log('✅ i18next ready via polling, language:', pageState.currentLanguage);
+                        resolve();
+                    }
+                }, 100);
+                
+                // احتياطي بعد 5 ثوان
                 setTimeout(() => {
-                    pageState.currentLanguage = 'ar';
-                    console.log('⏰ Timeout, using default language: ar');
+                    clearInterval(checkInterval);
+                    document.removeEventListener('i18nextReady', handleI18nReady);
+                    console.log('⏰ Timeout, using detected language:', pageState.currentLanguage);
                     resolve();
                 }, 5000);
             }
@@ -86,23 +105,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             console.log(`📥 Loading news data for language: ${pageState.currentLanguage}`);
             
-            // تحميل ملف الأخبار للغة الحالية
-            const response = await fetch(`/public/locales/${pageState.currentLanguage}/news.json`);
+            // محاولة تحميل ملف اللغة الحالية
+            let response = await fetch(`/public/locales/${pageState.currentLanguage}/news.json`);
             
             if (!response.ok) {
                 console.warn(`⚠️ Failed to load ${pageState.currentLanguage}, trying Arabic...`);
-                const arabicResponse = await fetch('/public/locales/ar/news.json');
+                response = await fetch('/public/locales/ar/news.json');
                 
-                if (!arabicResponse.ok) {
+                if (!response.ok) {
                     throw new Error('فشل في تحميل ملفات البيانات');
                 }
                 
-                const arabicData = await arabicResponse.json();
-                pageState.newsArticles = arabicData.news_articles || [];
+                console.log('✅ Loaded Arabic fallback');
             } else {
-                const data = await response.json();
-                pageState.newsArticles = data.news_articles || [];
+                console.log(`✅ Loaded ${pageState.currentLanguage} successfully`);
             }
+            
+            const data = await response.json();
+            pageState.newsArticles = data.news_articles || [];
             
             console.log(`✅ Loaded ${pageState.newsArticles.length} articles`);
             return pageState.newsArticles;
@@ -159,18 +179,66 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!elements.container) return;
         
         const errorHtml = `
-            <div class="error-display">
+            <div class="error-display" style="
+                text-align: center;
+                padding: 60px 20px;
+                background: var(--news-detail-bg-card);
+                border-radius: var(--news-detail-radius);
+                margin: 40px auto;
+                max-width: 600px;
+                border: 1px solid var(--news-detail-border);
+                box-shadow: 0 8px 25px var(--news-detail-shadow);
+            ">
                 <div class="error-content">
-                    <i class="fas fa-exclamation-triangle error-icon"></i>
-                    <h2 class="error-title">خطأ في تحميل الخبر</h2>
-                    <p class="error-message">${message}</p>
-                    <div class="error-actions">
-                        <button onclick="location.reload()" class="retry-button">
-                            <i class="fas fa-refresh"></i>
+                    <i class="fas fa-exclamation-triangle" style="
+                        font-size: 4rem;
+                        color: #dc3545;
+                        margin-bottom: 25px;
+                        filter: drop-shadow(0 4px 8px rgba(220,53,69,0.2));
+                    "></i>
+                    <h2 style="
+                        color: var(--news-detail-text-primary);
+                        margin-bottom: 20px;
+                        font-size: 1.8rem;
+                        font-family: var(--news-detail-font-heading);
+                    ">خطأ في تحميل الخبر</h2>
+                    <p style="
+                        color: var(--news-detail-text-secondary);
+                        margin-bottom: 30px;
+                        font-size: 1.1rem;
+                        line-height: 1.6;
+                    ">${message}</p>
+                    <div class="error-actions" style="
+                        display: flex;
+                        gap: 20px;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    ">
+                        <button onclick="location.reload()" style="
+                            background: var(--news-detail-accent);
+                            color: var(--news-detail-bg-dark);
+                            border: none;
+                            padding: 15px 25px;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            transition: var(--news-detail-transition);
+                        ">
+                            <i class="fas fa-refresh" style="margin-left: 8px;"></i>
                             إعادة المحاولة
                         </button>
-                        <a href="/public/html/news.html" class="back-button">
-                            <i class="fas fa-arrow-right"></i>
+                        <a href="/public/html/news.html" style="
+                            background: var(--news-detail-text-secondary);
+                            color: var(--news-detail-text-primary);
+                            text-decoration: none;
+                            padding: 15px 25px;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            transition: var(--news-detail-transition);
+                        ">
+                            <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
                             العودة إلى الأخبار
                         </a>
                     </div>
@@ -212,7 +280,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log('✅ Article found:', article.title);
             
             // عرض المقال
-            displayArticleWithTranslations(article);
+            await displayArticleWithTranslations(article);
             
         } catch (error) {
             console.error('❌ Error in findAndDisplayArticle:', error);
@@ -224,7 +292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       عرض المقال مع الترجمات
     ====================================================*/
     
-    function displayArticleWithTranslations(article) {
+    async function displayArticleWithTranslations(article) {
         try {
             console.log('🎨 Displaying article with translations...');
             
@@ -241,11 +309,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 showContent();
                 
                 // تطبيق الترجمات على العناصر الجديدة
-                applyTranslationsToNewElements();
+                await applyTranslationsToNewElements();
             }
             
             // تحديث الميتا تاجز
             updateMetadata(article);
+            
+            // إعداد Social Share
+            setupSocialShare();
             
             console.log('✅ Article displayed with translations');
             
@@ -259,31 +330,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         // تحديد النصوص المترجمة
         const texts = getTranslatedTexts();
         
-        // تحديد فئة المقال
-        const categoryText = getCategoryText(article.category);
-        
         let html = `
             <article class="news-detail-article">
-                <header class="article-header">
-                    <div class="article-category">
-                        <span class="category-badge">${categoryText}</span>
-                    </div>
-                    <h1 class="article-title">${article.title || texts.untitled}</h1>
-                    <div class="article-meta">
+                <header class="news-detail-header">
+                    <h1 class="article-title">${escapeHtml(article.title || texts.untitled)}</h1>
+                    <div class="news-detail-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar-alt"></i>
-                            <span>${article.date || ''}</span>
+                            <span>${escapeHtml(article.date || '')}</span>
                         </div>
                         ${article.author ? `
                             <div class="meta-item">
                                 <i class="far fa-user"></i>
-                                <span>${article.author}</span>
-                            </div>
-                        ` : ''}
-                        ${article.readTime ? `
-                            <div class="meta-item">
-                                <i class="far fa-clock"></i>
-                                <span>${article.readTime}</span>
+                                <span>${escapeHtml(article.author)}</span>
                             </div>
                         ` : ''}
                     </div>
@@ -293,17 +352,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         // الصورة الرئيسية
         if (article.image_title) {
             html += `
-                <div class="article-image-main">
-                    <img src="/public/images/news/news.title/${article.image_title}" 
-                         alt="${article.title}" 
-                         onerror="this.style.display='none'"
-                         loading="lazy">
-                </div>
+                <img class="news-detail-image-main" 
+                     src="/public/images/news/news.title/${article.image_title}" 
+                     alt="${escapeHtml(article.title)}" 
+                     onerror="this.style.display='none'"
+                     loading="lazy">
             `;
         }
         
         // محتوى المقال
-        html += `<div class="article-content">`;
+        html += `<div class="news-detail-content">`;
         html += createContentHTML(article);
         html += `</div>`;
         
@@ -313,7 +371,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="article-tags">
                     <h3>${texts.tags}:</h3>
                     <div class="tags-list">
-                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        ${article.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
                     </div>
                 </div>
             `;
@@ -321,12 +379,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // رابط العودة
         html += `
-                <footer class="article-footer">
-                    <a href="/public/html/news.html" class="back-to-news">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>${texts.backToNews}</span>
-                    </a>
-                </footer>
+                <a href="/public/html/news.html" class="news-detail-back-link">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>${texts.backToNews}</span>
+                </a>
             </article>
         `;
         
@@ -343,19 +399,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 switch (part.type) {
                     case 'text':
                         if (part.value) {
-                            contentHtml += `<p class="content-paragraph">${part.value}</p>`;
+                            contentHtml += `<p>${escapeHtml(part.value)}</p>`;
                         }
                         break;
                         
                     case 'image':
                         if (part.value) {
                             contentHtml += `
-                                <div class="content-image-wrapper">
-                                    <img src="/public/images/news/news/${part.value}" 
-                                         alt="صورة من المقال ${index + 1}" 
-                                         onerror="this.parentElement.style.display='none'"
-                                         loading="lazy">
-                                </div>
+                                <img src="/public/images/news/news/${part.value}" 
+                                     alt="${escapeHtml('صورة من المقال ' + (index + 1))}" 
+                                     onerror="this.style.display='none'"
+                                     loading="lazy">
                             `;
                         }
                         break;
@@ -363,7 +417,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     case 'video':
                         if (part.value) {
                             contentHtml += `
-                                <div class="content-video-wrapper">
+                                <div class="video-container">
                                     <video controls preload="metadata">
                                         <source src="${part.value}" type="video/mp4">
                                         <p>متصفحك لا يدعم تشغيل الفيديو</p>
@@ -375,17 +429,28 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
         } else if (article.excerpt) {
-            contentHtml += `<p class="content-paragraph">${article.excerpt}</p>`;
+            contentHtml += `<p>${escapeHtml(article.excerpt)}</p>`;
         } else {
             const texts = getTranslatedTexts();
-            contentHtml += `<p class="content-paragraph">${texts.noContent}</p>`;
+            contentHtml += `<p>${texts.noContent}</p>`;
         }
         
         return contentHtml;
     }
     
     /*====================================================
-      الترجمات والنصوص
+      وظيفة تنظيف النصوص
+    ====================================================*/
+    
+    function escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    /*====================================================
+      الترجمات والنصوص المحسن
     ====================================================*/
     
     function getTranslatedTexts() {
@@ -397,8 +462,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             noContent: 'محتوى هذا المقال غير متوفر حالياً',
             publishedOn: 'نُشر في',
             author: 'الكاتب',
-            readTime: 'وقت القراءة',
-            category: 'الفئة'
+            readTime: 'وقت القراءة'
         };
         
         // محاولة الحصول على الترجمات من i18next
@@ -410,43 +474,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                 noContent: i18next.t('news:noContent', { defaultValue: defaultTexts.noContent }),
                 publishedOn: i18next.t('news:publishedOn', { defaultValue: defaultTexts.publishedOn }),
                 author: i18next.t('news:author', { defaultValue: defaultTexts.author }),
-                readTime: i18next.t('news:readTime', { defaultValue: defaultTexts.readTime }),
-                category: i18next.t('news:category', { defaultValue: defaultTexts.category })
+                readTime: i18next.t('news:readTime', { defaultValue: defaultTexts.readTime })
             };
         }
         
         return defaultTexts;
     }
     
-    function getCategoryText(category) {
-        if (!category) return 'عام';
-        
-        // خريطة الفئات
-        const categoryMap = {
-            'إعلان': { ar: 'إعلان', en: 'Announcement', tr: 'Duyuru' },
-            'فعالية': { ar: 'فعالية', en: 'Event', tr: 'Etkinlik' },
-            'خدمات قنصلية': { ar: 'خدمات قنصلية', en: 'Consular Services', tr: 'Konsolosluk Hizmetleri' },
-            'تعليم': { ar: 'تعليم', en: 'Education', tr: 'Eğitim' }
-        };
-        
-        const categoryMapping = categoryMap[category];
-        if (categoryMapping) {
-            return categoryMapping[pageState.currentLanguage] || categoryMapping.ar;
-        }
-        
-        // محاولة الترجمة عبر i18next
-        if (typeof i18next !== 'undefined' && i18next.isInitialized) {
-            const categoryKey = `category${category.replace(/\s/g, '')}`;
-            const translated = i18next.t(`news:${categoryKey}`, { defaultValue: category });
-            return translated;
-        }
-        
-        return category;
-    }
-    
-    function applyTranslationsToNewElements() {
+    async function applyTranslationsToNewElements() {
         // تطبيق الترجمات على العناصر الجديدة إذا كان i18next متاحاً
-        if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+        if (typeof i18next !== 'undefined' && i18next.isInitialized && elements.container) {
             console.log('🔄 Applying translations to new elements...');
             
             // البحث عن العناصر التي تحتوي على data-i18n
@@ -514,22 +551,143 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     /*====================================================
-      معالجة تغيير اللغة
+      معالجة تغيير اللغة - مُصحح
     ====================================================*/
     
-    function handleLanguageChange(lng) {
-        console.log(`🔄 Language changed to: ${lng}`);
-        pageState.currentLanguage = lng;
-        
-        if (pageState.isInitialized && pageState.currentArticle) {
-            console.log('🔄 Reloading article for new language...');
-            showLoading();
+    async function handleLanguageChange(lng) {
+        try {
+            if (pageState.languageChangeInProgress) {
+                console.log('🔄 Language change already in progress, skipping...');
+                return;
+            }
             
-            // إعادة تحميل المقال بالترجمة الجديدة
-            setTimeout(() => {
-                findAndDisplayArticle();
-            }, 100);
+            pageState.languageChangeInProgress = true;
+            console.log(`🔄 Language changed to: ${lng}`);
+            
+            const oldLanguage = pageState.currentLanguage;
+            pageState.currentLanguage = lng;
+            
+            if (pageState.isInitialized && pageState.currentArticle) {
+                console.log('🔄 Reloading article for new language...');
+                showLoading();
+                
+                try {
+                    // إعادة تحميل المقال بالترجمة الجديدة
+                    await findAndDisplayArticle();
+                    console.log('✅ Article reloaded successfully for new language');
+                } catch (error) {
+                    console.error('❌ Error reloading article:', error);
+                    // العودة للغة السابقة في حالة الخطأ
+                    pageState.currentLanguage = oldLanguage;
+                    showError('حدث خطأ أثناء تغيير اللغة');
+                }
+            }
+            
+        } catch (error) {
+            console.error('❌ Error in handleLanguageChange:', error);
+            showError('حدث خطأ أثناء تغيير اللغة');
+        } finally {
+            pageState.languageChangeInProgress = false;
         }
+    }
+    
+    /*====================================================
+      إعداد Social Share
+    ====================================================*/
+    
+    function setupSocialShare() {
+        const socialSection = document.getElementById('socialShareSection');
+        if (!socialSection) return;
+        
+        socialSection.style.display = 'block';
+        
+        // Facebook Share
+        const facebookBtn = document.getElementById('shareFacebook');
+        if (facebookBtn) {
+            facebookBtn.addEventListener('click', () => {
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            });
+        }
+        
+        // Twitter Share
+        const twitterBtn = document.getElementById('shareTwitter');
+        if (twitterBtn) {
+            twitterBtn.addEventListener('click', () => {
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent(pageState.currentArticle?.title || 'خبر من سفارة فلسطين');
+                window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+            });
+        }
+        
+        // WhatsApp Share
+        const whatsappBtn = document.getElementById('shareWhatsApp');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', () => {
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent(pageState.currentArticle?.title || 'خبر من سفارة فلسطين');
+                window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+            });
+        }
+        
+        // Copy Link
+        const copyBtn = document.getElementById('copyLink');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(window.location.href);
+                    
+                    const copyMessage = document.getElementById('copyMessage');
+                    if (copyMessage) {
+                        copyMessage.style.display = 'block';
+                        setTimeout(() => {
+                            copyMessage.style.display = 'none';
+                        }, 3000);
+                    }
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = window.location.href;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+            });
+        }
+    }
+    
+    /*====================================================
+      إعداد مراقب تغيير اللغة
+    ====================================================*/
+    
+    function setupLanguageChangeListener() {
+        // إعداد مراقبة تغيير اللغة من i18next
+        if (typeof i18next !== 'undefined') {
+            i18next.on('languageChanged', handleLanguageChange);
+            console.log('✅ Language change listener set up for i18next');
+        }
+        
+        // إعداد مراقبة تغيير اللغة من HTML lang attribute
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+                    const newLang = document.documentElement.lang;
+                    if (newLang && newLang !== pageState.currentLanguage) {
+                        console.log(`🔄 HTML lang changed to: ${newLang}`);
+                        handleLanguageChange(newLang);
+                    }
+                }
+            });
+        });
+        
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['lang']
+        });
+        
+        console.log('✅ HTML lang attribute observer set up');
     }
     
     /*====================================================
@@ -538,7 +696,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     async function initializePage() {
         try {
-            console.log('🔄 Initializing news detail page with i18n...');
+            console.log('🔄 Initializing news detail page...');
             
             // تهيئة العناصر
             if (!initializeElements()) {
@@ -558,13 +716,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             // البحث عن المقال وعرضه
             await findAndDisplayArticle();
             
-            // إعداد مراقبة تغيير اللغة
-            if (typeof i18next !== 'undefined') {
-                i18next.on('languageChanged', handleLanguageChange);
-            }
+            // إعداد مراقب تغيير اللغة
+            setupLanguageChangeListener();
             
             pageState.isInitialized = true;
-            console.log('✅ News detail page initialized with i18n support');
+            console.log('✅ News detail page initialized successfully');
             
         } catch (error) {
             console.error('❌ Failed to initialize page:', error);
@@ -573,296 +729,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     /*====================================================
-      إضافة الأنماط
-    ====================================================*/
-    
-    function addStyles() {
-        const styles = `
-            <style>
-            .error-display {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 400px;
-                padding: 40px 20px;
-            }
-            
-            .error-content {
-                text-align: center;
-                max-width: 500px;
-                background: #f8f9fa;
-                padding: 40px;
-                border-radius: 12px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            }
-            
-            .error-icon {
-                font-size: 4rem;
-                color: #dc3545;
-                margin-bottom: 20px;
-            }
-            
-            .error-title {
-                font-size: 1.8em;
-                color: #dc3545;
-                margin-bottom: 15px;
-                font-weight: 700;
-            }
-            
-            .error-message {
-                color: #6c757d;
-                margin-bottom: 30px;
-                font-size: 1.1em;
-                line-height: 1.6;
-            }
-            
-            .error-actions {
-                display: flex;
-                gap: 15px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .retry-button,
-            .back-button {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                padding: 12px 20px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                border: none;
-                cursor: pointer;
-                font-size: 1em;
-            }
-            
-            .retry-button {
-                background: #007bff;
-                color: white;
-            }
-            
-            .retry-button:hover {
-                background: #0056b3;
-                transform: translateY(-2px);
-            }
-            
-            .back-button {
-                background: #6c757d;
-                color: white;
-            }
-            
-            .back-button:hover {
-                background: #5a6268;
-                transform: translateY(-2px);
-                text-decoration: none;
-            }
-            
-            .news-detail-article {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-                background: white;
-                border-radius: 12px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-                line-height: 1.7;
-            }
-            
-            .article-header {
-                text-align: center;
-                margin-bottom: 30px;
-                padding-bottom: 20px;
-                border-bottom: 2px solid #e9ecef;
-            }
-            
-            .category-badge {
-                display: inline-block;
-                background: linear-gradient(135deg, #007bff, #0056b3);
-                color: white;
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 0.9em;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
-            
-            .article-title {
-                font-size: 2.5em;
-                color: #1a1a1a;
-                margin: 15px 0;
-                line-height: 1.3;
-                font-weight: 700;
-            }
-            
-            .article-meta {
-                display: flex;
-                justify-content: center;
-                gap: 25px;
-                flex-wrap: wrap;
-                margin-top: 15px;
-            }
-            
-            .meta-item {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                color: #6c757d;
-                font-size: 0.95em;
-            }
-            
-            .meta-item i {
-                color: #007bff;
-            }
-            
-            .article-image-main {
-                margin: 30px 0;
-                text-align: center;
-            }
-            
-            .article-image-main img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 12px;
-                box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            }
-            
-            .article-content {
-                font-size: 1.1em;
-                line-height: 1.8;
-                color: #333;
-                margin: 30px 0;
-            }
-            
-            .content-paragraph {
-                margin-bottom: 25px;
-                text-align: justify;
-            }
-            
-            .content-image-wrapper,
-            .content-video-wrapper {
-                margin: 30px 0;
-                text-align: center;
-            }
-            
-            .content-image-wrapper img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            }
-            
-            .content-video-wrapper video {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-            }
-            
-            .article-tags {
-                margin: 40px 0;
-                padding: 20px;
-                background: #f8f9fa;
-                border-radius: 8px;
-            }
-            
-            .article-tags h3 {
-                margin-bottom: 15px;
-                color: #495057;
-                font-size: 1.2em;
-            }
-            
-            .tags-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .tag {
-                background: #e3f2fd;
-                color: #1976d2;
-                padding: 6px 14px;
-                border-radius: 20px;
-                font-size: 0.9em;
-                font-weight: 500;
-            }
-            
-            .article-footer {
-                margin-top: 40px;
-                padding-top: 30px;
-                border-top: 2px solid #e9ecef;
-                text-align: center;
-            }
-            
-            .back-to-news {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                padding: 15px 30px;
-                background: #007bff;
-                color: white;
-                text-decoration: none;
-                border-radius: 8px;
-                font-weight: 600;
-                transition: all 0.3s ease;
-            }
-            
-            .back-to-news:hover {
-                background: #0056b3;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(0,123,255,0.3);
-                color: white;
-                text-decoration: none;
-            }
-            
-            @media (max-width: 768px) {
-                .news-detail-article {
-                    padding: 15px;
-                    margin: 10px;
-                }
-                
-                .article-title {
-                    font-size: 2em;
-                }
-                
-                .article-meta {
-                    flex-direction: column;
-                    gap: 10px;
-                }
-                
-                .content-paragraph {
-                    font-size: 1em;
-                }
-                
-                .error-actions {
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-            </style>
-        `;
-        
-        document.head.insertAdjacentHTML('beforeend', styles);
-    }
-    
-    /*====================================================
-      أدوات التصحيح
+      أدوات التصحيح المحسنة
     ====================================================*/
     
     window.NewsDetailDebug = {
-        getState: () => pageState,
+        getState: () => ({
+            ...pageState,
+            elementsFound: Object.keys(elements).filter(key => elements[key])
+        }),
+        
         getElements: () => elements,
+        
         reload: () => location.reload(),
+        
         testArticle: (id) => {
             const url = new URL(window.location);
             url.searchParams.set('id', id);
             window.location.href = url.toString();
         },
+        
         showAvailableIds: () => {
             console.log('Available article IDs:', pageState.newsArticles.map(a => ({
                 id: a.id,
                 title: a.title
             })));
         },
+        
         testTranslation: (key) => {
             if (typeof i18next !== 'undefined') {
                 console.log(`Translation for "${key}":`, i18next.t(key));
@@ -870,30 +762,43 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.log('i18next not available');
             }
         },
-        forceLanguage: (lang) => {
-            if (typeof i18next !== 'undefined') {
-                i18next.changeLanguage(lang);
+        
+        forceLanguage: async (lang) => {
+            console.log(`🔧 Force changing language to: ${lang}`);
+            if (typeof i18next !== 'undefined' && i18next.changeLanguage) {
+                await i18next.changeLanguage(lang);
             } else {
-                pageState.currentLanguage = lang;
-                findAndDisplayArticle();
+                await handleLanguageChange(lang);
             }
         },
-        checkI18next: () => {
-            console.log('i18next status:', {
+        
+        simulateLanguageChange: (lang) => {
+            console.log(`🧪 Simulating language change to: ${lang}`);
+            handleLanguageChange(lang);
+        },
+        
+        checkI18nStatus: () => {
+            console.log('i18next Status:', {
                 available: typeof i18next !== 'undefined',
                 initialized: typeof i18next !== 'undefined' ? i18next.isInitialized : false,
-                language: typeof i18next !== 'undefined' ? i18next.language : 'not available',
-                currentPageLang: pageState.currentLanguage
+                currentLanguage: typeof i18next !== 'undefined' ? i18next.language : 'N/A',
+                pageLanguage: pageState.currentLanguage,
+                htmlLang: document.documentElement.lang
             });
+        },
+        
+        testLanguageSwitch: () => {
+            const languages = ['ar', 'en', 'tr'];
+            const currentIndex = languages.indexOf(pageState.currentLanguage);
+            const nextLang = languages[(currentIndex + 1) % languages.length];
+            console.log(`🔄 Testing switch from ${pageState.currentLanguage} to ${nextLang}`);
+            this.forceLanguage(nextLang);
         }
     };
     
     /*====================================================
-      بدء التشغيل
+      بدء التشغيل المحسن
     ====================================================*/
-    
-    // إضافة الأنماط
-    addStyles();
     
     // بدء التطبيق
     if (document.readyState === 'loading') {
@@ -910,51 +815,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }, 8000);
     
-    console.log('✅ News Detail with i18n Integration Loaded!');
+    // تنظيف عند إغلاق الصفحة
+    window.addEventListener('beforeunload', () => {
+        if (typeof i18next !== 'undefined') {
+            i18next.off('languageChanged', handleLanguageChange);
+        }
+    });
+    
+    console.log('✅ Fixed News Detail System with Language Support Loaded!');
 });
-
-/*====================================================
-  إضافة الترجمات المفقودة إلى ملفات JSON
-====================================================*/
-
-// يجب إضافة هذه المفاتيح إلى ملفات الترجمة:
-const requiredTranslationKeys = {
-    ar: {
-        "untitled": "عنوان غير متوفر",
-        "tags": "العلامات", 
-        "backToNews": "العودة إلى الأخبار",
-        "noContent": "محتوى هذا المقال غير متوفر حالياً",
-        "publishedOn": "نُشر في",
-        "author": "الكاتب",
-        "readTime": "وقت القراءة",
-        "category": "الفئة",
-        "errorLoading": "خطأ في تحميل الخبر",
-        "tryAgain": "إعادة المحاولة"
-    },
-    en: {
-        "untitled": "Title Not Available",
-        "tags": "Tags",
-        "backToNews": "Back to News", 
-        "noContent": "Content for this article is currently not available",
-        "publishedOn": "Published on",
-        "author": "Author",
-        "readTime": "Reading Time",
-        "category": "Category",
-        "errorLoading": "Error Loading News",
-        "tryAgain": "Try Again"
-    },
-    tr: {
-        "untitled": "Başlık Mevcut Değil",
-        "tags": "Etiketler",
-        "backToNews": "Haberlere Dön",
-        "noContent": "Bu makalenin içeriği şu anda mevcut değil", 
-        "publishedOn": "Yayınlanma Tarihi",
-        "author": "Yazar",
-        "readTime": "Okuma Süresi", 
-        "category": "Kategori",
-        "errorLoading": "Haber Yüklenirken Hata",
-        "tryAgain": "Tekrar Dene"
-    }
-};
-
-console.log('📝 Required translation keys for news detail:', requiredTranslationKeys);
