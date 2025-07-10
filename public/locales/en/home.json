@@ -1,43 +1,102 @@
 {
-  "siteTitle": "Embassy of the State of Palestine in Turkey",
-  "ambassadorTitle": "Ambassador's Message",
-  "ambassadorMessage": "On behalf of the Embassy of the State of Palestine to the Republic of Turkey and all its staff, I am pleased to extend my greetings and appreciation to you, and I welcome all visitors to our new website, hoping that this site will be a window for the Palestinian public to get acquainted with all the required information about the Embassy, its role, and its activities in all fields, in addition to the consular services it provides to students and the Palestinian community in the Republic of Turkey.",
-  "ambassadorName": "Dr. Faed Mustafa",
-  "ambassadorTitleOnly": "Ambassador",
-  "galleryTitle": "Photo Gallery",
-  "galleryDescription": "Explore the beauty and history of Palestinian cities",
-  "jerusalemTitle": "Jerusalem",
-  "jerusalemDescription": "Capital of Palestine",
-  "haifaTitle": "Haifa",
-  "haifaDescription": "One of the largest and most important historical cities in Palestine",
-  "gazaTitle": "Gaza",
-  "gazaDescription": "Gaza is a Palestinian coastal city",
-  "nazarethTitle": "Nazareth",
-  "nazarethDescription": "One of the most important historical cities in Palestine",
-  "hebronTitle": "Hebron",
-  "hebronDescription": "Hebron is one of the oldest cities in the world, its history dating back 5500 years.",
-  "info-palestine": "Palestine",
-  "info-embassy": "The Embassy",
-  "info-consular": "Consular Affairs",
-  "info-turkey": "Turkey",
-  "info-education": "Educational Affairs",
-  "info-circulars": "Circulars and Announcements",
-  "info-news": "News",
-  "info-activities": "Activities and Events",
-  "info-holidays": "National Holidays",
-  "presidency_card": "Palestinian Presidency",
-  "pm_card": "Prime Minister's Office",
-  "mofa_card": "Ministry of Foreign Affairs",
-  "moi_card": "Ministry of Interior",
-  "culture_card": "Ministry of Culture",
-  "wafa_card": "WAFA Official Agency",
-  "newsTitle1": "Latest News",
-  "news-headline-1": "Main News Headline Here",
-  "news-desc-1": "A brief description of the news including the most important information and details related to the topic.",
-  "news-date-1": "May 25, 2025",
-  "news-headline-2": "Important Local News",
-  "news-desc-2": "Details of local events and new developments in the region with a focus on important aspects.",
-  "news-date-2": "May 24, 2025",
-  "news-headline-3": "New Developments in Politics",
-  "news-desc-3": "Latest political developments and new government decisions affecting citizens."
+  "welcome_message": "Welcome to the official website of the Embassy of the State of Palestine in the Republic of Turkey",
+  "palestine_flag_alt": "Flag of the State of Palestine",
+  "turkey_flag_alt": "Flag of the Republic of Turkey",
+  "ambassador_name": "Dr. Faed Mustafa",
+  "ambassador_title": "Ambassador of the State of Palestine to the Republic of Turkey",
+  "ambassador_message": "On behalf of the Embassy of the State of Palestine to the Republic of Turkey and all its staff, I am pleased to address you with greetings and appreciation, and welcome all visitors to our website in its new form, hoping that this website will serve as a window for the Palestinian public to learn about all the required information about the embassy, its role, and its activities in all fields.",
+  "ambassador_alt": "Dr. Faed Mustafa - Ambassador of the State of Palestine to Turkey",
+  
+  "gallery_title": "Photo Gallery",
+  "gallery_subtitle": "Explore the beauty and history of Palestinian cities",
+  
+  "jerusalem_title": "Jerusalem",
+  "jerusalem_desc": "The eternal capital of Palestine",
+  "jerusalem_alt": "Photo of Jerusalem city",
+  
+  "haifa_title": "Haifa",
+  "haifa_desc": "The bride of the Mediterranean Sea",
+  "haifa_alt": "Photo of Haifa city",
+  
+  "gaza_title": "Gaza",
+  "gaza_desc": "City of steadfastness and dignity",
+  "gaza_alt": "Photo of Gaza city",
+  
+  "ramallah_title": "Ramallah",
+  "ramallah_desc": "The administrative capital",
+  "ramallah_alt": "Photo of Ramallah city",
+  
+  "consular_title": "Consular Affairs",
+  "consular_desc": "Passport and official document services for Palestinian citizens",
+  "consular_alt": "Image representing consular services",
+  
+  "education_title": "Educational Affairs",
+  "education_desc": "Support for Palestinian students in Turkish universities",
+  "education_alt": "Image representing education",
+  
+  "cultural_title": "Cultural Relations",
+  "cultural_desc": "Promoting cultural exchange between Palestine and Turkey",
+  "cultural_alt": "Image representing cultural relations",
+  
+  "palestine_title": "About Palestine",
+  "palestine_desc": "Comprehensive information about the State of Palestine and its history",
+  "palestine_alt": "Image representing Palestine",
+  
+  "turkey_title": "About Turkey",
+  "turkey_desc": "A comprehensive guide to life and study in Turkey",
+  "turkey_alt": "Image representing Turkey",
+  
+  "circulars_title": "Circulars and Announcements",
+  "circulars_desc": "Latest official circulars and announcements from the embassy",
+  "circulars_alt": "Image representing circulars and announcements",
+  
+  "activities_title": "Activities and Events",
+  "activities_desc": "Events and activities organized by the embassy",
+  "activities_alt": "Image representing activities and events",
+  
+  "holidays_title": "National Holidays",
+  "holidays_desc": "Palestinian national occasions and holidays",
+  "holidays_alt": "Image representing national holidays",
+  
+  "inquiry_title": "Inquiries",
+  "inquiry_desc": "Inquiry about the status of transactions and documents",
+  "inquiry_alt": "Image representing inquiries",
+  
+  "partners_title": "Important Links",
+  
+  "presidency_name": "Palestinian Presidency",
+  "presidency_alt": "Logo of the Palestinian Presidency",
+  
+  "cabinet_name": "Prime Minister's Office",
+  "cabinet_alt": "Logo of the Prime Minister's Office",
+  
+  "mofa_name": "Ministry of Foreign Affairs",
+  "mofa_alt": "Logo of the Ministry of Foreign Affairs",
+  
+  "moi_name": "Ministry of Interior",
+  "moi_alt": "Logo of the Ministry of Interior",
+  
+  "culture_name": "Ministry of Culture",
+  "culture_alt": "Logo of the Ministry of Culture",
+  
+  "wafa_name": "Official WAFA Agency",
+  "wafa_alt": "Logo of WAFA Agency",
+  
+  "news_title": "Latest News",
+  "news_subtitle": "Follow the latest news and updates",
+  
+  "news1_title": "Important meeting between the Ambassador and Turkish officials",
+  "news1_summary": "His Excellency Ambassador Dr. Faed Mustafa held an important meeting with senior Turkish officials to discuss ways to enhance bilateral relations between the two countries in various fields.",
+  "news1_date": "July 10, 2025",
+  "news1_alt": "Photo of the meeting between the Ambassador and Turkish officials",
+  
+  "news2_title": "New scholarships for Palestinian students",
+  "news2_summary": "The Turkish government announced the provision of additional scholarships for Palestinian students for the upcoming academic year in various prestigious Turkish universities.",
+  "news2_date": "July 8, 2025",
+  "news2_alt": "Image representing scholarships",
+  
+  "news3_title": "Palestinian heritage exhibition in Ankara",
+  "news3_summary": "The embassy organizes a Palestinian heritage exhibition in the Turkish capital Ankara, lasting for a week and featuring a collection of rare heritage exhibits.",
+  "news3_date": "July 5, 2025",
+  "news3_alt": "Photo of the Palestinian heritage exhibition"
 }

@@ -5,29 +5,24 @@
   "subtitle": "Filistin Devleti Türkiye Büyükelçiliği'nden en son haberleri ve duyuruları takip edin",
   "allNewsTitle": "Tüm Haberler",
   "searchPlaceholder": "Haberlerde ara...",
-  
   "filterAll": "Tüm Haberler",
   "filterAnnouncements": "Duyurular",
   "filterEvents": "Etkinlikler",
   "filterConsular": "Konsolosluk Hizmetleri",
   "filterEducation": "Eğitim",
-  
   "noResults": "Sonuç Bulunamadı",
   "tryDifferentSearch": "Farklı arama terimleri deneyin veya başka bir kategori seçin",
   "clearFilters": "Filtreleri Temizle",
   "showAllNews": "Tüm Haberleri Göster",
   "resetFilters": "Filtreleri Sıfırla",
-  
   "loadMore": "Daha Fazla Yükle",
   "newsItem": "haber",
   "newsItems": "haber",
   "newsCount": "Haber Sayısı",
-  
   "loadingArticle": "Makale detayları yükleniyor...",
   "errorLoading": "Haber Yüklenirken Hata",
   "tryAgain": "Tekrar Dene",
   "backToNews": "Haberlere Dön",
-  
   "untitled": "Başlık Mevcut Değil",
   "tags": "Etiketler",
   "noContent": "Bu makalenin içeriği şu anda mevcut değil",
@@ -35,28 +30,23 @@
   "author": "Yazar",
   "readTime": "Okuma Süresi",
   "category": "Kategori",
-  
   "shareArticle": "Bu Makaleyi Paylaş",
   "copyLink": "Bağlantıyı Kopyala",
   "linkCopied": "Bağlantı Kopyalandı",
   "relatedArticles": "İlgili Makaleler",
-  
   "categoryAnnouncement": "Duyuru",
   "categoryEvent": "Etkinlik",
   "categoryConsular": "Konsolosluk Hizmetleri",
   "categoryEducation": "Eğitim",
-  
   "articleNotFound": "Makale bulunamadı",
   "noIdProvided": "Haber kimliği sağlanmadı",
   "loadingError": "Haber yüklenirken hata oluştu",
-  
   "newsletterTitle": "Bültene Abone Ol",
   "newsletterDescription": "En son haberleri ve duyuruları doğrudan e-postanızda alın",
   "emailPlaceholder": "E-posta adresinizi girin",
   "subscribe": "Abone Ol",
   "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
   "subscriptionSuccess": "Başarıyla abone oldunuz! Teşekkürler",
-  
   "featuredTitle": "Öne Çıkan Haberler",
   "lastUpdated": "Son Güncelleme",
   "error": "Bir hata oluştu",
@@ -64,7 +54,6 @@
   "close": "Kapat",
   "viewDetails": "Detayları Görüntüle",
   "readMore": "Devamını Oku",
-  
   "recent": "Son",
   "popular": "Popüler",
   "featured": "Öne Çıkan",
@@ -76,7 +65,6 @@
   "sortByTitle": "Başlığa Göre Sırala",
   "ascending": "Artan",
   "descending": "Azalan",
-
   "news_articles": [
     {
       "id": "1",
@@ -85,7 +73,12 @@
       "category": "Duyuru",
       "author": "Filistin Devleti Büyükelçiliği",
       "readTime": "5 dakika",
-      "tags": ["ulaştırma", "forum", "istanbul", "uluslararası işbirliği"],
+      "tags": [
+        "ulaştırma",
+        "forum",
+        "istanbul",
+        "uluslararası işbirliği"
+      ],
       "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Ulaştırma ve Haberleşme Bakanı Sayın Mühendis Tarık Zarab adına, İstanbul'da üç gün süren Küresel Ulaştırma Bağlantısı Forumu 2025 çalışmalarına katıldı.",
       "image_title": "news.title.1.jpg",
       "content_parts": [
@@ -118,7 +111,12 @@
       "category": "Duyuru",
       "author": "Filistin Devleti Büyükelçiliği",
       "readTime": "7 dakika",
-      "tags": ["AFAD", "afetler", "Gazze", "insani işbirliği"],
+      "tags": [
+        "AFAD",
+        "afetler",
+        "Gazze",
+        "insani işbirliği"
+      ],
       "excerpt": "İsrail'in Filistin halkına yönelik cani saldırılarının devam etmesi ve insani felaketin derinleşmesi karşısında, Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, Türk Afet ve Acil Durum Yönetimi (AFAD) Başkanı Sayın Ali Hamza Pehlivan ile kurumun Ankara'daki merkezinde bir araya geldi.",
       "image_title": "news.title.2.jpg",
       "content_parts": [
@@ -171,7 +169,12 @@
       "category": "Duyuru",
       "author": "Filistin Devleti Büyükelçiliği",
       "readTime": "3 dakika",
-      "tags": ["kayıt", "nitelikli bireyler", "yerinden edilme", "istihdam"],
+      "tags": [
+        "kayıt",
+        "nitelikli bireyler",
+        "yerinden edilme",
+        "istihdam"
+      ],
       "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği, İsrail'in Ekim 2023'te Gazze Şeridi'ne yönelik saldırısı ve sonrasında Türkiye Cumhuriyeti'ne gelen vatandaşlara, yükseköğrenim diplomasına sahip vatandaşların verilerini kaydetmek üzere bir bağlantının açıldığını duyurmaktan memnuniyet duyar.",
       "image_title": "news.title.3.jpg",
       "content_parts": [
@@ -188,7 +191,12 @@
       "category": "Duyuru",
       "author": "Filistin Devleti Büyükelçiliği",
       "readTime": "4 dakika",
-      "tags": ["Nekbe", "röportaj", "TRT", "anma"],
+      "tags": [
+        "Nekbe",
+        "röportaj",
+        "TRT",
+        "anma"
+      ],
       "excerpt": "Büyükelçi Dr. Faed Mustafa ile TRT Arapça Kanalında Nekbe Anma etkinliği üzerine bir görüşme. Filistin davası ve Filistin-Türkiye ilişkileri hakkında kapsamlı bir televizyon röportajı.",
       "image_title": "news.title.4.jpg",
       "content_parts": [
@@ -203,6 +211,112 @@
         {
           "type": "text",
           "value": "Büyükelçi röportaj sırasında Türkiye'nin Filistin davasına sürekli desteğinin önemini ve Filistin acılarını sona erdirmek ve bölgede adalet ve barışı sağlamak için uluslararası çabaların birleştirilmesi gerekliliğini vurguladı."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Büyükelçi Dr. Faed Mustafa, Maldivler Büyükelçisini Kabul Etti",
+      "date": "16 Mayıs 2025",
+      "category": "Duyurular",
+      "excerpt": "Filistin Devleti'nin Ankara Büyükelçisi Dr. Faed Mustafa, bugün Maldivler'in Türkiye Büyükelçisi Sayın Abdulrahim Abdullateef'i Büyükelçilik makamında kabul etti.",
+      "image_title": "news.title.5.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Ankara Büyükelçisi Dr. Faed Mustafa, bugün Maldivler'in Türkiye Büyükelçisi Sayın Abdulrahim Abdullateef'i Büyükelçilik makamında kabul etti. Büyükelçi Dr. Faed Mustafa, misafirine Gazze Şeridi'ndeki halkımıza yönelik Siyonist saldırının gelişmelerini ve işgalci devletin Kudüs dahil Batı Şeria'daki uygulamalarını aktardı. Ayrıca, Filistin ve Maldiv halkları arasındaki iyi ikili ilişkileri takdir ederek, Maldiv liderliğinin halkımızın davasına verdiği destek ve sahip çıkma kararlarını övgüyle karşıladı. Maldivler Büyükelçisi ise, Filistin davasının Maldiv halkının davası olduğunu, Filistin halkının haklarını tüm uluslararası platformlarda ve her düzeyde desteklediğini ve desteklemeye devam edeceğini vurguladı."
+        },
+        {
+          "type": "image",
+          "value": "news.5.part1.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.5.part2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği Nakba Anma Töreni Düzenledi",
+      "date": "15 Mayıs 2025",
+      "category": "Etkinlikler",
+      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği ve Ankara'daki Filistin topluluğu, bugün Pazartesi, Büyükelçilik binasında Nakba'nın 77. yıldönümü etkinliğini düzenledi.",
+      "image_title": "news.title.6.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçiliği ve Ankara'daki Filistin topluluğu, bugün Pazartesi, Büyükelçilik binasında Nakba'nın 77. yıldönümü etkinliğini düzenledi. Etkinliğe, Ankara'da ikamet eden Arap topluluklarından ve İsrail işgalinin uyguladığı soykırım savaşı sırasında Gazze Şeridi'nden gelen yaralı ve hasta Filistinlilerden çok sayıda kişi ile Filistin topluluğu ve medya mensupları katıldı."
+        },
+        {
+          "type": "text",
+          "value": "Etkinlik, aziz şehitlerimizin ruhları için bir dakikalık saygı duruşuyla başladı, ardından Filistin marşı çalındı ve Nakba'dan esinlenen bir film gösterimi yapıldı."
+        },
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Sayın Dr. Faed Mustafa, kapsamlı bir konuşma yaparak Nakba'yı İsrail'in Filistin halkına karşı işlediği bir suç olarak tanımladı. Bölgede adalet, barış ve istikrarın sağlanmasının, Birleşmiş Milletler'in tüm kararlarının uygulanmasını, uluslararası anlaşmalara saygı gösterilerek başkenti Kudüs olan Filistin devletinin kurulmasını ve 1948'de yerlerinden edilen mültecilerin BM 194 sayılı kararı uyarınca topraklarına geri dönmelerini gerektirdiğini belirtti."
+        },
+        {
+          "type": "text",
+          "value": "Ayrıca, Filistin halkımızın diasporada ve kamplarda asla unutmayacağını ve taviz vermeyeceğini, çalınan vatanlarına geri dönme haklarına kararlılıkla bağlı kalacağını söyledi. Hakların zaman aşımına uğramayacağını, zaman ne kadar uzun veya kısa olursa olsun işgalin suçlarının da zaman aşımına uğramayacağını ve İsrail'in halkımıza karşı işlediği tüm suçlardan dolayı hesap vereceği günün geleceğini vurguladı."
+        },
+        {
+          "type": "text",
+          "value": "Etkinlikte ayrıca, halkımızın direnişini ve özgürlük ile bağımsızlık hayallerini yansıtan Nakba temalı bir fotoğraf sergisi de yer aldı."
+        },
+        {
+          "type": "image",
+          "value": "news.6.part1.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.6.part2.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.6.part3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Büyükelçi Dr. Faed Mustafa'dan Ankara Bilim Üniversitesi'nde Filistin Davası Gelişmeleri Konulu Konferans",
+      "date": "13 Mayıs 2025",
+      "category": "Etkinlikler",
+      "excerpt": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, bugün Ankara Bilim Üniversitesi'nde, Filistin halkına yönelik soykırım savaşı gölgesinde Filistin davasının gelişmeleri hakkında bir konferans verdi.",
+      "image_title": "news.title.7.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "Filistin Devleti'nin Türkiye Cumhuriyeti Büyükelçisi Dr. Faed Mustafa, bugün Ankara Bilim Üniversitesi'nde, Filistin halkına yönelik soykırım savaşı gölgesinde Filistin davasının gelişmeleri hakkında, üniversite öğrencileri ve akademisyenlerden oluşan geniş bir dinleyici kitlesinin katılımıyla bir konferans verdi."
+        },
+        {
+          "type": "text",
+          "value": "Büyükelçi Mustafa, konuşmasına Filistin davasının köklerine ve Filistin halkının bağımsızlık ve başkenti Kudüs olan bağımsız Filistin devletini kurma mücadelesinin aşamalarına değinerek başladı."
+        },
+        {
+          "type": "text",
+          "value": "Sayın Büyükelçi, Filistin davasının seyrindeki önemli duraklara ve olaylara değinerek, Filistin hakkında konuşmanın uzun olduğunu ve içinde tarih, adalet, siyaset, mücadele ve hak hakkında konuşmaları barındırdığını ekledi. Bir asırdan fazla bir süredir Filistin halkının yaşadığı ve yaşamakta olduğu acılara rağmen barışı sağlamaya çalıştığını vurgulayarak, Filistin halkının ve mücadeleci güçlerinin savaşları ve ölümü arzu edenler olmadığını, Filistin halkının canlı ve yaşamayı seven bir halk olduğunu, Filistin'in kutsal bir toprak olduğunu ve barış ile istikrara çok ihtiyacı olduğunu belirtti. Ancak Filistin halkının bu barışta bir ortak bulamadığını, çünkü mevcut İsrail hükümetinin de önceki hükümetler gibi yükümlülüklerini yerine getirmede ağırdan aldığını ve yerleşim politikalarını sürdürmekte ısrar ettiğini, çözüm için uluslararası referansları tanımadığını ifade etti."
+        },
+        {
+          "type": "text",
+          "value": "Sayın Büyükelçi Mustafa ayrıca, son olaylara ve İsrail işgalinin özellikle Gazze Şeridi'ndeki Filistin halkımıza yönelik yürüttüğü soykırım savaşına, Kudüs'teki kutsal mekanlara yönelik tekrarlanan saldırılara ve Batı Şeria'daki sürekli tutuklama kampanyalarına değindi."
+        },
+        {
+          "type": "text",
+          "value": "Tüm bunların halkımızı mücadelesini ve direnişini tam ulusal haklarını, başında kendi kaderini tayin hakkı ve başkenti Şerefli Kudüs olan bağımsız Filistin devletini kurma hakkı olmak üzere, elde edene kadar sürdürmekten alıkoymayacağını vurguladı."
+        },
+        {
+          "type": "text",
+          "value": "Konferansın sonunda Büyükelçi Mustafa, Türk hükümetinin ve halkının Filistin halkının bağımsız Filistin devletini kurma mücadelesine verdiği desteği takdir ettiğini ve bu destek için Türkiye'ye saygılarını sunduğunu belirtti."
+        },
+        {
+          "type": "text",
+          "value": "Ayrıca, Büyükelçi Dr. Faed Mustafa'nın Üniversite Rektörü Profesör Yavuz Demir ile bir araya geldiği bir toplantı da yapıldı. Bu toplantıda Sayın Büyükelçi, Siyonist saldırının gelişmeleri ve halkımızın efsanevi direnişi hakkında bilgi verdi ve sıcak karşılama ile Filistin ve davasına destek veren başarılı dayanışma programı için teşekkür etti."
+        },
+        {
+          "type": "image",
+          "value": "news.7.part1.jpg"
         }
       ]
     }

@@ -5,29 +5,24 @@
   "subtitle": "Follow the latest news and announcements from the Embassy of the State of Palestine in Turkey",
   "allNewsTitle": "All News",
   "searchPlaceholder": "Search news...",
-  
   "filterAll": "All News",
   "filterAnnouncements": "Announcements",
   "filterEvents": "Events",
   "filterConsular": "Consular Services",
   "filterEducation": "Education",
-  
   "noResults": "No results found",
   "tryDifferentSearch": "Try different search terms or select another category",
   "clearFilters": "Clear Filters",
   "showAllNews": "Show All News",
   "resetFilters": "Reset Filters",
-  
   "loadMore": "Load More",
   "newsItem": "news item",
   "newsItems": "news items",
   "newsCount": "News count",
-  
   "loadingArticle": "Loading article details...",
   "errorLoading": "Error Loading News",
   "tryAgain": "Try Again",
   "backToNews": "Back to News",
-  
   "untitled": "Title Not Available",
   "tags": "Tags",
   "noContent": "Content for this article is currently not available",
@@ -35,28 +30,23 @@
   "author": "Author",
   "readTime": "Reading Time",
   "category": "Category",
-  
   "shareArticle": "Share this Article",
   "copyLink": "Copy Link",
   "linkCopied": "Link Copied",
   "relatedArticles": "Related Articles",
-  
   "categoryAnnouncement": "Announcement",
   "categoryEvent": "Event",
   "categoryConsular": "Consular Services",
   "categoryEducation": "Education",
-  
   "articleNotFound": "Article not found",
   "noIdProvided": "No news ID provided",
   "loadingError": "Error occurred while loading news",
-  
   "newsletterTitle": "Subscribe to Newsletter",
   "newsletterDescription": "Get the latest news and announcements directly in your email",
   "emailPlaceholder": "Enter your email address",
   "subscribe": "Subscribe",
   "invalidEmail": "Please enter a valid email address",
   "subscriptionSuccess": "Successfully subscribed! Thank you",
-  
   "featuredTitle": "Featured News",
   "lastUpdated": "Last updated",
   "error": "An error occurred",
@@ -64,7 +54,6 @@
   "close": "Close",
   "viewDetails": "View Details",
   "readMore": "Read More",
-  
   "recent": "Recent",
   "popular": "Popular",
   "featured": "Featured",
@@ -76,7 +65,6 @@
   "sortByTitle": "Sort by Title",
   "ascending": "Ascending",
   "descending": "Descending",
-
   "news_articles": [
     {
       "id": "1",
@@ -85,7 +73,12 @@
       "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "5 minutes",
-      "tags": ["transport", "forum", "istanbul", "international cooperation"],
+      "tags": [
+        "transport",
+        "forum",
+        "istanbul",
+        "international cooperation"
+      ],
       "excerpt": "The Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, participated on behalf of His Excellency the Minister of Transport and Communications, Engineer Tariq Zarab, in the Global Transport Connectivity Forum 2025 held in Istanbul over three days.",
       "image_title": "news.title.1.jpg",
       "content_parts": [
@@ -118,7 +111,12 @@
       "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "7 minutes",
-      "tags": ["AFAD", "disasters", "Gaza", "humanitarian cooperation"],
+      "tags": [
+        "AFAD",
+        "disasters",
+        "Gaza",
+        "humanitarian cooperation"
+      ],
       "excerpt": "In light of the ongoing Israeli criminal aggression against the Palestinian people and the worsening humanitarian catastrophe, His Excellency the Ambassador of the State of Palestine to the Republic of Turkey, Dr. Faed Mustafa, met with the President of the Turkish Disaster and Emergency Management Authority (AFAD), Mr. Ali Hamza Pehlivan, at the institution's headquarters in the capital Ankara.",
       "image_title": "news.title.2.jpg",
       "content_parts": [
@@ -171,7 +169,12 @@
       "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "3 minutes",
-      "tags": ["registration", "skilled personnel", "displacement", "employment"],
+      "tags": [
+        "registration",
+        "skilled personnel",
+        "displacement",
+        "employment"
+      ],
       "excerpt": "The Embassy of the State of Palestine in the Republic of Turkey is pleased to announce to our brothers and sisters who came to the Republic of Turkey after the Israeli aggression on the Gaza Strip in October 2023 and beyond, the opening of a link to register data of citizens holding higher education degrees.",
       "image_title": "news.title.3.jpg",
       "content_parts": [
@@ -188,7 +191,12 @@
       "category": "Announcement",
       "author": "Embassy of the State of Palestine",
       "readTime": "4 minutes",
-      "tags": ["Nakba", "interview", "TRT", "memorial"],
+      "tags": [
+        "Nakba",
+        "interview",
+        "TRT",
+        "memorial"
+      ],
       "excerpt": "Interview with His Excellency Ambassador Dr. Faed Mustafa on the Nakba memorial event via TRT Arabic channel. A comprehensive television interview about the Palestinian cause and distinguished Palestinian-Turkish relations.",
       "image_title": "news.title.4.jpg",
       "content_parts": [
@@ -203,6 +211,112 @@
         {
           "type": "text",
           "value": "The Ambassador emphasized during the interview the importance of Turkey's continued support for the Palestinian cause and the necessity of international efforts to end Palestinian suffering and achieve justice and peace in the region."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Ambassador Dr. Faed Mustafa Receives Maldivian Ambassador to Turkey",
+      "date": "May 16, 2025",
+      "category": "Announcements",
+      "excerpt": "H.E. Ambassador Dr. Faed Mustafa today received the Ambassador of the Maldives to Turkey, Mr. Abdulrahim Abdullateef, at the Embassy of the State of Palestine in Ankara.",
+      "image_title": "news.title.5.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "H.E. Ambassador Dr. Faed Mustafa today received the Ambassador of the Maldives to Turkey, Mr. Abdulrahim Abdullateef, at the Embassy of the State of Palestine in Ankara. Ambassador Dr. Faed Mustafa briefed his guest on the developments of the Zionist aggression against our people in the Gaza Strip, as well as the practices of the occupying power in the West Bank, including Jerusalem. He also commended the strong bilateral relations between the Palestinian and Maldivian peoples, appreciating the supportive decisions taken by the Maldivian leadership in their backing and advocacy for our people's cause. The Maldivian Ambassador, in turn, affirmed that the cause of Palestine is the cause of the Maldivian people, who support the rights of the Palestinian people in all international forums and at all levels, and will continue to do so."
+        },
+        {
+          "type": "image",
+          "value": "news.5.part1.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.5.part2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Embassy of the State of Palestine to the Republic of Turkey Commemorates Nakba Anniversary",
+      "date": "May 15, 2025",
+      "category": "Events",
+      "excerpt": "The Embassy of the State of Palestine to the Republic of Turkey and the Palestinian community in Ankara organized the 77th Nakba Anniversary event today, Monday, at the Embassy's headquarters.",
+      "image_title": "news.title.6.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "The Embassy of the State of Palestine to the Republic of Turkey and the Palestinian community in Ankara organized the 77th Nakba Anniversary event today, Monday, at the Embassy's headquarters, with the presence of members of Arab communities residing in Ankara and the participation of a number of wounded and sick Palestinians who came from the Gaza Strip during the genocidal war practiced by the Israeli occupation, as well as members of the Palestinian community and media personnel."
+        },
+        {
+          "type": "text",
+          "value": "The event began with a minute of silence for our righteous martyrs, followed by the playing of the Palestinian anthem and the screening of a film inspired by the Nakba."
+        },
+        {
+          "type": "text",
+          "value": "H.E. Ambassador Dr. Faed Mustafa, Ambassador of the State of Palestine to the Republic of Turkey, delivered a comprehensive speech that included the concept of the Nakba as a crime committed by Israel against the Palestinian people, pointing out that achieving justice, peace, and stability in the region requires the implementation of all resolutions issued by the United Nations and respect for international agreements for the establishment of the Palestinian state with its capital Jerusalem and the return of refugees to their lands from which they were displaced in 1948, in accordance with UN Resolution 194."
+        },
+        {
+          "type": "text",
+          "value": "He also stated that our Palestinian people in the diaspora and in the camps will not forget, will not compromise, and will remain determined and steadfast in their rights to return to their stolen homeland, stressing that rights do not expire by statute of limitations, no matter how long or short the time, just as the occupation's crimes do not expire by statute of limitations, and the day will come when Israel will be held accountable for all its crimes against our people."
+        },
+        {
+          "type": "text",
+          "value": "The event also included a photo exhibition inspired by the Nakba, embodying the steadfastness of our people and their dreams of freedom and independence."
+        },
+        {
+          "type": "image",
+          "value": "news.6.part1.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.6.part2.jpg"
+        },
+        {
+          "type": "image",
+          "value": "news.6.part3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Lecture by H.E. Ambassador Dr. Faed Mustafa at Ankara University of Science on Developments of the Palestinian Issue Amidst the War of Genocide on the Palestinian People",
+      "date": "May 13, 2025",
+      "category": "Events",
+      "excerpt": "H.E. Ambassador Dr. Faed Mustafa, Ambassador of the State of Palestine to the Republic of Turkey, delivered a lecture today at Ankara University of Science on the developments of the Palestinian issue amidst the war of genocide on the Palestinian people.",
+      "image_title": "news.title.7.jpg",
+      "content_parts": [
+        {
+          "type": "text",
+          "value": "H.E. Ambassador Dr. Faed Mustafa, Ambassador of the State of Palestine to the Republic of Turkey, delivered a lecture today at Ankara University of Science on the developments of the Palestinian issue amidst the war of genocide on the Palestinian people, with a large audience of university students and faculty members."
+        },
+        {
+          "type": "text",
+          "value": "Ambassador Mustafa began his lecture by highlighting the roots of the Palestinian issue and the stages of the Palestinian people's struggle for independence and the establishment of an independent Palestinian state with Jerusalem as its capital."
+        },
+        {
+          "type": "text",
+          "value": "His Excellency dwelled on the most prominent milestones and events in the course of the Palestinian issue, stating that talking about Palestine is long and includes discussions about history, justice, politics, struggle, and rights. He added that despite the suffering the Palestinian people have endured and continue to endure for more than a hundred years, they still seek to achieve peace, emphasizing that the Palestinian people and their struggling forces are not those who desire wars and death, for the Palestinian people are a living people who love life, and Palestine is the Holy Land which is in dire need of peace and stability. However, the Palestinian people do not find a partner for this peace, as the current Israeli government, like previous governments, continues to procrastinate in fulfilling its obligations and insists on continuing its settlement policies and not recognizing international references for a solution."
+        },
+        {
+          "type": "text",
+          "value": "H.E. Ambassador Mustafa also highlighted the recent events and the war of genocide being carried out by the Israeli occupation against our Palestinian people and the Gaza Strip in particular, the repeated attacks on holy sites in Jerusalem, and the continuous arrest campaigns in the West Bank."
+        },
+        {
+          "type": "text",
+          "value": "He affirmed that all of this will not deter our people from continuing their struggle and resistance until they achieve their full national rights, foremost among them their right to self-determination and the establishment of an independent Palestinian state with its capital, noble Jerusalem."
+        },
+        {
+          "type": "text",
+          "value": "At the end of the lecture, H.E. Ambassador Mustafa praised the Turkish stance supporting the Palestinian people's struggle and extended greetings to Turkey, its leadership and people, for the support they provide to the Palestinian people for the establishment of an independent Palestinian state."
+        },
+        {
+          "type": "text",
+          "value": "There was also a meeting between H.E. Ambassador Dr. Faed Mustafa and the President of the University, Professor Yavuz Demir, where he briefed him on the developments of the Zionist aggression on one hand and the legendary steadfastness of our people on the other, and thanked him for the warm reception and the successful solidarity program in support of Palestine and its just cause."
+        },
+        {
+          "type": "image",
+          "value": "news.7.part1.jpg"
         }
       ]
     }

@@ -11,23 +11,54 @@ class LanguageSwitcher {
 
     // Initialize when i18next is ready
     document.addEventListener('i18nextReady', this.handleI18nextReady.bind(this));
+    // Also listen for componentsLoaded, in case i18nextReady fires before header is in DOM
+    document.addEventListener('componentsLoaded', this.handleComponentsLoaded.bind(this));
+  }
+
+  async handleComponentsLoaded() {
+    // Only proceed if i18next is already ready, or we are sure we'll get an i18nextReady event soon
+    // and elements are available.
+    try {
+      this.langButton = await waitForElement('#langButton');
+      this.langMenu = await waitForElement('#langMenu');
+      this.langItems = this.langMenu.querySelectorAll("li[data-lang]");
+      
+      // If i18next is already initialized, just init the switcher
+      if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+        this.init();
+      } else {
+        // Otherwise, init will be called by handleI18nextReady
+        console.log('LanguageSwitcher: Components loaded, waiting for i18nextReady...');
+      }
+    } catch (error) {
+      console.error('❌ LanguageSwitcher: Failed to find language switcher elements after components loaded:', error);
+    }
   }
 
   async handleI18nextReady() {
     try {
-      // Wait for elements to be available
-      this.langButton = await waitForElement('#langButton');
-      this.langMenu = await waitForElement('#langMenu');
-      this.langItems = this.langMenu.querySelectorAll("li[data-lang]");
+      // Ensure elements are available if not already found by handleComponentsLoaded
+      if (!this.langButton) {
+        this.langButton = await waitForElement('#langButton');
+      }
+      if (!this.langMenu) {
+        this.langMenu = await waitForElement('#langMenu');
+      }
+      if (this.langItems.length === 0 && this.langMenu) { // Re-query if empty
+        this.langItems = this.langMenu.querySelectorAll("li[data-lang]");
+      }
 
       this.init();
     } catch (error) {
-      console.error('❌ Failed to find language switcher elements:', error);
+      console.error('❌ LanguageSwitcher: Failed to find language switcher elements during i18next ready:', error);
     }
   }
 
   init() {
-    if (this.isInitialized) return;
+    if (this.isInitialized || !this.langButton || !this.langMenu || this.langItems.length === 0) {
+        if (!this.isInitialized) console.log('LanguageSwitcher: Init skipped - missing elements or already initialized.');
+        return; 
+    }
 
     this.setupEventListeners();
     this.updateButtonText();
@@ -122,8 +153,10 @@ class LanguageSwitcher {
 
   updateButtonText() {
     if (this.langButton && typeof i18next !== 'undefined') {
-      const buttonText = i18next.t('common:header.language_switcher.button_text');
-      this.langButton.textContent = buttonText;
+      const currentLang = i18next.language;
+      const buttonTextKey = `common:header.language_switcher.${currentLang}`;
+      const buttonText = i18next.t(buttonTextKey, { defaultValue: currentLang.toUpperCase() }); // Fallback to uppercase code
+      this.langButton.textContent = `🌐 ${buttonText}`;
     }
   }
 
@@ -143,4 +176,28 @@ class LanguageSwitcher {
 ====================================================*/
 
 // Create instance
-new LanguageSwitcher();
+const languageSwitcherInstance = new LanguageSwitcher();
+
+// Expose a global function for direct language changes if needed by external scripts (optional)
+window.changeLanguage = (lang) => {
+    if (languageSwitcherInstance.isReady()) {
+        i18next.changeLanguage(lang);
+        localStorage.setItem('preferredLanguage', lang);
+    } else {
+        console.warn('Language switcher not fully initialized. Saving preference but change might not be immediate.');
+        localStorage.setItem('preferredLanguage', lang);
+        // Fallback to reload if switcher isn't ready. This might be necessary if some page scripts depend on instant change.
+        location.reload();
+    }
+};
+
+// This ensures the language preferences are set and applied even if i18n-init is slightly delayed
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang && document.documentElement.lang !== savedLang) {
+        document.documentElement.lang = savedLang;
+        document.documentElement.dir = (savedLang === 'ar') ? 'rtl' : 'ltr';
+        document.body.classList.toggle('rtl', savedLang === 'ar');
+        document.body.classList.toggle('ltr', savedLang !== 'ar');
+    }
+});
